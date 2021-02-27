@@ -3,7 +3,7 @@ import logo from "../images/logo.svg";
 const Sdata = [
     {
         imgsrc : logo,
-        title : "Weight loss",
+        title : "Weight loss Diet",
     },
     {
         imgsrc : logo,
