@@ -122,13 +122,47 @@ footer{
     bottom:0;
    
 }
+.footer{
+    background-color: #121116
+}
+
+.list{
+    padding-top: 10%;
+    padding-left: 5%;
+    color: white;
+}
+.list li{
+    padding: 2%;
+    text-decoration: none;
+    color: yellowgreen;
+}
+li{
+}
+.list .footerlinks{
+    font-weight: 500;
+    color: rgb(218, 218, 218);
+    text-decoration: none;
+}
+.list .footerlink :hover{
+    color: rgb(109, 170, 29);
+    border-bottom: 3px dotted red;
+}
+.text p{
+    letter-spacing: 2px;
+    font-size:15px;
+    font-family:cursive;
+    word-break:keep-all;
+    color:white;    
+    box-sizing: border-box;
+
+
+}
+/*
 p {
     font-size: 14px
 }
 
-.footer{
-    background-color: #a294cc
-}
+
 
 .top-part {
     margin-top: 50px;
@@ -162,7 +196,7 @@ p {
 .fa-mobile {
     font-size: 20px
 }
-
+*/
 #contact {
     font-size: 15px
 }
