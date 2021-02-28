@@ -1,10 +1,13 @@
 import React from 'react';
 
 import { NavLink } from 'react-router-dom';
-function Card(props) {
+const Card = (props)=> {
   return (
     
-              <div className="col-md-4 col-12 pt-5 mx-auto">
+            <div className="container-fluid"> 
+              <div className="row">
+             
+              <div className="col-lg-12 col-12">
               <div className="card" >
                 <img src={props.imgsrc} className="card-img-top" alt={props.imgsrc} />
                 <div className="card-body">
@@ -13,8 +16,10 @@ function Card(props) {
                 <NavLink to="/" className="btn btn-primary">Go somewhere</NavLink>
                 </div>
               </div>
-
               </div>
+              </div>
+              </div>
+          
   );
 }
 
