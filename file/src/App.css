@@ -167,6 +167,28 @@ padding: 2%;
     color: white;
     padding: 1%;
 }
+.icons a{
+text-decoration: none;
+color: ivory;
+}
+.facebook:hover{
+    color: rgb(21, 149, 235);
+  
+    transform: translateY(-4px)
+}
+.whatsapp :hover{
+    color: chartreuse;  
+    transform: translateY(-4px)
+}
+.insta:hover{
+    color: rgb(255, 0, 242);  
+    transform: translateY(-4px)
+}
+.mail:hover{
+    color: rgb(147, 207, 140);
+    
+    transform: translateY(-4px)
+}
 
 /*
 p {
