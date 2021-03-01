@@ -15,18 +15,18 @@ const Footer =()=>{
         <>
         <div className="container-fluid mx-auto footer mt-4">
         <div className="row p-5">
-        
+
         <div className="col-12 col-lg-4 order-0">
-            
+
         <div className="">
         <img src={logo} alt="sorry" style={{width:"100%"}}></img>
         </div>
         </div>
- 
+
 
         <div className="col-12 col-lg-3">
         <h5 className=" text-center" style={{color:"white", marginTop:"-6px"}}>Programs</h5>
-        <div className="list"> 
+        <div className="list">
         <ul>
         <li className="footerlink"><NavLink exact className="footerlinks"  to="/">Weight loss</NavLink></li>
         <li className="footerlink"><NavLink exact className="footerlinks"  to="/About">Weight gain</NavLink></li>
@@ -43,8 +43,8 @@ const Footer =()=>{
         <div className="contactlist">
         <ul type="none">
         <li><CallIcon className="icon"/>Call : +91 8700326422</li>
-        <li><AccessTimeIcon className="icon"/>Timeing : Mon-Sat 10:00Am - 7:00 PM</li>
-        <li><EditLocationIcon className="icon" />Location: HOUSE NO. 288-89, POCKET G-26, SECTOR 3, ROHINI , DELHI</li>
+        <li><AccessTimeIcon className="icon"/>Timing : Mon-Sat 10:00Am - 7:00 PM</li>
+        <li><EditLocationIcon className="icon" />Address : Hno. 288-89 G-26 Sec-3 ROHINI , DELHI</li>
         <li><EmailIcon className="icon"/>EMAIL : balancedbites10@gmail.com</li>
         </ul>
         </div>
