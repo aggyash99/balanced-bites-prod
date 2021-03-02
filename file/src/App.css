@@ -56,6 +56,17 @@
     color: black;
 }
 
+.head {
+    background-color: rgb(32, 32, 32);
+    font-weight: 600;
+    color: white;
+    
+}
+.head a{
+    color: white;
+    text-decoration: none;
+}
+
 #header .brand-name {
     color :rgb(223, 62, 62);
 }
@@ -173,21 +184,23 @@ color: ivory;
 }
 .facebook:hover{
     color: rgb(21, 149, 235);
-  
-    transform: translateY(-4px)
+    transform: translateY(-4px);
+    transition: 500ms;
 }
 .whatsapp :hover{
-    color: chartreuse;  
-    transform: translateY(-4px)
-}
+    color: rgb(98, 170, 26);  
+    transform: translateY(-3px);
+    transition: 500ms;
+   }
 .insta:hover{
     color: rgb(255, 0, 242);  
-    transform: translateY(-4px)
+    transform: translateY(-4px);
+    transition: 500ms;;
 }
 .mail:hover{
-    color: rgb(147, 207, 140);
-    
-    transform: translateY(-4px)
+    color: rgb(147, 207, 140); 
+    transform: translateY(-4px);
+    transition: 500ms;
 }
 
 /*

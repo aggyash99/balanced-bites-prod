@@ -48,19 +48,22 @@ const Footer =()=>{
         <li><EmailIcon className="icon"/>EMAIL : balancedbites10@gmail.com</li>
         </ul>
         </div>
-        </div>
-        </div>
-
-        <div className="row endfoot" >
-        <div className="col-lg-6 col-12 order-0">
-        <h2 className=" text-center" style={{fontSize:"15px"}}><CopyrightIcon className="icon"/>COPYRIGHT</h2>
-        </div>
-        <div className="col-lg-6 col-12 order-1 d-flex justify-content-sm-center justify-content-lg-end gap-4 icons">
-            <a href="" className="whatsapp"><WhatsAppIcon></WhatsAppIcon></a>
+        <div className="col-12 d-flex justify-content-sm-center justify-content-lg-center gap-3 icons">
+        <a href="" className="whatsapp"><WhatsAppIcon></WhatsAppIcon></a>
            <a href="https://www.facebook.com/Balancedbites10/" className="facebook"><FacebookIcon></FacebookIcon></a>
             <a href="balancedbites10@gmail.com" className="mail"> <MailOutlineIcon></MailOutlineIcon></a>
             <a href="https://www.instagram.com/balancedbites10/?r=nametag" className="insta"><InstagramIcon></InstagramIcon></a>
+       
         </div>
+        </div>
+        
+        </div>
+
+        <div className="row endfoot" >
+        <div className="col-lg-12 col-12 order-0">
+        <h2 className=" text-center" style={{fontSize:"15px"}}><CopyrightIcon className="icon"/>COPYRIGHT</h2>
+        </div>
+       
         </div>
         </div>
         </>
