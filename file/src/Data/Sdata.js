@@ -1,25 +1,36 @@
 import logo from "../Image/images/logo.svg";
+import  Milk  from "../Image/services/milk.jpg";
+import  fit  from "../Image/services/fit.jpg";
+import  fruits  from "../Image/services/fruits.jpg";
+import  lemon  from "../Image/services/lemon.jpg";
+import  med from "../Image/services/med.jpg";
+import  orange  from "../Image/services/orange.jpg";
+import  praga  from "../Image/services/praga.jpg";
 
 const Sdata = [
     {
-        imgsrc : logo,
+        imgsrc : fit,
         title : "Weight loss Diet online",
     },
     {
-        imgsrc : logo,
+        imgsrc : Milk,
         title : "Weight loss",
     },{
-        imgsrc : logo,
+        imgsrc : lemon,
         title : "Weight loss",
     },{
-        imgsrc : logo,
+        imgsrc : praga,
         title : "Weight loss",
     },{
-        imgsrc : logo,
+        imgsrc : orange,
         title : "Weight loss",
     },{
-        imgsrc : logo,
+        imgsrc : med,
         title : "Weight loss",
+    },{
+        imgsrc : fruits,
+        title : "Weight Loss"
+
     }
 ];
 

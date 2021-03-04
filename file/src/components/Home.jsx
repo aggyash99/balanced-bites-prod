@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../Image/services/front.jpg';
+import img from '../Image/services/lemon.jpg';
 //import Carousel from './Carousel';
 //import Common from './Common';
 function Home() {

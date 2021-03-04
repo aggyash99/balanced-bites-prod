@@ -12,9 +12,9 @@ return (
 <div className="container-fluid ">
 <div className="row head">
 <div className="col-1"></div>
-<div className="col-lg-3 p-2 col-12 d-flex justify-content-lg-start justify-content-sm-center"><a ><WhatsAppIcon className="whatsapp" /> Whatsapp :98761431736</a>
+<div className="col-lg-3 p-2 col-12 d-flex justify-content-around "><a ><WhatsAppIcon className="whatsapp" /> Whatsapp :98761431736</a>
 </div>
-<div className="col-lg-4 d-flex justify-content-lg-start justify-content-sm-center p-2 col-12"><a ><EmailIcon className="mail" /> Email : balancedbites10@gmail.com</a>
+<div className="col-lg-4 d-flex justify-content-around p-2 col-12"><a ><EmailIcon className="mail" /> Email : balancedbites10@gmail.com</a>
 </div>
 <div className="col-lg-2 p-2 d-flex gap-3 ">
 <FacebookIcon />
@@ -22,7 +22,7 @@ return (
 <InstagramIcon />
 <EmailIcon/>
 </div>
-<div className="col-lg-2 p-2 d-flex justify-content-around" style={{backgroundColor:"litegreen"}}>Contact : 9654874636</div>
+<div className="col-lg-2 p-2 d-flex justify-content-around" style={{backgroundColor:"green"}}>Contact : 9654874636</div>
 
 </div> 
 </div>
