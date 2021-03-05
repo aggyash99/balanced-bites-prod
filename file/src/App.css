@@ -357,6 +357,7 @@ box-shadow: 1px 2px 2px 4px rgb(228, 222, 222);
     transition: 500ms ease-out;
 }
 .card-img-top{
+    position:relative;
     padding: 5%;
    /* transition: transform ease-in 500ms;*/
 }
