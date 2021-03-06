@@ -7,7 +7,7 @@ return (
 
   <div className=" container">
 
-    <div  className="row">
+    <div  className="row mt-5 p-5">
       {
         Sdata.map( (value,index) => {
           return (

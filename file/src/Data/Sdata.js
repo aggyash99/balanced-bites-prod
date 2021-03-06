@@ -16,9 +16,6 @@ const Sdata = [
         imgsrc : Milk,
         title : "Weight loss",
     },{
-        imgsrc : lemon,
-        title : "Weight loss",
-    },{
         imgsrc : praga,
         title : "Weight loss",
     },{
