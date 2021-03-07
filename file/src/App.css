@@ -344,6 +344,7 @@ box-shadow: 1px 2px 2px 4px rgb(228, 222, 222);
     width: 100%;
     overflow: hidden;
     padding: 2%;
+    position: relative;
 }
 
 .card-img-top{
@@ -362,6 +363,7 @@ box-shadow: 1px 2px 2px 4px rgb(228, 222, 222);
 }
 .btn-primary{
    position: relative;
+
    left: 50%;
    transform: translateX(-50%);
 }
@@ -369,7 +371,6 @@ box-shadow: 1px 2px 2px 4px rgb(228, 222, 222);
 .animate{
 animation: dry 590ms ease-in;
 }
-
 
 @keyframes dry {
     from {
@@ -381,6 +382,10 @@ animation: dry 590ms ease-in;
         }
 }
 .card-body:hover{
-    top: -15%;
+    top: -20%;
 
+}
+.opacity{
+    opacity: 0.7;
+    
 }

@@ -6,6 +6,7 @@ import  lemon  from "../Image/services/lemon.jpg";
 import  med from "../Image/services/med.jpg";
 import  orange  from "../Image/services/orange.jpg";
 import  praga  from "../Image/services/praga.jpg";
+import  Childrens from '../Image/services/child.jpg';
 
 const Sdata = [
     {
@@ -27,7 +28,10 @@ const Sdata = [
     },{
         imgsrc : fruits,
         title : "Weight Loss"
-
+    }
+    ,{
+        imgsrc: Childrens,
+        title : "childrens"
     }
 ];
 

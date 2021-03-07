@@ -8,13 +8,17 @@ class ServicesCards extends Component{
 
   hand = () =>{     
       const e = findDOMNode(this.refs.toggle);
+      const img = findDOMNode(this.refs.img);
       $(e).addClass('animate');
+      $(img).addClass('opacity');
         console.log('x');
   }
 
   leave =()=>{
+    const img = findDOMNode(this.refs.img);
     const e = findDOMNode(this.refs.toggle);
       $(e).removeClass('animate');
+      $(img).removeClass('opacity');
   }
 
   render(){
@@ -22,10 +26,12 @@ class ServicesCards extends Component{
           <>
   <div className=" allcar col-12 col-lg-4  mx-auto">
   <div class="maincards"> 
-<img class="card-img-top" src={this.props.imgsrc} alt="Card image cap"  />
+  <div></div>
+<img class="card-img-top img" ref="img" src={this.props.imgsrc} alt="Card image cap"  />
 <div class="card-body" onMouseOver={this.hand} onMouseLeave={this.leave}>
   <h5 class=" text-center" >Card title</h5>
   <div>
+    ankur is adjshfk ajdhsfkj hlad f glfjal
    <a href="#" ref="toggle" class="btn btn-primary ">Go somewhere</a>
   </div>
   </div>
