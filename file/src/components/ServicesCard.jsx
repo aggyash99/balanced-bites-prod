@@ -31,7 +31,7 @@ class ServicesCards extends Component{
 <div class="card-body" onMouseOver={this.hand} onMouseLeave={this.leave}>
   <h5 class=" text-center" >Card title</h5>
   <div>
-    ankur is adjshfk ajdhsfkj hlad f glfjal
+    <span>Balanced Bites Photos</span>
    <a href="#" ref="toggle" class="btn btn-primary ">Go somewhere</a>
   </div>
   </div>
