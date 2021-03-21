@@ -25,14 +25,14 @@ class ServicesCards extends Component{
       return (
           <>
   <div className=" allcar col-12 col-lg-4  mx-auto">
-  <div class="maincards"> 
+  <div class="maincards" onMouseLeave={this.leave}> 
   <div></div>
-<img class="card-img-top img" ref="img" src={this.props.imgsrc} alt="Card image cap"  />
-<div class="card-body" onMouseOver={this.hand} onMouseLeave={this.leave}>
+<img class="card-img-top img" onMouseOver={this.hand} ref="toggle"   ref="img" src={this.props.imgsrc} alt="Card image cap"  />
+<div class="card-body" ref="toggle" >
   <h5 class=" text-center" >Card title</h5>
   <div>
     <span>Balanced Bites Photos</span>
-   <a href="#" ref="toggle" class="btn btn-primary ">Go somewhere</a>
+   <a href="#"  class="btn btn-primary">Go somewhere</a>
   </div>
   </div>
   </div>
