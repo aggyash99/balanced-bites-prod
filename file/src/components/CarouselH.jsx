@@ -29,12 +29,14 @@ const CarouselH =()=>{
   
   return (
 <>
-    <div className=" container pt-4">
+    <div>
+    <div className=" container " style={{padding:"50px"}}>
     <div className="row">
-    <div className="col-lg-12 p-2">
+    <div className="col-lg-12 ">
     <Carousel responsive={responsive}
     keyBoardControl={false}
-    removeArrowOnDeviceType={["tablet","mobile","desktop"]}
+    removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
+    showDots={false}
     >
     {
       Sdata.map( (value,key)=>{
@@ -49,7 +51,7 @@ const CarouselH =()=>{
     </div>
 
     </div>
- 
+    </div>
 </>
 );
 }

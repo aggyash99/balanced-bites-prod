@@ -13,7 +13,7 @@ import logo from '../Image/logo.png';
 const Footer =()=>{
     return (
         <>
-        <div className="container-fluid mx-auto footer mt-4">
+        <div className="container-fluid mx-auto footer">
         <div className="row p-5">
 
         <div className="col-12 col-lg-4 order-0">
