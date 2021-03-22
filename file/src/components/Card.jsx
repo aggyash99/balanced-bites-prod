@@ -2,9 +2,8 @@ import React from 'react';
 const Card = (props)=> {
   return (
     
-            <div className="container pt-0"> 
-              <div className="row">
-              <div className="col-lg-12">
+          
+              <div className="col-lg-10">
               <div className="card" >
                 <img src={props.imgsrc} className="card-img-top" alt="sorry"/>
                 <div className="card-body">
@@ -13,8 +12,7 @@ const Card = (props)=> {
                 </div>
               </div>
               </div>
-              </div>
-              </div>
+
           
   );
 }
