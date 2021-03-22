@@ -126,7 +126,6 @@ footer{
     position: fixed;
     left:0;
     bottom:0;
-   
 }
 .footer{
     background-color: #121116
@@ -379,10 +378,13 @@ box-shadow: 1px 2px 2px 4px rgb(228, 222, 222);
     background-color: white;
     transition: all 100ms ease-out;
 }
-.btn-primary{
+.service{
+    display: flex;
+    flex-direction: column;
    position: relative;
    left: 50%;
    transform: translateX(-50%);
+   width : 50%;
 }
 
 .animate{
@@ -398,10 +400,6 @@ animation: up 400ms ease-in forwards;
         opacity: 1;
         }
 }
-.card-body:hover{
-    animation: up 490ms ease-in forwards;
-}
-
 @keyframes up{
     from{
         top : 15%;
@@ -416,4 +414,11 @@ animation: up 400ms ease-in forwards;
 }
 .btn{
     border-radius: 50px;
+}
+
+/* slider in about*/
+
+.Slider{
+    height: 50%;
+    
 }

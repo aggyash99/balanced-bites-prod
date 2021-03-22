@@ -3,7 +3,7 @@ import Carousel from './Carousel';
 function About() {
   return (
     <>
-    <main>
+    <div>
     <div className="container-fluid about">
     <div className="row">
       <div className="col-lg-12 col-md-12 mx-auto">
@@ -35,8 +35,7 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
       </div>
       
-    <Carousel></Carousel>
-    </main>
+    </div>
     
     </>
   );

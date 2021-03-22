@@ -28,11 +28,11 @@ class ServicesCards extends Component{
   <div class="maincards" onMouseLeave={this.leave}> 
   <div></div>
 <img class="card-img-top img" onMouseOver={this.hand} ref="toggle"   ref="img" src={this.props.imgsrc} alt="Card image cap"  />
-<div class="card-body" ref="toggle" >
+<div class="card-body" ref="toggle" onMouseOver={this.hand}>
   <h5 class=" text-center" >Card title</h5>
-  <div>
+  <div className="">
     <span>Balanced Bites Photos</span>
-   <a href="#"  class="btn btn-primary">Go somewhere</a>
+   <a href="#"  class="btn btn-primary service">Go somewhere</a>
   </div>
   </div>
   </div>

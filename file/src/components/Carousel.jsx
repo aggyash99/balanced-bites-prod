@@ -3,37 +3,64 @@ import Slider from "react-slick";
 import Cards from './Card';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Sdata from '../Data/Sdata';
 const Carousel =()=>{
   var settings = {
-    infinite: true,
+    dots: true,
+    infinite: false,
+    speed: 500,
     slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    slidesToScroll: 4,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
 
 return (
     <>
-    <div className="container pt-4">
-      <div className="row">
-        <div className="col-lg-12 col-md-12 justify-content-between mx-auto">
-    <div style={{backgroundColor:"gray",maxHeight:"50%", marginLeft:"4px", padding:"1%",boxShadow:"3px 4px 2px 4px grey"}}>
-    <Slider {...settings}>
-    <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-      <Cards></Cards>
-    </Slider>
-    </div>
-        </div>
-      </div>
-    </div>
+    <div className=" container-fluid pt-5">
+    <div className="row" style={{height:"400px", width:"100%"}}>
+    <div className="col-lg-12">
+    <div className="Slider">
+  <Slider {...settings}>
+  {
+    Sdata.map( (value,key) =>{
+      return (
+        <Cards title={value.title} imgsrc={value.imgsrc} key={key}></Cards>
+      );
+    })
+
+  }
+
+  </Slider>
+</div>
+</div>
+</div>
+</div>
        
     </>
 );

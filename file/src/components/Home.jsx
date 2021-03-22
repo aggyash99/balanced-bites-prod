@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../Image/services/lemon.jpg';
-//import Carousel from './Carousel';
+import Carousel from './Carousel';
 //import Common from './Common';
 function Home() {
   return (
@@ -14,6 +14,9 @@ function Home() {
         </div>
         <div className="row">
         </div>
+      </div>
+      <div className="container-fuild">
+      <Carousel></Carousel>
       </div>
     </section>
     </>
