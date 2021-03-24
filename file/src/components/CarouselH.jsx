@@ -1,5 +1,4 @@
 import React from 'react';
-import Slider from "react-slick";
 import Cards from './Card';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -30,22 +29,24 @@ const CarouselH =()=>{
   return (
 <>
     <div>
-    <div className=" container " style={{padding:"50px"}}>
+    <div className=" container mt-5 ">
     <div className="row">
     <div className="col-lg-12 ">
     <Carousel responsive={responsive}
     keyBoardControl={false}
     removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
-    showDots={false}
+    showDots={true}
+    autoPlaySpeed={1000}
+    arrows={true}
     >
     {
       Sdata.map( (value,key)=>{
         return (
-          <Cards imgsrc={value.imgsrc} title={value.title} key={key}></Cards>
+        <Cards imgsrc={value.imgsrc} title={value.title} key={key}></Cards>
         );
       })
     }
-</Carousel>
+    </Carousel>
 
     </div>
     </div>
