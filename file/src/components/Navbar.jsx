@@ -4,17 +4,15 @@ import logo from '../Image/logo.png';
 function Navbar() {
   return (
       <>
-      <div className = "container-fluid sticky-lg-top top-0">
-          <div className = "row">
-              <div className = "col-lg-12 mx-auto">
     {
       // HEADER END
     }
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-lg-top top-0">
   <div className="container-fluid pt-0">
     
-   <nav className="d-flex">
-  <NavLink className="navbar-brand" to="/"><img  src={logo}alt="" style={{maxWidth:"40%"}}/></NavLink>
+  {/*
+   */}<nav className="d-flex">
+     <NavLink className="navbar-brand" to="/"><img  src={logo}alt="" style={{maxWidth:"40%"}}/></NavLink>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -38,10 +36,6 @@ function Navbar() {
     </div>
   </div>
 </nav>
-</div>
-
-</div>
-</div> 
 </>
   );
 }

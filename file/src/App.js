@@ -10,8 +10,6 @@ import './App.css';
 import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer'
-import jquery from './components/Jquary'
-
 function App() {
   return (
     <BrowserRouter>
@@ -21,8 +19,6 @@ function App() {
         <Route exact path = "/" component={Home}/>
         <Route exact path = "/About" component={About}/>
         <Route exact path = "/Contact" component={Contact}/>
-        
-        <Route exact path = "/jquery" component={jquery} ></Route>
         <Route exact path = "/Service" component={Service}/>
         <Redirect to = "/" />
       </Switch>
