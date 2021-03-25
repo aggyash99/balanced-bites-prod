@@ -33,7 +33,7 @@ const Footer =()=>{
         <li className="footerlink"><NavLink exact className="footerlinks"  to="/About">Weight gain</NavLink></li>
         <li className="footerlink"><NavLink exact className="footerlinks" to="/Contact">Child Nutrition</NavLink></li>
         <li className="footerlink"><NavLink exact className="footerlinks" to="/Service">Theraputic Nutrition</NavLink></li>
-        <li className="footerlink"><NavLink exact className="footerlinks"  to="/Programs" > Hair/Skin Care</NavLink></li>
+        <li className="footerlink"><NavLink exact className="footerlinks"  to="/Contact" > Hair/Skin Care</NavLink></li>
         </ul>
         </div>
         </div>

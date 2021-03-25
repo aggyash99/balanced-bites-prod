@@ -3,8 +3,6 @@ import Map from './Map';
 import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/EditLocation';
-import EmailIcon from '@material-ui/icons/Email';
-import CopyrightIcon from '@material-ui/icons/Copyright';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
