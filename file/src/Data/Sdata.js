@@ -12,6 +12,7 @@ const Sdata = [
     {
         imgsrc : fit,
         title : "Weight loss Diet online",
+        
     },
     {
         imgsrc : Milk,

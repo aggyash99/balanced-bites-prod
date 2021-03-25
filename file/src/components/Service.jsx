@@ -13,6 +13,7 @@ return (
           return (
             <ServicesCards
             key = {index}
+            num = {index}
             imgsrc = {value.imgsrc}
             title = {value.title}
             ></ServicesCards>

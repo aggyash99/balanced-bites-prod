@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
-import image from '../Image/services/fit.jpg';
-import { Opacity } from '@material-ui/icons';
+import { NavLink } from 'react-router-dom';
 
 class ServicesCards extends Component{
 
@@ -11,7 +10,6 @@ class ServicesCards extends Component{
       const img = findDOMNode(this.refs.img);
       $(e).addClass('animate');
       $(img).addClass('opacity');
-        console.log('x');
   }
 
   leave =()=>{
@@ -21,18 +19,22 @@ class ServicesCards extends Component{
       $(img).removeClass('opacity');
   }
 
+  c = () =>{
+    console.log(this.props.num);
+  }
+
   render(){
       return (
           <>
-  <div className=" allcar col-12 col-lg-4  mx-auto">
-  <div class="maincards" onMouseLeave={this.leave}> 
+  <div className=" col-12 col-lg-4  mx-auto">
+  <div className="maincards" onMouseLeave={this.leave}> 
   <div></div>
-<img class="card-img-top img" onMouseOver={this.hand} ref="toggle"   ref="img" src={this.props.imgsrc} alt="Card image cap"  />
-<div class="card-body" ref="toggle" onMouseOver={this.hand}>
-  <h5 class=" text-center" >Card title</h5>
+<img className="card-img-top img" onMouseOver={this.hand} ref="toggle"   ref="img" src={this.props.imgsrc} alt="Card image cap"  />
+<div className="card-body" ref="toggle" onMouseOver={this.hand}>
+  <h5 className=" text-center" >Card title</h5>
   <div className="">
     <span>Balanced Bites Photos</span>
-   <a href="#"  class="btn btn-primary service">Go somewhere</a>
+   <NavLink className="btn btn-primary service" exact to='/Contact' >Go somewhere</NavLink>
   </div>
   </div>
   </div>

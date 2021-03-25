@@ -13,10 +13,11 @@ import logo from '../Image/logo.png';
 const Footer =()=>{
     return (
         <>
-        <div className="container-fluid mx-auto footer">
+        <div className="footer">
+        <div className="container-fluid mx-auto">
         <div className="row p-5">
 
-        <div className="col-12 col-lg-4 order-0">
+        <div className="col-12 col-lg-3 order-0">
 
         <div className="">
         <img src={logo} alt="sorry" style={{width:"100%"}}></img>
@@ -32,7 +33,7 @@ const Footer =()=>{
         <li className="footerlink"><NavLink exact className="footerlinks"  to="/About">Weight gain</NavLink></li>
         <li className="footerlink"><NavLink exact className="footerlinks" to="/Contact">Child Nutrition</NavLink></li>
         <li className="footerlink"><NavLink exact className="footerlinks" to="/Service">Theraputic Nutrition</NavLink></li>
-        <li className="footerlink"><NavLink exact className="footerlinks"  to="/Contact" > Hair/Skin Care</NavLink></li>
+        <li className="footerlink"><NavLink exact className="footerlinks"  to="/Programs" > Hair/Skin Care</NavLink></li>
         </ul>
         </div>
         </div>
@@ -64,6 +65,7 @@ const Footer =()=>{
         <h2 className=" text-center" style={{fontSize:"15px"}}><CopyrightIcon className="icon"/>COPYRIGHT</h2>
         </div>
        
+        </div>
         </div>
         </div>
         </>

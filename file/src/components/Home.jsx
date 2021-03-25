@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../Image/services/lemon.jpg';
+import img from '../Image/services/home.jpg';
 import CarouselH from './CarouselH';
 //import Common from './Common';
 function Home() {
@@ -9,7 +9,7 @@ function Home() {
       <div className="container-fluid ">
         <div className="row">
           <div className="col-lg-10 d-flex justify-content-around mx-auto">
-              <img style={{width:"80%",opacity:"0.9"}}  src={img} alt ="sorry"></img>
+              <img  style={{width:"100%"}}  src={img} alt ="sorry"></img>
           </div>
         </div>
       </div>
