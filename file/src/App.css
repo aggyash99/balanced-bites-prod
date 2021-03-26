@@ -441,3 +441,28 @@ animation: up 400ms ease-in forwards;
     justify-content: center;
     transition: color 1000ms;
 }
+.program{
+    margin-top: 4.3%;
+    border: 2px solid rgba(119, 119, 112, 0.979);
+    margin-left: 1%;
+}
+.link {
+    display: flex;
+    text-decoration:none;
+    color: rgb(73, 57, 57);
+    font-family: sans-serif;
+    font-weight: 600;
+    justify-content: center;
+    padding: 5px;
+    letter-spacing: 3px;
+    font-size: 15px;
+    border: 0.1px solid grey;
+    margin-bottom: 3px;
+    background:rgba(238, 238, 238, 0.918);
+}
+.image{
+    position: relative;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

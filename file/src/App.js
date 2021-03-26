@@ -10,6 +10,7 @@ import './App.css';
 import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Program from './components/Program'
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function App() {
         <Route exact path = "/About" component={About}/>
         <Route exact path = "/Contact" component={Contact}/>
         <Route exact path = "/Service" component={Service}/>
+        <Route exact path ="/Program" component={Program}></Route>
         <Redirect to="/"/>
       </Switch>
      

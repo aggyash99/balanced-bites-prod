@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
-import { NavLink, Link} from 'react-router-dom';
+import { NavLink, Link, Route} from 'react-router-dom';
+import Program from './Program';
+import { ThreeSixty } from '@material-ui/icons';
 
 class ServicesCards extends Component{
 
@@ -34,7 +36,9 @@ class ServicesCards extends Component{
   <h5 className=" text-center" >Card title</h5>
   <div className="">
     <span>Balanced Bites Photos</span>
-   <Link className="btn btn-primary service" to='/Program'  onClick={this.c} >Go somewhere</Link>
+   <Link className="btn btn-primary service"  to={{pathname:'/Program',
+    state:{key : this.props.num}
+    }} ><span>Go somewhere </span></Link>
   </div>
   </div>
   </div>
