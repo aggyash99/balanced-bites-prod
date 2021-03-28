@@ -33,7 +33,7 @@ class ServicesCards extends Component{
  
 <img className="card-img-top img" onMouseOver={this.hand} ref="toggle"   ref="img" src={this.props.imgsrc} alt="Card image cap"  />
 <div className="card-body" ref="toggle" onMouseOver={this.hand}>
-  <h5 className=" text-center" >Card title</h5>
+  <h5 className=" text-center" >{this.props.title}</h5>
   <div className="">
     <span>Balanced Bites Photos</span>
    <Link className="btn btn-primary service"  to={{pathname:'/Program',

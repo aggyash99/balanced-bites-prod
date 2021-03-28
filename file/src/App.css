@@ -466,3 +466,6 @@ animation: up 400ms ease-in forwards;
     top: 50%;
     transform: translate(-50%,-50%);
 }
+.cardsforhome:hover{
+    box-shadow: 1px 2px 1px 2px grey;
+}

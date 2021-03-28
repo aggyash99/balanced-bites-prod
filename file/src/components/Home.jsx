@@ -1,3 +1,4 @@
+import { Carousel } from 'bootstrap';
 import React from 'react';
 import img from '../Image/services/home.jpg';
 import CarouselH from './CarouselH';
@@ -22,9 +23,10 @@ function Home() {
       <span><h1>Our <span style={{color:'green', borderBottom:"green solid 2px", fontWeight:"700", opacity:"0.8"}}>Services</span> </h1></span>
       </div>
      
-      <div>
-      <CarouselH></CarouselH>
-      </div>
+      <div className=" container">
+      <CarouselH ></CarouselH>
+      {console.log(Carousel)
+      }</div>
       </div>
 
       <div>

@@ -9,11 +9,11 @@ const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
-    items: 5
+    items: 3
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
-    items: 4
+    items: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
@@ -28,16 +28,15 @@ const CarouselH =()=>{
   
   return (
 <>
-    <div>
+    <div >
     <div className=" container mt-5 ">
     <div className="row">
-    <div className="col-lg-12 ">
+    <div className="col-lg-12">
     <Carousel responsive={responsive}
     keyBoardControl={false}
     removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
-    showDots={true}
-    autoPlaySpeed={1000}
-    arrows={true}
+    showDots={false}
+    arrows={false}
     >
     {
       Sdata.map( (value,key)=>{

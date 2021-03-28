@@ -2,12 +2,12 @@ import logo from "../Image/images/logo.svg";
 import  Milk  from "../Image/services/milk.jpg";
 import  fit  from "../Image/services/fit.jpg";
 import  fruits  from "../Image/services/fruits.jpg";
-import  lemon  from "../Image/services/lemon.jpg";
+import  PCOS  from "../Image/services/PCOS.jpg";
 import  med from "../Image/services/med.jpg";
 import  orange  from "../Image/services/orange.jpg";
 import  praga  from "../Image/services/praga.jpg";
 import  Childrens from '../Image/services/child.jpg';
-
+import diabetes from '../Image/services/diabetes.jpg'
 const Sdata = [
     {
         imgsrc : fit,
@@ -40,6 +40,16 @@ const Sdata = [
         imgsrc: Childrens,
         title : "Children",
         description:"lorum",
+    },
+    {
+        imgsrc : diabetes,
+        title : "diabetes",
+        discription : "No ",
+    },
+    {
+        imgsrc:PCOS,
+        title :"PCOS",
+        Description : "hello"
     }
 ];
 
