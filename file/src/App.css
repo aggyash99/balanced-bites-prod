@@ -469,3 +469,9 @@ animation: up 400ms ease-in forwards;
 .cardsforhome:hover{
     box-shadow: 1px 2px 1px 2px grey;
 }
+
+.testimonial {
+    color: rgb(235, 154, 5);
+    font-weight: 700;
+    font-style: oblique;
+}

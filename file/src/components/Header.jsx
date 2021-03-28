@@ -8,26 +8,27 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 const Header = () =>{
 return (
 <>
-<header >
+<header className=" ">
 <div className="container-fluid ">
-<div className="row head">
-<div className="col-1"></div>
-<div className="col-lg-3 p-2 col-12 d-flex justify-content-around "><a ><WhatsAppIcon className="whatsapp" /> Whatsapp :98761431736</a>
-</div>
-<div className="col-lg-4 d-flex justify-content-around p-2 col-12"><a ><EmailIcon className="mail" /> Email : balancedbites10@gmail.com</a>
-</div>
-<div className="col-lg-2 p-2 d-flex gap-3 ">
+<div className="row head ">
+ 
+<div className="col-lg-6 p-2 d-flex justify-content-center ">
+    <div className="col-lg-4 ">
+    <WhatsAppIcon className="whatsapp" /><a> Whatsapp :98761431736</a>
+    </div>
+    <div className="col-lg-6 d-flex justify-content-end ">
+    <EmailIcon className="mail" /><a> Email : balancedbites10@gmail.com</a>
+    </div>
+  </div>
+
+<div className="col-lg-4 p-2 d-flex gap-3  justify-content-lg-end">
 <FacebookIcon />
 <MailOutlineIcon/>
 <InstagramIcon />
 <EmailIcon/>
 </div>
-<div className="col-lg-2 p-2 d-flex justify-content-around" style={{backgroundColor:"green"}}>Contact : 9654874636</div>
-
 </div> 
 </div>
-
-
 </header>
 
 </>

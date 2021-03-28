@@ -2,6 +2,7 @@ import { Carousel } from 'bootstrap';
 import React from 'react';
 import img from '../Image/services/home.jpg';
 import CarouselH from './CarouselH';
+import Testimonial from './Testimonial';
 //import Common from './Common';
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
      
       <div className=" container">
       <CarouselH ></CarouselH>
+      <Testimonial />
       {console.log(Carousel)
       }</div>
       </div>
