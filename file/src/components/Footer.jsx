@@ -50,7 +50,7 @@ const Footer =()=>{
         </ul>
         </div>
         <div className="col-12 d-flex justify-content-sm-center justify-content-lg-center gap-3 icons">
-        <a href="" className="whatsapp"><WhatsAppIcon></WhatsAppIcon></a>
+        <a href="https://wa.link/k2f045" className="whatsapp"><WhatsAppIcon></WhatsAppIcon></a>
            <a href="https://www.facebook.com/Balancedbites10/" className="facebook"><FacebookIcon></FacebookIcon></a>
             <a href="balancedbites10@gmail.com" className="mail"> <MailOutlineIcon></MailOutlineIcon></a>
             <a href="https://www.instagram.com/balancedbites10/?r=nametag" className="insta"><InstagramIcon></InstagramIcon></a>

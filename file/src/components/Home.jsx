@@ -1,16 +1,15 @@
 import { Carousel } from 'bootstrap';
 import React from 'react';
-import img from '../Image/services/home.jpg';
+import img from '../Image/services/Homepage.png';
 import CarouselH from './CarouselH';
 import Testimonial from './Testimonial';
-//import Common from './Common';
 function Home() {
   return (
     <>
     <section className = "header">
-      <div className="container-fluid ">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-10 d-flex justify-content-around mx-auto">
+          <div className="col-lg-12 d-flex justify-content-around mx-auto">
               <img  style={{width:"100%"}}  src={img} alt ="sorry"></img>
           </div>
         </div>

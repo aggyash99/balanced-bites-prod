@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';  
 function About() {
   return (
     <>
@@ -32,8 +32,7 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
     </div>
     </div>
-      </div>
-      
+      </div> 
     </div>
     
     </>

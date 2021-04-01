@@ -471,7 +471,15 @@ animation: up 400ms ease-in forwards;
 }
 
 .testimonial {
-    color: rgb(235, 154, 5);
+    color: rgb(7, 7, 6);
     font-weight: 700;
     font-style: oblique;
+    
+}
+.testimonial-card{
+    border-radius: 30px;
+}
+.testimonial-card:hover{
+background-color: aqua;
+transition: background-color 500ms ease-in;
 }
