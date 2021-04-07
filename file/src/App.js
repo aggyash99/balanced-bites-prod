@@ -10,7 +10,7 @@ import './App.css';
 import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Program from './components/Program'
+import Program from './components/Program';
 function App() {
   return (
     <BrowserRouter>

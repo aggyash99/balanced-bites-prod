@@ -415,8 +415,7 @@ animation: up 400ms ease-in forwards;
 }
 
 /*carousel home*/
-.carousel{
-    margin-bottom:40px;
+.carousel{ 
     padding: 3%;
     }
 .appoint{
@@ -424,7 +423,7 @@ animation: up 400ms ease-in forwards;
     background-image: url("https://s3-eu-west-2.amazonaws.com/images.s3.cpm-int.com/wp-content/uploads/2017/01/26151812/customer_care_WIDE1.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    margin-bottom: 50px;
+    padding: 30px;    
 }
 .textin{
     

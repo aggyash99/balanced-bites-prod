@@ -14,7 +14,6 @@ function Home() {
           </div>
         </div>
       </div>
-      <div className="appoint">
 
 
       <div className="carousel" style={{ backgroundColor:"#F8F8F8"}}>
@@ -22,13 +21,18 @@ function Home() {
       <div className="text-center">
       <span><h1>Our <span style={{color:'green', borderBottom:"green solid 2px", fontWeight:"700", opacity:"0.8"}}>Services</span> </h1></span>
       </div>
-     
       <div className=" container">
       <CarouselH ></CarouselH>
-      <Testimonial />
-      {console.log(Carousel)
-      }</div>
       </div>
+      </div>
+      
+      
+
+      <div className=" container">
+      <Testimonial />
+      </div>
+
+      <div className="appoint">
 
       <div>
         <div className="textin">

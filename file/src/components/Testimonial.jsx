@@ -8,7 +8,7 @@ const Testimonial = () => {
 
   return (
    
-    <section className="text-center my-5 p-1">
+    <section className="text-center mb-5 p-1">
     
     
       <h2 className="h1-responsive font-weight-bold my-5">Testimonials</h2>
