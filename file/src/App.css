@@ -479,6 +479,14 @@ animation: up 400ms ease-in forwards;
     border-radius: 30px;
 }
 .testimonial-card:hover{
-background-color: aqua;
-transition: background-color 500ms ease-in;
+    background-color: #92fe9d;
+    transition: background-color 500ms ease-in;
+}
+.Comments{
+font-size: 15px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Comments:hover{
+    background-image: linear-gradient(to top, #7028e4 0%, #e5b2ca 100%);
+    transition: background-image 500ms ease-out;
 }

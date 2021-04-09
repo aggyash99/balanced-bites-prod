@@ -3,7 +3,7 @@ const Card = (props)=> {
   return (
     
           
-              <div className="col-lg-10 col-12 col-md-7" >
+              <div className="col-lg-10 mx-auto col-12 col-md-7" >
               <div className="card" >
                 <img src={props.imgsrc} className="card-img-top" alt="sorry"/>
                 <div className="card-body">

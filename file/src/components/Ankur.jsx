@@ -2,7 +2,8 @@ import React from 'react';
 import Cards from './Card';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Sdata from '../Data/Sdata';
+import Testimonial from '../Data/Testimonial';
+import TestimonialCards from './TestimonialCards';
 
 
 const responsive = {
@@ -28,10 +29,10 @@ const Ankur =()=>{
   
   return (
 <>
-    <div >
-    <div className=" container-fluid mt-5 ">
-    <div className="row mx-auto p-3 ">
-    <div className="col-lg-10 mx-auto ">
+  
+    <div className=" container p-5">
+    <div className="row ">
+    <div className="col-lg-12">
         
     <Carousel responsive={responsive}
     keyBoardControl={false}
@@ -41,9 +42,9 @@ const Ankur =()=>{
     infinite={true}
     >
     {
-      Sdata.map( (value,key)=>{
+      Testimonial.map( (value,key)=>{
         return (
-        <Cards imgsrc={value.imgsrc} title={value.title} key={key}></Cards>
+        <TestimonialCards name={value.name} comment={value.comment} key={key}></TestimonialCards>
         );
       })
     }
@@ -53,7 +54,7 @@ const Ankur =()=>{
     </div>
 
     </div>
-    </div>
+ 
 </>
 );
 }

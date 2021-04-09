@@ -1,13 +1,14 @@
 import React from 'react'; 
 import Ankur from './Ankur';
+import logo from '../Image/services/about.jpg';
 function About() {
   return (
     <>
-    <div>
+
     <div className="container-fluid about">
     <div className="row">
       <div className="col-lg-12 col-md-12 mx-auto">
-      <img  className="food"  src="https://images.pexels.com/photos/1105166/pexels-photo-1105166.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
+      <img  className="food"  src={logo} alt="" style={{width:"100%"}}/>
       
       <div className="row d-flex">
       <div className="col-lg-8 col-md-8 pt-5 order-2">
@@ -34,7 +35,7 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
     </div>
       </div> 
-    </div>
+ 
     <Ankur />
     </>
   );
