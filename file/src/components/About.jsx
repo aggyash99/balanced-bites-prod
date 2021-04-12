@@ -1,11 +1,27 @@
-import React from 'react'; 
+import React,{ Component } from 'react'; 
 import Ankur from './Ankur';
 import logo from '../Image/services/about.jpg';
-function About() {
-  return (
-    <>
+import BMI from './BMI';
+import $ from 'jquery';
+import {findDOMNode} from 'react-dom';
 
-    <div className="container-fluid about">
+class About extends Component{
+
+  opens =()=>{
+    const o = findDOMNode(this.refs.toggle);
+    //const b = findDOMNode(this.refs.black);
+   //$(b).addClass("black"); 
+   $(o).addClass('ankur');
+  }
+
+
+  render(){
+    return (
+    <>
+  
+
+    <div className="container-fluid about" >
+    
     <div className="row">
       <div className="col-lg-12 col-md-12 mx-auto">
       <img  className="food"  src={logo} alt="" style={{width:"100%"}}/>
@@ -34,11 +50,29 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
     </div>
     </div>
-      </div> 
- 
+    </div> 
+    <div className="">
+    <div className="continer-fluid opens mt-3" ref="toggle" > 
+    
+    <BMI/>
+
+    </div>
+    </div>
+
+
+    <div className="container mt-3">
+      <div className=" d-flex justify-content-around ">
+      
+      <div className="btn btn-success open" onClick={this.opens}>CALCULATE BMI</div> 
+    </div>
+</div>
     <Ankur />
+   
+ 
     </>
   );
 }
+}
+
 
 export default About;
