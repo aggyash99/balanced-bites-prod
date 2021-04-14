@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Map from './Map';
+import Map from '../Map';
 import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/EditLocation';

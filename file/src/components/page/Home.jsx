@@ -1,8 +1,7 @@
-import { Carousel } from 'bootstrap';
 import React from 'react';
-import img from '../Image/services/Homepage.png';
-import CarouselH from './CarouselH';
-import Testimonial from './Testimonial';
+import img from '../../Image/services/test.png';
+import CarouselH from '../CarouselH';
+import Testimonial from '../Testimonial';
 function Home() {
   return (
     <>

@@ -2,9 +2,9 @@ import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
-import Home from './components/Home'
-import About from './components/About'
-import Contact from './components/Contact'
+import Home from './components/page/Home'
+import About from './components/page/About'
+import Contact from './components/page/Contact'
 import Navbar from './components/Navbar'
 import './App.css';
 import Service from './components/Service';
@@ -24,7 +24,7 @@ function App() {
         <Route exact path ="/Program" component={Program}></Route>
         <Redirect to="/"/>
       </Switch>
-     
+
       <Footer></Footer>
     </BrowserRouter>
   );
