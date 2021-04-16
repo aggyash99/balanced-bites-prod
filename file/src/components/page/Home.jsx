@@ -20,7 +20,7 @@ function Home() {
       <div className="text-center">
       <span><h1>Our <span style={{color:'green', borderBottom:"green solid 2px", fontWeight:"700", opacity:"0.8"}}>Services</span> </h1></span>
       </div>
-      <div className=" container">
+      <div className="">
       <CarouselH ></CarouselH>
       </div>
       </div>

@@ -1,8 +1,7 @@
 import React from 'react';
 import Rating from '@material-ui/lab/Rating';
 import EllipsisText from 'react-ellipsis-text';
-import Box from '@material-ui/core/Box';
-import { Ellipsis } from 'react-bootstrap/esm/PageItem';
+import Box from '@material-ui/core/Box'; 
 const Testimonial = () => {
   
 

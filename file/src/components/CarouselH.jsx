@@ -29,7 +29,7 @@ const CarouselH =()=>{
   return (
 <>
     <div >
-    <div className=" container mt-5 ">
+    <div className="mt-5">
     <div className="row">
     <div className="col-lg-12">
     <Carousel responsive={responsive}
@@ -41,7 +41,7 @@ const CarouselH =()=>{
     {
       Sdata.map( (value,key)=>{
         return (
-        <Cards imgsrc={value.imgsrc} title={value.title} key={key}></Cards>
+        <Cards imgsrc={value.imgsrc} title={value.title} key={key} num={key} description={value.description}></Cards>
         );
       })
     }

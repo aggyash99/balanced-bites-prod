@@ -441,23 +441,26 @@ animation: up 400ms ease-in forwards;
     transition: color 1000ms;
 }
 .program{
-    margin-top: 4.3%;
-    border: 2px solid rgba(119, 119, 112, 0.979);
-    margin-left: 1%;
+ padding: 1%;    
 }
-.link {
-    display: flex;
-    text-decoration:none;
-    color: rgb(73, 57, 57);
+.link { 
+    text-decoration:none; 
+    color: rgb(12, 12, 12);
     font-family: sans-serif;
-    font-weight: 600;
-    justify-content: center;
-    padding: 5px;
-    letter-spacing: 3px;
+    font-weight: 800;  
+    padding: 15px;
+    letter-spacing: 2px;
     font-size: 15px;
-    border: 0.1px solid grey;
-    margin-bottom: 3px;
+    border: 0.1px solid rgb(241, 234, 234);
+    margin-bottom: 1%;
     background:rgba(238, 238, 238, 0.918);
+}
+.alllink{
+    width: 100%;
+    margin-left: 2%;
+}
+.link:hover{
+    color: rgb(34, 13, 10);
 }
 .image{
     position: relative;
@@ -499,14 +502,19 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     transition: background-image 500ms ease-out;
 }
 
-.ankur{ 
-position: fixed;
-top: 50%;
-left:50%; 
-width: 100vw;
-transform: translate(-50%,-50%);
+.program-photo{
 display: flex;
 justify-content: center;
-background:rgba(0,0,0,.8);
 }
- 
+.program-text{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 600;
+
+}
+.Caro{
+    padding: 4px;
+}
+.Caro .card-img-top :hover{
+    color:#7028e4    
+}
