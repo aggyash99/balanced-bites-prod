@@ -2,6 +2,7 @@ import React from 'react';
 import img from '../../Image/services/test.png';
 import CarouselH from '../CarouselH';
 import Testimonial from '../Testimonial';
+import BMI from '../BMI'
 function Home() {
   return (
     <>
@@ -20,11 +21,14 @@ function Home() {
       <div className="text-center">
       <span><h1>Our <span style={{color:'green', borderBottom:"green solid 2px", fontWeight:"700", opacity:"0.8"}}>Services</span> </h1></span>
       </div>
-      <div className="">
+      <div className="container-fluid">
       <CarouselH ></CarouselH>
       </div>
       </div>
       
+      <div className="container-fluid">
+      <BMI/>
+      </div>
       
 
       <div className=" container">

@@ -51,21 +51,7 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
     </div>
     </div>
-    <div className="">
-    <div className="continer-fluid opens mt-3" ref="toggle" >
 
-    <BMI/>
-
-    </div>
-    </div>
-
-
-    <div className="container mt-3">
-      <div className=" d-flex justify-content-around ">
-
-      <div className="btn btn-success open" onClick={this.opens}>CALCULATE BMI</div>
-    </div>
-</div>
     <Ankur />
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Photo from '../Image/services/programs.jpg'
+import Photo from '../Image/services/program.jpg'
 import Sdata from '../Data/Sdata';
 const Program =(props)=>{
 var title,description,logo;

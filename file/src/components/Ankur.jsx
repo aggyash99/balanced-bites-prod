@@ -1,5 +1,4 @@
-import React from 'react';
-import Cards from './Card';
+import React from 'react'; 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Testimonial from '../Data/Testimonial';
