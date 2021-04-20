@@ -1,15 +1,24 @@
 .navbar {
     background-color: #ffffff !important;
+
+    box-shadow: 0px 0px 9px 0px grey;
 }
 .nav-name{
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
+   
+}
+.Navbar-image{
+    border:none;
+    width:30%;
+    height:100%
 }
 .menu_active{
     font-weight: bold;
 }
 
 .nav-name:hover{
-    color: rgba(6, 75, 0, 0.918);
+    color: rgba(75, 5, 0, 0.918);
 }
  
 .header1{
@@ -508,27 +517,74 @@ justify-content: center;
     color:#7028e4    
 }
 /*BMI start*/
-
-.BMI-start{
-    background-color: white;
-    box-shadow: 2px 2px 3px 3px grey;
-    padding: 5px;
+.BMI{
+    background-position:center;
+    background-color:no-repeat;
+    background-size:cover;
 }
-
+.BMI-start{
+/*    background: #FFEFBA;  fallback for old browsers
+    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    outline: none;
+    border: 0px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    box-shadow: 9px 8px 95px 1px rgb(190, 190, 190);
+    border-radius: 20px;
+}
+.input-BMI{ 
+}
 .input-BMI input{
-padding: 2%;
+outline: none;
+font-weight: 600;
+border: none;
+border-radius: 5px;
+border: 1px solid rgb(148, 153, 141); 
+padding: 10px;
+margin-bottom: 15px;
+text-transform: uppercase;
+text-align: center;
+
+    /*
+padding: 3%;
 border: 2px solid grey;
 border-radius: 12px;
 text-align: center;
 text-transform: uppercase;
 font-weight: 600;
-}
+align-items: center;
+margin-top: 5px;
+outline:none;
+*/}
 
 .input-MSG input {
-    padding: 2%;
+  /*  padding: 2%;
     border: 2px solid grey;
     border-radius: 12px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
+    outline:none;*/
+}
+.success{
+    background-color: transparent;
+    font-weight: 700; 
+    border: 0.1px solid grey;  
+    transition: all 500ms ease-in-out; 
+}
+.success:hover{
+    color: white;
+    background-color:rgb(25, 84, 173);
+/*
+    background: #56ab2f;  /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #a8e063, #56ab2f);  /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #a8e063, #56ab2f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.BMI-text{ 
+    color:rgb(25, 84, 173);
+    font-size: 40px;
+    font-weight: 700;
+    
 }
