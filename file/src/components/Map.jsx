@@ -7,12 +7,12 @@ const Map = ()=>{
        <div classNameName="container-fluid mx-auto">
         
         <div className="row">
-          <div className="col-md-12 mt-5">
+          <div className="col-lg-12 mt-5">
         
             <div className="card card-cascade narrower">
         
               <div className="view view-cascade gradient-card-header peach-gradient">
-                <h5 className="mb-2 text-capitalize text-center">Custom map</h5>
+                <h2 className=" text-capitalize text-center " style={{padding:"5px", fontWeight:"600"}}>Our <span style={{color:"green",fontWeight:"700",borderBottom:"2px green solid",fontSize:"35px"}}>Location</span></h2>
               </div>
         
               <div className="card-body card-body-cascade text-center ">

@@ -1,4 +1,3 @@
-import logo from "../Image/images/logo.svg";
 import  Milk  from "../Image/services/milk.jpg";
 import  fit  from "../Image/services/fit.jpg";
 import  fruits  from "../Image/services/fruits.jpg";
@@ -13,7 +12,7 @@ const Sdata = [
     {
         imgsrc : fit,
         title : "Weight Loss",
-        description:"Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way? You exercise, but the weight keeps coming back? If this is true? Then Balanced Bites is just right for you. We DO NOT believe in short-term diet plans that you follow for temporary results, We truly believe on a balanced diet with healthy food and nutrition. In our program you will get 100% customized diet plans according to your likes &amp;  dislikes, no predefined or fixed diets are there. In our diets you will get homemade and traditional food without any pills or supplements."
+        description:`Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way? You exercise, but the weight keeps coming back? If this is true? Then Balanced Bites is just right for you. We DO NOT believe in short-term diet plans that you follow for temporary results, We truly believe on a balanced diet with healthy food and nutrition. In our program you will get 100% customized diet plans according to your likes &amp;  dislikes, no predefined or fixed diets are there. In our diets you will get homemade and traditional food without any pills or supplements.`
     },
     {
         imgsrc : Milk,

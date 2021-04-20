@@ -8,7 +8,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { NavLink } from 'react-router-dom';
-
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 function Contact() {
   const [Data,setData] = useState({
     fullname:'',
@@ -24,10 +24,21 @@ function Contact() {
         [name]:value,
       };
     })
+    console.log(Data)
   }
   const formsubmit = (e)=>{
     e.preventDefault();
     console.log(Data);
+  }
+
+  const submitform = () =>{
+   if(Data.fullname === "")
+   alert('Please enter Valid Username');
+   if(Data.phone==="")
+   alert('Please enter Valid Phonenumber');
+  if(Data.email==="")
+  alert("please enter valid Email");
+  return "";
   }
   return (
     <>
@@ -44,30 +55,29 @@ function Contact() {
           
           <div className="container-fluid">
 
-          <form onSubmit = {formsubmit} className=" mx-auto">
+          <form action="Contactgmail.php"  className=" mx-auto">
             
           <div className="con text-center">
           <span >Send Message</span>
-          <h4></h4>
           </div>
             <div className="mb-3" required>
-            <label for="exampleFormControlInput1" className="form-label">Full Name</label>
-            <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname' value={Data.fullname} onChange={InputEvent} placeholder="Enter your name"/>
+            <label for="exampleFormControlInput1" style={{border:"none"}} className="form-label">Full Name</label>
+            <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname'autoComplete="off"  value={Data.fullname} onChange={InputEvent} placeholder="Enter your name"/>
             </div>
             <div className="mb-3" required>
             <label for="exampleFormControlInput2" className="form-label">Phone No.</label>
-            <input type="number" className="form-control" required id="exampleFormControlInput2" name='phone' value={Data.phone} onChange={InputEvent} placeholder="mobile number"/>
+            <input type="text" className="form-control" required id="exampleFormControlInput2" name='phone'autoComplete="off"  value={Data.phone} onChange={InputEvent} placeholder="mobile number"/>
             </div>
             <div className="mb-3" required>
             <label for="exampleFormControlInput3" className="form-label">Email address</label>
-            <input type="email" className="form-control" required id="exampleFormControlInput3" name='email' value={Data.email} onChange={InputEvent} placeholder="name@example.com"/>
+            <input type="email" className="form-control" required id="exampleFormControlInput3" name='email'autoComplete="off"  value={Data.email} onChange={InputEvent} placeholder="name@example.com" style={{}}/>
             </div>
             <div className="mb-3" required>
             <label for="exampleFormControlTextarea1" className="form-label"  >Message</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name='msg' value={Data.msg} onChange={InputEvent}></textarea>
+            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" name='msg'autoComplete="off"  value={Data.msg} onChange={InputEvent}></textarea>
             </div>
-            <div className="col-lg-6 col-sm-6 mx-auto">
-            <button className="btn btn-outline-primary" type="submit">Submit form</button>
+            <div className="col-lg-12 col-sm-12  d-flex justify-content-center">
+            <button className="btn btn-outline-primary" type="submit" onClick={submitform}>Submit form</button>
             </div>
           </form>
          
@@ -76,10 +86,10 @@ function Contact() {
       <div className="col-lg-6 col-sm-12 mt-sm-5 col-md-12">
       <div className="container icon-in-contact p-lg-5">
       <div className="">
-        <span >< CallIcon className="contact-icon" style={{fontSize:"35px"}}/>Call : +91 8700326422</span>
+        <span >< PhoneIphoneIcon className="contact-icon" style={{fontSize:"35px"}}/>Call : +91 8700326422</span>
       </div>
       <div className="mt-5">
-      <span >< EditLocationIcon className="contact-icon" style={{fontSize:"35px"}}></EditLocationIcon>Address : Hno. 288-89 G-26 Sec-3 ROHINI , DELHI</span>
+      <span >< EditLocationIcon className="contact-icon" style={{fontSize:"35px"}}></EditLocationIcon>Address : Hno. 288-89 G-26 Sec-3 Rohini , Delhi</span>
       </div>
       <div className="mt-5">
         <span ><AccessTimeIcon className="contact-icon" style={{fontSize:"35px"}}/>Timing : Mon-Sat 10:00Am - 7:00 PM</span>
@@ -88,7 +98,7 @@ function Contact() {
         <span ><MailOutlineIcon className="contact-icon"  style={{fontSize:"35px"}}></MailOutlineIcon>EMAIL : balancedbites10@gmail.com</span>
       </div>
       <div className="mt-5">
-      <span><WhatsAppIcon className="contact-icon" style={{fontSize:"35px"}}/><a href="https://play.google.com/store/apps/details?id=com.whatsapp" style={{color:"black",textDecoration:"none"}}>Click to Download</a></span>
+      <span><WhatsAppIcon className="contact-icon" style={{fontSize:"35px"}}/><a href="https://api.whatsapp.com/send?phone=+918700326422" target="_blank" style={{color:"black",textDecoration:"none"}}>Contact Us</a></span>
       </div>
       <div className="mt-5">
       <span> <InstagramIcon className="contact-icon" style={{fontSize:"35px"}}/><a href="https://www.instagram.com/balancedbites10/?r=nametag" style={{color:"black",textDecoration:"none"}}>balancedbites10</a></span>
@@ -97,15 +107,8 @@ function Contact() {
       </div>
 
         </div>
-        <div className="row d-flex justify-content-center">
-        
-      <div className="col-lg-12 col-12">
-         <div className="container-fluid">
+
          <Map/>
-         </div>
-         
-      </div>
-      </div>
       </div>
      
       
