@@ -507,3 +507,28 @@ justify-content: center;
 .Caro .card-img-top :hover{
     color:#7028e4    
 }
+/*BMI start*/
+
+.BMI-start{
+    background-color: white;
+    box-shadow: 2px 2px 3px 3px grey;
+    padding: 5px;
+}
+
+.input-BMI input{
+padding: 2%;
+border: 2px solid grey;
+border-radius: 12px;
+text-align: center;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.input-MSG input {
+    padding: 2%;
+    border: 2px solid grey;
+    border-radius: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
