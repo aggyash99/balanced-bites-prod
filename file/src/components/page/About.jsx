@@ -4,7 +4,7 @@ import logo from '../../Image/services/about.jpg';
 import BMI from '../BMI';
 import $ from 'jquery';
 import {findDOMNode} from 'react-dom';
-
+import './about.css';
 class About extends Component{
 
   opens =()=>{
@@ -24,11 +24,10 @@ class About extends Component{
 
     <div className="row">
       <div className="col-lg-12 col-md-12 mx-auto">
-      <img  className="food"  src={logo} alt="" style={{width:"100%"}}/>
-
+    
       <div className="row d-flex">
-      <div className="col-lg-8 col-md-8 pt-5 order-2">
-      <h1 className="headtext" ><><strong>Muskan Bansal</strong> Nutritionist & Diabetes</></h1>
+      <div className="col-lg-8 col-md-8 pt-5 order-lg-2">
+      <h1 className="headtext" ><><strong style={{color:"black", fontSize:"55px"}}>Muskan Bansal</strong> Nutritionist & Diabetes</></h1>
 
       <div className="col-lg-10 col-md-10 mx-auto">
       <h5 className="pt-5">One Of The Best Dietitian In Delhi</h5>
@@ -41,6 +40,9 @@ Clients can also have free consultation and doubt handling sessions, you can get
 
       </p>
       </div>
+  <div className="row">
+  
+  </div>
       </div>
 
       <div className="col-lg-4 col-md-4 order-1 pt-5 ">
@@ -52,7 +54,7 @@ Clients can also have free consultation and doubt handling sessions, you can get
     </div>
     </div>
 
-    <Ankur />
+    
 
 
     </>
