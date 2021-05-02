@@ -1,0 +1,165 @@
+
+/*
+Contact
+*/
+.contact_div{
+ background-color: rgb(250, 250, 250);   
+}
+.input input{
+    background: transparent;
+    text-decoration: none;
+    border-width: 2.3px;
+    background-color: #f5f4f7;
+    font-family: 'Times New Roman', Times, serif;
+    padding:2%;
+ 
+}
+.con{
+
+    font-family: roboto; 
+    font-size: 60px;
+    color: Red;
+}
+form {
+    
+    border-radius: 40px;
+    border: 1px solid #83f302;
+    background: rgba(248, 248, 248, 0.973);
+    padding: 10%;
+    border-width: 5px;
+    width: 100%;
+    font-weight: 500;
+    outline: none;
+    
+}
+.jumbotron{
+    background: rgba(248, 248, 248, 0.973);
+    padding: 4%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-icon{
+    margin-right: 2%;
+    color: #83f302;
+}
+.icon-in-contact{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:'Times New Roman', Times, serif;
+}
+
+ 
+
+.btncontact{
+    border-radius: 50px;
+    color:#83f302;
+    border-color: #83f302;
+}
+.btncontact:hover{
+    
+    color:white;
+    border-color: #83f302;
+    background-color: #83f302;
+}
+
+.form-group
+{
+    box-shadow: none;
+    outline: none;
+
+    transition: all .3s;
+}
+
+.form-label
+{
+    font-size:1em;
+    color:#83f302;
+    display:block;
+    opacity:1;
+    transform:translateY(-1.75em);
+    transform-origin:0 0;
+    transition:all .3s;
+
+}
+.form-control{
+    box-shadow:none;
+    background-color: rgba(0, 0, 0, 0.02);
+    font-size: small;
+    border-radius:5px;
+    border-color: #ccc;
+    border-style: none none solid none;
+    width: 100%;
+    transition: all .5s;
+    outline: none;
+   
+   
+}
+
+.form-control::placeholder{
+    color:transparent;
+}
+.form-control:focus-within{
+    box-shadow: none;
+    outline:none;
+    border-color:#83f302;
+   
+}
+.form-group:focus-within{
+    transform:scale(1.05, 1.05);
+
+}
+
+.form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
+    transform:translateY(-3.5em) scale(0.75);
+}
+.borderbottom
+{
+    border-bottom:  2px solid #f44336;
+    
+}
+.alertinline
+{
+    color:red;
+    padding:auto;
+     size:auto;
+}
+a:link{
+    color:black;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:link:hover
+{
+    transform: translateY(3px);
+    color:black;
+}
+ .contact-icon:hover, .alink:hover+.contact-icon
+{
+    transition: .3s;
+    transform:translateY(-3px);
+    color:red;
+    
+}
+.formheading
+{
+    font:xx-large;
+    font-style: oblique;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif   ;
+    color:greenyellow;
+    
+}
+
+.warningicon
+{
+    color:red;
+    display:flex;
+    justify-content: flex-end;
+    
+}
+.hiddenelement{
+    visibility: hidden;
+    display: none;
+}
