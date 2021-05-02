@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from 'react'
-import image from '../Image/pics/bmi-1.jpg'
+import image from '../Image/pics/bmi-2.jpg'
 const BMI = ()=>{
 
     const [height, Height] = useState("");
@@ -23,7 +23,6 @@ const BMI = ()=>{
       //  console.log(result);
       
     }
-
     const reset = () =>{
        
             Height("");
@@ -33,44 +32,74 @@ const BMI = ()=>{
     }
 
     return (
-    <div className="container-fluid BMI p-5" style={{backgroundImage:`url(${(image)})`, backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover"}}>
+        <div>
+
+
+    <div className="container-fluid BMI p-5" style={{backgroundImage:`url(${(image)})`}}>
+
+        <div className="row d-flex justify-content-between">
         
+        <div className="col-lg-6 result">
+        <div >
+                <p style={{textAlign:"left", fontSize:"15px", lineHeight:"0px",fontWeight:"600",color:"#A9A9A9"}}>Your BMI Score</p>
+                    <div style={{width:"50%", float:"left"}}>
+                        <input value={result}></input>
+                    </div>
+                    <div className="status">
+                        <h5>Your Category</h5>
+                        <h5 style={{alignItems:"right",fontSize:"15px",lineHeight:"7px"}}>Healthy Weight</h5>
+                        <div className="">
+                        <img className="dot" src="https://img.icons8.com/emoji/48/000000/blue-circle-emoji.png"/>
+                   </div>
+                    </div>
+                <div className="bars">
+                <div className="redbars" ></div>
+                <div className="yellowbars"></div>
+                <div className="greenbars"></div>
+                <div className="bluebars"></div>
+                </div>
+            <div className="barText">
+            <p>Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
+            </div>
+            <div className="bottom-status">
+            <p>Your BMI in Range : 12 - 15</p>
+            </div>
+
+            </div>
+            </div>
+         <div className="col-lg-6 col-md-12">
+
+       
+        <form className="BMI-start">
+         
+        <div className="row">
+        <div className="col-lg-6 col-md-6 col-12 input-BMI d-flex justify-content-center">
+        <input placeholder="Your weight (In Kg)" type="number" onChange={setweight} value={weight}  />
+        </div>
+        <div className="col-lg-6 col-md-6 col-12 input-BMI d-flex justify-content-center">
+        <input  type="number" placeholder="YOUR HEIGHT In cm" onChange={set} />
+        </div>
+        </div>
+        <div className="row">
+        <div className="col-lg-12 d-flex justify-content-around">
+        <div className="btn success " onClick={calculate}>Calculate BMI</div>
+        <div className="btn success" onClick={reset}>Reset</div>
+        </div>
+        </div>  
  
-        <div className="row" >
-        
-        <div className="col-lg-6 pt-5 mb-5">
 
-        <h1 className="text-capitalize mb-4" style={{fontWeight:"700",}}> BMI CALCULATOR</h1>
 
-        <div className="BMI-start">
-       
-        <div className = "mb-2 d-flex p-3 input-BMI justify-content-around">
-        <input  type="number" placeholder="Your height (In cm)" onChange={set} value={height} style={{}}/>
-        <input placeholder="Your weight (In Kg)" type="number" onChange={setweight} value={weight} style={{}}/>
-        </div>
-        <div className="mb-2 col-lg-12 d-flex justify-content-center">
-        <div className="btn btn-success " onClick={calculate}>calculate</div>
-         </div>  
 
-         <div className="row p-3 input-MSG" >
-             <div className="d-flex flex-column gap-3">
-            <input value={result} placeholder="Your BMI"></input>
-            <input vlaue={""} placeholder="Your Status"></input>
-        </div>
-        </div>
-
-        <div className="col-lg-12 d-flex justify-content-center">
-        <div className="btn btn-success mb-2" onClick={reset}>RESET</div>
-         </div>
-        </div>
+        </form>
         
         </div>
-       
+        
+
         </div>
         
-      
+        
 
-    </div>
+    </div></div>
 );
 }
 
@@ -81,8 +110,7 @@ export default BMI;
  <div className="row">
             <div className="col-lg-12 col-12 d-flex mb-3  justify-content-center" >
             <span>HEIGHT</span>
-            <input  type="number" placeholder="In cm" onChange={set} style={{outline:"none",padding:"5px",textAlign:"center", width:"50%"}}/>
-            </div>
+             </div>
             </div>
             <div className="row">
             <div className="col-lg-12 col-12 mb-3 d-flex justify-content-center">
