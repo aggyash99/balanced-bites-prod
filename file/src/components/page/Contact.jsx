@@ -9,6 +9,9 @@ import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import { NavLink } from 'react-router-dom';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import { faExclamationCircle} from '@fortawesome/free-solid-svg-icons';
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Contact() {
   const [Data,setData] = useState({
     fullname:'',
@@ -62,7 +65,11 @@ function Contact() {
           </div>
             <div className="mb-3" required>
             <label for="exampleFormControlInput1" style={{border:"none"}} className="form-label">Full Name</label>
+            <div className="d-flex align-items-center">
+         
             <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname'autoComplete="off"  value={Data.fullname} onChange={InputEvent} placeholder="Enter your name"/>
+            <FontAwesomeIcon icon={faExclamationCircle} style={{position:"relative",left:"-5%"}}></FontAwesomeIcon>
+            </div>
             </div>
             <div className="mb-3" required>
             <label for="exampleFormControlInput2" className="form-label">Phone No.</label>

@@ -20,15 +20,15 @@ class About extends Component{
     <>
 
 
-    <div className="container-fluid about" >
+    <div className="container-fluid about g-0">
 
-    <div className="row">
+    <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
-      <img  className="food"  src={logo} alt="" style={{width:"100%"}}/>
+      <img  className="food"  src={logo} alt=""  />
 
-      <div className="row d-flex">
-      <div className="col-lg-8 col-md-8 pt-5 order-2">
-      <h1 className="headtext" ><><strong>Muskan Bansal</strong> Nutritionist & Diabetes</></h1>
+      <div className="row d-flex g-0">
+      <div className="col-lg-8 col-md-8 pt-5 order-2 " style={{}}>
+      <h1 className="headtext " ><><strong>Muskan Bansal</strong> Nutritionist & Diabetes</></h1>
 
       <div className="col-lg-10 col-md-10 mx-auto">
       <h5 className="pt-5">One Of The Best Dietitian In Delhi</h5>

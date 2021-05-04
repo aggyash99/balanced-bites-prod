@@ -1,15 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Photo from '../Image/services/program.jpg'
+import Photo from '../Image/pics/program-4.jpg'
 import Sdata from '../Data/Sdata';
 const Program =(props)=>{
-var title,description,logo;
+var title,description,logo,second,third;
 {
     Sdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
         title = value.title;
         description = value.description;
+        second = value.second;
+        third = value.third
         logo = value.imgsrc;
         return ("");
     }
@@ -21,9 +23,9 @@ return (
     {
   
     /*TOP PHOTO*/}
-    <div className="row"style={{width:"100%"}} >
-    <div className="col-lg-12 col-12">
-    <img className=" image img-thumbnail" src={Photo} alt="sorry"></img>
+    <div className="row p-0"  >
+    <div className="col-lg-12 p-0  col-12">
+    <img className="IMAGEFORPROGRAM" src={Photo} alt="sorry"></img>
     </div>
     </div>
 <hr></hr>
@@ -36,7 +38,7 @@ return (
             {
                 Sdata.map( (value,key) =>{
                     return (
-                        <Link activeClassName="active_link" className="link" to={{pathname:'/Program',
+                        <Link   className="link" to={{pathname:'/Program',
                         state:{key : key}}} ><span>{value.title}</span> </Link>
                     );
                 })
@@ -46,18 +48,35 @@ return (
 
 
 
-        <div className="col-lg-9 col-md-8 col-sm-12 col-12">
+        <div className="col-lg-9   col-sm-12 col-md-12 col-12">
         <div className="program-photo">
-        <img src={logo} className="img-thumbnail img-fluid"></img>
+        <img src={logo} className="" style={{width:"90%",height:"70vh",backgroundColor:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}></img>
         </div>
         
-        <div className="row text-black p-5 d-flex justify-content-center">
-        <h1 className=" text-center" style={{color:"black",fontWeight:"800"}}>{title}</h1> <hr></hr>
-        <div className="col-lg-10 ">
-        
-        <p className="program-text">
+        <div className="row text-black PROGRAM-TEXT  d-flex justify-content-center">
+        <div className=" text-center PROGRAM-HEADING" >
+            <div>{title}</div>
+            <div className="under" ></div> 
+            
+            </div> 
+            <hr></hr>
+        <div className="col-lg-10 " style={{padding:"10px"}}>
+            <ul>
+            <li><p className="program-text">
             {description}
-        </p></div>
+            </p></li>
+            <li><p className="program-text1">
+            {second}
+            </p></li>
+            <li><p className="program-text2">
+            {third}
+            </p></li>
+            </ul>
+        
+        
+        
+        
+        </div>
         </div>
 
 
