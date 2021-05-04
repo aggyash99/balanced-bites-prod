@@ -12,7 +12,7 @@ const Map = ()=>{
           <div className="col-lg-2 "></div>
           <div className="col-lg-8 mt-5">
               <div className="view view-cascade gradient-card-header peach-gradient">
-                <h2 className=" text-capitalize text-center " style={{padding:"5px", fontWeight:"600"}}>Our <span className="borderbottom" style={{color:"#83f302",fontWeight:"700",fontSize:"35px"}}>Location</span></h2>
+                <h2 className=" text-capitalize text-center " style={{padding:"5px", paddingBottom:"45px", fontWeight:"600", fontSize:"55px"}}>Our <span className="borderbottom" style={{color:"#03ac11",fontWeight:"700"}}>Location</span></h2>
               </div>
             <div className="card card-cascade narrower">
               <div className="card-body card-body-cascade text-center " >

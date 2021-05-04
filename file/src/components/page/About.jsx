@@ -31,8 +31,8 @@ class About extends Component{
 
       <div className="col-lg-10 col-md-10 mx-auto">
       <h5 className="pt-5">One Of The Best Dietitian In Delhi</h5>
-      <p className="text pb-2">
-      Muskan Bansal is a young & aspiring dietitian, nutritionist and Diabetes Educator from Delhi, India. She is enthusiastically working in the field of weight management and therapeutic nutrition. She believes in a natural way of achieving a healthy lifestyle & don’t recommend artificial methods like pills and supplement.</p>
+      <p className="text pb-2 firstletter">
+      Muskan Bansal is a young & aspiring dietitian, nutritionist and Diabetes Educator <span style={{paddingLeft:"6px"}}>f</span>rom Delhi, India. She is enthusiastically working in the field of weight management and therapeutic nutrition. She believes in a natural way of achieving a healthy lifestyle & don’t recommend artificial methods like pills and supplement.</p>
       <p className="text pt-2 pb-2">
 She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with individuals who are obese or suffering from lifestyle disorders and serving personalized diet plan to the clients.
 She doesn’t believe in “give up on your favourite food” instead of this she encourages a healthy eating lifestyle by eating all your favourite food in balance with other meals. Her plan is based on balanced diet and you will get homemade and traditional food. She encourages use of food as medicine with a holistic approach.
