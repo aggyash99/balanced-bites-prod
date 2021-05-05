@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
 import Sdata from '../Data/Sdata';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboardList , faCheck,faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
 const Program =(props)=>{
 var title,description,logo,second,third;
 {
@@ -19,6 +23,7 @@ var title,description,logo,second,third;
     }
 return (
 <>
+<div>
 <div className=" container-fluid">
     {
   
@@ -72,18 +77,62 @@ return (
             {third}
             </p></li>
             </ul>
-        
-        
-        
-        
+        </div>
+        </div>
+        </div>
         </div>
         </div>
 
-
+<div className="container">
+    {/* <div className="row">
+        <div className="col-lg-6 col-md-8 col-12 ">
+        
         </div>
+    </div> */}
+    <div className="row d-flex justify-content-end" style={{paddingRight:""}}>
     
+    <div className="col-lg-5 col-md-8 col-12 p-3">
+    
+    <div className="step">
+        
+        <div className="col-12">
+         <div className = "heading-feature">
+        <div style={{fontSize:"17px"}}> 
+        <FontAwesomeIcon icon={faChevronUp}></FontAwesomeIcon>
+        </div>
+        <div style={{color: "green",fontSize:"17px"}}>
+        <FontAwesomeIcon icon={faClipboardList} ></FontAwesomeIcon>
+        </div>
+        <div>Program features</div>
+        </div>
+        </div>
+    <div className="col-12 features">
+    <FontAwesomeIcon icon={faCheck}/>
+    <div>100 % customized diet plans; no pre – defined or fixed diets.</div>
+    </div>           
+    <div className="col-12 features">
+    <FontAwesomeIcon icon={faCheck}/>
+    <div>Analysis of your routine & food preferences.</div>
+    </div>
+    <div  className="col-12 features">
+    <FontAwesomeIcon icon={faCheck}/>
+    <div>Non – restrictive diet & lifestyle plan.</div>
+    </div>
+    <div  className="col-12 features">
+    <FontAwesomeIcon icon={faCheck}/>
+    <div>Provide you multiple options in your diet plan.</div>
+    </div>
+    <div className="col-12 features">
+    <FontAwesomeIcon icon={faCheck}/>
+    <div>Ongoing support & guidance via. WhatsApp chat.</div>
+    </div> 
+    </div>
+    </div>
+    </div>
 
 </div>
+
+
 </div>
 </>
 );

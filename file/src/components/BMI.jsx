@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import image from '../Image/pics/bmi-1.jpg'; 
+import image from '../Image/pics/bmi-2.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom";
 import {Link} from 'react-router-dom'
@@ -9,8 +9,8 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close'; 
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class BMI extends Component{
 
     constructor(props)
@@ -47,7 +47,6 @@ class BMI extends Component{
         this.setState({result: ""});
         this.setState({height:"",weight:""});
         const temp = this.state.height/100;
- 
         const Atemp = this.state.weight/(temp*temp);
         const news = Atemp.toFixed(0);
         const s = findDOMNode(this.refs.slideBMI);
@@ -135,10 +134,7 @@ class BMI extends Component{
     render(){
         return(
         <div>
-       <div className="calculator">
-            <p>BMI<span className="underline"></span> CALCULATOR</p>
-            
-        </div>
+       
     <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`}}>
     
         <div className="row d-flex justify-content-between p-2 PHONE-CLASS m-0">
@@ -171,16 +167,17 @@ class BMI extends Component{
                     </div>
                     </div>
                 <div className="d-flex justify-content-around" style={{lineHeight:"0px",padding:"0px"}}>
-                <div><FontAwesomeIcon icon={faArrowDown} style={{fontSize:"15px",color:"red", visibility:this.state.redone}}></FontAwesomeIcon></div>
+                {/* <div><FontAwesomeIcon icon={faArrowDown} style={{fontSize:"15px",color:"red", visibility:this.state.redone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"yellow", visibility:this.state.yellowone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"green", visibility:this.state.greenone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"blue", visibility:this.state.blueone}}></FontAwesomeIcon></div>
-                </div>
+               */} </div> 
                 <div className="bars">
-                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
-                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
-                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+
                 <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
                 </div>
             <div className="barText">
             <p>Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
@@ -193,19 +190,23 @@ class BMI extends Component{
             </div>
          <div className="col-lg-6  col-md-12">
 
-         
+         <div className="calculator">
+            <p>BMI<span className="underline"></span> CALCULATOR</p>
+            
+        </div>
         <form className="BMI-start">
          
-        <div className="row d-flex padding-button">
-            
-        <div className="col-lg-8 p-0 col-md-12 col-12 input-BMI" ref="leave" onClick={this.click} > { /* onMouseLeave={this.leave2} */}
+        <div className="row d-flex justify-content-evenly">
+        
+        <div className="row d-flex">
+        <div className="col-lg-8 p-0 col-md-10 col-12 input-BMI" ref="leave" onClick={this.click} > { /* onMouseLeave={this.leave2} */}
         <input type="number"  onChange={this.setweight}  value={this.state.weight}  />
        
         <p className="floty" ref="toggle" onSelectStart="return false">Your weight</p> 
    
         </div>
 
-        <div className="col-lg-4  p-0">
+        <div className="col-lg-4 col-md-2 col-12 p-0">
         
         <div className=" BMI-unit-part">
         <select className="units">
@@ -215,33 +216,31 @@ class BMI extends Component{
        </div>
  
         </div>
+        </div>
 
-
-        <div className="col-lg-8 col-md-12  p-0  col-12 input-BMI" ref="leave2"  onClick={this.click1}  > { /* onMouseLeave={this.leave1} */}          
+        <div className="row d-flex "> 
+        <div className="col-lg-8 col-md-10  p-0  col-12 input-BMI" ref="leave2"  onClick={this.click1}  > { /* onMouseLeave={this.leave1} */}          
         <input  type="number" placeholder="" value={this.state.height} onChange={this.set} />
         <p className="floty" ref="toggle2">Your Height</p>
         </div>
-        <div className="col-lg-4  p-0">
+        <div className="col-lg-4 col-md-2 col-12 p-0">
     
             <div className=" BMI-unit-part">
 
         <select className="units">
-  <option value="centimeter">Centimeter</option>
-  <option value="meter">meter</option>
-  <option value="Inch">Inch</option>
-  <option value="Foot">Foot</option>
-  
-</select>
-
-
-    </div> 
+     <option value="centimeter">Centimeter</option>
+     <option value="meter">meter</option>
+     <option value="Inch">Inch</option>
+     <option value="Foot">Foot</option>
+      </select>
+         </div> 
         </div>
-       
+       </div>
 
         </div>
 
 
-        <div className="row">
+        <div className="row pb-2">
         <div className="col-lg-12 d-flex justify-content-center">
         <div className="btn success " onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
         </div>
