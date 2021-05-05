@@ -1,6 +1,6 @@
 import React from "react";
 import { Component } from "react";
-import image from '../Image/pics/bmi-1.jpg'; 
+import image from '../Image/pics/bmi-2.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom";
 import {Link} from 'react-router-dom'
@@ -9,8 +9,8 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close'; 
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class BMI extends Component{
 
     constructor(props)
@@ -30,36 +30,44 @@ class BMI extends Component{
             yellow : "hidden",
             greenone : "hidden",
             buleone : "hidden",
+            Error : "",
+            form : "",
         }
 
     }
 
     set = (props) =>{
+        if(props.target.value > 50)
+        {
+            this.setState({Error : "YES"});
+            return "";
+        }
         this.setState({height : props.target.value});
         
     }
      setweight = (props)=>{
+        if(props.target.value > 50)
+        {
+            this.setState({Error : "YES"});
+            return "";
+        }
         this.setState({weight : props.target.value});
     }
      calculate = () =>{
-        
-        this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
-        this.setState({result: ""});
-        this.setState({height:"",weight:""});
-        const temp = this.state.height/100;
- 
-        const Atemp = this.state.weight/(temp*temp);
-        const news = Atemp.toFixed(0);
         const s = findDOMNode(this.refs.slideBMI);
         $(s).addClass('slideBMI');
-    
-        if(news <= 60){
-            this.setState({result: news});
-            this.setState({height:"",weight:""});
-        }
+        this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
+        this.setState({height:"",weight:""});
+        
+        
+        const temp = this.state.height/100;
+        const Atemp = this.state.weight/(temp*temp);
+        const news = Atemp.toFixed(0);
+        this.state.result = news;
+         
    
     
-         if(this.state.result <= 19)
+        if(this.state.result <= 19)
         {
             this.setState({text: "UnderWeight",blue : 10 ,blueone:"visible" ,green:7,red:7,yellow:7,redone:"hidden",greenone:"hidden",yellowone:"hidden",dot: bluedot});
         }
@@ -75,9 +83,8 @@ class BMI extends Component{
             console.log(this.state.result)
             this.setState({text : "OverWeight",green:7,yellow:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
         }
-        else if(this.state.result < 50)
-        {
-            
+        else
+        {   
             console.log(this.state.result)
             this.setState({text : "Obese",green:7,yellow:7,blue:7,red : 10 ,dot : reddot,redone:"visible",blueone:"hidden",greenone:"hidden",yellowone:"hidden"});
         }
@@ -111,7 +118,10 @@ class BMI extends Component{
         $(e1).removeClass("floaty");
 
     }
-
+    units = (props) =>{
+        console.log(props.target.value)
+        this.setState({form : props.target.value})
+    }
     click1 = () =>{
         const e = findDOMNode(this.refs.toggle2);
         const f = findDOMNode(this.refs.leave2);
@@ -135,15 +145,17 @@ class BMI extends Component{
     render(){
         return(
         <div>
-       <div className="calculator">
-            <p>BMI<span className="underline"></span> CALCULATOR</p>
+       
+    <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
+    
+
+        <div className="row d-flex justify-content-between p-2 PHONE-CLASS m-0">
+        <div className="d-flex calculator">
+            <p>BMI<span className=""></span> CALCULATOR</p>
             
         </div>
-    <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`}}>
-    
-        <div className="row d-flex justify-content-between p-2 PHONE-CLASS m-0">
-        
-        <div className="col-lg-6 result" ref="slideBMI">
+
+        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:"visible"}}>
       
         <div style={{width:"100%"}} className="setBMI">
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
@@ -171,16 +183,17 @@ class BMI extends Component{
                     </div>
                     </div>
                 <div className="d-flex justify-content-around" style={{lineHeight:"0px",padding:"0px"}}>
-                <div><FontAwesomeIcon icon={faArrowDown} style={{fontSize:"15px",color:"red", visibility:this.state.redone}}></FontAwesomeIcon></div>
+                {/* <div><FontAwesomeIcon icon={faArrowDown} style={{fontSize:"15px",color:"red", visibility:this.state.redone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"yellow", visibility:this.state.yellowone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"green", visibility:this.state.greenone}}></FontAwesomeIcon></div>
                 <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"blue", visibility:this.state.blueone}}></FontAwesomeIcon></div>
-                </div>
+               */} </div> 
                 <div className="bars">
-                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
-                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
-                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+
                 <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
                 </div>
             <div className="barText">
             <p>Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
@@ -191,21 +204,59 @@ class BMI extends Component{
 
             </div>
             </div>
-         <div className="col-lg-6  col-md-12">
+
+
+        <div className="Slider ">
+            <div className="content-in-phone" style={{background:""}}>
+               <div className="cards-for-phone">
+               <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
+               <p>BMI RESULT</p>
+               <CloseIcon />
+               </div>
+               <div className=" Phone-bmi">
+                   <div className="answer">
+                   <h1>$</h1>
+                   </div>
+                   <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
+                   <p>Your Category</p>
+                   <p>Result</p>
+                   </div>
+               </div>
+               <div className="bars">
+                <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
+                </div>
+               </div>
+               <div className="content-2">
+               <p >
+               Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.
+               </p>
+               <p>
+                YOUR BMI RESULT :   {this.state.result}
+               </p>
+               </div>
+            </div>
+        </div>
+
+
+         <div className="col-lg-6 col-md-12">
 
          
         <form className="BMI-start">
          
-        <div className="row d-flex padding-button">
-            
-        <div className="col-lg-8 p-0 col-md-12 col-12 input-BMI" ref="leave" onClick={this.click} > { /* onMouseLeave={this.leave2} */}
-        <input type="number"  onChange={this.setweight}  value={this.state.weight}  />
+        <div className="row d-flex justify-content-evenly">
+        
+        <div className="row d-flex">
+        <div className="col-lg-8 p-0 col-md-10 col-12 input-BMI" ref="leave" onClick={this.click} > { /* onMouseLeave={this.leave2} */}
+        <input type="number " className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
        
         <p className="floty" ref="toggle" onSelectStart="return false">Your weight</p> 
    
         </div>
 
-        <div className="col-lg-4  p-0">
+        <div className="col-lg-4 col-md-2 col-12 p-0">
         
         <div className=" BMI-unit-part">
         <select className="units">
@@ -215,33 +266,31 @@ class BMI extends Component{
        </div>
  
         </div>
+        </div>
 
-
-        <div className="col-lg-8 col-md-12  p-0  col-12 input-BMI" ref="leave2"  onClick={this.click1}  > { /* onMouseLeave={this.leave1} */}          
+        <div className="row d-flex "> 
+        <div className="col-lg-8 col-md-10  p-0  col-12 input-BMI" ref="leave2"  onClick={this.click1}  > { /* onMouseLeave={this.leave1} */}          
         <input  type="number" placeholder="" value={this.state.height} onChange={this.set} />
         <p className="floty" ref="toggle2">Your Height</p>
         </div>
-        <div className="col-lg-4  p-0">
+        <div className="col-lg-4 col-md-2 col-12 p-0">
     
             <div className=" BMI-unit-part">
 
         <select className="units">
-  <option value="centimeter">Centimeter</option>
-  <option value="meter">meter</option>
-  <option value="Inch">Inch</option>
-  <option value="Foot">Foot</option>
-  
-</select>
-
-
-    </div> 
+     <option onChange={this.units} value=  "centimeter">Centimeter</option>
+     <option onChange={this.units} value= "meter ">meter</option>
+     <option onChange={this.units} value = "Inch" >Inch</option>
+     <option onChange={this.units} value = " Foot" >Foot</option>
+      </select>
+         </div> 
         </div>
-       
+       </div>
 
         </div>
 
 
-        <div className="row">
+        <div className="row pb-2">
         <div className="col-lg-12 d-flex justify-content-center">
         <div className="btn success " onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
         </div>

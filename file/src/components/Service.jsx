@@ -16,6 +16,7 @@ return (
             num = {index}
             imgsrc = {value.imgsrc}
             title = {value.title}
+            service = {value.service}
             ></ServicesCards>
           )
 
