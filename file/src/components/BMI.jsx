@@ -31,40 +31,47 @@ class BMI extends Component{
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
-            form : "",
+            heightstatus : "",
+            weightstatus : ""
         }
 
     }
 
     set = (props) =>{
-        if(props.target.value > 50)
-        {
-            this.setState({Error : "YES"});
-            return "";
-        }
+        // if(props.target.value > 50)
+        // {
+        //     this.setState({Error : "YES"});
+        //     return "";
+        // }
         this.setState({height : props.target.value});
         
     }
      setweight = (props)=>{
-        if(props.target.value > 50)
-        {
-            this.setState({Error : "YES"});
-            return "";
-        }
+        // if(props.target.value > 50)
+        // {
+        //     this.setState({Error : "YES"});
+        //     return "";
+        // }
         this.setState({weight : props.target.value});
     }
      calculate = () =>{
         const s = findDOMNode(this.refs.slideBMI);
         $(s).addClass('slideBMI');
+        const f = findDOMNode(this.refs.Phoneslider)
+        $(f).addClass('slide-phone')
         this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
         this.setState({height:"",weight:""});
-        
-        
+      
+        //const weightcategory 
+
+
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus == "centimeter"){
         const temp = this.state.height/100;
         const Atemp = this.state.weight/(temp*temp);
         const news = Atemp.toFixed(0);
-        this.state.result = news;
-         
+        this.setState({result : news});
+        }
+        
    
     
         if(this.state.result <= 19)
@@ -118,14 +125,21 @@ class BMI extends Component{
         $(e1).removeClass("floaty");
 
     }
-    units = (props) =>{
-        console.log(props.target.value)
-        this.setState({form : props.target.value})
+    heightunits = (props) =>{
+        if(props.target.name == "weightstatus")
+        {
+            console.log('weight')
+            this.setState({weightstatus : props.target.value});
+        }
+        else{
+        this.setState({heightstatus : props.target.value});      
+        console.log('height')
+        }
     }
+    
     click1 = () =>{
         const e = findDOMNode(this.refs.toggle2);
         const f = findDOMNode(this.refs.leave2);
-        
         const e1 = findDOMNode(this.refs.toggle);
         const f1 = findDOMNode(this.refs.leave);
         $(f).addClass("leave");
@@ -140,14 +154,16 @@ class BMI extends Component{
     close = () =>{
         const c = findDOMNode(this.refs.slideBMI);
         $(c).removeClass('slideBMI')
+        const f = findDOMNode(this.refs.Phoneslider)
+        $(f).removeClass('slide-phone')
     }
 
     render(){
         return(
         <div>
-       
+  
     <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
-    
+    { console.log(this.state.heightstatus)}
 
         <div className="row d-flex justify-content-between p-2 PHONE-CLASS m-0">
         <div className="d-flex calculator">
@@ -155,7 +171,7 @@ class BMI extends Component{
             
         </div>
 
-        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:"visible"}}>
+        <div className="col-lg-6 result " ref="slideBMI" >
       
         <div style={{width:"100%"}} className="setBMI">
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
@@ -206,20 +222,21 @@ class BMI extends Component{
             </div>
 
 
-        <div className="Slider ">
-            <div className="content-in-phone" style={{background:""}}>
+
+            <div className="Slider" ref="Phoneslider">
+            <div className="content-in-phone">
                <div className="cards-for-phone">
                <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
                <p>BMI RESULT</p>
-               <CloseIcon />
+                <CloseIcon ref="closephone" onClick={this.close}/> 
                </div>
                <div className=" Phone-bmi">
                    <div className="answer">
-                   <h1>$</h1>
+                   <h1>{this.state.result}</h1>
                    </div>
                    <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
                    <p>Your Category</p>
-                   <p>Result</p>
+                   <p>{this.state.text}</p>
                    </div>
                </div>
                <div className="bars">
@@ -243,7 +260,7 @@ class BMI extends Component{
 
          <div className="col-lg-6 col-md-12">
 
-         
+
         <form className="BMI-start">
          
         <div className="row d-flex justify-content-evenly">
@@ -259,9 +276,10 @@ class BMI extends Component{
         <div className="col-lg-4 col-md-2 col-12 p-0">
         
         <div className=" BMI-unit-part">
-        <select className="units">
-        <option value="centimeter">Pounds</option>
-        <option value="meter">kg</option> 
+        <select className="units" name="weightstatus" onClick={this.heightunits}>
+        <option value="select">Select</option>
+        <option value="Kg">kg</option> 
+        <option value="Pounds">Pounds</option>
         </select>
        </div>
  
@@ -277,11 +295,12 @@ class BMI extends Component{
     
             <div className=" BMI-unit-part">
 
-        <select className="units">
-     <option onChange={this.units} value=  "centimeter">Centimeter</option>
-     <option onChange={this.units} value= "meter ">meter</option>
-     <option onChange={this.units} value = "Inch" >Inch</option>
-     <option onChange={this.units} value = " Foot" >Foot</option>
+        <select className="units" name="heightstatus" onClick={this.heightunits}>
+    <option value="select">Select</option>
+    <option value = " Foot" >Feet</option>
+     <option value=  "centimeter">Centimeter</option>
+     <option value= "meter ">meter</option>
+     <option value = "Inch" >Inch</option>
       </select>
          </div> 
         </div>
