@@ -1,0 +1,48 @@
+
+.food{
+    max-height: 80vh;
+    min-height: 0vh;
+    width:100%;
+    opacity:0.9;
+    background: transparent;
+}
+.text{
+    
+    font-family: 'Antic Didone', serif;
+letter-spacing: 1px;
+font-size: 20px;
+
+}
+
+.headtext{
+font-family: 'Roboto', sans-serif;
+font-size: 45px;
+color:#03ac11;
+text-align: center;
+}
+
+.about{
+    background: rgba(245, 245, 245, 0.877);
+}
+
+.client{
+    width: 100%;
+    background: transparent;
+}
+
+.maincards{
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.firstletter::first-letter
+{
+    font-size:4.7rem;
+    float:left;
+    padding-top: 0px;
+  
+    line-height:50px;
+}
