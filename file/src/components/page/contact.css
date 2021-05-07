@@ -290,8 +290,7 @@ a:link:hover
     position:relative;
     left:-60px;
     top:25px;
-    
-    vertical-align: bottom;
+     
 }
 .hiddenelement{
     visibility: hidden;
@@ -312,9 +311,7 @@ a:link:hover
 {
     border-color: #03ac11;
 }
-.acceptedborder:focus-within{
-     
-}
+ 
 @media (max-width:650px) {
     .paddingmobile
     {
