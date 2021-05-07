@@ -11,6 +11,7 @@ import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Program from './components/Program';
+import Newcards from './components/Newcards'
 function App() {
   return (
     <BrowserRouter>
@@ -21,7 +22,8 @@ function App() {
         <Route exact path = "/About" component={About}/>
         <Route exact path = "/Contact" component={Contact}/>
         <Route exact path = "/Service" component={Service}/>
-        <Route exact path ="/Program" component={Program}></Route>
+        <Route exact path ="/Program" component={Program} />
+        <Route exact path ="/Newcards" component={Newcards}></Route>
         <Redirect to="/"/>
       </Switch>
 

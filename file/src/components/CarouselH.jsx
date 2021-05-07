@@ -33,10 +33,10 @@ const CarouselH =()=>{
     <div className="row">
     <div className="col-lg-12">
     <Carousel responsive={responsive}
-    keyBoardControl={false}
+    keyBoardControl={true}
     removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
     showDots={false}
-    arrows={false}
+    arrows={true}
     >
     {
       Sdata.map( (value,key)=>{

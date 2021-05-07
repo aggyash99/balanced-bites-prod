@@ -38,10 +38,10 @@ class ServicesCards extends Component{
   <div class="card-body servicecards">
     <p class="title" style={{fontSize:"20px",fontWeight:"700",color:"purple"}}>{this.props.title}</p>
   </div>
-  <div className="content d-flex flex-column justify-content-center" ref="toggle">
-        <h1 className="text-center " style={{fontSize:"25px",fontWeight:"700",color:"red"}}>{this.props.title}</h1>
-        <span>Diet therapy for diabetes mellitus involves a well-balanced diet plan to manage blood glucose levels as well as stress</span>
-        <Link className="btn btn-primary" to={{pathname:'/Program',state:{key : this.props.num}}} ><span >Go More</span></Link>
+  <div className="content  d-flex flex-column justify-content-around" ref="toggle">
+        {/* <h1 className="text-center " style={{fontSize:"25px",fontWeight:"700",color:"red"}}>{this.props.title}</h1> */}
+        <span style={{fontSize:"20px"}}>{this.props.service}</span>
+        <Link className="btn btn-primary "  to={{pathname:'/Program',state:{key : this.props.num}}} ><span >Go More</span></Link>
   </div>
 </div>
 

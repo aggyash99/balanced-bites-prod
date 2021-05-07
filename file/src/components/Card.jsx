@@ -11,9 +11,8 @@ const Card = (props)=> {
                 <div className="card-body">
                 <h5 className="card-title">{props.title}</h5>
                 <p className="card-text"><EllipsisText text={`${props.description}`} length="90" /></p>
-                <Link className="btn btn-primary service"  to={{pathname:'/Program'
-    ,state:{key : props.num}
-    }} ><span style={{fontWeight:"600"}}>Read More</span></Link>
+                <div style={{display:"flex", justifyContent:"center"}}> 
+                <Link className="btn btn-primary service"  to={{pathname:'/Program',state:{key : props.num}}} ><span style={{fontWeight:"600"}}>Read More</span></Link></div>
                 </div>
               </div>
               </div>
