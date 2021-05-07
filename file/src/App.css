@@ -340,7 +340,8 @@ font-weight: bold;
     opacity: 0.7;  
 }
 .btn{
-    border-radius: 50px;
+   /*x border-radius: 50px;*/
+   
 }
 
 /*carousel home*/
@@ -566,6 +567,7 @@ justify-content: center;
     background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
     /*background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
  
+    padding:4%;
     border: 0px solid rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;

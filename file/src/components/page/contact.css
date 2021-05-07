@@ -6,16 +6,31 @@ Contact
  background-color: rgb(250, 250, 250);   
 }
 
-.input input{
+.inputcontact input{
     background: transparent;
     text-decoration: none;
     border-radius: 1px;
+    height:40px;
     border-width: 2.3px;
     background-color: #f5f4f7;
     font-family: 'Roboto', sans-serif;
-    padding:0px;
+    
     font-size: large;
  
+}
+
+@media (max-width:550px)
+{
+    .paddingtextarea{
+        padding-left:30px;
+        padding-right:30px;
+
+    }
+    .formheading{
+        
+        text-align: center;
+        display: flex;
+    }
 }
 .con{
 
@@ -24,14 +39,15 @@ Contact
     font-size: 60px;
     color: Red;
 }
-form {
+.formcontact form {
     
     border-radius: 15px;
     border: 1px solid #03ac11;
     background: rgba(248, 248, 248, 0.973);
     padding-top: 5%;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-left:0px;
+    padding-right: 0px;
     border-width: 4px;
     width: 100%;
     font-weight: 500;
@@ -40,15 +56,14 @@ form {
     /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
 }
 .paddingtextarea{
-    padding-top: 25px;
-    padding-bottom:25px;
+    padding-top: 10px;
+    padding-bottom:10px;
 }
-textarea{
+.textmessage{
     
-    height:20px;
+    height:125px;
     max-height: 800px;
-    border-radius: 0px;
-    font-size: xx-large;
+    border:2px;    font-size: xx-large;
    
 }
 .jumbotron{
@@ -70,32 +85,33 @@ textarea{
     font-size: 20px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;}
-.btn{
-width:100px;
-border-radius: 10px;
-}
-.input .btn{
+
+.inputcontact .btncontact{
   
 border-radius: 50px;
 border-radius: 50px;
-font-size:24px;
+height:40px;
+font-size: large;
 color:#03ac11;
 border-color: #03ac11;
 }
  
 
-.btncontact{
+.btncontact {
+    width:100px;
     border-radius: 50px;
-    font-size:14px;
+    height:14px;
+   
     color:#03ac11;
     border-color: #03ac11;
 
 }
 @media (min-width:650px) {
-    input .btncontact
+    inputcontact .btncontact
     {
         font-size:20px;
     }
+    
     
 }
 .btncontact:hover{
@@ -119,7 +135,7 @@ border-color: #03ac11;
     position: absolute;
     display:block;
     opacity:1;
-    transform:translateY(-1.75em);
+    transform:translateY(-1.75em) translateX(15px);
     transform-origin:0 0;
     transition:all .3s;
     font-family: 'Roboto', sans-serif;
@@ -156,7 +172,7 @@ border-color: #03ac11;
 }
 
 .form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
-    transform:translateY(-2.5em) scale(0.75);
+    transform:translateY(-3em) scale(0.75);
     color:#03ac11;
 }
 .borderbottom
@@ -288,9 +304,15 @@ a:link:hover
     color:red;
     display:block;
     position:relative;
+<<<<<<< HEAD
     left:-60px;
     top:25px;
      
+=======
+    left:-63px;
+    top:13px;
+
+>>>>>>> acd11ce3d828381104e29431656e731950924e97
 }
 .hiddenelement{
     visibility: hidden;
@@ -332,6 +354,7 @@ a:link:hover
 }
 .textmessagelabel{
    position:absolute;
+   transform:translateX(15px);
     font-family: 'Roboto', sans-serif;
     font-size:large;
     transform-origin: 0 0;

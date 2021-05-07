@@ -3,8 +3,11 @@
     max-height: 80vh;
     min-height: 0vh;
     width:100%;
-    opacity:0.9;
-    background: transparent;
+    background-attachment: fixed; 
+    background-image: url('../../Image/services/about.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+   
 }
 .text{
     
@@ -12,21 +15,50 @@
 letter-spacing: 1px;
 font-size: 20px;
 
+
 }
+
 
 .headtext{
+    display: block;
 font-family: 'Roboto', sans-serif;
-font-size: 45px;
+font-size: 30px;
 color:#03ac11;
-text-align: center;
-}
 
+}
+.subheadtext
+{
+    font-size:35px;
+    padding:20px
+}
+@media (min-width:768px) {
+    
+.headalignment
+{
+    text-align: left;
+    padding-left: 9%;
+    margin-left:0px ;
+}
+}
+@media (max-width:767px)
+{
+    .headalignment
+    {
+        text-align:left;
+        padding-left: 5%;
+    }
+    .text
+    {
+        padding-left: 5%;
+    }
+}
 .about{
     background: rgba(245, 245, 245, 0.877);
 }
 
 .client{
     width: 100%;
+    height: 500px;
     background: transparent;
 }
 
@@ -45,4 +77,11 @@ text-align: center;
     padding-top: 0px;
   
     line-height:50px;
+}
+
+.greenHighlight{
+    color:#03ac11;
+    font-size:22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
