@@ -428,7 +428,37 @@ font-weight: bold;
 /*carousel home*/
 .carousel{ 
     padding: 3%;
+}
+.Home-carousel{
+    letter-spacing: 1.5px;
+    font-size: 45px;
+    font-weight : 800;
+    color: rgb(11,70,0.5);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     line-height: 3.3rem;
+    gap:1%;
     }
+ 
+.Home-carousel p {
+    position: relative; 
+    color: rgb(180, 32, 32);
+}
+.Home-carousel span {
+    position: relative; 
+    color: rgb(91, 141, 17);
+}
+.Home-carousel p::before{
+    content:"";
+ 
+    border-radius: 4px;
+    position: absolute;
+    background:rgb(0, 0, 0);
+    bottom:0;
+    left:0;
+    right: 0;
+
+}
+
 .appoint{
    background-attachment: fixed; 
     background-image: url("https://s3-eu-west-2.amazonaws.com/images.s3.cpm-int.com/wp-content/uploads/2017/01/26151812/customer_care_WIDE1.jpg");
@@ -653,9 +683,6 @@ transition: all 500ms ;
         left: 50%;
         top: 50%;
         transform: translate(-50%,-50%);
-    }
-    .BMI-unit-part{
-        padding-top: 10px;
     }
     .floty{
        
@@ -1190,4 +1217,7 @@ justify-content: space-between;
     .floaty{
         animation: upperText 70ms  forwards;  
     }
+}
+.caouselBody{
+    background : rgb(218, 248, 108)
 }

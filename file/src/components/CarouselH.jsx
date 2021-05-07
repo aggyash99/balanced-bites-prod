@@ -3,7 +3,7 @@ import Cards from './Card';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Sdata from '../Data/Sdata';
-
+import Styled from 'styled-components'
 
 const responsive = {
   superLargeDesktop: {
@@ -27,31 +27,25 @@ const responsive = {
 const CarouselH =()=>{
   
   return (
-<>
-    <div >
-    <div className="mt-5">
-    <div className="row">
-    <div className="col-lg-12">
-    <Carousel responsive={responsive}
+<> 
+
+
+    <MyCarousel responsive={responsive}
     keyBoardControl={true}
     removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
     showDots={false}
     arrows={true}
     >
-    {
+     {
       Sdata.map( (value,key)=>{
         return (
-        <Cards imgsrc={value.imgsrc} title={value.title} key={key} num={key} description={value.description}></Cards>
+        <Cards imgsrc={value.imgsrc} title={value.title} key={key} num={key} description={value.service}></Cards>
         );
       })
-    }
-    </Carousel>
-
-    </div>
-    </div>
-
-    </div>
-    </div>
+    }  
+    </MyCarousel>
+  
+ 
 </>
 );
 }
@@ -59,3 +53,14 @@ const CarouselH =()=>{
 
 
 export default CarouselH;
+
+const MyCarousel = Styled(Carousel)`
+margin-top : 50px; 
+margin-bottom : 50px;
+li:hover{ 
+}
+ul li button{
+  color : rgb(150,158,171);;
+} 
+`
+

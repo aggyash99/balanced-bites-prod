@@ -66,7 +66,7 @@ return (
             </div> 
             <hr></hr>
         <div className="col-lg-10 " style={{padding:"10px"}}>
-            <ul>
+            <ul style={{listStyle:"none"}}>
             <li><p className="program-text">
             {description}
             </p></li>
