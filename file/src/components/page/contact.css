@@ -304,15 +304,9 @@ a:link:hover
     color:red;
     display:block;
     position:relative;
-<<<<<<< HEAD
-    left:-60px;
-    top:25px;
-     
-=======
     left:-63px;
     top:13px;
 
->>>>>>> acd11ce3d828381104e29431656e731950924e97
 }
 .hiddenelement{
     visibility: hidden;
