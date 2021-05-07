@@ -17,14 +17,14 @@ function Home() {
       </div>
 
 
-      <div className="carousel" style={{ backgroundColor:"#F8F8F8"}}>
+      <div className="carousel caouselBody" >
 
-      <div className="text-center">
-      <span><h1>Our <span style={{color:'green', borderBottom:"green solid 2px", fontWeight:"700", opacity:"0.8"}}>Services</span> </h1></span>
+      <div className="text-center Home-carousel d-flex justify-content-center">
+      <p>Our</p><span> Programs</span>
       </div>
-      <div className="container-fluid">
+     
       <CarouselH ></CarouselH>
-      </div>
+     
       </div>
       
       <div className="">

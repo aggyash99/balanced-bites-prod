@@ -36,12 +36,12 @@ class ServicesCards extends Component{
   <div class="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ border:"2px solid greenyellow",Width:"18rem",height:"50vh",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:`url(${this.props.imgsrc})`}}>
   
   <div class="card-body servicecards">
-    <p class="title" style={{fontSize:"20px",fontWeight:"700",color:"purple"}}>{this.props.title}</p>
+    <p class="title">{this.props.title}</p>
   </div>
-  <div className="content  d-flex flex-column justify-content-around" ref="toggle">
+  <div className="content" ref="toggle">
         {/* <h1 className="text-center " style={{fontSize:"25px",fontWeight:"700",color:"red"}}>{this.props.title}</h1> */}
-        <span style={{fontSize:"20px"}}>{this.props.service}</span>
-        <Link className="btn btn-primary "  to={{pathname:'/Program',state:{key : this.props.num}}} ><span >Go More</span></Link>
+        <div><span style={{fontSize:"20px"}}>{this.props.service}</span></div>
+        <div className=""><Link className="btn btn-primary button-service" to={{pathname:'/Program',state:{key : this.props.num}}} ><span >Read More</span></Link></div>
   </div>
 </div>
 
