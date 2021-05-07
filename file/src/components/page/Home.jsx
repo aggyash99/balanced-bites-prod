@@ -20,7 +20,7 @@ function Home() {
       <div className="carousel caouselBody" >
 
       <div className="text-center Home-carousel d-flex justify-content-center">
-      <p>Our</p><span> Programs</span>
+      <p>Our</p><span className="borderbottom"> Programs</span>
       </div>
      
       <CarouselH ></CarouselH>

@@ -1,13 +1,21 @@
 
 .food{
-    max-height: 80vh;
-    min-height: 0vh;
+  height: 300px;
     width:100%;
     background-attachment: fixed; 
     background-image: url('../../Image/services/about.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
    
+}
+.alignbottomabout
+{
+    padding-top: 209px;
+}
+.gradientbg
+{
+    background-image:linear-gradient(54deg , #f6f6f6 0,#f6f6f6 50%,transparent 50%,transparent 100%);
+
 }
 .text{
     
@@ -29,14 +37,15 @@ color:#03ac11;
 .subheadtext
 {
     font-size:35px;
-    padding:20px
+    padding:20px;
+    padding-left:2px;
 }
 @media (min-width:768px) {
     
 .headalignment
 {
     text-align: left;
-    padding-left: 9%;
+    padding-left: 5%;
     margin-left:0px ;
 }
 }
@@ -54,6 +63,7 @@ color:#03ac11;
 }
 .about{
     background: rgba(245, 245, 245, 0.877);
+    overflow: hidden;
 }
 
 .client{
@@ -84,4 +94,41 @@ color:#03ac11;
     font-size:22px;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+}
+.leftimageabout
+{width: 500px;
+    
+
+}
+.righttextabout
+{
+    padding-top: 100px;
+    padding-bottom:100px;
+    padding-left: 50px;
+    background-image: linear-gradient( to right, 
+        rgb(0, 255, 149), rgb(0, 255, 149)) /*, url('../../Image/services/fruits.jpg')   background-size: 150%;*/;
+ 
+    
+}
+
+.textrightsideabout
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+.btnabout
+{
+    border-radius: 50px;
+
+    border-color: black  ;
+    background-color: rgba(0, 255, 149, 0);
+    transition:.3s;
+}
+.btnabout:hover
+{
+    background-color: black;
+    border-color: black;
+    color:rgb(0, 255, 149);
+
+
 }
