@@ -9,7 +9,18 @@
     background-size: 100%;
     background-repeat: no-repeat;
    
-}}
+}
+.headtext
+{
+    font-size:200px;
+    
+
+}
+.subheadtext
+{
+    font-size: 20px;
+}
+}
 .alignbottomabout
 {
     padding-top: 309px;
