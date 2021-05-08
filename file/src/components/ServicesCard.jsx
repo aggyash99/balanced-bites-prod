@@ -39,9 +39,9 @@ class ServicesCards extends Component{
     <p class="title">{this.props.title}</p>
   </div>
   <div className="content" ref="toggle">
-        {/* <h1 className="text-center " style={{fontSize:"25px",fontWeight:"700",color:"red"}}>{this.props.title}</h1> */}
-        <div><span style={{fontSize:"20px"}}>{this.props.service}</span></div>
-        <div className=""><Link className="btn btn-primary button-service" to={{pathname:'/Program',state:{key : this.props.num}}} ><span >Read More</span></Link></div>
+ 
+        <div><span style={{fontSize:"15px"}}>{this.props.service}</span></div>
+        <div className=""><Link className="success-for-service" to={{pathname:'/Program',state:{key : this.props.num}}} ><span className="success-for-service-text">Read More</span></Link></div>
   </div>
 </div>
 

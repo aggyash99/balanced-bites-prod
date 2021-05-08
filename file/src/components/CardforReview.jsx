@@ -1,6 +1,5 @@
 import {Link} from 'react-router-dom'
-import Rating from '@material-ui/lab/Rating';
-import logo from '../Image/Review/letter2.png'
+import Rating from '@material-ui/lab/Rating'; 
 import google from '../Image/Review/google.png'
 const CardforReview =(props)=>{
 
@@ -21,7 +20,7 @@ const CardforReview =(props)=>{
         </p>
         <div className="ENDbutton">
         <a href={props.link}><img className="googleImage" src={google} alt="google "/></a>
-        <Link to="/" className="buttonLink">Read More</Link>
+        <Link to={props.link} className="buttonLink">Read More</Link>
         </div>
         </div>
         </div>
