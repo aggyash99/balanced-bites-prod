@@ -5,7 +5,7 @@ const Service = () =>{
 
 return (
 
-  <div className=" container p-0">
+  <div className=" container">
 
     <div  className="row mt-5 p-5">
       {
