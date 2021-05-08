@@ -194,7 +194,7 @@ function Contact() {
       <Modal onClose={() => clearform()} show={show} />
       <div className=" container-fluid contact_div">
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
-          <h1 className="text-center" style={{ fontSize: "50px" }}>Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
+          <h1 className="text-center contactheading" >Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
         </div>
 
         <div className="row">
@@ -208,7 +208,7 @@ function Contact() {
                 <div className="row">
                   <div className="col-1 d-sm d-xs-block"></div>
                   <div className="con col-sm-10" style={{ paddingBottom: "5%", verticalAlign: "Center" }}>
-                    <span className="formheading">Send Message</span>
+                    <span className="formheading">Contact Us</span>
                   </div></div>
                 <div className="row form-group">
                   <div className="col-1 d-none d-sm-block"></div>
@@ -251,7 +251,7 @@ function Contact() {
 
                 <div className="col-lg-12 col-sm-12  d-flex justify-content-center">
 
-                  <input className="btn btn-outline-primary btncontact" type="submit" name="submit" onClick={submitform} />
+                  <input className=" btncontact" type="submit" name="submit" onClick={submitform} />
                 </div>
               </form>
 

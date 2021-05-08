@@ -36,10 +36,10 @@ const Modal = props => {
                             </div>
                     <div className="modal-body ">
                         <div className="row">
-                            <div className="col-12 justify-content-center">We will contact you as soon as possible </div>
+                            <div className="col-12 justifycontentcenter">We will contact you as soon as possible </div>
                         </div>
                         <div className="row">
-                            <div className="col-12 justify-content-center" >
+                            <div className="col-12 justifycontentcenter" >
                     <button onClick={props.onClose} className="btn btn-outline btnmodal">Okay!</button>
                     </div></div></div>
                 </div>
