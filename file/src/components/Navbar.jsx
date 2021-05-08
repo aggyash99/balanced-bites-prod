@@ -1,7 +1,10 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
 import logo from '../Image/logo.png';
+import $ from 'jquery';
 function Navbar() {
+  
+
   return (
       <>
     {
@@ -25,7 +28,7 @@ function Navbar() {
           <NavLink activeClassName = "menu_active" className="nav-link" to="/Service"><span className="nav-name">Program</span></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink activeClassName = "menu_active" className="nav-link" to="/Contact"><span className="nav-name">Contact</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link" to="/Contact"><span className="nav-name" >Contact</span></NavLink>
         </li>
         <li className="nav-item">
           <NavLink activeClassName = "menu_active" className="nav-link" to="/About"><span className="nav-name">About</span></NavLink>

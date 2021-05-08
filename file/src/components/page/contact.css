@@ -19,7 +19,7 @@ Contact
  
 }
 
-@media (max-width:550px)
+@media (max-width:580px)
 {
     .paddingtextarea{
         padding-left:30px;
@@ -89,25 +89,28 @@ Contact
 .inputcontact .btncontact{
   
 border-radius: 50px;
-border-radius: 50px;
-height:40px;
-font-size: large;
-color:#03ac11;
-border-color: #03ac11;
+display: flex;
+    width:102px;
+    border:none;
+    border-radius: 50px;
+    height:41px;
+    font-family:  'Roboto', sans-serif;
+   font-size: 22px;
+    color:#03ac11;
+    border:.5px solid;
+    border-color: #03ac11;
+  
+    vertical-align:-webkit-baseline-middle;
+    justify-content: center;
+    box-shadow: none;
+
+transition: .3s;
 }
  
 
-.btncontact {
-    width:100px;
-    border-radius: 50px;
-    height:14px;
-   
-    color:#03ac11;
-    border-color: #03ac11;
 
-}
-@media (min-width:650px) {
-    inputcontact .btncontact
+@media (max-width:650px) {
+    .inputcontact .btncontact
     {
         font-size:20px;
     }
@@ -115,10 +118,11 @@ border-color: #03ac11;
     
 }
 .btncontact:hover{
-    
+    transition: .3s;
     color:white;
     border-color: #03ac11;
     background-color: #03ac11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-group
@@ -164,6 +168,7 @@ border-color: #03ac11;
     outline:none;
     border-color:#03ac11;
    
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-group:focus-within{
@@ -173,6 +178,7 @@ border-color: #03ac11;
 
 .form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
     transform:translateY(-3em) scale(0.75);
+    
     color:#03ac11;
 }
 .borderbottom
@@ -282,6 +288,7 @@ a:visited{
     transform:translateY(-3px);
     color:red;
     
+    
 }
  .contact-icon-hover
 {
@@ -293,11 +300,38 @@ a:visited{
 }
 .formheading
 {
-    font-size:54px;
+    font-size:52px;
     font-family: 'Roboto', sans-serif;
      color:Black;
-     justify-content: center   ;
-}   
+     display:flex;
+     justify-content: center;
+}  
+
+.contactheading
+{
+    font-size:50px;
+}
+.mapheading
+{
+    padding:5px;
+    padding-bottom: 45px;
+    font-weight: 600;
+    font-size: 55px;
+}
+
+@media (max-width:660px)
+{
+    .contactheading{
+        font-size:35px;
+    }
+    .formheading{
+        font-size:30px;
+    }
+    .mapheading{
+        font-size:37.5px;
+        padding-bottom: 15px;
+    }
+}
 
 .warningicon
 {
