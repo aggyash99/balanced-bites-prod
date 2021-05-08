@@ -33,8 +33,11 @@ return (
     <img className="IMAGEFORPROGRAM" src={Photo} alt="sorry"></img>
     </div>
     </div>
-<hr></hr>
-        <div className=" text-center program-header" > <span style={{color:"green",fontWeight:"600",fontSize:"50px"}}>Our </span><span style={{fontSize:"30px",fontWeight:"600"}}>Service</span></div>
+ 
+        <div className=" text-center program-header" >
+        <span className="OurStyle">Our</span>
+        <span className="serviceStyle borderbottom">Service</span>
+        </div>
     <div className="row mt-5">  
         
         <div className="col-lg-3 col-md-12 col-sm-12 col-12 d-flex">
@@ -55,17 +58,22 @@ return (
 
         <div className="col-lg-9   col-sm-12 col-md-12 col-12">
         <div className="program-photo">
-        <img src={logo} className="" style={{width:"90%",height:"70vh",backgroundColor:"no-repeat", backgroundPosition:"center", backgroundSize:"cover"}}></img>
+        <img src={logo} className="" style={{backgroundColor:"no-repeat", backgroundPosition:"center", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
         </div>
         
-        <div className="row text-black PROGRAM-TEXT  d-flex justify-content-center">
+      
+        </div>
+        </div>
+
+
+
+        <div className="row text-black   d-flex justify-content-center">
         <div className=" text-center PROGRAM-HEADING" >
             <div>{title}</div>
             <div className="under" ></div> 
             
-            </div> 
-            <hr></hr>
-        <div className="col-lg-10 " style={{padding:"10px"}}>
+            </div>  
+        <div className="col-lg-12 pt-3" style={{padding:"0px 10px"}}>
             <ul style={{listStyle:"none"}}>
             <li><p className="program-text">
             {description}
@@ -79,11 +87,10 @@ return (
             </ul>
         </div>
         </div>
-        </div>
-        </div>
+
         </div>
 
-<div className="container">
+<div className="container-fluid p-5">
     {/* <div className="row">
         <div className="col-lg-6 col-md-8 col-12 ">
         
@@ -91,7 +98,7 @@ return (
     </div> */}
     <div className="row d-flex justify-content-end" style={{paddingRight:""}}>
     
-    <div className="col-lg-5 col-md-8 col-12 p-3">
+    <div className="col-lg-12 col-md-8 col-12 p-3">
     
     <div className="step">
         
@@ -108,7 +115,7 @@ return (
         </div>
     <div className="col-12 features">
     <FontAwesomeIcon icon={faCheck}/>
-    <div>100 % customized diet plans; no pre – defined or fixed diets.</div>
+    <div>100 % customized diet plans no pre – defined or fixed diets.</div>
     </div>           
     <div className="col-12 features">
     <FontAwesomeIcon icon={faCheck}/>

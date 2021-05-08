@@ -64,7 +64,7 @@ const Sdata = [
     
     {
         imgsrc:PCOS,
-        title:"PRE&Amp POST NATAL CARE",
+        title:"Pregnancy",
         description :"If you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",
         third : "Our Post-natal plans involve losing the baby weight in a healthy and nutritional manner to get your body back to shape. If there’s anything we know, it’s that achieving a healthy weight post-baby can be a struggle. It can be stressful taking care of a newborn, adjusting to a new routine, and recovering from childbirth. It’s a lot. You do not have to worry about that. We will take complete responsibility to design a nutritious and easy to prepare diet plan for the new mothers to make life easy. Making good lifestyle choices will directly impact the health of your baby.",
@@ -73,7 +73,7 @@ const Sdata = [
 
     {
         imgsrc: Childrens,
-        title : "Children",
+        title : "Child Nutrition",
         description:"Whether you have a toddler or a teen, nutrition is important to his or her physical and mental development.\n Healthy eating in childhood and adolescence is important for proper growth and development and to prevent various health conditions. How your child eats today will have an effect on their health, both now and in the future.",
         second : " As children grow and make choices, they can be overwhelmed by a confusing world that throws convenience and fast food at their feet. It is important to help children develop healthy habits that will make it easier for them to continue throughout life..",
         third : " Balanced Bites diet program designed is made child-friendly keeping in mind their likes and dislikes. We create a positive relationship between the child and nutritious foods. ",

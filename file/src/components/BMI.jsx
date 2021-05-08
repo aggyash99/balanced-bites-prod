@@ -10,6 +10,7 @@ import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close'; 
 import { BorderColor } from "@material-ui/icons";
+import { Toast } from "bootstrap";
 // import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class BMI extends Component{
@@ -32,8 +33,8 @@ class BMI extends Component{
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
-            heightstatus : "",
-            weightstatus : "",
+            heightstatus : "centimeter",
+            weightstatus : "Kg",
             selectionweight : "springgreen",
             selectionheight : "springgreen",
             heightInch : "",
@@ -61,18 +62,33 @@ class BMI extends Component{
         //     this.setState({Error : "YES"});
         //     return "";
         // }
-        this.setState({weight : props.target.value});
+        
+ this.setState({weight : props.target.value});
+       
     }
      calculate = () =>{
 
-        if(this.state.weightstatus == "")
-        {
-            this.setState({selectionweight : "red"})
-        } 
-        if(this.state.heightstatus == "")
-        {
-            this.setState({selectionheight : "red"})
-        }
+    if(this.state.weight === "" || this.state.height == ""){
+    return "";
+     }
+    let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
+    var temp1 = this.state.height;
+    if(reg.test((temp1))==false)
+    { 
+    console.log('weight')
+    return "";
+    }
+        
+    var temp = this.state.weight;
+    console.log(temp);
+    if(reg.test((temp))==false)
+    { 
+    return "";
+    
+    }
+
+        
+        console.log(this.state.height)
 
         const s = findDOMNode(this.refs.slideBMI);
         $(s).addClass('slideBMI');
@@ -83,13 +99,12 @@ class BMI extends Component{
       
          
        
-
+        let total = 0;
         if(this.state.weightstatus === "Kg" && this.state.heightstatus == "centimeter"){
         const wei = this.state.weight;
         const hei = this.state.height/100;
         const Atemp = wei/(hei*hei);
-        const total = Atemp.toFixed(0);
-         
+        total  = Atemp.toFixed(0);
         this.setState({result : total});
         }
         if(this.state.weightstatus === "Kg" && this.state.heightstatus == "meter")
@@ -97,7 +112,7 @@ class BMI extends Component{
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
             console.log('conme')
-            const total = wei / (hei * hei);
+           total = (wei / (hei * hei)).toFixed(0);
             this.setState({result : total});
         }
         if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Inch")
@@ -105,7 +120,7 @@ class BMI extends Component{
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
             console.log('conme')
-            const total = wei / (hei * hei) * 703;
+            const total =( wei / (hei * hei) * 703).toFixed(0);
             this.setState({result : total});
         }
         if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Foot")
@@ -113,9 +128,8 @@ class BMI extends Component{
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
             const heiIn = parseInt(this.state.heightInch);
-            console.log('conme')
-            const total = (wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703;
-            this.setState({result : total.toFixed(0)});
+           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(0);
+            this.setState({result : total});
         }
         if(this.state.result <= 19)
         {
@@ -183,6 +197,9 @@ class BMI extends Component{
         return "";    
     }
     }
+     
+    
+    
     
     click1 = () =>{
         const e = findDOMNode(this.refs.toggle2);
@@ -208,10 +225,9 @@ class BMI extends Component{
     render(){
         return(
         <div>
-  
+   
     <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
-    { //console.log(this.state.heightstatus)// 
-    }
+    
 
         <div className="row d-flex justify-content-between p-5 PHONE-CLASS m-0">
         <div className="d-flex calculator">
@@ -219,7 +235,7 @@ class BMI extends Component{
             
         </div>
 
-        <div className="col-lg-6 result " ref="slideBMI" >
+        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:""}}>
       
         <div style={{width:"100%"}} className="setBMI">
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
@@ -259,6 +275,15 @@ class BMI extends Component{
                 <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
                 <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
                 </div>
+                {
+                    <div className="indicator" >
+                    <span>0 - 19</span>
+                    <span>19 - 25</span>
+                    <span>25 - 30</span>
+                    <span>30 - ..</span>
+                    
+                    </div>
+                }
             <div className="barText">
             <p>Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
             </div>
@@ -293,6 +318,15 @@ class BMI extends Component{
                 <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
                 <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
                 </div>
+                {
+                    <div className="indicator" >
+                    <span>0 - 19</span>
+                    <span>19 - 31</span>
+                    <span>12 - 32</span>
+                    <span>32 - 12</span>
+                    
+                    </div>
+                }
                </div>
                <div className="content-2">
                <p >
@@ -309,23 +343,22 @@ class BMI extends Component{
          <div className="col-lg-6 col-md-12">
 
 
-        <form className="BMI-start">
+        <div className="BMI-start">
          
-        <div className="row d-flex justify-content-evenly">
+        <div className=""> { /*row d-flex justify-content-evenly */ }
         
-        <div className="row d-flex">
-        <div className="col-lg-8  col-md-10 col-12 input-BMI" ref="leave" onClick={this.click} > { /* onMouseLeave={this.leave2} */}
-        <input type="number " className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
+        <div className="row ">
+        <div className="col-lg-8 pt-2 col-md-9 col-12 input-BMI" ref="leave" onClick={this.click} > 
+        <input type="" className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
        
-        <p className="floty" ref="toggle" onSelectStart="return false">Your weight</p> 
+         <span className="floty" ref="toggle" onSelectStart="return false">Your weight</span> 
    
         </div>
 
-        <div className="col-lg-4 col-md-2  col-12 ">
+        <div className="col-lg-4 pt-2 col-md-3 col-12 ">
         
-        <div className= " BMI-unit-part " style={{borderColor :`${this.state.selectionweight}`}} >
-        <select className="units" name="weightstatus" onClick={this.heightunits}>
-        <option value="select">Select</option>
+        <div className= "" style={{borderColor :`${this.state.selectionweight}`}} >
+        <select className="units p-2 form-select" name="weightstatus" onClick={this.heightunits}>
         <option value="Kg">kg</option> 
         <option value="Pounds">Pounds</option>
         </select>
@@ -334,8 +367,44 @@ class BMI extends Component{
         </div>
         </div>
 
-        <div className="row d-flex "> 
-        <div className="col-lg-8 col-md-10   col-12 input-BMI" ref="leave2"  onClick={this.click1}  >     
+
+        <div className="row pt-2 ">
+        <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  > 
+        {
+         (this.state.heightstatus !== "Foot") ? 
+        <><input  type="" placeholder="" value={this.state.height} onChange={this.set} />
+         <span className="floty" ref="toggle2">Your Height</span>
+        </> : 
+        <div className="d-flex justify-content-between" style={{gap : "5%"}}>
+        
+        <div>
+        <input  type=""  value={this.state.height} onChange={this.set} /> 
+        <span className="floty" ref="toggle2">Feet</span>   
+        </div>
+        <div>
+         <input  type=""  value={this.state.heightInch} onChange={this.setInch} />
+         <span className="floty" ref="toggle2">Inch</span>
+        </div>
+        </div>
+    }
+        </div>
+
+        <div className="col-lg-4 pt-2 col-md-3 col-12 ">
+        
+        <div className="" style={{borderColor :`${this.state.selectionheight}`}}>
+
+        <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
+        <option value=  "centimeter">Centimeter</option>
+        <option value = "Foot" >Feet</option>
+        <option value= "meter ">meter</option> 
+        </select>
+        </div>
+ 
+        </div>
+        </div>     
+
+        {/* <div className="row  ">
+        <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  >     
         
         {
          (this.state.heightstatus !== "Foot") ? 
@@ -343,47 +412,48 @@ class BMI extends Component{
          <p className="floty" ref="toggle2">Your Height</p>
         </> : 
         <div className="d-flex justify-content-between" style={{gap : "5%"}}>
+        
         <div>
-        <input  type="number" placeholder="Feet" value={this.state.height} onChange={this.set} /> 
-         </div>
-         <div>
-         <input  type="number" placeholder="Inch" value={this.state.heightInch} onChange={this.setInch} />
-         </div>
+        <input  type="number"  value={this.state.height} onChange={this.set} /> 
+        <p className="floty" ref="toggle2">Feet</p>   
+        </div>
+        <div>
+         <input  type="number"  value={this.state.heightInch} onChange={this.setInch} />
+         <p className="floty" ref="toggle2">Inch</p>
+        </div>
         </div>
     }
-    {     }
+  
         </div>
-        <div className="col-lg-4 col-md-2 col-12 ">
+    <div className="col-lg-4  pt-2  col-md-3 col-12 ">
     
-            <div className=" BMI-unit-part" style={{borderColor :`${this.state.selectionheight}`}}>
+    <div className=" BMI-unit-part" style={{borderColor :`${this.state.selectionheight}`}}>
 
-        <select className="units" name="heightstatus" onClick={this.heightunits}>
-    <option value="select">Select</option>
+    <select className="units" name="heightstatus" onClick={this.heightunits}>
     <option value = "Foot" >Feet</option>
-     <option value=  "centimeter">Centimeter</option>
-     <option value= "meter ">meter</option>
-     <option value = "Inch" >Inch</option>
-      </select>
-         </div> 
-        </div>
-       </div>
-
-        </div>
+    <option value=  "centimeter">Centimeter</option>
+    <option value= "meter ">meter</option> 
+    </select>
+    </div> 
+    </div>
+    </div> */}
 
 
-        <div className="row pb-2">
-        <div className="col-lg-12 d-flex justify-content-center">
-        <div className="btn success " onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
+
+       <div className="row pt-3">
+        <div className="col-lg-12  d-flex justify-content-center">
+        <div className="btn success" onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
         </div>
         </div>  
  
 
+        </div>
 
-        </form>
-        
         </div>
         
-
+        </div> 
+        
+ {/*  */}
         </div>
         
         

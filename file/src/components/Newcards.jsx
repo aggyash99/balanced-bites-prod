@@ -15,8 +15,8 @@ const Newcards = ()=>{
                 <span>Review</span>
                 </div>
                 <span className="center-Heading">Give Your Wishes</span>
-                <div className="button">
-                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn btn-info">Write your Review</a> 
+                <div className="">
+                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn success">Write your Review</a> 
                 </div>
             </div>
 
