@@ -22,7 +22,7 @@ function Navbar() {
           <NavLink exact activeClassName = "menu_active" className="nav-link active" aria-current="page" to="/"><span className="nav-name">Home</span></NavLink>
         </li>
         <li className="nav-item">
-          <NavLink activeClassName = "menu_active" className="nav-link" to="/Service"><span className="nav-name">Programs</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link" to="/Service"><span className="nav-name">Program</span></NavLink>
         </li>
         <li className="nav-item">
           <NavLink activeClassName = "menu_active" className="nav-link" to="/Contact"><span className="nav-name">Contact</span></NavLink>
