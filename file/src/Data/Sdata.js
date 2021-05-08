@@ -68,7 +68,7 @@ const Sdata = [
         description :"If you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",
         third : "Our Post-natal plans involve losing the baby weight in a healthy and nutritional manner to get your body back to shape. If there’s anything we know, it’s that achieving a healthy weight post-baby can be a struggle. It can be stressful taking care of a newborn, adjusting to a new routine, and recovering from childbirth. It’s a lot. You do not have to worry about that. We will take complete responsibility to design a nutritious and easy to prepare diet plan for the new mothers to make life easy. Making good lifestyle choices will directly impact the health of your baby.",
-        service : ""
+        service : "Healthy eating is always important, but especially when you're pregnant"
     },
 
     {
@@ -85,7 +85,7 @@ const Sdata = [
         description:"The thyroid gland is a small, butterfly-shaped gland that sits near the base of your neck. It makes and stores thyroid hormones that affect nearly every cell in your body. Thyroid hormones are very important. They help control growth, cell repair, and metabolism — the process by which your body converts what you eat into energy. ",
         second : "An imbalance in the levels of thyroid hormones could lead to an underactive (Hypothyroid) or overactive (Hyperthyroid).",
         third : "We, at Balanced Bites, carefully assess the levels of TSH (Thyroid Stimulating Hormone), Thyroid Hormones (T3 & T4) in your body and prepare a nutrition plan to stimulate your thyroid glands in a natural and holistic manner.",
-        service : ""
+        service : "Get to know about the foods to eat & avoid during Thyroid. "
     }
 ];
 
