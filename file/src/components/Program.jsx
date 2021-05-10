@@ -1,12 +1,12 @@
 import React from 'react';
+import { findDOMNode } from 'react-dom'
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
 import Sdata from '../Data/Sdata';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClipboardList , faCheck,faChevronUp } from '@fortawesome/free-solid-svg-icons';
-
-const Program =(props)=>{
+import ProgramsFeatures from './ProgramFeatures';
+ import $ from 'jquery';
+const Program =(props)=>{ 
+ 
 var title,description,logo,second,third;
 {
     Sdata.map( (value,key)=>{
@@ -47,7 +47,7 @@ return (
                 Sdata.map( (value,key) =>{
                     return (
                         <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} ><span>{value.title}</span> </Link>
+                        state:{key : key}}} key={key}><span>{value.title}</span> </Link>
                     );
                 })
             }
@@ -56,9 +56,9 @@ return (
 
 
 
-        <div className="col-lg-9   col-sm-12 col-md-12 col-12">
+        <div className="col-lg-9 col-sm-12 col-md-12 col-12 d-flex">
         <div className="program-photo">
-        <img src={logo} className="" style={{backgroundColor:"no-repeat", backgroundPosition:"center", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
+        <img src={logo} className="PROGRAMS-PHOTO" ></img>
         </div>
         
       
@@ -89,58 +89,11 @@ return (
         </div>
 
         </div>
+     
+        <ProgramsFeatures/>
 
-<div className="container-fluid p-5">
-    {/* <div className="row">
-        <div className="col-lg-6 col-md-8 col-12 ">
-        
-        </div>
-    </div> */}
-    <div className="row d-flex justify-content-end" style={{paddingRight:""}}>
-    
-    <div className="col-lg-12 col-md-8 col-12 p-3">
-    
-    <div className="step">
-        
-        <div className="col-12">
-         <div className = "heading-feature">
-        <div style={{fontSize:"17px"}}> 
-        <FontAwesomeIcon icon={faChevronUp}></FontAwesomeIcon>
-        </div>
-        <div style={{color: "green",fontSize:"17px"}}>
-        <FontAwesomeIcon icon={faClipboardList} ></FontAwesomeIcon>
-        </div>
-        <div>Program features</div>
-        </div>
-        </div>
-    <div className="col-12 features">
-    <FontAwesomeIcon icon={faCheck}/>
-    <div>100 % customized diet plans no pre – defined or fixed diets.</div>
-    </div>           
-    <div className="col-12 features">
-    <FontAwesomeIcon icon={faCheck}/>
-    <div>Analysis of your routine & food preferences.</div>
-    </div>
-    <div  className="col-12 features">
-    <FontAwesomeIcon icon={faCheck}/>
-    <div>Non – restrictive diet & lifestyle plan.</div>
-    </div>
-    <div  className="col-12 features">
-    <FontAwesomeIcon icon={faCheck}/>
-    <div>Provide you multiple options in your diet plan.</div>
-    </div>
-    <div className="col-12 features">
-    <FontAwesomeIcon icon={faCheck}/>
-    <div>Ongoing support & guidance via. WhatsApp chat.</div>
-    </div> 
-    </div>
-    </div>
     </div>
 
-</div>
-
-
-</div>
 </>
 );
 }
