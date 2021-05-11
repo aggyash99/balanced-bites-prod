@@ -9,8 +9,6 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close'; 
-import { BorderColor } from "@material-ui/icons";
-import { Toast } from "bootstrap";
 // import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 class BMI extends Component{
@@ -68,12 +66,12 @@ class BMI extends Component{
     }
      calculate = () =>{
 
-    if(this.state.weight === "" || this.state.height == ""){
+    if(this.state.weight === "" || this.state.height === ""){
     return "";
      }
     let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
-    if(reg.test((temp1))==false)
+    if(reg.test((temp1))===false)
     { 
     console.log('weight')
     return "";
@@ -81,7 +79,7 @@ class BMI extends Component{
         
     var temp = this.state.weight;
     console.log(temp);
-    if(reg.test((temp))==false)
+    if(reg.test((temp))===false)
     { 
     return "";
     
@@ -100,14 +98,14 @@ class BMI extends Component{
          
        
         let total = 0;
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus == "centimeter"){
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "centimeter"){
         const wei = this.state.weight;
         const hei = this.state.height/100;
         const Atemp = wei/(hei*hei);
         total  = Atemp.toFixed(0);
         this.setState({result : total});
         }
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus == "meter")
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "meter")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -115,7 +113,7 @@ class BMI extends Component{
            total = (wei / (hei * hei)).toFixed(0);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Inch")
+        if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Inch")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -123,7 +121,7 @@ class BMI extends Component{
             const total =( wei / (hei * hei) * 703).toFixed(0);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Foot")
+        if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Foot")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -185,7 +183,7 @@ class BMI extends Component{
     heightunits = (props) =>{       
         
 
-        if(props.target.name == "weightstatus")
+        if(props.target.name === "weightstatus")
         {
           //  console.log(props.target.value)
             this.setState({weightstatus : props.target.value , selectionweight : "springgreen"});
@@ -254,7 +252,7 @@ class BMI extends Component{
                         <div>
                             {
                                  
-                                <img className="dot" src={this.state.dot}/> 
+                                <img className="dot" alt="." src={this.state.dot}/> 
                             }
                                </div>
                                <h5 className="categoryStatus" >{this.state.text}</h5>
@@ -465,8 +463,8 @@ class BMI extends Component{
 
 
 export default BMI;
- 
-{/*
+ /*
+{
  <div className="row">
             <div className="col-lg-12 col-12 d-flex mb-3  justify-content-center" >
             <span>HEIGHT</span>
@@ -494,4 +492,4 @@ export default BMI;
             </div>
             </div>
 
-*/ }
+ }*/

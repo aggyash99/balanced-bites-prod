@@ -1,7 +1,6 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom';
 import logo from '../Image/logo.png';
-import $ from 'jquery';
 function Navbar() {
   
 

@@ -1,13 +1,13 @@
 import React from 'react';
 import img from '../../Image/services/test.png';
 import CarouselH from '../CarouselH';
-import Testimonial from '../Testimonial';
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
+import {Link} from 'react-router-dom';
 function Home() {
   return (
     <>
-    <section className = "header">
+    <section className = "header" id="headerindex">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-12 d-flex justify-content-around mx-auto p-0">
@@ -43,7 +43,9 @@ function Home() {
         <h1 >Best Dietitian in vikaspuri West Delhi | 9 yrs Exp | Online Diet Charts - Weight Loss, PCOD/PCOS etc.</h1>
         </div>
         <div className="buttoninhome">
-        <a className="btn btn-success ">Book Appointment</a>
+        <Link className="" to={{pathname:'/Contact'}} >
+        <span className="btn btn-success " >Book Appointment</span>
+        </Link>
       </div>
       </div>
 

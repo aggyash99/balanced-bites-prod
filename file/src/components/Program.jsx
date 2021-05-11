@@ -8,7 +8,7 @@ import { faClipboardList , faCheck,faChevronUp } from '@fortawesome/free-solid-s
 
 const Program =(props)=>{
 var title,description,logo,second,third;
-{
+
     Sdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -19,8 +19,9 @@ var title,description,logo,second,third;
         logo = value.imgsrc;
         return ("");
     }
+    return ("");
     })
-    }
+    
 return (
 <>
 <div>
@@ -58,7 +59,7 @@ return (
 
         <div className="col-lg-9   col-sm-12 col-md-12 col-12">
         <div className="program-photo">
-        <img src={logo} className="" style={{backgroundColor:"no-repeat", backgroundPosition:"center", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
+        <img src={logo} className="" alt="BalancedBites" style={{backgroundColor:"no-repeat", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
         </div>
         
       
