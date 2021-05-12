@@ -96,12 +96,13 @@ import Styled from 'styled-components';
              
             
             
-             <div className="row d-flex justify-content-around position-relative">
-             <Main className="col-lg-4">
+             <LAST className="row">
+             <Main className="col-lg-4 col-12">
             <Content>
                 <Card>
-            <Img>
+            <Img> 
             <img src={whatsApp}></img>
+        
             </Img>
             <Heading>Support</Heading>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
@@ -109,7 +110,7 @@ import Styled from 'styled-components';
             </Content>
             </Main>
 
-                 </div>   
+                 </LAST>   
             
                 
         </div>
@@ -139,38 +140,34 @@ cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
-&:hover{
-    box-shadow : 0px 30px 10px 0px #f9f9f9;
-    background : #ffffff;
-}
+// &:hover{
+//     box-shadow : 0px 30px 10px 0px #f9f9f9;
+//     background : #ffffff;
+// }
 `
 const Card = Styled.div` 
 width : 250px;
 height : 150px;
 padding :20px 0px;
 margin : 10px 20px;
-
 `
 const Img = Styled.div`
 position :relative;
-cursor : pointer;
- 
+cursor : pointer; 
+
 img{
-    width : 80px;
-    height : 80px;
-    object-fit : contain; 
+    width : 70px;
+    height : 70px; 
     position : absolute;
     bottom : 0;
-    background : #f9f9f9;
+    background : red;
     z-index : 0;
     left : 50%;
     transform:translate(-50%);    
     background : transparent;
     transition : all 250ms;
     padding : 5px;
-&:hover{ 
-    border-color: #f9f9f9;
-}
+
 }
 `
 const Heading = Styled.div`
@@ -235,4 +232,14 @@ const Bottom = Styled.div`
 // {
 //     top : 0;
 // }
+`
+const LAST = Styled.div`
+margin-top : -40px;
+display : flex;
+justify-content : center;
+@media(max-width : 700px)
+{
+    margin-top : 0px;
+    
+}
 `

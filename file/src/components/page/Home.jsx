@@ -1,7 +1,6 @@
 import React from 'react';
 import img from '../../Image/services/test.png';
-import CarouselH from '../CarouselH';
-import Testimonial from '../Testimonial';
+import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 function Home() {

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
 import Sdata from '../Data/Sdata';
 import ProgramsFeatures from './ProgramFeatures';
- import $ from 'jquery';
 const Program =(props)=>{ 
  
 var title,description,logo,second,third;
@@ -25,9 +24,6 @@ return (
 <>
 <div>
 <div className=" container-fluid">
-    {
-  
-    /*TOP PHOTO*/}
     <div className="row p-0"  >
     <div className="col-lg-12 p-0  col-12">
     <img className="IMAGEFORPROGRAM" src={Photo} alt="sorry"></img>

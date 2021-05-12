@@ -15,7 +15,7 @@ const Card = (props)=> {
                 <h5 className="card-title text-center">{props.title}</h5>
                 <p className="card-text text-center"><EllipsisText text={`${props.description}`} length={90}/></p>
                 <div style={{display:"flex", justifyContent:"center"}}> 
-                <Link className=" success"  to={{pathname:'/Program',state:{key : props.num}}} ><span style={{}}>Read More</span></Link></div>
+                <Link className=" success"  to={{pathname:'/Program',state:{key : props.num}}}>Read More</Link></div>
                 </div>
                 
               </MyCards>

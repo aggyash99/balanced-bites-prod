@@ -33,15 +33,17 @@ class ServicesCards extends Component{
 
 
   
-  <div className="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ border:"2px solid greenyellow",Width:"18rem",height:"50vh",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:`url(${this.props.imgsrc})`}}>
+  <div className="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ backgroundImage:`url(${this.props.imgsrc})`}}>
   
+  <div className="text-content-for-program">
   <div className="card-body servicecards">
     <p className="title">{this.props.title}</p>
+  </div>
   </div>
   <div className="content" ref="toggle">
  
         <div><span style={{fontSize:"15px"}}>{this.props.service}</span></div>
-        <div className=""><Link className="success-for-service" to={{pathname:'/Program',state:{key : this.props.num}}} ><span className="success-for-service-text">Read More</span></Link></div>
+        <div className=""><Link className="success" to={{pathname:'/Program',state:{key : this.props.num}}} ><span className="success-for-service-text">Read More</span></Link></div>
   </div>
 </div>
 

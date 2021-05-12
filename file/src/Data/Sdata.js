@@ -63,7 +63,7 @@ const Sdata = [
     },
     
     {
-        imgsrc:PCOS,
+        imgsrc:pregnant,
         title:"Pregnancy",
         description :"If you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",
