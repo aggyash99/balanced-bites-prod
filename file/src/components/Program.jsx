@@ -65,9 +65,9 @@ return (
 
         <div className="row text-black   d-flex justify-content-center">
         <div className=" text-center PROGRAM-HEADING" >
-            <div>{title}</div>
-            <div className="under" ></div> 
-            
+           <div>
+            <span className="borderbottom">{title}</span>
+            </div>
             </div>  
         <div className="col-lg-12 pt-3" style={{padding:"0px 10px"}}>
             <ul style={{listStyle:"none"}}>

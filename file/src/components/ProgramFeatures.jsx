@@ -130,11 +130,13 @@ display : flex;
 justify-content : center;
 position : relative;
 
+ 
 `
 
 const Content = Styled.div`
 border: 1px solid white;
 padding : 20px;
+margin-bottom : 20px;
 background: #f9f9f9;
 cursor : pointer;
 border-radius : 10px;
@@ -150,25 +152,30 @@ width : 250px;
 height : 150px;
 padding :20px 0px;
 margin : 10px 20px;
+
 `
 const Img = Styled.div`
 position :relative;
 cursor : pointer; 
-
 img{
+    
+border-radius : 50%;
     width : 70px;
     height : 70px; 
     position : absolute;
-    bottom : 0;
-    background : red;
+    bottom : 5px;
     z-index : 0;
     left : 50%;
     transform:translate(-50%);    
-    background : transparent;
+    background : #f9f9f9;
     transition : all 250ms;
-    padding : 5px;
-
-}
+    padding : 0px;
+    box-shadow : 0px 0px 0px 12px #f9f9f9;
+    &:hover{
+        box-shadow : 0px 0px 0px 6px #b8f090;
+   
+    }
+} 
 `
 const Heading = Styled.div`
 padding : 5px;
@@ -208,7 +215,7 @@ padding : 20px;
 const Mainhead = Styled.span`
 font-size : 30px;
 word-spacing : 5px;
-font-family : 'Poppins', sans-serif;
+font-family : roboto, sans-serif;
 padding : 5px 0px;
 `
 
@@ -223,6 +230,7 @@ color : #000000;
 `
 const MidHead = Styled.div`
 color : #000000;
+font-family : roboto;
 `
 
 const Bottom = Styled.div`
