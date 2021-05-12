@@ -27,7 +27,7 @@ class BMI extends Component{
             blue:7,
             dot:"",
             redone : "hidden",
-            yellow : "hidden",
+            yellowone : "hidden",
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
@@ -69,7 +69,7 @@ class BMI extends Component{
     if(this.state.weight === "" || this.state.height === ""){
     return "";
      }
-    let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
+    let reg = /^([0-9]){0,5}([.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
     if(reg.test((temp1))===false)
     { 
@@ -143,7 +143,7 @@ class BMI extends Component{
         {
             
            // console.log(this.state.result)
-            this.setState({text : "OverWeight",green:7,yellow:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
+            this.setState({text : "OverWeight",green:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
         }
         else
         {   
