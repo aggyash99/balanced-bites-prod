@@ -14,8 +14,9 @@ const Card = (props)=> {
                 <div className="card-body">
                 <h5 className="card-title text-center">{props.title}</h5>
                 <p className="card-text text-center"><EllipsisText text={`${props.description}`} length={90}/></p>
-                <div style={{display:"flex", justifyContent:"center"}}> 
-                <Link className=" success"  to={{pathname:'/Program',state:{key : props.num}}}>Read More</Link></div>
+                <Button> 
+                <Link className=" success-for-carousel"  to={{pathname:'/Program',state:{key : props.num}}}><span className="Carousel-in-home-text">Read More</span></Link>
+                </Button>
                 </div>
                 
               </MyCards>
@@ -49,6 +50,12 @@ overflow : hidden;
 transition : all 250ms;
 box-shadow : 0px 1px 5px 0px grey;
 &:hover{ 
-  transform : scale(1.05);
+  transform : scale(1.02);
 }
 `
+
+const Button = Styled.div`
+display : flex;
+justify-content : center;
+`
+ 

@@ -4,7 +4,7 @@ import option from '../Image/pics/option.svg';
 import whatsApp from '../Image/pics/whatsapp1.svg'
 import plain from '../Image/pics/plain1.svg'
 import routine from '../Image/pics/routine1.svg';
-import logos from '../Image/logo1.png'
+import logos from '../Image/pics/sports.png'
 import Styled from 'styled-components'; 
 
  const ProgramsFeatures = (props)=>{
@@ -52,12 +52,13 @@ import Styled from 'styled-components';
     
     
             
-            <Main className="col-lg-4 LEFTCARD-Center">
+            <CenterImg className="col-lg-4 -Center">
+            <div className="col-12">
             <Center>
             <img src={logos}></img>
             </Center>
-         
-            </Main>
+            </div>
+            </CenterImg>
     
     
     
@@ -96,6 +97,10 @@ import Styled from 'styled-components';
              
             
             
+            
+                
+        </div>
+               
              <LAST className="row">
              <Main className="col-lg-4 col-12">
             <Content>
@@ -110,11 +115,7 @@ import Styled from 'styled-components';
             </Content>
             </Main>
 
-                 </LAST>   
-            
-                
-        </div>
-                
+                 </LAST>    
     
     </div>
     
@@ -123,7 +124,10 @@ import Styled from 'styled-components';
 }
 export default ProgramsFeatures
 
-
+const CenterImg = Styled.div`
+//position : relative;
+ 
+`
 const Main = Styled.div`
 padding : 5% 2%;
 display : flex;
@@ -137,7 +141,7 @@ const Content = Styled.div`
 border: 1px solid white;
 padding : 20px;
 margin-bottom : 20px;
-background: #f9f9f9;
+background: #f5f5f5;
 cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
@@ -170,7 +174,7 @@ border-radius : 50%;
     background : #f9f9f9;
     transition : all 250ms;
     padding : 0px;
-    box-shadow : 0px 0px 0px 12px #f9f9f9;
+    box-shadow : 1px 0px 0px 12px #f5f5f5;
     &:hover{
         box-shadow : 0px 0px 0px 6px #b8f090;
    
@@ -193,9 +197,15 @@ font-weight: 550;
 font-family : loto sans-serif;
 `
 const Center = Styled.div`
-width : 100%;  
-display : flex;
-justify-content : center; 
+// width : 100%;  
+// display : flex;
+// justify-content : center; 
+
+img{
+    width :100%;
+    height : 100%;
+    object-fit : contain;
+}
 
 @media (max-width : 900px)
 {

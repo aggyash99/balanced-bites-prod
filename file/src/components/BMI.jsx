@@ -26,7 +26,7 @@ class BMI extends Component{
             blue:7,
             dot:"",
             redone : "hidden",
-            yellow : "hidden",
+            yellowone : "hidden",
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
@@ -66,12 +66,15 @@ class BMI extends Component{
      calculate = () =>{
 
     if(this.state.weight === "" || this.state.height == ""){
-    return "";
+        this.setState({height:"",weight:""});
+    
+        return "";
      }
     let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
     if(reg.test((temp1))==false)
     { 
+    this.setState({height:"",weight:"",heightInch:""});
     console.log('weight')
     return "";
     }
@@ -80,6 +83,8 @@ class BMI extends Component{
     console.log(temp);
     if(reg.test((temp))==false)
     { 
+    
+    this.setState({height:"",weight:"",heightInch:""});
     return "";
     
     }
@@ -156,6 +161,7 @@ class BMI extends Component{
         const e = findDOMNode(this.refs.toggle);
         const f = findDOMNode(this.refs.leave);
 
+        const e3 = findDOMNode(this.refs.toggle1);
         const e1 = findDOMNode(this.refs.toggle2);
         const f1 = findDOMNode(this.refs.leave2);
 
@@ -164,18 +170,21 @@ class BMI extends Component{
         if(this.state.height === ""){
         $(f1).removeClass("leave");
         $(e1).removeClass("floaty");
+        $(e3).removeClass("floaty");
         }
     }
     leave = ()=>{
         const e = findDOMNode(this.refs.toggle);
         const f = findDOMNode(this.refs.leave);
         
+        const e3 = findDOMNode(this.refs.toggle1);
         const e1 = findDOMNode(this.refs.toggle2);
         const f1 = findDOMNode(this.refs.leave2);
 
         $(f).removeClass("leave");
         $(e).removeClass("floaty");
         $(f1).removeClass("leave");
+        $(e3).removeClass("floaty");
         $(e1).removeClass("floaty");
 
     }
@@ -200,11 +209,13 @@ class BMI extends Component{
     
     click1 = () =>{
         const e = findDOMNode(this.refs.toggle2);
+        const e3 = findDOMNode(this.refs.toggle1);
         const f = findDOMNode(this.refs.leave2);
         const e1 = findDOMNode(this.refs.toggle);
         const f1 = findDOMNode(this.refs.leave);
         $(f).addClass("leave");
         $(e).addClass("floaty") ;
+        $(e3).addClass("floaty") ;
 
 
         if(this.state.weight === ""){
@@ -241,7 +252,7 @@ class BMI extends Component{
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
                 <p style={{textAlign:"left", fontSize:"15px", lineHeight:"0px",fontWeight:"600",color:"#A9A9A9"}}>Your BMI Score</p>
                     
-                    <div className="main" style={{width:"100%"}}>
+                    <div className="main">
                     <div className="BMI-whole">
                         <input value={this.state.result} className="input-class"  readOnly ></input>
                     </div>
@@ -273,9 +284,9 @@ class BMI extends Component{
                 </div>
                 {
                     <div className="indicator" >
-                    <span>18.5</span>
-                    <span>25</span>
-                    <span>30</span> 
+                    <span className="first-indicator">18.5</span>
+                    <span className="second-indicator"> 25</span>
+                    <span className="third-indicator"> 30</span> 
                     
                     </div>
                 }
@@ -381,7 +392,7 @@ class BMI extends Component{
         </div>
         <div>
          <input  type=""  value={this.state.heightInch} onChange={this.setInch} />
-         <span className="floty" ref="toggle2">Inch</span>
+         <span className="floty" ref="toggle1">Inch</span>
         </div>
         </div>
     }

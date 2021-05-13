@@ -113,11 +113,11 @@ height: 100%;
     float: left;
     display: flex;
     justify-content: center;
-    flex : 1;
+    flex : 1; 
 }
 .LEFTCARD-Center{ 
     /* float: left;  */
-    animation: rotate infinite 10s linear;
+    /* animation: rotate infinite 10s linear; */
 }
 
 
@@ -463,10 +463,21 @@ font-weight: bold;
     margin-bottom: 1%;
     background:rgba(238, 238, 238, 0.918);
     position: relative;
-    border-left: 10px solid red;
+   
     overflow: hidden;
 }
- 
+.link::after{
+    z-index: 5;
+    content: "";
+    background-color: rgb(235, 11, 11);
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left: 0;
+    overflow: hidden;
+    transform: translateX(-97%);
+}
 
 .link::before{
     z-index: -1;
@@ -477,8 +488,7 @@ font-weight: bold;
     height : 100%;
     position: absolute;
     top : 0;
-    left : 0;
-    opacity: 0.8;
+    left : 0; 
     overflow: hidden;
     transform: translate(-100%);
     transition: all 250ms linear;
@@ -544,9 +554,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
  
 .PROGRAM-HEADING{
-    font-size: 30px;    
-    font-family: roboto, serif;
-    padding: 20px;
+    font-size: 2.8rem;   
+    padding: 10px;
+    font-family: Rubik, sans-serif;
+    color: #737373;
     letter-spacing: 4px; 
     display: flex;
     font-weight:600;
@@ -554,21 +565,11 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
 }
  
-.under{
-    /* height: 3px;
-    content: "";
-    width: 30px; 
-    border-bottom: 3px solid rgb(83, 110, 43);
-    position: relative;
-    left: 50%;
-    top: 10%;
-    transform: translate(-50%,-50%);
-    transition: all 5ms ease-in; */
-} 
+ 
  
 .program-text{
     color: rgb(87, 84, 84);
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: 500; 
     font-family: 'Lexend', sans-serif;} 
@@ -599,14 +600,14 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 .program-text1{
     color: rgb(87, 84, 84);
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: 600; 
     line-height: 1.8rem;
 } 
 .program-text2{
     color: rgb(87, 84, 84);
-    font-size: 18px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-weight: 600; 
     line-height: 1.8rem;
@@ -677,20 +678,40 @@ transition: all 500ms ;
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
-} 
- 
+}  
+.success-for-carousel{
+    background-color: transparent;
+    font-weight: 500; 
+    border: 0.1px solid rgb(45, 128, 24);  
+    transition: all 250ms ease-in-out; 
+    border-radius: 30px;
+    padding:5px 10px;
+    word-spacing: 1px;
+    color :rgb(30, 128, 30);
+    font-family: roboto;
+}
+
+.success-for-carousel:hover{
+  
+    background:rgb(48, 138, 53); 
+}
+.success-for-carousel:hover .Carousel-in-home-text{
+    color: white;
+}
 .success{
     background-color: transparent;
     font-weight: 500; 
     border: 0.1px solid rgb(45, 128, 24);  
-    transition: all 500ms ease-in-out; 
+    transition: all 250ms ease-in-out; 
     border-radius: 30px;
     padding:5px 10px;
     word-spacing: 1px;
-    color :rgb(42, 126, 46);
+    color :rgb(30, 128, 30);
     font-family: roboto;
 }
-
+.Carousel-in-home-text{
+    color: rgb(30,128,30);
+}
 .success-for-service{
 color:#d4fc79;
 border: 0.1px solid rgb(255, 255, 255);
@@ -705,17 +726,13 @@ background: #92fe9d;
 border-width: 2px;
 }
 .success-for-service-text{
-    font-size: 18px;
-
-    color : rgb(49, 112, 30);
+    font-size: 17px;
+    color : rgb(249, 249,249);
 }
-.success:hover{
+.success:hover {
     color: rgb(255, 255, 255);
     background-color:rgb(48, 138, 53); 
-}
-.success span:hover{
-color: white;
-}
+} 
 .BMI-text{ 
     color:rgb(25, 84, 173);
     font-size: 40px;
@@ -827,9 +844,7 @@ color: white;
     justify-content: flex-end; 
     /* background-color: rgb(248, 248, 248); */
 
-}
-.calculator p{ 
-}
+}  
 .underline{
     content: "";
     height: 20px;
@@ -850,8 +865,9 @@ color: white;
     text-align: center;
     outline: none;
     border: none;
+    border-radius: 10px;;
     font-size: 40px;
-     background-color: rgba(247, 241, 241, 0.973);
+     background-color: rgba(241, 241, 241, 0.973);
     }
  
     .Hidden{
@@ -1054,6 +1070,13 @@ select{
     justify-content:space-between;
     align-items: center;
 }
+@media (max-width : 700px){
+    .center-Heading{
+        display: none;
+    }
+}
+
+
 @media (max-width:450px) {
      
     .write-review{
@@ -1067,9 +1090,9 @@ select{
         margin-right: 10px;
          
     }
-    .center-Heading{ 
+    /* .center-Heading{ 
         display: none; 
-    }
+    } */
     .button{ 
 
         display: flex; 
@@ -1105,8 +1128,8 @@ select{
     margin-left: 5px;
 }
 .btn-for-program{
-    padding : 5px 8px;
-    border-radius: 15px;
+    padding : 10px 10px;
+    border-radius: 20px;
     font-size: 16px;
     border:1px solid grey;
     font-family:inherit;
@@ -1115,7 +1138,7 @@ select{
     color: rgb(255, 255, 255);
 }
 .btn-for-program:hover{
-    background: rgb(38, 81, 173);
+    background: rgb(68, 110, 202);
     color: white;
 }
 .center-Heading{
@@ -1153,7 +1176,8 @@ select{
 .buttonLink{
     text-decoration: none;
     color: grey;
-    font: 17px small-caption;
+    font: 15px sans-serif;
+    font-weight: 500;
 }
 .buttonLink:hover{
 color: blue;
@@ -1244,11 +1268,21 @@ justify-content: space-between;
 .caouselBody{
     background : rgb(218, 248, 108)
 }
+.first-indicator{
+margin-left: 20px;;
+}
+.second-indicator{
+    margin-left: -28px;;
+}
+.third-indicator{
+    position: relative;
+    left : -9%
+}
 .indicator{
     display: flex;
     justify-content: space-around;
     font:15px small-caption;
-    padding: 10px 011px 0 0;
+ 
     font-weight: 550;
 }
 .program-header{
@@ -1295,7 +1329,7 @@ font-weight: 500;
 }
 .dropdown-list{
     border-radius: 4px;
-    background-color: white;
+    background-color:#f9f9f9;
     position:absolute;
     top: 110%;
     width: 100%;
@@ -1314,6 +1348,7 @@ font-weight: 500;
 .dropdown-list__item{
 padding : 7px;
 font-size: 1rem;
+border:1px solid grey;
 width: 100%;
 margin-top: 5px;
 font-weight: 600;
