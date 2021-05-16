@@ -125,7 +125,7 @@ class BMI extends Component{
             const total =( wei / (hei * hei) * 703).toFixed(0);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Foot")
+        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Feet")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -237,7 +237,7 @@ class BMI extends Component{
         return(
         <div>
    
-    <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
+    <div className="container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
     
 
         <div className="row d-flex justify-content-between p-5 PHONE-CLASS m-0">
@@ -246,7 +246,7 @@ class BMI extends Component{
             
         </div>
 
-        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:"visible"}}>
+        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:""}}>
       
         <div style={{width:"100%"}} className="setBMI">
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
@@ -299,9 +299,6 @@ class BMI extends Component{
 
             </div>
             </div>
-
-
-
             <div className="Slider" ref="Phoneslider">
             <div className="content-in-phone">
                <div className="cards-for-phone">
@@ -343,17 +340,21 @@ class BMI extends Component{
                </div>
             </div>
         </div>
+        
+
+
+            
 
 
          <div className="col-lg-6 col-md-12">
-
-
         <div className="BMI-start">
          
         <div className=""> { /*row d-flex justify-content-evenly */ }
         
-        <div className="row ">
+        <div className="row "> 
+        
         <div className="col-lg-8 pt-2 col-md-9 col-12 input-BMI" ref="leave" onClick={this.click} > 
+
         <input type="" className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
        
          <span className="floty" ref="toggle" onSelectStart="return false">Your weight</span> 
@@ -380,7 +381,7 @@ class BMI extends Component{
         <div className="row pt-2 ">
         <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  > 
         {
-         (this.state.heightstatus !== "Foot") ? 
+         (this.state.heightstatus !== "Feet") ? 
         <><input  type="" placeholder="" value={this.state.height} onChange={this.set} />
          <span className="floty" ref="toggle2">Your Height</span>
         </> : 
@@ -404,7 +405,7 @@ class BMI extends Component{
 
         {/* <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
         <option value=  "centimeter">Centimeter</option>
-        <option value = "Foot" >Feet</option>
+        <option value = "Feet" >Feet</option>
         <option value= "meter ">meter</option> 
         </select> */}
         <div className="dropdown">
@@ -416,7 +417,7 @@ class BMI extends Component{
         <div className="dropdown-list__item" onClick={()=>{this.setState({heightstatus : "Centimeter"})}}>Centimeter</div>
         <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Meter"})} >Meter</div>
 
-        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Foot"})} >Feet</div>
+        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Feet"})} >Feet</div>
         </div>
 
         </div>

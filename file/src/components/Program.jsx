@@ -1,14 +1,14 @@
-import React from 'react';
-import { findDOMNode } from 'react-dom'
+import React from 'react'; 
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
+import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata';
 import ProgramsFeatures from './ProgramFeatures';
 const Program =(props)=>{ 
  
 var title,description,logo,second,third;
 {
-    Sdata.map( (value,key)=>{
+    Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
         title = value.title;
@@ -43,7 +43,7 @@ return (
                 Sdata.map( (value,key) =>{
                     return (
                         <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} key={key}><span>{value.title}</span> </Link>
+                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}>{}</span> </Link>
                     );
                 })
             }
@@ -64,21 +64,24 @@ return (
 
 
         <div className="row text-black   d-flex justify-content-center">
-        <div className=" text-center PROGRAM-HEADING" >
-           <div>
-            <span className="borderbottom">{title}</span>
-            </div>
-            </div>  
+         
+           <div  className="text-center PROGRAM-HEADING">
+           <span className="borderbottom" dangerouslySetInnerHTML={{__html:title}}></span>
+             </div>
+         
         <div className="col-lg-12 pt-3" style={{padding:"0px 10px"}}>
             <ul style={{listStyle:"none"}}>
-            <li><p className="program-text">
-            {description}
+            
+            
+            <li> 
+            <p className="program-text" dangerouslySetInnerHTML={{__html: description}}>
+             
             </p></li>
-            <li><p className="program-text1">
-            {second}
+            <li><p className="program-text1" dangerouslySetInnerHTML={{__html : second}}>
+            
             </p></li>
-            <li><p className="program-text2">
-            {third}
+            <li><p className="program-text2" dangerouslySetInnerHTML={{__html : third}}>
+            
             </p></li>
             </ul>
         </div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import nopills from '../Image/pics/pills.svg'
 import option from '../Image/pics/option.svg';
+import options from '../Image/pics/food.svg';
 import whatsApp from '../Image/pics/whatsapp1.svg'
 import plain from '../Image/pics/plain1.svg'
 import routine from '../Image/pics/routine1.svg';
-import logos from '../Image/pics/sports.png'
+import logos from '../Image/pics/dietlogo.jpg'
 import Styled from 'styled-components'; 
 
  const ProgramsFeatures = (props)=>{
@@ -24,7 +25,7 @@ import Styled from 'styled-components';
             <Content>
             <Card>
             <Img>
-            <img src={option}></img>
+            <img src={options}></img>
             </Img>
             <Heading>Heading</Heading>
             <Writeup>100 % customized diet plans; no pre – defined or fixed diets.</Writeup>

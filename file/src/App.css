@@ -84,6 +84,26 @@
     border : 2px solid greenyellow;
     text-decoration: none;
 }
+/* DATA CSS  */
+
+.data-heading{
+color: rgb(93, 155, 31);
+}
+.top-line{
+    color: black;
+    font-weight: 600;
+    line-height : 10.8px;
+}
+.bold{
+    font-size: 20px;
+}
+.first{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* data CSS end */
+
 .PROGRAMS-PHOTO{
 background-repeat: no-repeat;
 background-position :center;
@@ -91,6 +111,12 @@ background-position :center;
  object-fit:cover;
 width: 100% ; 
 height: 100%;
+}
+@media (max-width : 400px)
+{
+    .PROGRAMS-PHOTO{
+        margin-top: 10px;
+    }
 }
 @media (min-width:990px){
 
@@ -554,25 +580,75 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
  
 .PROGRAM-HEADING{
-    font-size: 2.8rem;   
-    padding: 10px;
+    font-size: 2.5rem;   
+    padding: 20px 0px;
     font-family: Rubik, sans-serif;
     color: #737373;
     letter-spacing: 4px; 
-    display: flex;
     font-weight:600;
-    flex-direction: column; 
+
     position: relative;
 }
  
  
+.our-programs{ 
+    font-size: 45px;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    color: rgb(209, 30, 30);
+}
+.logo-for-service{
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px; 
+}
+/* .service-for-programs div {
+font-size: 20px;
+font-family: "Roboto Slab",Arial,Helvetica,sans-serif;
+font-weight: 700;
+float: left;
+margin-top: 10px; */
+/* }
+.maa span{ 
+display:flex;
+flex-direction:column;
+padding: 10px 20px 10px 0px; 
+}
+.font-red{
+color: rgb(214, 40, 27);
+}
+.font-green{
+    color: #03ac11;
+}   */
+.programs{
+    color: green;
+    font-size: 45px;
+    position: relative;
+    font-weight: 600;
+
+}
+/* .programs::after{
+    content: '';
+    width: 100%;
+    height: 5%;
+    background:rgb(17, 17, 17);
+    position:absolute;
+    bottom: -10%;
+    left: 0;
+
+} */
+.program-text , .program-text2, .program-text1{
  
-.program-text{
-    color: rgb(87, 84, 84);
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 27px;
     letter-spacing: 1px;
-    font-weight: 500; 
-    font-family: 'Lexend', sans-serif;} 
+    color: #575757;
+    font-family: "Roboto",Arial,Helvetica,sans-serif;
+} 
 .step{
 
     background-color: rgba(243, 240, 240, 0.726);
@@ -598,20 +674,8 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
-.program-text1{
-    color: rgb(87, 84, 84);
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 600; 
-    line-height: 1.8rem;
-} 
-.program-text2{
-    color: rgb(87, 84, 84);
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-weight: 600; 
-    line-height: 1.8rem;
-} 
+ 
+ 
 .Caro{
     padding: 4px;
 }
@@ -742,7 +806,7 @@ border-width: 2px;
 
 .result{
     position: relative;
-    width: 350px;  
+    width: 350px   ;
     background:white;
     box-shadow: 0px 0px 4px 1px grey;
     text-align: center;
@@ -787,7 +851,7 @@ border-width: 2px;
         left:-30%;
     }
     to{
-        left:4%
+        left:10%
     }
 }
 @media (max-width : 400px)
@@ -935,21 +999,37 @@ justify-content: center;
 align-items: end;
 gap: 2px;
 }
+@media (max-width : 400px) {
+    .floty{  
+        position: relative;
+        top:-20px;
+        width:auto;
+        background-color: #ffffffff;
+        float: left;
+        left:40px;
+        color: grey; 
+        z-index: 0;
+        line-height: 5px;
+        text-align: center;
+        font-weight: 500;
+    }  
+}
+@media (min-width : 400px) {
+    .floty{ 
+        position: relative;
+        top:-25px;
+        width:auto;
+        background-color: #ffffffff;
+        float: left;
+        left:40px;
+        color: grey; 
+        z-index: 0;
+        line-height: 5px;
+        text-align: center;
+        font-weight: 500;
+    } 
+}
  
-.floty{ 
-    position: relative;
-    top:-25px;
-    width:auto;
-    background-color: #ffffffff;
-    float: left;
-    left:40px;
-    color: grey; 
-    z-index: 1;
-    line-height: 5px;
-    text-align: center;
-    font-weight: 500;
-}  
-
 
  
     @keyframes  new {
@@ -966,20 +1046,59 @@ gap: 2px;
     
     }
  
-
-@keyframes upperText {
-    from{
-        top:-30px;
-    }
-    to{
-        top: -45px;
-        left : 20px;
-        font-size: 14px; 
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-
+@media (min-width : 400px) {
+    @keyframes upperText {
+        from{
+            top:-30px;
+        }
+        to{
+            top: -45px;
+            left : 20px;
+            font-size: 14px; 
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+    } 
 }
+
+@media (max-width : 400px) {
+    @keyframes upperText {
+        from{
+            top:-30px;
+        }
+        to{
+            top: -38px;
+            left : 20px;
+            font-size: 14px; 
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+    } 
+}
+/* @media (max-width : 340px) {
+    @keyframes upperText {
+        from{
+            top:-30px;
+        }                        // one plus media query
+        to{
+            top: -41px;
+            left : 20px;
+            font-size: 14px; 
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    
+    } 
+} */
+@media (max-width : 400px) {
+.btn-for-program {
+    font-size: 13px;
+}
+}
+
+
 .leave input{ 
     border: 2px solid blue;
     transition: all 100ms ease-in;
@@ -1127,10 +1246,14 @@ select{
     font-size: 22px;
     margin-left: 5px;
 }
+@media (min-width : 400px) {
+    .btn-for-program {
+        font-size: 16px;
+    }
+}
 .btn-for-program{
-    padding : 10px 10px;
+    padding : 8px 10px;
     border-radius: 20px;
-    font-size: 16px;
     border:1px solid grey;
     font-family:inherit;
     transition: all 250ms;
@@ -1186,16 +1309,7 @@ color: blue;
     margin-left: 0px;
 }
 /* All media query */
-/* @media (max-width:600px)
-{
-   
-    .floty{
-        top:-25px
-    }
-    .floaty{
-        animation: new 70ms  forwards;;
-    }
-} */
+
 /* /////////////////////////////////////////////////////////////////// */
 .content-in-phone{
     /* background: #a8ff78;  /* fallback for old browsers */
@@ -1244,17 +1358,18 @@ justify-content: space-between;
         left : 0%;
     }
 }
-@media (max-width:608px) {
+@media (max-width:630px) {
     .result{ 
        display: none;
     }
 }
-@media (min-width:988px) {
+@media (max-width:998px) {
     .result{ 
-        left: 4%; 
+        left: 15%;
+        margin-bottom : 10px;
     }
 }
-@media (min-width:450px) {
+@media (min-width:650px) {
     .Slider{
         display: none;
 

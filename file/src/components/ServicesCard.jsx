@@ -37,7 +37,7 @@ class ServicesCards extends Component{
   
   <div className="text-content-for-program">
   <div className="card-body servicecards">
-    <p className="title">{this.props.title}</p>
+    <p className="title" dangerouslySetInnerHTML={{__html:this.props.title}}></p>
   </div>
   </div>
   <div className="content" ref="toggle">
