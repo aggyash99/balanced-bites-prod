@@ -32,10 +32,10 @@ class ServicesCards extends Component{
 
 
   
-  <div class="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ border:"2px solid greenyellow",Width:"18rem",height:"50vh",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:`url(${this.props.imgsrc})`}}>
+  <div className="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ border:"2px solid greenyellow",Width:"18rem",height:"50vh",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:`url(${this.props.imgsrc})`}}>
   
-  <div class="card-body servicecards">
-    <p class="title">{this.props.title}</p>
+  <div className="card-body servicecards">
+    <p className="title">{this.props.title}</p>
   </div>
   <div className="content" ref="toggle">
  

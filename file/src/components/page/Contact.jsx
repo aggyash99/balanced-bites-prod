@@ -211,7 +211,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname' autoComplete="off" value={Data.fullname} onChange={InputEvent} onKeyUp={resultname} placeholder="E" />
-                    <label for="exampleFormControlInput1" style={{ border: "none" }} className="form-label">Full Name</label>
+                    <label style={{ border: "none" }} className="form-label">Full Name</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" style={{ verticalAlign: "bottom" }}>
                     <WarningIcon className="warningicon hiddenelement" id="name" style={{ fontSize: "35px" }} />
@@ -221,7 +221,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea " required>
                     <input type="text" className="form-control" required id="exampleFormControlInput2" name='phone' autoComplete="off" value={Data.phone} onChange={InputEvent} onKeyUp={resultphone} placeholder="r" />
-                    <label for="exampleFormControlInput2" className="form-label">Phone No.</label>
+                    <label className="form-label">Phone No.</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="num" style={{ fontSize: "35px" }} />
@@ -232,7 +232,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="email" className="form-control" required id="exampleFormControlInput3" name='email' autoComplete="off" value={Data.email} onChange={InputEvent} onKeyUp={resultemail} placeholder="m" style={{}} />
-                    <label for="exampleFormControlInput3" className="form-label">Email address</label>
+                    <label  className="form-label">Email address</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="email" style={{ fontSize: "35px" }} />
@@ -241,7 +241,7 @@ window.location.replace("/");
                 <div className="row">
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3 form-group col-sm-10 paddingtextarea" required>
-                    <label class="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
+                    <label className="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
                     <textarea className="form-control textmessage" id="exampleFormControlTextarea1" rows="3" name='msg' autoComplete="off" value={Data.msg} onChange={InputEvent} onFocus={textareafocus} onBlur={textareafocusout} onClick={textareaclick} placeholder="message"></textarea>
                   </div>
                 </div>

@@ -80,7 +80,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
         </ul>
         <div style={{paddingTop:"20px"}}>
           <a href="./contact">
-          <button className="  btnabout " onClick={'./Contact'}>Contact Us</button></a>
+          <button className="  btnabout ">Contact Us</button></a>
         </div>
       </div>
     </div>
