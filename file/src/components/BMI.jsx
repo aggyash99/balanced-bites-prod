@@ -1,5 +1,4 @@
-import React from "react";
-import { Component } from "react";
+import React,{ Component }  from "react";
 import image from '../Image/pics/bmi-2.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom";
@@ -8,9 +7,9 @@ import reddot from '../Image/images/red.png';
 import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
-import CloseIcon from '@material-ui/icons/Close'; 
-// import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CloseIcon from '@material-ui/icons/Close';   
+import Styled from 'styled-components';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 class BMI extends Component{
 
     constructor(props)
@@ -31,7 +30,7 @@ class BMI extends Component{
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
-            heightstatus : "centimeter",
+            heightstatus : "Centimeter",
             weightstatus : "Kg",
             selectionweight : "springgreen",
             selectionheight : "springgreen",
@@ -67,12 +66,15 @@ class BMI extends Component{
      calculate = () =>{
 
     if(this.state.weight === "" || this.state.height === ""){
-    return "";
+        this.setState({height:"",weight:""});
+    
+        return "";
      }
     let reg = /^([0-9]){0,5}([.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
     if(reg.test((temp1))===false)
     { 
+    this.setState({height:"",weight:"",heightInch:""});
     console.log('weight')
     return "";
     }
@@ -81,6 +83,8 @@ class BMI extends Component{
     console.log(temp);
     if(reg.test((temp))===false)
     { 
+    
+    this.setState({height:"",weight:"",heightInch:""});
     return "";
     
     }
@@ -98,14 +102,14 @@ class BMI extends Component{
          
        
         let total = 0;
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "centimeter"){
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Centimeter"){
         const wei = this.state.weight;
         const hei = this.state.height/100;
         const Atemp = wei/(hei*hei);
         total  = Atemp.toFixed(0);
         this.setState({result : total});
         }
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "meter")
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Meter")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -121,7 +125,7 @@ class BMI extends Component{
             const total =( wei / (hei * hei) * 703).toFixed(0);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Foot")
+        if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
         {
             const wei = parseInt(this.state.weight);
             const hei = parseInt(this.state.height);
@@ -157,6 +161,7 @@ class BMI extends Component{
         const e = findDOMNode(this.refs.toggle);
         const f = findDOMNode(this.refs.leave);
 
+        const e3 = findDOMNode(this.refs.toggle1);
         const e1 = findDOMNode(this.refs.toggle2);
         const f1 = findDOMNode(this.refs.leave2);
 
@@ -165,18 +170,21 @@ class BMI extends Component{
         if(this.state.height === ""){
         $(f1).removeClass("leave");
         $(e1).removeClass("floaty");
+        $(e3).removeClass("floaty");
         }
     }
     leave = ()=>{
         const e = findDOMNode(this.refs.toggle);
         const f = findDOMNode(this.refs.leave);
         
+        const e3 = findDOMNode(this.refs.toggle1);
         const e1 = findDOMNode(this.refs.toggle2);
         const f1 = findDOMNode(this.refs.leave2);
 
         $(f).removeClass("leave");
         $(e).removeClass("floaty");
         $(f1).removeClass("leave");
+        $(e3).removeClass("floaty");
         $(e1).removeClass("floaty");
 
     }
@@ -201,11 +209,13 @@ class BMI extends Component{
     
     click1 = () =>{
         const e = findDOMNode(this.refs.toggle2);
+        const e3 = findDOMNode(this.refs.toggle1);
         const f = findDOMNode(this.refs.leave2);
         const e1 = findDOMNode(this.refs.toggle);
         const f1 = findDOMNode(this.refs.leave);
         $(f).addClass("leave");
         $(e).addClass("floaty") ;
+        $(e3).addClass("floaty") ;
 
 
         if(this.state.weight === ""){
@@ -219,12 +229,15 @@ class BMI extends Component{
         const f = findDOMNode(this.refs.Phoneslider)
         $(f).removeClass('slide-phone')
     }
-
+    selectCategory = (propss)=>{
+        console.log(propss.target.cp)
+        this.setState({heightstatus : propss.target.value})
+    }
     render(){
         return(
         <div>
    
-    <div className=" container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
+    <div className="container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
     
 
         <div className="row d-flex justify-content-between p-5 PHONE-CLASS m-0">
@@ -239,7 +252,7 @@ class BMI extends Component{
         <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
                 <p style={{textAlign:"left", fontSize:"15px", lineHeight:"0px",fontWeight:"600",color:"#A9A9A9"}}>Your BMI Score</p>
                     
-                    <div className="main" style={{width:"100%"}}>
+                    <div className="main">
                     <div className="BMI-whole">
                         <input value={this.state.result} className="input-class"  readOnly ></input>
                     </div>
@@ -261,11 +274,7 @@ class BMI extends Component{
                     </div>
                     </div>
                 <div className="d-flex justify-content-around" style={{lineHeight:"0px",padding:"0px"}}>
-                {/* <div><FontAwesomeIcon icon={faArrowDown} style={{fontSize:"15px",color:"red", visibility:this.state.redone}}></FontAwesomeIcon></div>
-                <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"yellow", visibility:this.state.yellowone}}></FontAwesomeIcon></div>
-                <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"green", visibility:this.state.greenone}}></FontAwesomeIcon></div>
-                <div><FontAwesomeIcon icon={faArrowDown}  style={{fontSize:"15px",color:"blue", visibility:this.state.blueone}}></FontAwesomeIcon></div>
-               */} </div> 
+                 </div> 
                 <div className="bars">
 
                 <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
@@ -275,15 +284,14 @@ class BMI extends Component{
                 </div>
                 {
                     <div className="indicator" >
-                    <span>0 - 19</span>
-                    <span>19 - 25</span>
-                    <span>25 - 30</span>
-                    <span>30 - ..</span>
+                    <span className="first-indicator">18.5</span>
+                    <span className="second-indicator"> 25</span>
+                    <span className="third-indicator"> 30</span> 
                     
                     </div>
                 }
             <div className="barText">
-            <p>Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.</p>
+            <p>Your BMI indicates that you are at a healthy weight for your height</p>
             </div>
             <div className="bottom-status">
             <p>Your BMI in Range : { this.state.text}</p>
@@ -291,9 +299,6 @@ class BMI extends Component{
 
             </div>
             </div>
-
-
-
             <div className="Slider" ref="Phoneslider">
             <div className="content-in-phone">
                <div className="cards-for-phone">
@@ -318,35 +323,38 @@ class BMI extends Component{
                 </div>
                 {
                     <div className="indicator" >
-                    <span>0 - 19</span>
-                    <span>19 - 31</span>
-                    <span>12 - 32</span>
-                    <span>32 - 12</span>
+                    <span>18.5</span>
+                    <span>25</span>
+                    <span>30</span> 
                     
                     </div>
                 }
                </div>
                <div className="content-2">
                <p >
-               Your BMI indicates that you are at a healthy weight for your height. by maintaining a healthy weight, you lower your risk of developing serious health problems.
+               Your BMI indicates that you are at a healthy weight for your height.
                </p>
                <p>
-                YOUR BMI RESULT :   {this.state.result}
+                YOUR BMI RESULT :   {this.state.text}
                </p>
                </div>
             </div>
         </div>
+        
+
+
+            
 
 
          <div className="col-lg-6 col-md-12">
-
-
         <div className="BMI-start">
          
         <div className=""> { /*row d-flex justify-content-evenly */ }
         
-        <div className="row ">
+        <div className="row "> 
+        
         <div className="col-lg-8 pt-2 col-md-9 col-12 input-BMI" ref="leave" onClick={this.click} > 
+
         <input type="" className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
        
          <span className="floty" ref="toggle" onSelectStart="return false">Your weight</span> 
@@ -354,14 +362,18 @@ class BMI extends Component{
         </div>
 
         <div className="col-lg-4 pt-2 col-md-3 col-12 ">
-        
-        <div className= "" style={{borderColor :`${this.state.selectionweight}`}} >
-        <select className="units p-2 form-select" name="weightstatus" onClick={this.heightunits}>
-        <option value="Kg">kg</option> 
-        <option value="Pounds">Pounds</option>
-        </select>
-       </div>
+       <div className="dropdown">
+        <div className="dropdown-select">
+        <span className>{this.state.weightstatus}</span>
+       <KeyboardArrowDownIcon/>
+        </div>
+        <div className="dropdown-list">
+        <div className="dropdown-list__item" onClick={()=>{this.setState({weightstatus : "Kg"})}}>Kilogram(Kg)</div>
+        <div className="dropdown-list__item" onClick={()=>this.setState({weightstatus : "Pounds"})} >Pounds</div>
  
+        </div>
+
+        </div>
         </div>
         </div>
 
@@ -369,7 +381,7 @@ class BMI extends Component{
         <div className="row pt-2 ">
         <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  > 
         {
-         (this.state.heightstatus !== "Foot") ? 
+         (this.state.heightstatus !== "Feet") ? 
         <><input  type="" placeholder="" value={this.state.height} onChange={this.set} />
          <span className="floty" ref="toggle2">Your Height</span>
         </> : 
@@ -381,7 +393,7 @@ class BMI extends Component{
         </div>
         <div>
          <input  type=""  value={this.state.heightInch} onChange={this.setInch} />
-         <span className="floty" ref="toggle2">Inch</span>
+         <span className="floty" ref="toggle1">Inch</span>
         </div>
         </div>
     }
@@ -391,50 +403,30 @@ class BMI extends Component{
         
         <div className="" style={{borderColor :`${this.state.selectionheight}`}}>
 
-        <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
+        {/* <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
         <option value=  "centimeter">Centimeter</option>
-        <option value = "Foot" >Feet</option>
+        <option value = "Feet" >Feet</option>
         <option value= "meter ">meter</option> 
-        </select>
+        </select> */}
+        <div className="dropdown">
+        <div className="dropdown-select">
+        <span className>{this.state.heightstatus}</span>
+       <KeyboardArrowDownIcon/>
+        </div>
+        <div className="dropdown-list">
+        <div className="dropdown-list__item" onClick={()=>{this.setState({heightstatus : "Centimeter"})}}>Centimeter</div>
+        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Meter"})} >Meter</div>
+
+        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Feet"})} >Feet</div>
+        </div>
+
+        </div>
+
         </div>
  
         </div>
         </div>     
-
-        {/* <div className="row  ">
-        <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  >     
-        
-        {
-         (this.state.heightstatus !== "Foot") ? 
-        <><input  type="number" placeholder="" value={this.state.height} onChange={this.set} />
-         <p className="floty" ref="toggle2">Your Height</p>
-        </> : 
-        <div className="d-flex justify-content-between" style={{gap : "5%"}}>
-        
-        <div>
-        <input  type="number"  value={this.state.height} onChange={this.set} /> 
-        <p className="floty" ref="toggle2">Feet</p>   
-        </div>
-        <div>
-         <input  type="number"  value={this.state.heightInch} onChange={this.setInch} />
-         <p className="floty" ref="toggle2">Inch</p>
-        </div>
-        </div>
-    }
-  
-        </div>
-    <div className="col-lg-4  pt-2  col-md-3 col-12 ">
-    
-    <div className=" BMI-unit-part" style={{borderColor :`${this.state.selectionheight}`}}>
-
-    <select className="units" name="heightstatus" onClick={this.heightunits}>
-    <option value = "Foot" >Feet</option>
-    <option value=  "centimeter">Centimeter</option>
-    <option value= "meter ">meter</option> 
-    </select>
-    </div> 
-    </div>
-    </div> */}
+ 
 
 
 
@@ -476,20 +468,12 @@ export default BMI;
             <input placeholder="In Kg" type="number" onChange={setweight} style={{outline:"none",padding:"5px",textAlign:"center", width:"50%"}}/>
             </div> 
             </div>
+const UL = Styled.ul`
 
 
-            <div className="row ">
-            <div className="col-lg-12 mb-3 d-flex justify-content-around">
-            <div className="btn btn-success" onClick={calculate}>calculate</div>
-            </div>
-            </div>
-            <div className="row">
-            <div className="col-lg-12 col-12 d-flex justify-content-center"  >
-                <div className="col-lg-6 d-flex justify-content-center">
-                {result}     
-                </div>
-               
-            </div>
-            </div>
+`
+
+const LI = Styled.li`
 
  }*/
+

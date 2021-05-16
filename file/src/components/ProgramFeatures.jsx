@@ -1,10 +1,11 @@
 import React from 'react';
 import nopills from '../Image/pics/pills.svg'
 import option from '../Image/pics/option.svg';
+import options from '../Image/pics/food.svg';
 import whatsApp from '../Image/pics/whatsapp1.svg'
 import plain from '../Image/pics/plain1.svg'
 import routine from '../Image/pics/routine1.svg';
-import logos from '../Image/logo1.png'
+import logos from '../Image/pics/dietlogo.jpg'
 import Styled from 'styled-components'; 
 
  const ProgramsFeatures = (props)=>{
@@ -24,7 +25,7 @@ import Styled from 'styled-components';
             <Content>
             <Card>
             <Img>
-            <img alt="alt"src={option}></img>
+            <img alt="alt" src={options}></img>
             </Img>
             <Heading>Heading</Heading>
             <Writeup>100 % customized diet plans; no pre – defined or fixed diets.</Writeup>
@@ -52,12 +53,13 @@ import Styled from 'styled-components';
     
     
             
-            <Main className="col-lg-4 LEFTCARD-Center">
+            <CenterImg className="col-lg-4 -Center">
+            <div className="col-12">
             <Center>
             <img alt="alt" src={logos}></img>
             </Center>
-         
-            </Main>
+            </div>
+            </CenterImg>
     
     
     
@@ -96,8 +98,12 @@ import Styled from 'styled-components';
              
             
             
-             <div className="row d-flex justify-content-around position-relative">
-             <Main className="col-lg-4">
+            
+                
+        </div>
+               
+             <LAST className="row">
+             <Main className="col-lg-4 col-12">
             <Content>
                 <Card>
             <Img>
@@ -109,11 +115,7 @@ import Styled from 'styled-components';
             </Content>
             </Main>
 
-                 </div>   
-            
-                
-        </div>
-                
+                 </LAST>    
     
     </div>
     
@@ -122,27 +124,32 @@ import Styled from 'styled-components';
 }
 export default ProgramsFeatures
 
-
+const CenterImg = Styled.div`
+//position : relative;
+ 
+`
 const Main = Styled.div`
 padding : 5% 2%;
 display : flex;
 justify-content : center;
 position : relative;
 
+ 
 `
 
 const Content = Styled.div`
 border: 1px solid white;
 padding : 20px;
-background: #f9f9f9;
+margin-bottom : 20px;
+background: #f5f5f5;
 cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
-&:hover{
-    box-shadow : 0px 30px 10px 0px #f9f9f9;
-    background : #ffffff;
-}
+// &:hover{
+//     box-shadow : 0px 30px 10px 0px #f9f9f9;
+//     background : #ffffff;
+// }
 `
 const Card = Styled.div` 
 width : 250px;
@@ -153,25 +160,26 @@ margin : 10px 20px;
 `
 const Img = Styled.div`
 position :relative;
-cursor : pointer;
- 
+cursor : pointer; 
 img{
-    width : 80px;
-    height : 80px;
-    object-fit : contain; 
+    
+border-radius : 50%;
+    width : 70px;
+    height : 70px; 
     position : absolute;
-    bottom : 0;
-    background : #f9f9f9;
+    bottom : 5px;
     z-index : 0;
     left : 50%;
     transform:translate(-50%);    
-    background : transparent;
+    background : #f9f9f9;
     transition : all 250ms;
-    padding : 5px;
-&:hover{ 
-    border-color: #f9f9f9;
-}
-}
+    padding : 0px;
+    box-shadow : 1px 0px 0px 12px #f5f5f5;
+    &:hover{
+        box-shadow : 0px 0px 0px 6px #b8f090;
+   
+    }
+} 
 `
 const Heading = Styled.div`
 padding : 5px;
@@ -189,9 +197,15 @@ font-weight: 550;
 font-family : loto sans-serif;
 `
 const Center = Styled.div`
-width : 100%;  
-display : flex;
-justify-content : center; 
+// width : 100%;  
+// display : flex;
+// justify-content : center; 
+
+img{
+    width :100%;
+    height : 100%;
+    object-fit : contain;
+}
 
 @media (max-width : 900px)
 {
@@ -211,7 +225,7 @@ padding : 20px;
 const Mainhead = Styled.span`
 font-size : 30px;
 word-spacing : 5px;
-font-family : 'Poppins', sans-serif;
+font-family : roboto, sans-serif;
 padding : 5px 0px;
 `
 
@@ -226,6 +240,7 @@ color : #000000;
 `
 const MidHead = Styled.div`
 color : #000000;
+font-family : roboto;
 `
 /*
 const Bottom = Styled.div`
@@ -236,3 +251,14 @@ const Bottom = Styled.div`
 //     top : 0;
 // }
 `*/
+
+const LAST = Styled.div`
+margin-top : -40px;
+display : flex;
+justify-content : center;
+@media(max-width : 700px)
+{
+    margin-top : 0px;
+    
+}
+`

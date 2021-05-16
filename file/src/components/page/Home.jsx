@@ -1,6 +1,6 @@
 import React from 'react';
 import img from '../../Image/services/test.png';
-import CarouselH from '../CarouselH';
+import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 import {Link} from 'react-router-dom';

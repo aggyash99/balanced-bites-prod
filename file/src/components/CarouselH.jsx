@@ -55,8 +55,8 @@ const CarouselH =()=>{
 export default CarouselH;
 
 const MyCarousel = Styled(Carousel)`
-margin-top : 50px; 
-margin-bottom : 50px;
+margin-top : 30px; 
+margin-bottom : 20px;
 li:hover{ 
 }
 ul li button{
