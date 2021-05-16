@@ -6,6 +6,7 @@ import  thyroid  from "../Image/services/thyroid.jpg";
 import  Childrens from '../Image/services/child.jpg';
 import diabetes from '../Image/services/diabetes.jpg';
 import Detox from '../Image/services/detox.jpg';
+import pregnant from '../Image/services/pregnant.jpg'
 const Sdata = [
     {
         imgsrc : weightloss,
