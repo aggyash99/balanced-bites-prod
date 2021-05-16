@@ -7,7 +7,7 @@ import ProgramsFeatures from './ProgramFeatures';
 const Program =(props)=>{ 
  
 var title,description,logo,second,third;
-{
+
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -20,7 +20,6 @@ var title,description,logo,second,third;
     }
     return ("");
     })
-    
 return (
 <>
 <div>
