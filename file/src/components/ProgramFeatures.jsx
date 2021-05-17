@@ -3,6 +3,7 @@ import nopills from '../Image/pics/pills.svg'
 import option from '../Image/pics/option.svg';
 import options from '../Image/pics/food.svg';
 import whatsApp from '../Image/pics/whatsapp1.svg'
+import call from '../Image/pics/call.png'
 import plain from '../Image/pics/plain1.svg'
 import routine from '../Image/pics/routine1.svg';
 import logos from '../Image/pics/dietlogo.jpg'
@@ -12,7 +13,7 @@ import Styled from 'styled-components';
     return (
         <div className="container">
         <Top className="row">  
-            <Mainhead>Program Features</Mainhead>
+            <Mainhead ><span className="borderbottom mb-2">Program Features</span></Mainhead>
             <MidHead>Nutritionist & Diabetes Educator</MidHead>
             <Descriptions >Diets prescribed are designed for a particular person or purpose. We emphasise and focus only on Individual needs & requirements.</Descriptions>
         </Top>
@@ -107,7 +108,7 @@ import Styled from 'styled-components';
             <Content>
                 <Card>
             <Img> 
-            <img src={whatsApp}></img>
+            <img src={call}></img>
         
             </Img>
             <Heading>Support</Heading>
@@ -224,15 +225,15 @@ font-weight : 600;
 padding : 20px;
 `
 const Mainhead = Styled.span`
-font-size : 30px;
+font-size : 35px;
 word-spacing : 5px;
-font-family : roboto, sans-serif;
+font-family : Rubik, sans-serif;
 padding : 5px 0px;
 `
 
 const Descriptions = Styled.div`
 font-size : 15px;
-padding: 10px 100px;
+padding: 10px 10px;
 color : #000000;
 @media (max-width : 400px)
 {
@@ -240,8 +241,10 @@ color : #000000;
 }
 `
 const MidHead = Styled.div`
-color : #000000;
-font-family : roboto;
+color :red;
+font-family :  'Caveat', cursive;
+font-size : 27px;
+font-weight : 500;
 `
 
 const Bottom = Styled.div`

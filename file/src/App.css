@@ -1,5 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+ 
 .navbar {
     background-color: #ffffff !important;
 
@@ -96,9 +99,11 @@ color: rgb(93, 155, 31);
 }
 .bold{
     font-size: 20px;
+    color: rgb(32, 95, 51);
+    font-weight: 600;
 }
 .first{
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 600;
 }
 
@@ -107,25 +112,17 @@ color: rgb(93, 155, 31);
 .PROGRAMS-PHOTO{
 background-repeat: no-repeat;
 background-position :center;
- background-size:cover;
- object-fit:cover;
-width: 100% ; 
-height: 100%;
+height : 500px;
+width: 100%;
 }
-@media (max-width : 400px)
+@media (max-width : 500px)
 {
     .PROGRAMS-PHOTO{
         margin-top: 10px;
+        height: 100%;
     }
 }
-@media (min-width:990px){
-
-    .PROGRAMS-PHOTO{
-        height: 85vh; 
-        width: 100%;
-        
-    }
-}
+ 
 #header .btn-get-started:hover {
     background: greenyellow;
     color: ivory;
@@ -484,12 +481,16 @@ font-weight: bold;
     font-weight: 600;  
     padding: 15px;
     letter-spacing: 3px;
-    font-size: 16px;
+    font-size: 17px;
     border: 0.1px solid rgb(241, 234, 234);
     margin-bottom: 1%;
     background:rgba(238, 238, 238, 0.918);
     position: relative;
-   
+    /* height:70px; */
+    overflow: hidden; 
+}
+.class{
+    height: 100vh;
     overflow: hidden;
 }
 .link::after{
@@ -528,6 +529,7 @@ font-weight: bold;
 }
 .alllink{
     width: 100%; 
+    height: 500px;
 }
 
 .IMAGEFORPROGRAM{
@@ -597,6 +599,10 @@ font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 2px;
     color: rgb(209, 30, 30);
+    
+}
+.our-programs-head{
+    padding : 40px;
 }
 .logo-for-service{
     background-position: center;
@@ -625,8 +631,7 @@ color: rgb(214, 40, 27);
 }   */
 .programs{
     color: green;
-    font-size: 45px;
-    position: relative;
+    font-size: 45px; 
     font-weight: 600;
 
 }

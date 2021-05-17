@@ -7,7 +7,6 @@ import ProgramsFeatures from './ProgramFeatures';
 const Program =(props)=>{ 
  
 var title,description,logo,second,third;
-{
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -19,7 +18,7 @@ var title,description,logo,second,third;
         return ("");
     }
     })
-    }
+  
 return (
 <>
 <div>
@@ -34,32 +33,33 @@ return (
         <span className="OurStyle">Our</span>
         <span className="serviceStyle borderbottom">Service</span>
         </div>
-    <div className="row mt-5">  
+    <div className="row mt-5" >  
         
-        <div className="col-lg-3 col-md-12 col-sm-12 col-12 d-flex">
+        
+        <div className="col-lg-3 col-md-12 col-12">
         <div className="alllink d-flex flex-column">
             
             {
                 Sdata.map( (value,key) =>{
                     return (
                         <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}>{}</span> </Link>
+                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
                     );
                 })
             }
         </div>
         </div> 
 
-
-
-        <div className="col-lg-9 col-sm-12 col-md-12 col-12 d-flex">
-        <div className="program-photo">
-        <img src={logo} className="PROGRAMS-PHOTO" ></img>
-        </div>
+        <div className="col-lg-9 col-md-12 col-12  ">
         
-      
+        <img src={logo} className="PROGRAMS-PHOTO" ></img>
+        {/* </div> */}
         </div>
-        </div>
+      </div>
+        
+
+
+         
 
 
 
