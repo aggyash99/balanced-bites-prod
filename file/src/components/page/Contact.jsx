@@ -11,8 +11,11 @@ import './contact.css';
 import $ from 'jquery';
 import emailjs from 'emailjs-com';
 import Modal from './Modal';
+import VisibilitySensor from 'react-visibility-sensor';
+
 
 function Contact() {
+
   const [Data, setData] = useState({
     fullname: '',
     phone: '',
@@ -185,13 +188,26 @@ window.location.replace("/");
   }
   
   const [show, setShow] =useState(false);
+  const [showB, setB]=useState(false);
+  if(!showB)
+  {
+    console.log("Not Visible");
+  }
   return (
     <>
     
       <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
       <div className=" container-fluid contact_div">
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
-          <h1 className="text-center contactheading" >Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
+          <h1 className="text-center contactheading" >Get in Touch <VisibilitySensor
+          partialVisibility 
+        onChange={(isVisible) => {
+          
+          setB(isVisible?true:false);
+          
+        }}
+         ><span id='bottomborder' className={showB?'borderbottom':''}>
+      <strong style={{ color: "#03ac11" }}>With us Today </strong></span></VisibilitySensor></h1>
         </div>
 
         <div className="row">

@@ -210,3 +210,7 @@ list-style: none;
         background-position: right center;
     
 }
+
+#loading{
+    background: #03ac11;
+}

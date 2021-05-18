@@ -14,7 +14,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    
+    <style>
+      .loader {
+        position:absolute;
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #0105ff;
+        border-radius: 50%;
+        width: 130px;
+        height: 130px;
+        top:50%;
+        
+        animation: spin 2s linear infinite;
+      }
+      .loader-container{
+        display: flex;
+        justify-content: center;
+      }
+      
+      @keyframes spin {
+        0%  { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      </style>
     
     
     
@@ -39,7 +60,11 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loader-container">
+      <div class="loader"></div>
+   </div>
+  </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

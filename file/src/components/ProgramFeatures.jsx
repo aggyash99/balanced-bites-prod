@@ -1,6 +1,6 @@
 import React from 'react';
 import nopills from '../Image/pics/pills.svg'
-import option from '../Image/pics/option.svg';
+//import option from '../Image/pics/option.svg';
 import options from '../Image/pics/food.svg';
 import whatsApp from '../Image/pics/whatsapp1.svg'
 import plain from '../Image/pics/plain1.svg'

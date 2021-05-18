@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const Map = ()=>{
+  
+  const [showB, setB]=useState(false);
 
     return (
        <>
@@ -12,7 +15,15 @@ const Map = ()=>{
           <div className="col-lg-2 "></div>
           <div className="col-lg-8 mt-5">
               <div className="view view-cascade gradient-card-header peach-gradient">
-                <h2 className=" text-capitalize text-center mapheading" >Our <span className="borderbottom" style={{color:"#03ac11",fontWeight:"700"}}>Location</span></h2>
+                <h2 className=" text-capitalize text-center mapheading" >Our <VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setB(isVisible?true:false);
+                 
+            
+          
+        }}><span className={showB?'borderbottom':''} style={{color:"#03ac11",fontWeight:"700"}}>Location</span></VisibilitySensor></h2>
               </div>
             <div className="card card-cascade narrower">
               <div className="card-body card-body-cascade text-center " >
