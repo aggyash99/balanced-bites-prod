@@ -10,6 +10,8 @@ import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
 import Styled from 'styled-components';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+
+
 class BMI extends Component{
 
     constructor(props)
@@ -18,18 +20,21 @@ class BMI extends Component{
         this.state= {
             height : "",
             weight : "",
-            result : "", 
+            result :0, 
             text  : "",
             red:7,
             green:7,
             yellow:7,
             blue:7,
             dot:"",
+
+
             redone : "hidden",
             yellowone : "hidden",
             greenone : "hidden",
             buleone : "hidden",
             Error : "",
+            
             heightstatus : "Centimeter",
             weightstatus : "Kg",
             selectionweight : "springgreen",
@@ -41,35 +46,29 @@ class BMI extends Component{
     }
 
     set = (props) =>{
-        // if(props.target.value > 50)
-        // {
-        //     this.setState({Error : "YES"});
-        //     return "";
-        // }
         this.setState({height : props.target.value});
-        
     }
 
     setInch = (props) =>{
         this.setState({heightInch : props.target.value})
     }
-     setweight = (props)=>{
-        // if(props.target.value > 50)
-        // {
-        //     this.setState({Error : "YES"});
-        //     return "";
-        // }
-        
- this.setState({weight : props.target.value});
-       
-    }
-     calculate = () =>{
 
-    if(this.state.weight === "" || this.state.height == ""){
-        this.setState({height:"",weight:""});
-    
-        return "";
-     }
+    setweight = (props)=>{
+    this.setState({weight : props.target.value});
+    }
+
+
+     calculate = () =>{
+        
+
+        // if(this.state.weight === "" || this.state.height == ""){
+        // this.setState({height:"",weight:""});
+        // return "";
+        // }
+
+
+
+    // REGEX PART 
     let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
     if(reg.test((temp1))==false)
@@ -83,76 +82,77 @@ class BMI extends Component{
     console.log(temp);
     if(reg.test((temp))==false)
     { 
-    
     this.setState({height:"",weight:"",heightInch:""});
     return "";
-    
     }
+    const s = findDOMNode(this.refs.slideBMI);
+        $(s).addClass('slideBMI');
+        const f = findDOMNode(this.refs.Phoneslider);
+        $(f).addClass('slide-phone') 
+  
+        //console.log(this.state.height)
 
         
-        console.log(this.state.height)
-
-        const s = findDOMNode(this.refs.slideBMI);
-        $(s).addClass('slideBMI');
-        const f = findDOMNode(this.refs.Phoneslider)
-        $(f).addClass('slide-phone')
-        this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
-        this.setState({height:"",weight:"",heightInch:""});
+        // this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
+        // this.setState({height:"",weight:"",heightInch:""});
       
-         
-       
-        let total = 0;
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus == "Centimeter"){
-        const wei = this.state.weight;
-        const hei = this.state.height/100;
+        var wei = parseInt(this.state.weight);
+        var hei = parseInt(this.state.height);
+        var total = 0;
+
+        console.log(wei + " " + hei)
+        
+        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Centimeter"){
+        hei = hei/100;
         const Atemp = wei/(hei*hei);
-        total  = Atemp.toFixed(0);
+        total  = Atemp.toFixed(1);
         this.setState({result : total});
         }
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus == "Meter")
+
+        else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Meter")
         {
-            const wei = parseInt(this.state.weight);
-            const hei = parseInt(this.state.height);
             console.log('conme')
-           total = (wei / (hei * hei)).toFixed(0);
+           total = (wei / (hei * hei)).toFixed(1);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Inch")
+        else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Inch")
         {
-            const wei = parseInt(this.state.weight);
-            const hei = parseInt(this.state.height);
-            console.log('conme')
-            const total =( wei / (hei * hei) * 703).toFixed(0);
+            // console.log('conme')
+            const total =( wei / (hei * hei) * 703).toFixed(1);
             this.setState({result : total});
         }
-        if(this.state.weightstatus === "Pounds" && this.state.heightstatus == "Feet")
+        else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
         {
-            const wei = parseInt(this.state.weight);
-            const hei = parseInt(this.state.height);
+            
             const heiIn = parseInt(this.state.heightInch);
-           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(0);
+           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(1);
             this.setState({result : total});
         }
-        if(this.state.result <= 19)
+        // console.log(this.state.result)
+        if(total <= 19)
         {
-            this.setState({text: "UnderWeight",blue : 10 ,blueone:"visible" ,green:7,red:7,yellow:7,redone:"hidden",greenone:"hidden",yellowone:"hidden",dot: bluedot});
+            this.setState({text: "UnderWeight",height:"",weight:"",heightunits:"",blue : 10  ,green:7,red:7,yellow:7,blueone:"visible",redone:"hidden",greenone:"hidden",yellowone:"hidden",dot: bluedot});
+            return "";
         }
-        else if(this.state.result <= 25)
+        else if(total <= 25)
         {
             
           //  console.log(this.state.result)
-            this.setState({text : "Healthy Weight",red:7,yellow:7,blue:7,green :10,greenone:"visible",blueone:"hidden",redone:"hidden",yellowone:"hidden",dot : greendot});
+            this.setState({text : "Healthy Weight",height:"",weight:"",heightunits:"",red:7,yellow:7,blue:7,green :10,greenone:"visible",blueone:"hidden",redone:"hidden",yellowone:"hidden",dot : greendot});
+            return "";
         }  
-        else if(this.state.result <= 30)
+        else if(total <= 30)
         {
             
            // console.log(this.state.result)
-            this.setState({text : "OverWeight",green:7,yellow:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
+            this.setState({text : "OverWeight",height:"",weight:"",heightunits:"",green:7,yellow:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
+            return "";
         }
         else
         {   
             //console.log(this.state.result)
-            this.setState({text : "Obese",green:7,yellow:7,blue:7,red : 10 ,dot : reddot,redone:"visible",blueone:"hidden",greenone:"hidden",yellowone:"hidden"});
+            this.setState({text : "Obese",height:"",weight:"",heightunits:"",green:7,yellow:7,blue:7,red : 10 ,dot : reddot,redone:"visible",blueone:"hidden",greenone:"hidden",yellowone:"hidden"});
+            return "";
         }
        
     }
@@ -217,7 +217,6 @@ class BMI extends Component{
         $(e).addClass("floaty") ;
         $(e3).addClass("floaty") ;
 
-
         if(this.state.weight === ""){
         $(f1).removeClass("leave");
         $(e1).removeClass("floaty") ;
@@ -228,9 +227,11 @@ class BMI extends Component{
         $(c).removeClass('slideBMI')
         const f = findDOMNode(this.refs.Phoneslider)
         $(f).removeClass('slide-phone')
+        
+        this.setState({height:"",weight:"",result:""});
     }
     selectCategory = (propss)=>{
-        console.log(propss.target.cp)
+        //console.log(propss.target.cp)
         this.setState({heightstatus : propss.target.value})
     }
     render(){
@@ -240,7 +241,7 @@ class BMI extends Component{
     <div className="container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
     
 
-        <div className="row d-flex justify-content-between p-5 PHONE-CLASS m-0">
+        <div className="row d-flex justify-content-between  PHONE-CLASS m-0">
         <div className="d-flex calculator">
             <p>BMI<span className=""></span> CALCULATOR</p>
             
@@ -299,50 +300,67 @@ class BMI extends Component{
 
             </div>
             </div>
-            <div className="Slider" ref="Phoneslider">
-            <div className="content-in-phone">
-               <div className="cards-for-phone">
-               <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
-               <p>BMI RESULT</p>
-                <CloseIcon ref="closephone" onClick={this.close}/> 
-               </div>
-               <div className=" Phone-bmi">
-                   <div className="answer">
-                   <h1>{this.state.result}</h1>
-                   </div>
-                   <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
-                   <p>Your Category</p>
-                   <p>{this.state.text}</p>
-                   </div>
-               </div>
-               <div className="bars">
-                <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
-                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
-                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
-                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
-                </div>
-                {
-                    <div className="indicator" >
-                    <span>18.5</span>
-                    <span>25</span>
-                    <span>30</span> 
-                    
-                    </div>
-                }
-               </div>
-               <div className="content-2">
-               <p >
-               Your BMI indicates that you are at a healthy weight for your height.
-               </p>
-               <p>
-                YOUR BMI RESULT :   {this.state.text}
-               </p>
-               </div>
-            </div>
-        </div>
+ 
         
+            {/* phone output */}
+            {
+                            <div className="Slider" ref="Phoneslider">
+                            <div className="content-in-phone">
+                               <div className="cards-for-phone">
+                               <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
+                               <p>BMI RESULT</p>
+                                <CloseIcon ref="closephone" onClick={this.close}/> 
+                               </div>
+                               <div className=" Phone-bmi">
+                                   <div className="answer">
+                                   <h1 className="output_data">{this.state.result}</h1>
+                                   </div>
+                                   <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
+                                   <p>Your Category</p>
+                                   <p>{this.state.text}</p>
+                                   </div>
+                               </div>
+                               <div className="bars">
+                                <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+                                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+                                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+                                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
+                                </div>
+                                {
+                                    <div className="indicator" >
+                                    <span>18.5</span>
+                                    <span>25</span>
+                                    <span>30</span> 
+                                    
+                                    </div>
+                                }
+                               </div>
+                               <div className="content-2">
+                               <p >
+                               Your BMI indicates that you are at a healthy weight for your height.
+                               </p>
+                               <p>
+                                YOUR BMI RESULT :   {this.state.text}
+                               </p>
+                               </div>
+                            </div>
+                        </div>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            }
             
 
 
@@ -408,7 +426,7 @@ class BMI extends Component{
         <option value = "Feet" >Feet</option>
         <option value= "meter ">meter</option> 
         </select> */}
-        <div className="dropdown">
+        <div className="dropdown" onClick={this.open}>
         <div className="dropdown-select">
         <span className>{this.state.heightstatus}</span>
        <KeyboardArrowDownIcon/>
@@ -450,6 +468,9 @@ class BMI extends Component{
 
     </div></div>
 );
+
+
+
     }
 }
 
