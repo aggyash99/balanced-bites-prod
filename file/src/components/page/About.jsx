@@ -1,11 +1,8 @@
 import React,{ Component } from 'react';
-import Ankur from '../Ankur';
 import logo from '../../Image/services/about.jpg';
-import BMI from '../BMI';
 import $ from 'jquery';
 import {findDOMNode} from 'react-dom';
 import './about.css';
-import tickmark from '../../Image/images/tickmark.png';
 class About extends Component{
 
   opens =()=>{
@@ -58,7 +55,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
       </div>
 
       <div className="col-lg-4 col-md-4  pt-5 d-none d-sm-block" >
-      <img className="client" src="https://i.pinimg.com/236x/34/25/9d/34259d8b6b60a94f5e43bde242ecc26e.jpg"></img>
+      <img className="client" src="https://i.pinimg.com/236x/34/25/9d/34259d8b6b60a94f5e43bde242ecc26e.jpg" alt=" "></img>
       </div>
 
     </div>
@@ -68,7 +65,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     <div className="row">
       <div className="col-6 d-none d-sm-block" style={{paddingRight:"0px"}}>
         <div className="" style={{width:"100%", paddingRight:"0px "}}>
-        < img  className="leftimageabout"  src={logo} alt="" style={{width:"100%"}}/>
+        < img  className="leftimageabout"  src={logo} alt="Thank You!" style={{width:"100%"}}/>
         </div>
       </div>
       <div className="col-lg-6 col-12 righttextabout fadebackground" >
@@ -83,7 +80,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
         </ul>
         <div style={{paddingTop:"20px"}}>
           <a href="./contact">
-          <button className="  btnabout " onClick={'./Contact'}>Contact Us</button></a>
+          <button className="  btnabout ">Contact Us</button></a>
         </div>
       </div>
     </div>

@@ -71,7 +71,7 @@ class BMI extends Component{
     // REGEX PART 
     let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
     var temp1 = this.state.height;
-    if(reg.test((temp1))==false)
+    if(reg.test((temp1))===false)
     { 
     this.setState({height:"",weight:"",heightInch:""});
     console.log('weight')
@@ -80,7 +80,7 @@ class BMI extends Component{
         
     var temp = this.state.weight;
     console.log(temp);
-    if(reg.test((temp))==false)
+    if(reg.test((temp))===false)
     { 
     this.setState({height:"",weight:"",heightInch:""});
     return "";
@@ -191,7 +191,7 @@ class BMI extends Component{
     heightunits = (props) =>{       
         
 
-        if(props.target.name == "weightstatus")
+        if(props.target.name === "weightstatus")
         {
           //  console.log(props.target.value)
             this.setState({weightstatus : props.target.value , selectionweight : "springgreen"});
@@ -266,7 +266,7 @@ class BMI extends Component{
                         <div>
                             {
                                  
-                                <img className="dot" src={this.state.dot}/> 
+                                <img className="dot" alt="." src={this.state.dot}/> 
                             }
                                </div>
                                <h5 className="categoryStatus" >{this.state.text}</h5>
@@ -476,6 +476,19 @@ class BMI extends Component{
 
 
 export default BMI;
+ /*
+{
+ <div className="row">
+            <div className="col-lg-12 col-12 d-flex mb-3  justify-content-center" >
+            <span>HEIGHT</span>
+             </div>
+            </div>
+            <div className="row">
+            <div className="col-lg-12 col-12 mb-3 d-flex justify-content-center">
+            <span>WEIGHT</span>
+            <input placeholder="In Kg" type="number" onChange={setweight} style={{outline:"none",padding:"5px",textAlign:"center", width:"50%"}}/>
+            </div> 
+            </div>
 const UL = Styled.ul`
 
 
@@ -483,4 +496,5 @@ const UL = Styled.ul`
 
 const LI = Styled.li`
 
-`
+ }*/
+

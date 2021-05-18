@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
-import { NavLink, Link, Route} from 'react-router-dom';
-import Program from './Program';
-import { ThreeSixty } from '@material-ui/icons';
+import {  Link} from 'react-router-dom';
+
 
 class ServicesCards extends Component{
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
 import Card from './CardforReview';
 import carddata from '../Data/ReviewData';
 import google from '../Image/Review/google.png'
@@ -11,7 +10,7 @@ const Newcards = ()=>{
             <span className="main-head">WHAT OUR CLIENT SAY</span>
             <div className="Heading-border">
             <div className='write-review'>
-                <img src={google}></img>
+                <img src={google} alt="G"></img>
                 <span>Review</span>
                 </div>
                 <span className="center-Heading">Give Your Wishes</span>

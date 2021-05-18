@@ -26,7 +26,7 @@ import Styled from 'styled-components';
             <Content>
             <Card>
             <Img>
-            <img src={options}></img>
+            <img alt="alt" src={options}></img>
             </Img>
             <Heading>Heading</Heading>
             <Writeup>100 % customized diet plans; no pre – defined or fixed diets.</Writeup>
@@ -39,7 +39,7 @@ import Styled from 'styled-components';
                 <Content> 
                     <Card>
                 <Img>
-                <img src={routine}></img>
+                <img alt="alt" src={routine}></img>
                 </Img>
                 <Heading>Heading</Heading>
                 <Writeup>Analysis of your routine & food preferences.</Writeup>
@@ -57,7 +57,7 @@ import Styled from 'styled-components';
             <CenterImg className="col-lg-4 -Center">
             <div className="col-12">
             <Center>
-            <img src={logos}></img>
+            <img alt="alt" src={logos}></img>
             </Center>
             </div>
             </CenterImg>
@@ -74,7 +74,7 @@ import Styled from 'styled-components';
             <Content>
                 <Card>
             <Img>
-            <img src={nopills}></img>
+            <img alt="alt" src={nopills}></img>
             </Img>
             <Heading>Heading</Heading>
             <Writeup>Non – restrictive diet & lifestyle plan.</Writeup>
@@ -87,7 +87,7 @@ import Styled from 'styled-components';
             <Content>
                 <Card>
             <Img>
-            <img src={plain}></img>
+            <img alt="alt" src={plain}></img>
             </Img>
             <Heading>Heading</Heading>
             <Writeup>Provide you multiple options in your diet plan.</Writeup>
@@ -107,9 +107,14 @@ import Styled from 'styled-components';
              <Main className="col-lg-4 col-12">
             <Content>
                 <Card>
+<<<<<<< HEAD
             <Img> 
             <img src={call}></img>
         
+=======
+            <Img>
+            <img alt="alt" src={whatsApp}></img>
+>>>>>>> bd87362a093d107428a167b148155435999f3cff
             </Img>
             <Heading>Support</Heading>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
@@ -246,7 +251,7 @@ font-family :  'Caveat', cursive;
 font-size : 27px;
 font-weight : 500;
 `
-
+/*
 const Bottom = Styled.div`
 // position: relative;
 
@@ -254,7 +259,8 @@ const Bottom = Styled.div`
 // {
 //     top : 0;
 // }
-`
+`*/
+
 const LAST = Styled.div`
 margin-top : -40px;
 display : flex;

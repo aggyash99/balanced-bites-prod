@@ -1,19 +1,16 @@
 import React, { useState } from 'react'
 import Map from '../Map';
-import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/LocationOn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { NavLink } from 'react-router-dom';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WarningIcon from '@material-ui/icons/ErrorOutline'
 import './contact.css';
-import $, { event } from 'jquery';
+import $ from 'jquery';
 import emailjs from 'emailjs-com';
-import Modal from './Modal'
+import Modal from './Modal';
 
 function Contact() {
   const [Data, setData] = useState({
@@ -49,14 +46,13 @@ function Contact() {
 
       }
       );
-     
     setShow(true);
     
   }
 
   function clearform() {
-    document.location.reload();
-
+    
+window.location.replace("/");
   }
 
   function placeholderActive() {
@@ -75,7 +71,7 @@ function Contact() {
     return regex.test(name);
   }
   function phoneverify(phone) {
-    var regex = /^\(?(\+([0-9]{2}(\ )?))?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
+    var regex = /^\(?(\+([0-9]{2}( )?))?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
     return regex.test(phone);
   }
 
@@ -137,13 +133,13 @@ function Contact() {
     $("#exampleFormControlInput1").removeClass("warningborder");
     $(iconname).addClass("hiddenelement");
     $("#exampleFormControlInput1").removeClass("acceptedborder");
-    if (nameverify(Data.fullname) == true) {
+    if (nameverify(Data.fullname) === true) {
       $("#exampleFormControlInput1").removeClass("warningborder");
       $(iconname).addClass("hiddenelement");
       $("#exampleFormControlInput1").addClass("acceptedborder");
       return true;
     }
-    if (nameverify(Data.fullname) == false) {
+    if (nameverify(Data.fullname) === false) {
       $(iconname).removeClass("hiddenelement");
       $("#exampleFormControlInput1").addClass("warningborder");
       return false;
@@ -155,14 +151,14 @@ function Contact() {
     $("#exampleFormControlInput2").removeClass("acceptedborder");
 
     $(iconnum).addClass("hiddenelement");
-    if (phoneverify(Data.phone) == true) {
+    if (phoneverify(Data.phone) === true) {
       $("#exampleFormControlInput2").removeClass("warningborder");
       $(iconnum).addClass("hiddenelement");
 
       $("#exampleFormControlInput2").addClass("acceptedborder");
       return true;
     }
-    if (phoneverify(Data.phone) == false) {
+    if (phoneverify(Data.phone) === false) {
       $(iconnum).removeClass("hiddenelement");
       $("#exampleFormControlInput2").addClass("warningborder");
       return false;
@@ -172,13 +168,13 @@ function Contact() {
     $("#exampleFormControlInput3").removeClass("warningborder");
     $("#exampleFormControlInput3").removeClass("acceptedborder");
     $(iconemail).addClass("hiddenelement");
-    if (emailverify(Data.email) == true) {
+    if (emailverify(Data.email) === true) {
       $("#exampleFormControlInput3").removeClass("warningborder");
       $(iconemail).addClass("hiddenelement");
       $("#exampleFormControlInput3").addClass("acceptedborder");
       return true;
     }
-    if (emailverify(Data.email) == false) {
+    if (emailverify(Data.email) === false) {
       $(iconemail).removeClass("hiddenelement");
       $("#exampleFormControlInput3").addClass("warningborder");
       return false;
@@ -187,11 +183,12 @@ function Contact() {
   function submitform() {
     return (resultname() && resultphone() && resultemail());
   }
+  
   const [show, setShow] =useState(false);
   return (
     <>
     
-      <Modal onClose={() => clearform()} show={show} />
+      <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
       <div className=" container-fluid contact_div">
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
           <h1 className="text-center contactheading" >Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
@@ -214,7 +211,7 @@ function Contact() {
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname' autoComplete="off" value={Data.fullname} onChange={InputEvent} onKeyUp={resultname} placeholder="E" />
-                    <label for="exampleFormControlInput1" style={{ border: "none" }} className="form-label">Full Name</label>
+                    <label style={{ border: "none" }} className="form-label">Full Name</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" style={{ verticalAlign: "bottom" }}>
                     <WarningIcon className="warningicon hiddenelement" id="name" style={{ fontSize: "35px" }} />
@@ -224,7 +221,7 @@ function Contact() {
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea " required>
                     <input type="text" className="form-control" required id="exampleFormControlInput2" name='phone' autoComplete="off" value={Data.phone} onChange={InputEvent} onKeyUp={resultphone} placeholder="r" />
-                    <label for="exampleFormControlInput2" className="form-label">Phone No.</label>
+                    <label className="form-label">Phone No.</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="num" style={{ fontSize: "35px" }} />
@@ -235,7 +232,7 @@ function Contact() {
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="email" className="form-control" required id="exampleFormControlInput3" name='email' autoComplete="off" value={Data.email} onChange={InputEvent} onKeyUp={resultemail} placeholder="m" style={{}} />
-                    <label for="exampleFormControlInput3" className="form-label">Email address</label>
+                    <label  className="form-label">Email address</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="email" style={{ fontSize: "35px" }} />
@@ -244,7 +241,7 @@ function Contact() {
                 <div className="row">
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3 form-group col-sm-10 paddingtextarea" required>
-                    <label class="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
+                    <label className="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
                     <textarea className="form-control textmessage" id="exampleFormControlTextarea1" rows="3" name='msg' autoComplete="off" value={Data.msg} onChange={InputEvent} onFocus={textareafocus} onBlur={textareafocusout} onClick={textareaclick} placeholder="message"></textarea>
                   </div>
                 </div>
@@ -272,7 +269,7 @@ function Contact() {
                 <span className="col-1"><MailOutlineIcon className="contact-icon" id='contact-icon-3' style={{ fontSize: "35px", transition: ".3s" }}></MailOutlineIcon></span><span className="col-11 paddingmobile" ><a href="mailto:balancedbites10@gmail.com" id="contactlink3" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Email : balancedbites10@gmail.com</a></span>
               </div>
               <div className="mt-5 row">
-                <span className="col-1"><WhatsAppIcon className="contact-icon" id='contact-icon-4' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://api.whatsapp.com/send?phone=+918700326422" id="contactlink4" target="_blank" style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Whatsapp Us</a></span>
+                <span className="col-1"><WhatsAppIcon className="contact-icon" id='contact-icon-4' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://api.whatsapp.com/send?phone=+918700326422" id="contactlink4"  style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Whatsapp Us</a></span>
               </div>
               <div className="mt-5 row">
                 <span className="col-1"> <InstagramIcon className="contact-icon" id='contact-icon-5' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://www.instagram.com/balancedbites10/?r=nametag" id="contactlink5" style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>balancedbites10</a></span>
