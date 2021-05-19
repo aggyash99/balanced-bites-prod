@@ -29,7 +29,7 @@ import Styled from 'styled-components';
             <img alt="alt" src={options}></img>
             </Img>
             <Heading>Heading</Heading>
-            <Writeup>100 % customized diet plans; no pre – defined or fixed diets.</Writeup>
+            <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
             </Card>
             </Content>
             </Main> 
@@ -107,14 +107,9 @@ import Styled from 'styled-components';
              <Main className="col-lg-4 col-12">
             <Content>
                 <Card>
-<<<<<<< HEAD
             <Img> 
-            <img src={call}></img>
+            <img src={call} alt=""></img>
         
-=======
-            <Img>
-            <img alt="alt" src={whatsApp}></img>
->>>>>>> bd87362a093d107428a167b148155435999f3cff
             </Img>
             <Heading>Support</Heading>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>

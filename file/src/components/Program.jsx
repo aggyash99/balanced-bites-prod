@@ -7,10 +7,7 @@ import ProgramsFeatures from './ProgramFeatures';
 const Program =(props)=>{ 
  
 var title,description,logo,second,third;
-<<<<<<< HEAD
-=======
-
->>>>>>> bd87362a093d107428a167b148155435999f3cff
+ 
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -23,10 +20,7 @@ var title,description,logo,second,third;
     }
     return ("");
     })
-<<<<<<< HEAD
   
-=======
->>>>>>> bd87362a093d107428a167b148155435999f3cff
 return (
 <>
 <div>
@@ -58,21 +52,10 @@ return (
         </div>
         </div> 
 
-<<<<<<< HEAD
         <div className="col-lg-9 col-md-12 col-12  ">
         
         <img src={logo} className="PROGRAMS-PHOTO" ></img>
         {/* </div> */}
-=======
-
-
-        <div className="col-lg-9 col-sm-12 col-md-12 col-12 d-flex">
-        <div className="program-photo">
-
-        <img src={logo} className="" alt="BalancedBites" style={{backgroundColor:"no-repeat", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
-
-        <img  alt="alt"src={logo} className="PROGRAMS-PHOTO" ></img>
->>>>>>> bd87362a093d107428a167b148155435999f3cff
         </div>
       </div>
         
