@@ -16,7 +16,7 @@ function App() {
 
   //const [loading, set]=useState(true);
  
-  
+  /* eslint-disable */
   const [isLoading, setLoading] = useState(true);
 
   function fakeRequest() {
@@ -46,7 +46,7 @@ function App() {
   if (isLoading) {
     console.log("Loading");
     return null; //app is not ready (fake request is in process)
-  }
+  }/* eslint-enable */
   
   return (
     <BrowserRouter>

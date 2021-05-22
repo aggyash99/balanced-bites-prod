@@ -25,7 +25,7 @@ const Map = ()=>{
           
         }}><span className={showB?'borderbottom':''} style={{color:"#03ac11",fontWeight:"700"}}>Location</span></VisibilitySensor></h2>
               </div>
-            <div className="card card-cascade narrower">
+            <div className="cardMap card-cascade narrower">
               <div className="card-body card-body-cascade text-center " >
         
                 <div id="map-container-google-9" className=" map-container-5" >

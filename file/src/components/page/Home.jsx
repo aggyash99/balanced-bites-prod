@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 function Home() {
   const [showB, setB]=useState(false);
+  
   return (
     <>
     <section className = "header" id="headerindex">
@@ -67,3 +68,4 @@ function Home() {
 }
 
 export default Home;
+/* eslint-enable */

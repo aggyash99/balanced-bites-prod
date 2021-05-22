@@ -10,6 +10,7 @@ import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
 //import Styled from 'styled-components';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+ /* eslint-disable */
 class BMI extends Component{
 
     constructor(props)
