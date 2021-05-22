@@ -7,7 +7,9 @@ import call from '../Image/pics/call.png'
 import plain from '../Image/pics/plain1.svg'
 import routine from '../Image/pics/routine1.svg';
 import logos from '../Image/pics/dietlogo.jpg'
+import center from '../Image/pics/center.jpg'
 import Styled from 'styled-components'; 
+import { styled } from '@material-ui/core';
 
  const ProgramsFeatures = (props)=>{
     return (
@@ -54,10 +56,10 @@ import Styled from 'styled-components';
     
     
             
-            <CenterImg className="col-lg-4 -Center">
-            <div className="col-12">
+            <CenterImg className="col-lg-4 Center">
+            <div className="col-12 position-relative">
             <Center>
-            <img alt="alt" src={logos}></img>
+            <IMGCENTER alt="alt" src={center}></IMGCENTER>
             </Center>
             </div>
             </CenterImg>
@@ -125,7 +127,9 @@ import Styled from 'styled-components';
     );
 }
 export default ProgramsFeatures
+const IMGCENTER = Styled.img`
 
+`
 const CenterImg = Styled.div`
 //position : relative;
  
@@ -199,10 +203,9 @@ font-weight: 550;
 font-family : loto sans-serif;
 `
 const Center = Styled.div`
-// width : 100%;  
-// display : flex;
-// justify-content : center; 
-
+ 
+position : absolute;
+top : 100px;
 img{
     width :100%;
     height : 100%;
