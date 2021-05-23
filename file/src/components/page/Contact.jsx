@@ -40,7 +40,7 @@ function Contact() {
     if (!submitform())
       return;
 
-    emailjs.sendForm('service_u77862v', 'template_d4a6rhq', e.target, 'user_s9XA9nBNNpdk7RQRaVfna')
+    emailjs.sendForm('balancedbites123', 'template_n9gdg9h', e.target, 'user_fK8lHw76rRZJeEA2LUSYn')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
