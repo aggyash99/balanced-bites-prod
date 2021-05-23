@@ -12,8 +12,8 @@ const Sdata = [
     {
         imgsrc : weightloss,
         title : "<span class='data-heading'>Weight</span> Loss",
-        description:`<span class='first'>A</span>re you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way<span class='bold'>?</span>You exercise, but the weight keeps coming back<span class='bold'>?</span>
-        If this is true? Then Balanced Bites is just right for you.
+        description:`<span class='first'>A</span>re you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way ?...You exercise, but the weight keeps coming back?...
+        If this is true?... Then Balanced Bites is just right for you.
         `,
         second : "I would always tell my clients <span class='bold'>\"DO NOT START SILLY PLANS THAT YOU CANT SUSTAIN FOR A LIFETIME.\"</span> health is a way of life , it has to be prioritised. My weight loss plans offer great nutrition and minimise unnecessary empty food choices.",
         third : " We <span class='bold'>DO NOT</span> believe in short-term diet plans that you follow for temporary results, We truly believe on a balanced diet with healthy food and nutrition. In our program you will get <span class='bold'>100% customized diet plans according to your likes & dislikes, no predefined or fixed diets are there.</span> In our diets you will get homemade and traditional food without any pills or supplements.",
@@ -74,7 +74,7 @@ const Sdata = [
     {
         imgsrc: Childrens,
         title : "<span class='data-heading'>Child</span> Nutrition",
-        description:"<p class='bold'><span class='first'>Y</span>ou want your child to eat healthy foods, but do you know which nutrients are necessary and in what amounts<span class='bold'>?</span><br></p> Whether you have a toddler or a teen, nutrition is important to his or her physical and mental development.<br> Healthy eating in childhood and adolescence is important for proper growth and development and to prevent various health conditions. How your child eats today will have an effect on their health, both now and in the future.",
+        description:"<p class='bold'><span class='first'>Y</span>ou want your child to eat healthy foods, but do you know which nutrients are necessary and in what amounts?...</p> Whether you have a toddler or a teen, nutrition is important to his or her physical and mental development.<br> Healthy eating in childhood and adolescence is important for proper growth and development and to prevent various health conditions. How your child eats today will have an effect on their health, both now and in the future.",
         second : " As children grow and make choices, they can be overwhelmed by a confusing world that throws convenience and fast food at their feet. It is important to help children develop healthy habits that will make it easier for them to continue throughout life..",
         third : " Balanced Bites diet program designed is made child-friendly keeping in mind their likes and dislikes. We create a positive relationship between the child and nutritious foods. ",
         service : "Educating kids about good nutrition from an early age helps them create and maintain a well - balanced, healthy life."

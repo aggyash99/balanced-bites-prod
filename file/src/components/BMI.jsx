@@ -61,10 +61,10 @@ class BMI extends Component{
      calculate = () =>{
         
 
-        // if(this.state.weight === "" || this.state.height == ""){
-        // this.setState({height:"",weight:""});
-        // return "";
-        // }
+          if(this.state.weight === "" || this.state.height == ""){
+         this.setState({height:"",weight:""});
+       return "";
+         }
 
 
 
@@ -230,8 +230,7 @@ class BMI extends Component{
         
         this.setState({height:"",weight:"",result:""});
     }
-    selectCategory = (propss)=>{
-        //console.log(propss.target.cp)
+    selectCategory = (propss)=>{ 
         this.setState({heightstatus : propss.target.value})
     }
     render(){

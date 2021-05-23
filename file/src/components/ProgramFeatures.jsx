@@ -1,16 +1,11 @@
 import React from 'react';
-import nopills from '../Image/pics/pills.svg'
-import option from '../Image/pics/option.svg';
-import options from '../Image/pics/food.svg';
-import whatsApp from '../Image/pics/whatsapp1.svg'
+import nopills from '../Image/pics/pills.svg' 
+import options from '../Image/pics/food.svg'; 
 import call from '../Image/pics/call.png'
 import plain from '../Image/pics/plain1.svg'
-import routine from '../Image/pics/routine1.svg';
-import logos from '../Image/pics/dietlogo.jpg'
+import routine from '../Image/pics/routine1.svg'; 
 import center from '../Image/pics/center.jpg'
-import Styled from 'styled-components'; 
-import { styled } from '@material-ui/core';
-
+import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
         <div className="container">
@@ -199,8 +194,8 @@ bottom : -5%;
 letter-spacing: 1.5px;
 text-align : center;
 font-size : 19px;
-font-weight: 550;
-font-family : loto sans-serif;
+font-weight: 600;
+font-family : roboto ;
 `
 const Center = Styled.div`
  
@@ -238,6 +233,7 @@ const Descriptions = Styled.div`
 font-size : 15px;
 padding: 10px 10px;
 color : #000000;
+font-family : roboto;
 @media (max-width : 400px)
 {
     padding : 10px 0px;

@@ -32,9 +32,9 @@ return (
     <img className="steps" src={step}></img>
     <h1 className="service-text">Service</h1>
     </div>
-    <div className="d-flex justify-content-evenly" style={{position:"absolute" , justifyContent:"space-around", marginBottom:"5px", bottom:"10px"}}>
-   <button className="btn-for-service">Programs</button>
-    <button className="btn-for-service">About</button>
+    <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
+   {/* <button className="btn-for-service">Programs</button>
+    <button className="btn-for-service">About</button> */}
     <button className="btn-for-service">Contact Us</button>
     
     </div>
