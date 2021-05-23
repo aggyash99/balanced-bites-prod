@@ -52,8 +52,9 @@ const Modal = props => {
                         <div className="row ">
                          
                         <div className="col-12 justifycontentcenter " >
-                        <img className="vidmodal" src={Tick} height="200" width="200"></img>
-                          </div>
+                        <video className="" height="200" width="200" id="video" autoPlay>
+                            <source  className="vidmodal2" src="https://media.tenor.com/videos/b1193bfdeb305b8e34dc975177590f53/mp4#t=0.1" type="video/mp4"/>
+                          </video>   </div>
                           </div>
                         <div className="row">
                             <div className="col-12 justifycontentcenter" style={{paddingBottom:"0px"}}>
