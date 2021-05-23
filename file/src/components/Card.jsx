@@ -15,7 +15,7 @@ const Card = (props)=> {
                 <h5 className="card-title text-center">{props.title}</h5>
                 <p className="card-text text-center"><EllipsisText text={`${props.description}`} length={90}/></p>
                 <Button> 
-                <Link className=" success-for-carousel"  to={{pathname:'/Program',state:{key : props.num}}}><span className="Carousel-in-home-text">Read More</span></Link>
+                <Link className="success-for-carousel"  to={{pathname:'/Program',state:{key : props.num}}}><span className="Carousel-in-home-text">Read More</span></Link>
                 </Button>
                 </div>
                 

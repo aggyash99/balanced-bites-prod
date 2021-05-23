@@ -1,18 +1,16 @@
 import React from 'react';
-import nopills from '../Image/pics/pills.svg'
-//import option from '../Image/pics/option.svg';
-import options from '../Image/pics/food.svg';
-import whatsApp from '../Image/pics/whatsapp1.svg'
+import nopills from '../Image/pics/pills.svg' 
+import options from '../Image/pics/food.svg'; 
+import call from '../Image/pics/call.png'
 import plain from '../Image/pics/plain1.svg'
-import routine from '../Image/pics/routine1.svg';
-import logos from '../Image/pics/dietlogo.jpg'
-import Styled from 'styled-components'; 
-
+import routine from '../Image/pics/routine1.svg'; 
+import center from '../Image/pics/center.jpg'
+import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
         <div className="container">
         <Top className="row">  
-            <Mainhead>Program Features</Mainhead>
+            <Mainhead ><span className="borderbottom mb-2">Program Features</span></Mainhead>
             <MidHead>Nutritionist & Diabetes Educator</MidHead>
             <Descriptions >Diets prescribed are designed for a particular person or purpose. We emphasise and focus only on Individual needs & requirements.</Descriptions>
         </Top>
@@ -28,7 +26,7 @@ import Styled from 'styled-components';
             <img alt="alt" src={options}></img>
             </Img>
             <Heading>Heading</Heading>
-            <Writeup>100 % customized diet plans; no pre – defined or fixed diets.</Writeup>
+            <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
             </Card>
             </Content>
             </Main> 
@@ -53,10 +51,10 @@ import Styled from 'styled-components';
     
     
             
-            <CenterImg className="col-lg-4 -Center">
-            <div className="col-12">
+            <CenterImg className="col-lg-4 Center">
+            <div className="col-12 position-relative">
             <Center>
-            <img alt="alt" src={logos}></img>
+            <IMGCENTER alt="alt" src={center}></IMGCENTER>
             </Center>
             </div>
             </CenterImg>
@@ -106,8 +104,9 @@ import Styled from 'styled-components';
              <Main className="col-lg-4 col-12">
             <Content>
                 <Card>
-            <Img>
-            <img alt="alt" src={whatsApp}></img>
+            <Img> 
+            <img src={call} alt=""></img>
+        
             </Img>
             <Heading>Support</Heading>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
@@ -123,7 +122,9 @@ import Styled from 'styled-components';
     );
 }
 export default ProgramsFeatures
+const IMGCENTER = Styled.img`
 
+`
 const CenterImg = Styled.div`
 //position : relative;
  
@@ -193,14 +194,13 @@ bottom : -5%;
 letter-spacing: 1.5px;
 text-align : center;
 font-size : 19px;
-font-weight: 550;
-font-family : loto sans-serif;
+font-weight: 600;
+font-family : roboto ;
 `
 const Center = Styled.div`
-// width : 100%;  
-// display : flex;
-// justify-content : center; 
-
+ 
+position : absolute;
+top : 100px;
 img{
     width :100%;
     height : 100%;
@@ -223,24 +223,27 @@ font-weight : 600;
 padding : 20px;
 `
 const Mainhead = Styled.span`
-font-size : 30px;
+font-size : 35px;
 word-spacing : 5px;
-font-family : roboto, sans-serif;
+font-family : Rubik, sans-serif;
 padding : 5px 0px;
 `
 
 const Descriptions = Styled.div`
 font-size : 15px;
-padding: 10px 100px;
+padding: 10px 10px;
 color : #000000;
+font-family : roboto;
 @media (max-width : 400px)
 {
     padding : 10px 0px;
 }
 `
 const MidHead = Styled.div`
-color : #000000;
-font-family : roboto;
+color :red;
+font-family :  'Caveat', cursive;
+font-size : 27px;
+font-weight : 500;
 `
 /*
 const Bottom = Styled.div`

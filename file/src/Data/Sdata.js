@@ -11,7 +11,7 @@ const Sdata = [
     {
         imgsrc : weightloss,
         title : "Weight Loss",
-        description:`Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way? You exercise, but the weight keeps coming back?
+        description:`Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way ?... You exercise, but the weight keeps coming back?
         If this is true? Then Balanced Bites is just right for you.
         `,
         second : "I would always tell my clients DO NOT START SILLY PLANS THAT YOU CANT SUSTAIN FOR A LIFETIME. health is a way of life , it has to be prioritised. My weight loss plans offer great nutrition and minimise unnecessary empty food choices.",

@@ -8,32 +8,25 @@ return (
 
   <div className=" container-fluid">
     <div className="row logo-for-service" style={{backgroundImage: `Url(${logo})` }}>
-        <div className="col-12 p-5" >
+        <div className="col-12 our-programs-head" >
           {/* <div className="our-programs"> Our <span className='programs'>Programs</span></div> */}
          <div className="our-programs">
-          <span>Our <span className='programs'>  Programs </span></span>
+           <span className='programs borderbottom'>  Programs </span> 
+            
           </div>
-          {/* <div className='service-for-programs'>
-          <div className='maa font-red'>
-          <span>Weight Loss</span>
-          <span>Weight Gain</span>
-          <span>Diabetes</span>
-          <span>Pcos</span>
-          </div>
-          <div className='maa font-green'>
-         
-          <span>Hair Skin Care</span>
-          <span>Detox Diet</span>
-          <span>Pregnancy</span>
-          <span>Child Nutrition</span>
-          <span>Thyroid</span>
-          </div>
-         
-          
-          </div> */}
         </div>
+        
     </div>
-    <div  className="row" style={{padding:"0px 50px"}}>
+      <div className="p-4">
+        <div className=" position-relative">
+        <div className="text-center d-flex flex-column end-line">
+        <span className="programs-head"><span style={{color:"black", marginRight:"6px"}}>Our</span>Programs</span>
+        <span className="programs-head-des">Diet plans designed to meet everyone's every nutrition need.</span>
+       
+        </div>
+        </div>
+      </div>
+    <div  className="row all-cards mt-5" >
       {
         Sdata.map( (value,index) => {
           return (

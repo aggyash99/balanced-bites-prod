@@ -1,8 +1,10 @@
 import React, {useState} from 'react'; 
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
+import shape from '../Image/services/b-shape1.png'
 import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata';
+import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
 const Program =(props)=>{ 
@@ -11,7 +13,7 @@ const Program =(props)=>{
     
     const [showC, setC]=useState(false);
 var title,description,logo,second,third;
-
+ 
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -24,13 +26,21 @@ var title,description,logo,second,third;
     }
     return ("");
     })
+  
 return (
 <>
 <div>
 <div className=" container-fluid">
-    <div className="row p-0"  >
-    <div className="col-lg-12 p-0  col-12">
-    <img className="IMAGEFORPROGRAM" src={Photo} alt="sorry"></img>
+    <div className="row photos">
+    <div className="col-12 p-0 position-relative">
+    <img className="steps" src={step}></img>
+    <h1 className="service-text">Service</h1>
+    </div>
+    <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
+   {/* <button className="btn-for-service">Programs</button>
+    <button className="btn-for-service">About</button> */}
+    <button className="btn-for-service">Contact Us</button>
+    
     </div>
     </div>
  
@@ -46,9 +56,10 @@ return (
         }}>
         <span  className={showB?'serviceStyle borderbottom':'serviceStyle'} >Service</span></VisibilitySensor>
         </div>
-    <div className="row mt-5">  
+    <div className="row mt-5" >  
         
-        <div className="col-lg-3 col-md-12 col-sm-12 col-12 d-flex">
+        
+        <div className="col-lg-3 col-md-12 col-12 ">
         <div className="alllink d-flex flex-column">
             
             {
@@ -62,19 +73,16 @@ return (
         </div>
         </div> 
 
-
-
-        <div className="col-lg-9 col-sm-12 col-md-12 col-12 d-flex">
-        <div className="program-photo">
-
-        <img src={logo} className="" alt="BalancedBites" style={{backgroundColor:"no-repeat", backgroundSize:"cover",backgroundPosition:"center",objectFit:"contain",width:"100%"}}></img>
-
-        <img  alt="alt"src={logo} className="PROGRAMS-PHOTO" ></img>
-        </div>
+        <div className="col-lg-9 col-md-12 col-12 ">
         
-      
+        <img src={logo} className="PROGRAMS-PHOTO" ></img>
+        {/* </div> */}
         </div>
-        </div>
+      </div>
+        
+
+
+         
 
 
 
@@ -92,7 +100,7 @@ return (
            <span className={showC?'borderbottom':''} dangerouslySetInnerHTML={{__html:title}}></span></VisibilitySensor>
              </div>
          
-        <div className="col-lg-12 pt-3" style={{padding:"0px 10px"}}>
+        <div className="col-lg-12  pt-3" style={{padding:"0px 10px"}}>
             <ul style={{listStyle:"none"}}>
             
             
@@ -109,10 +117,19 @@ return (
             </ul>
         </div>
         </div>
+        
+        
 
+
+        <ProgramsFeatures/>
+
+        {/* <div className="row ">
+            <div className="col-12 p-0">
+            <img src={step} style={{objectFit:"cover",width:"100%",height:"500px"}}></img>
+            </div>
+        </div> */}
         </div>
      
-        <ProgramsFeatures/>
 
     </div>
 
