@@ -3,11 +3,15 @@ import ReactDOM from "react-dom";
 import { CSSTransition } from "react-transition-group";
 import "./modal.css";
 import CloseIcon from '@material-ui/icons/Close'; 
+import Tick from '../../Image/tickmark.png';
 import {Link} from 'react-router-dom';
 const Modal = props => {
 
   
-
+/* <video className="vidmodal" height="200" width="200" id="video" autoPlay>
+                            <source  className="vidmodal2" src="https://media.tenor.com/videos/b1193bfdeb305b8e34dc975177590f53/mp4#t=0.1" type="video/mp4"/>
+                          </video>
+                         */
 
   
   var shortenedname;
@@ -44,13 +48,11 @@ const Modal = props => {
                             <Link className="" to={{pathname:'/'}} target="_top" >
                             <CloseIcon style={{fontSize:"25px"}} /></Link>
                             </button></div></div>
-                        <div className="row ">
-                          
-                        <div className="col-12 justifycontentcenter" >
                         
-                          <video className="vidmodal" height="175" width="175" id="video" autoPlay>
-                            <source  src="https://media.tenor.com/videos/b1193bfdeb305b8e34dc975177590f53/mp4#t=0.1" type="video/mp4"/>
-                          </video>
+                        <div className="row ">
+                         
+                        <div className="col-12 justifycontentcenter " >
+                        <img className="vidmodal" src={Tick} height="200" width="200"></img>
                           </div>
                           </div>
                         <div className="row">
