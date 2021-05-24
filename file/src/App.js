@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
@@ -13,6 +13,41 @@ import Footer from './components/Footer';
 import Program from './components/Program';
 import Newcards from './components/Newcards'
 function App() {
+
+  //const [loading, set]=useState(true);
+ 
+  /* eslint-disable */
+  const [isLoading, setLoading] = useState(true);
+
+  function fakeRequest() {
+    return new Promise(resolve => setTimeout(() => resolve(), 0));
+  }
+
+  useEffect(() => {
+    fakeRequest().then(() => {
+      console.log("loadingloading");
+      setLoading(!isLoading);
+      const el = document.querySelector(".loader-container");
+      if (el) {
+        el.remove();
+      
+        
+      }
+      else
+      {
+        console.log("element not found");
+      }
+    });
+  }, []);
+  
+   
+ 
+
+  if (isLoading) {
+    console.log("Loading");
+    return null; //app is not ready (fake request is in process)
+  }/* eslint-enable */
+  
   return (
     <BrowserRouter>
     <Header></Header>

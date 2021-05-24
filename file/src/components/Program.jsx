@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, {useState} from 'react'; 
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
 import shape from '../Image/services/b-shape1.png'
@@ -6,8 +6,12 @@ import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata';
 import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
+import VisibilitySensor from 'react-visibility-sensor';
 const Program =(props)=>{ 
  
+    const [showB, setB]=useState(false);
+    
+    const [showC, setC]=useState(false);
 var title,description,logo,second,third;
  
     Newdata.map( (value,key)=>{
@@ -38,12 +42,19 @@ return (
     <button className="btn-for-service">Contact Us</button>
     
     </div>
-   </div>
-    
-  
-        <div className="text-center program-header " >
-        <span className="OurStyle">Our</span>
-        <span className="serviceStyle borderbottom">Service</span>
+    </div>
+ 
+        <div className=" text-center program-header" >
+        <span className="OurStyle">Our</span><VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setB(isVisible?true:false);
+                 
+            
+          
+        }}>
+        <span  className={showB?'serviceStyle borderbottom':'serviceStyle'} >Service</span></VisibilitySensor>
         </div>
     <div className="row mt-5" >  
         
@@ -77,8 +88,16 @@ return (
 
         <div className="row text-black   d-flex justify-content-center">
          
-           <div  className="text-center PROGRAM-HEADING ">
-           <span className="borderbottom" dangerouslySetInnerHTML={{__html:title}}></span>
+           <div  className="text-center PROGRAM-HEADING"><VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setC(isVisible?true:false);
+                 
+            
+          
+        }}>
+           <span className={showC?'borderbottom':''} dangerouslySetInnerHTML={{__html:title}}></span></VisibilitySensor>
              </div>
          
         <div className="col-lg-12  pt-3" style={{padding:"0px 10px"}}>

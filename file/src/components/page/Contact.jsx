@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import Map from '../Map';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/LocationOn';
@@ -11,8 +11,10 @@ import './contact.css';
 import $ from 'jquery';
 import emailjs from 'emailjs-com';
 import Modal from './Modal';
+import VisibilitySensor from 'react-visibility-sensor';
 
 function Contact() {
+
   const [Data, setData] = useState({
     fullname: '',
     phone: '',
@@ -38,7 +40,7 @@ function Contact() {
     if (!submitform())
       return;
 
-    emailjs.sendForm('service_u77862v', 'template_d4a6rhq', e.target, 'user_s9XA9nBNNpdk7RQRaVfna')
+    emailjs.sendForm('balancedbites123', 'template_n9gdg9h', e.target, 'user_fK8lHw76rRZJeEA2LUSYn')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -49,6 +51,7 @@ function Contact() {
     setShow(true);
     
   }
+
 
   function clearform() {
     
@@ -99,7 +102,7 @@ window.location.replace("/");
 
   function contactmouseover(e) {
     const name = "\"" + e.target + "\"";
-    if (name.includes("callto:8700326422"))
+    if (name.includes("tel:8700326422"))
       $("#contact-icon-1").addClass("contact-icon-hover");
     else if (name.includes("https://goo.gl/maps/V9zRTXPGUrjiV78x8"))
       $("#contact-icon-2").addClass("contact-icon-hover");
@@ -114,7 +117,7 @@ window.location.replace("/");
 
   function contactmouseout(e) {
     const name = "\"" + e.target + "\"";
-    if (name.includes("callto:8700326422"))
+    if (name.includes("tel:8700326422"))
       $("#contact-icon-1").removeClass("contact-icon-hover");
     else if (name.includes("https://goo.gl/maps/V9zRTXPGUrjiV78x8"))
       $("#contact-icon-2").removeClass("contact-icon-hover");
@@ -185,13 +188,28 @@ window.location.replace("/");
   }
   
   const [show, setShow] =useState(false);
+  const [showB, setB]=useState(false);
+  if(!showB)
+  {
+    console.log("Not Visible");
+  }
+  
+   
   return (
     <>
-    
-      <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
-      <div className=" container-fluid contact_div">
+  
+        <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
+      <div className=" container-fluid contact_div" style={{overflow:"hidden"}}>
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
-          <h1 className="text-center contactheading" >Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
+          <h1 className="text-center contactheading" >Get in Touch <VisibilitySensor
+          partialVisibility 
+        onChange={(isVisible) => {
+          
+          setB(isVisible?true:false);
+          
+        }}
+         ><span id='bottomborder' className={showB?'borderbottom':''}>
+      <strong style={{ color: "#03ac11" }}>With us Today </strong></span></VisibilitySensor></h1>
         </div>
 
         <div className="row">
@@ -211,7 +229,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="text" className="form-control" required id="exampleFormControlInput1" name='fullname' autoComplete="off" value={Data.fullname} onChange={InputEvent} onKeyUp={resultname} placeholder="E" />
-                    <label style={{ border: "none" }} className="form-label">Full Name</label>
+                    <label for="exampleFormControlInput1" style={{ border: "none" }} className="form-label">Full Name</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" style={{ verticalAlign: "bottom" }}>
                     <WarningIcon className="warningicon hiddenelement" id="name" style={{ fontSize: "35px" }} />
@@ -221,7 +239,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea " required>
                     <input type="text" className="form-control" required id="exampleFormControlInput2" name='phone' autoComplete="off" value={Data.phone} onChange={InputEvent} onKeyUp={resultphone} placeholder="r" />
-                    <label className="form-label">Phone No.</label>
+                    <label for="exampleFormControlInput2" className="form-label">Phone No.</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="num" style={{ fontSize: "35px" }} />
@@ -232,7 +250,7 @@ window.location.replace("/");
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3  col-sm-10 paddingtextarea" required>
                     <input type="email" className="form-control" required id="exampleFormControlInput3" name='email' autoComplete="off" value={Data.email} onChange={InputEvent} onKeyUp={resultemail} placeholder="m" style={{}} />
-                    <label  className="form-label">Email address</label>
+                    <label for="exampleFormControlInput3" className="form-label">Email address</label>
                   </div>
                   <div className="col-1 d-none d-sm-block" >
                     <WarningIcon className="warningicon hiddenelement" id="email" style={{ fontSize: "35px" }} />
@@ -241,7 +259,7 @@ window.location.replace("/");
                 <div className="row">
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3 form-group col-sm-10 paddingtextarea" required>
-                    <label className="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
+                    <label for="exampleFormControlTextarea1" className="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
                     <textarea className="form-control textmessage" id="exampleFormControlTextarea1" rows="3" name='msg' autoComplete="off" value={Data.msg} onChange={InputEvent} onFocus={textareafocus} onBlur={textareafocusout} onClick={textareaclick} placeholder="message"></textarea>
                   </div>
                 </div>
@@ -257,7 +275,7 @@ window.location.replace("/");
           <div className="col-lg-5 col-sm-12 mt-sm-5 col-md-12">
             <div className="container icon-in-contact p-lg-5">
               <div className="mt-5 row " >
-                <span className="col-1" >< PhoneIphoneIcon className="contact-icon" id='contact-icon-1' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="callto:8700326422" id="contactlink1" value="1" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Call : +91 8700326422</a></span>
+                <span className="col-1" >< PhoneIphoneIcon className="contact-icon" id='contact-icon-1' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="tel:8700326422" id="contactlink1" value="1" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Call : +91 8700326422</a></span>
               </div>
               <div className="mt-5 row">
                 <span className="col-1" >< EditLocationIcon className="contact-icon " id='contact-icon-2' style={{ fontSize: "35px", transition: ".3s" }}></EditLocationIcon></span><span className="col-11 paddingmobile" ><a href="https://goo.gl/maps/V9zRTXPGUrjiV78x8" id="contactlink2" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Address : Hno. 288-89 G-26 Sec-3 Rohini , Delhi</a></span>

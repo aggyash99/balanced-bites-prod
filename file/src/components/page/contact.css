@@ -367,7 +367,7 @@ a:visited{
         padding-left: 10%;
         left:30%;
         width:90%;
-        word-break: break-all;
+        font-size: medium;
     }
     
     .paddingfixform {

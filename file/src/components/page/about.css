@@ -34,7 +34,7 @@
 }
 .gradientbg
 {
-    background-image:linear-gradient(54deg , #f6f6f6 0,#f6f6f6 50%,transparent 50%,transparent 100%);
+    background-image:linear-gradient(54deg , #ffffff 0,#ffffff 50%,transparent 50%,transparent 100%);
 
 }
 .text{
@@ -82,7 +82,7 @@ color:#03ac11;
     }
 }
 .about{
-    background: rgba(245, 245, 245, 0.877);
+    background: rgb(255, 255, 255);
     overflow: hidden;
 }
 
@@ -139,7 +139,7 @@ color:#03ac11;
 {
     padding-left: 0px;
     font-family: 'Roboto', sans-serif;
-    font-size: large;
+    font-size: 24px;
 list-style: none;    
 }
 .textrightsideabout .li::before{
@@ -209,4 +209,8 @@ list-style: none;
         margin: 8px 10px 12px;
         background-position: right center;
     
+}
+
+#loading{
+    background: #03ac11;
 }

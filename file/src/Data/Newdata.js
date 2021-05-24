@@ -1,6 +1,6 @@
 import  weightgain  from "../Image/services/milk.jpg";
 import  weightloss  from "../Image/services/weightloss.jpg";
-import  fruits  from "../Image/services/fruits.jpg";
+//import  fruits  from "../Image/services/fruits.jpg";
 import  PCOS  from "../Image/services/PCOS.jpg";
 import  Skinhair from "../Image/services/Skinhair.jpg";
 import  thyroid  from "../Image/services/thyroid.jpg";

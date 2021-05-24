@@ -8,7 +8,7 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-import Styled from 'styled-components';
+//import Styled from 'styled-components';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
 

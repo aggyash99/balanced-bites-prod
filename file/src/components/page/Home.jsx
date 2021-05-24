@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import img from '../../Image/services/test.png';
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 import {Link} from 'react-router-dom';
+import VisibilitySensor from 'react-visibility-sensor';
 function Home() {
+  const [showB, setB]=useState(false);
+  
   return (
     <>
     <section className = "header" id="headerindex">
@@ -20,7 +23,15 @@ function Home() {
       <div className="carousel caouselBody" >
 
       <div className="text-center Home-carousel d-flex justify-content-center">
-      <p>Our</p><span className="borderbottom"> Programs</span>
+      <p>Our</p><VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setB(isVisible?true:false);
+                 
+            
+          
+        }}><span className={showB?'borderbottom':''}> Programs</span></VisibilitySensor>
       </div>
      
       <CarouselH ></CarouselH>
@@ -57,3 +68,4 @@ function Home() {
 }
 
 export default Home;
+/* eslint-enable */
