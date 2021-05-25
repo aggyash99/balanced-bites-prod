@@ -1,16 +1,27 @@
 import React,{ Component }  from "react";
 import image from '../Image/pics/bmi-2.jpg'; 
 import $ from 'jquery';
-import { findDOMNode } from "react-dom";
-import {Link} from 'react-router-dom'
+import { findDOMNode } from "react-dom"; 
 import reddot from '../Image/images/red.png'; 
 import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-//import Styled from 'styled-components';
+import Styled from 'styled-components';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
+import { KeyboardArrowDown } from "@material-ui/icons";
+
+const WeightCategory = [
+  'Kilogram','Pounds'
+];
+const HeightCategory = [
+    'Centimeter','Meter', 'Feet'
+  ];
+const defaultWeight = WeightCategory[0];
+const defaultHeight = HeightCategory[0];
 
 class BMI extends Component{
 
@@ -28,6 +39,8 @@ class BMI extends Component{
             blue:7,
             dot:"",
 
+         
+            
 
             redone : "hidden",
             yellowone : "hidden",
@@ -235,237 +248,58 @@ class BMI extends Component{
     }
     render(){
         return(
-        <div>
-   
-    <div className="container-fluid BMI" style={{backgroundImage:`url(${(image)})`, position:"relative"}}>
-    
+        <Container className="container-fluid" style={{backgroundImage:`url(${(image)})`}}>
+        
+        
+            <Output>
+            <div className="d-flex">
+            <p>BMI Result</p>
+            <CloseIcon/>
+            </div>
+            <p>Output</p>
+            </Output>
 
-        <div className="row d-flex justify-content-between  PHONE-CLASS m-0">
-        <div className="d-flex calculator">
-            <p>BMI<span className=""></span> CALCULATOR</p>
-            
-        </div>
 
-        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:""}}>
-      
-        <div style={{width:"100%"}} className="setBMI">
-        <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>*/}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
-                <p style={{textAlign:"left", fontSize:"15px", lineHeight:"0px",fontWeight:"600",color:"#A9A9A9"}}>Your BMI Score</p>
-                    
-                    <div className="main">
-                    <div className="BMI-whole">
-                        <input value={this.state.result} className="input-class"  readOnly ></input>
-                    </div>
-                    <div>
-                        <div className="category-class">
-                        <h5 className="category">Your Category</h5>
-                        </div>
-                        <div className="status">
-                       
-                        <div>
-                            {
-                                 
-                                <img className="dot" alt="." src={this.state.dot}/> 
-                            }
-                               </div>
-                               <h5 className="categoryStatus" >{this.state.text}</h5>
-                 
+        <MAIN>
+        <ROW className = "row">
+
+            <Column >
+            <div>
+                   <div className="d-flex">
+                   <FLOAT>
+
+                   <input  required></input>
+                   <p>Weight</p>
+                   </FLOAT>
+                   <Dropdown options={WeightCategory} onChange={this._onSelect} value={defaultWeight}  />
                    </div>
-                    </div>
-                    </div>
-                <div className="d-flex justify-content-around" style={{lineHeight:"0px",padding:"0px"}}>
-                 </div> 
-                <div className="bars">
-
-                <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
-                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
-                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
-                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
-                </div>
-                {
-                    <div className="indicator" >
-                    <span className="first-indicator">18.5</span>
-                    <span className="second-indicator"> 25</span>
-                    <span className="third-indicator"> 30</span> 
-                    
-                    </div>
-                }
-            <div className="barText">
-            <p>Your BMI indicates that you are at a healthy weight for your height</p>
+                   <div className="d-flex">
+                   <FLOAT>
+                   <input  required></input>
+                   <p>Height</p>
+                   </FLOAT>
+                    <Dropdown options={HeightCategory} onChange={this._onSelect} value={defaultHeight} />
+                   
+                   </div>
             </div>
-            <div className="bottom-status">
-            <p>Your BMI in Range : { this.state.text}</p>
-            </div>
-
-            </div>
-            </div>
- 
-        
-            {/* phone output */}
-            {
-                            <div className="Slider" ref="Phoneslider">
-                            <div className="content-in-phone">
-                               <div className="cards-for-phone">
-                               <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
-                               <p>BMI RESULT</p>
-                                <CloseIcon ref="closephone" onClick={this.close}/> 
-                               </div>
-                               <div className=" Phone-bmi">
-                                   <div className="answer">
-                                   <h1 className="output_data">{this.state.result}</h1>
-                                   </div>
-                                   <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
-                                   <p>Your Category</p>
-                                   <p>{this.state.text}</p>
-                                   </div>
-                               </div>
-                               <div className="bars">
-                                <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
-                                <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
-                                <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
-                                <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
-                                </div>
-                                {
-                                    <div className="indicator" >
-                                    <span>18.5</span>
-                                    <span>25</span>
-                                    <span>30</span> 
-                                    
-                                    </div>
-                                }
-                               </div>
-                               <div className="content-2">
-                               <p >
-                               Your BMI indicates that you are at a healthy weight for your height.
-                               </p>
-                               <p>
-                                YOUR BMI RESULT :   {this.state.text}
-                               </p>
-                               </div>
-                            </div>
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            }
             
+            <Button>
+            <div className="d-flex justify-content-center p-2">
+            <button>Calculate</button>
+            </div>
+            </Button>
+
+            </Column>
 
 
-         <div className="col-lg-6 col-md-12">
-        <div className="BMI-start">
-         
-        <div className=""> { /*row d-flex justify-content-evenly */ }
-        
-        <div className="row "> 
-        
-        <div className="col-lg-8 pt-2 col-md-9 col-12 input-BMI" ref="leave" onClick={this.click} > 
-
-        <input type="" className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
-       
-         <span className="floty" ref="toggle" onSelectStart="return false">Your weight</span> 
-   
-        </div>
-
-        <div className="col-lg-4 pt-2 col-md-3 col-12 ">
-       <div className="dropdown">
-        <div className="dropdown-select">
-        <span className>{this.state.weightstatus}</span>
-       <KeyboardArrowDownIcon/>
-        </div>
-        <div className="dropdown-list">
-        <div className="dropdown-list__item" onClick={()=>{this.setState({weightstatus : "Kg"})}}>Kilogram(Kg)</div>
-        <div className="dropdown-list__item" onClick={()=>this.setState({weightstatus : "Pounds"})} >Pounds</div>
- 
-        </div>
-
-        </div>
-        </div>
-        </div>
-
-
-        <div className="row pt-2 ">
-        <div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  > 
-        {
-         (this.state.heightstatus !== "Feet") ? 
-        <><input  type="" placeholder="" value={this.state.height} onChange={this.set} />
-         <span className="floty" ref="toggle2">Your Height</span>
-        </> : 
-        <div className="d-flex justify-content-between" style={{gap : "5%"}}>
-        
-        <div>
-        <input  type=""  value={this.state.height} onChange={this.set} /> 
-        <span className="floty" ref="toggle2">Feet</span>   
-        </div>
-        <div>
-         <input  type=""  value={this.state.heightInch} onChange={this.setInch} />
-         <span className="floty" ref="toggle1">Inch</span>
-        </div>
-        </div>
-    }
-        </div>
-
-        <div className="col-lg-4 pt-2 col-md-3 col-12 ">
-        
-        <div className="" style={{borderColor :`${this.state.selectionheight}`}}>
-
-        {/* <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
-        <option value=  "centimeter">Centimeter</option>
-        <option value = "Feet" >Feet</option>
-        <option value= "meter ">meter</option> 
-        </select> */}
-        <div className="dropdown" onClick={this.open}>
-        <div className="dropdown-select">
-        <span className>{this.state.heightstatus}</span>
-       <KeyboardArrowDownIcon/>
-        </div>
-        <div className="dropdown-list">
-        <div className="dropdown-list__item" onClick={()=>{this.setState({heightstatus : "Centimeter"})}}>Centimeter</div>
-        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Meter"})} >Meter</div>
-
-        <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Feet"})} >Feet</div>
-        </div>
-
-        </div>
-
-        </div>
- 
-        </div>
-        </div>     
- 
+        </ROW>
+        </MAIN>
 
 
 
-       <div className="row pt-3">
-        <div className="col-lg-12  d-flex justify-content-center">
-        <div className="btn success" onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
-        </div>
-        </div>  
- 
+        </Container>
 
-        </div>
 
-        </div>
-        
-        </div> 
-        
- {/*  */}
-        </div>
-        
-        
-
-    </div></div>
 );
 
 
@@ -475,6 +309,112 @@ class BMI extends Component{
 
 
 export default BMI;
+
+
+const Container = Styled.div`
+width : 100%;
+background-position : center;
+background-repeat : no-repeat;
+object-fit : cover; 
+padding : 50px;
+position : relative;
+@media(max-width : 400px)
+{
+    padding  : 10px;
+}
+`
+const Output = Styled.div`
+position : absolute;
+z-index : 5;
+padding : 10px;
+background : white;
+border-radius : 10px;
+`
+
+
+const MAIN = Styled.div`
+padding: 10px;
+width : 100%;
+height : 100%;
+
+`
+const ROW = Styled.div`
+display : flex;
+justify-content : flex-end;
+`
+const Column = Styled.div`
+width : 500px;
+padding : 10px 10px 0 ; 
+background : white;
+border-radius : 10px;
+div{
+    width: 100%;
+    padding : 1px;
+    gap : 10px; 
+
+    input{
+        outline : none;
+        width: 100%;
+        padding : 8px;
+       border: 2px solid springgreen;
+        border-radius : 5px;
+        z-index : 1;
+        
+    
+    }
+    div{
+        align-items : center;
+        &:focus-within p{
+            line-height : 15px;    
+            top : -3px;
+            text-align : center;
+        
+        }
+    }
+    }
+.Dropdown-control{
+   
+    border : 2px solid springgreen;
+    border-radius : 5px;
+    padding : 6px;
+    width: 100%;
+}
+
+`
+const FLOAT = Styled.div`
+position : relative;
+p{
+    position : absolute;
+    left : 30px;
+    bottom : -3px;
+    z-index : 1;
+    font-weight : 500;
+    transition : all 550ms;
+    background : white;
+    font-size : 15px;
+    letter-spacing : 0.1rem;
+    padding :0 3px;
+}
+ 
+`
+
+const Button = Styled.div`
+
+button{
+    border : 1px solid green;
+    background : transparent;
+    outline : none;
+    border-radius : 15px;
+    font-family : roboto;
+    font-weight : 500;
+}
+
+`
+
+
+
+
+
  /*
 {
  <div className="row">
@@ -495,5 +435,261 @@ const UL = Styled.ul`
 
 const LI = Styled.li`
 
- }*/
+//  }*/
+
+/*
+all work
+
+
+
+    <div className="container-fluid BMI" >
+    
+
+        <div className="row d-flex justify-content-between  PHONE-CLASS m-0">
+        <div className="d-flex calculator">
+            <p>BMI<span className=""></span> CALCULATOR</p>
+            
+        </div>
+
+        <div className="col-lg-6 result " ref="slideBMI" style={{visibility:""}}>
+      
+        <div style={{width:"100%"}} className="setBMI">
+        <Link to="/">{/*<img className="close" ref="close" src={close} onClick={this.close}/>}<CloseIcon className="close" ref="close" onClick={this.close} /></Link>
+        <p style={{textAlign:"left", fontSize:"15px", lineHeight:"0px",fontWeight:"600",color:"#A9A9A9"}}>Your BMI Score</p>
+                    
+        <div className="main">
+        <div className="BMI-whole">
+            <input value={this.state.result} className="input-class"  readOnly ></input>
+        </div>
+        <div>
+            <div className="category-class">
+            <h5 className="category">Your Category</h5>
+            </div>
+            <div className="status">
+           
+            <div>
+                {
+                     
+                    <img className="dot" alt="." src={this.state.dot}/> 
+                }
+                   </div>
+                   <h5 className="categoryStatus" >{this.state.text}</h5>
+     
+       </div>
+        </div>
+        </div>
+    <div className="d-flex justify-content-around" style={{lineHeight:"0px",padding:"0px"}}>
+     </div> 
+    <div className="bars">
+
+    <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+    <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+    <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+    <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
+    </div>
+    {
+        <div className="indicator" >
+        <span className="first-indicator">18.5</span>
+        <span className="second-indicator"> 25</span>
+        <span className="third-indicator"> 30</span> 
+        
+        </div>
+    }
+<div className="barText">
+<p>Your BMI indicates that you are at a healthy weight for your height</p>
+</div>
+<div className="bottom-status">
+<p>Your BMI in Range : { this.state.text}</p>
+</div>
+
+</div>
+</div>
+
+
+{/* phone output }
+{
+                <div className="Slider" ref="Phoneslider">
+                <div className="content-in-phone">
+                   <div className="cards-for-phone">
+                   <div className="p-2 d-flex justify-content-between" style={{fontSize:"15px", letterSpacing:"3px", fontWeight:"700"}}>
+                   <p>BMI RESULT</p>
+                    <CloseIcon ref="closephone" onClick={this.close}/> 
+                   </div>
+                   <div className=" Phone-bmi">
+                       <div className="answer">
+                       <h1 className="output_data">{this.state.result}</h1>
+                       </div>
+                       <div className="" style={{height:"0px", lineHeight:"12px" , fontSize: "15px", fontWeight:"700"}}>
+                       <p>Your Category</p>
+                       <p>{this.state.text}</p>
+                       </div>
+                   </div>
+                   <div className="bars">
+                    <div className="bluebars" style={{height:this.state.blue, borderRadius:"5px"}}></div>
+                    <div className="greenbars" style={{height:this.state.green,borderRadius:"5px"}}></div>
+                    <div className="yellowbars" style={{height:this.state.yellow,borderRadius:"5px"}}></div>
+                    <div className="redbars" style={{height:this.state.red,borderRadius:"5px"}}></div>
+                    </div>
+                    {
+                        <div className="indicator" >
+                        <span>18.5</span>
+                        <span>25</span>
+                        <span>30</span> 
+                        
+                        </div>
+                    }
+                   </div>
+                   <div className="content-2">
+                   <p >
+                   Your BMI indicates that you are at a healthy weight for your height.
+                   </p>
+                   <p>
+                    YOUR BMI RESULT :   {this.state.text}
+                   </p>
+                   </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+<div className="col-lg-6 col-md-12">
+<div className="BMI-start">
+
+<div className=""> { /*row d-flex justify-content-evenly }
+
+<div className="row "> 
+
+<div className="col-lg-8 pt-2 col-md-9 col-12 input-BMI" ref="leave" onClick={this.click} > 
+
+<input type="" className={ this.state.Error }  onChange={this.setweight}  value={this.state.weight}  />
+
+<span className="floty" ref="toggle" onSelectStart="return false">Your weight</span> 
+
+</div>
+
+
+</div>
+
+
+<div className="row pt-2 ">
+<div className="col-lg-8  pt-2  col-md-9 col-12 input-BMI" ref="leave2"  onClick={this.click1}  > 
+{
+(this.state.heightstatus !== "Feet") ? 
+<><input  type="" placeholder="" value={this.state.height} onChange={this.set} />
+<span className="floty" ref="toggle2">Your Height</span>
+</> : 
+<div className="d-flex justify-content-between" style={{gap : "5%"}}>
+
+<div>
+<input  type=""  value={this.state.height} onChange={this.set} /> 
+<span className="floty" ref="toggle2">Feet</span>   
+</div>
+<div>
+<input  type=""  value={this.state.heightInch} onChange={this.setInch} />
+<span className="floty" ref="toggle1">Inch</span>
+</div>
+</div>
+}
+</div>
+
+
+</div>     
+
+
+
+
+<div className="row pt-3">
+<div className="col-lg-12  d-flex justify-content-center">
+<div className="btn success" onClick={this.calculate} onMouseDown={this.leave}>Calculate BMI</div>
+</div>
+</div>  
+
+
+</div>
+
+</div>
+
+</div> 
+
+ 
+</div>
+
+
+
+</div>
+
+*/
+
+
+
+// <div className="col-lg-4 pt-2 col-md-3 col-12 ">
+//        <div className="dropdown">
+//         <div className="dropdown-select">
+//         <span className>{this.state.weightstatus}</span>
+//        <KeyboardArrowDownIcon/>
+//         </div>
+//         <div className="dropdown-list">
+//         <div className="dropdown-list__item" onClick={()=>{this.setState({weightstatus : "Kg"})}}>Kilogram(Kg)</div>
+//         <div className="dropdown-list__item" onClick={()=>this.setState({weightstatus : "Pounds"})} >Pounds</div>
+ 
+//         </div>
+
+//         </div>
+//         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+//  <div className="col-lg-4 pt-2 col-md-3 col-12 ">
+        
+//         <div className="" style={{borderColor :`${this.state.selectionheight}`}}>
+
+//         {/* <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
+//         <option value=  "centimeter">Centimeter</option>
+//         <option value = "Feet" >Feet</option>
+//         <option value= "meter ">meter</option> 
+//         </select> */}
+//         <div className="dropdown" onClick={this.open}>
+//         <div className="dropdown-select">
+//         <span className>{this.state.heightstatus}</span>
+//        <KeyboardArrowDownIcon/>
+//         </div>
+//         <div className="dropdown-list">
+//         <div className="dropdown-list__item" onClick={()=>{this.setState({heightstatus : "Centimeter"})}}>Centimeter</div>
+//         <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Meter"})} >Meter</div>
+
+//         <div className="dropdown-list__item" onClick={()=>this.setState({heightstatus : "Feet"})} >Feet</div>
+//         </div>
+
+//         </div>
+
+//         </div>
+ 
+//         </div>
+
 
