@@ -7,12 +7,10 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-import Styled from 'styled-components';
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
+import Styled from 'styled-components'; 
 
 import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css';
-import { KeyboardArrowDown } from "@material-ui/icons";
+import 'react-dropdown/style.css'; 
 
 const WeightCategory = [
   'Kilogram','Pounds'
@@ -20,8 +18,8 @@ const WeightCategory = [
 const HeightCategory = [
     'Centimeter','Meter', 'Feet'
   ];
-const defaultWeight = WeightCategory[0];
-const defaultHeight = HeightCategory[0];
+let defaultWeight = WeightCategory[0];
+let defaultHeight = HeightCategory[0];
 
 class BMI extends Component{
 
@@ -29,234 +27,195 @@ class BMI extends Component{
     {
         super(props);
         this.state= {
-            height : "",
-            weight : "",
-            result :0, 
-            text  : "",
-            red:7,
-            green:7,
-            yellow:7,
-            blue:7,
-            dot:"",
-
-         
-            
-
-            redone : "hidden",
-            yellowone : "hidden",
-            greenone : "hidden",
-            buleone : "hidden",
-            Error : "",
-            
-            heightstatus : "Centimeter",
-            weightstatus : "Kg",
-            selectionweight : "springgreen",
-            selectionheight : "springgreen",
-            heightInch : "",
-     
+        heightstatus : 'Centimeter',
+        weightstatus : 'Kilogram',
+        height : "",
+        weight : "",
+        result : "",
+        Feetheight : "",
+        status : "",
+        dot : reddot,
+        red : 7,
+        yellow : 7,
+        green : 7,
+        blue : 7,
         }
-
     }
 
-    set = (props) =>{
+    setheightstatus = (props) =>{
+        let temp = props.value; 
+        this.setState({heightstatus: temp}); 
+        return ""
+    }
+    setweightstatus = (props) =>{
+        let temp = props.value; 
+        this.setState({weightstatus: temp}); 
+        return ""
+    }
+    setheight = (props) =>{
         this.setState({height : props.target.value});
+        return "";
     }
-
-    setInch = (props) =>{
-        this.setState({heightInch : props.target.value})
-    }
-
     setweight = (props)=>{
-    this.setState({weight : props.target.value});
-    }
-
-
-     calculate = () =>{
-        
-
-          if(this.state.weight === "" || this.state.height == ""){
-         this.setState({height:"",weight:""});
-       return "";
-         }
-
-
-
-    // REGEX PART 
-    let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
-    var temp1 = this.state.height;
-    if(reg.test((temp1))===false)
-    { 
-    this.setState({height:"",weight:"",heightInch:""});
-    console.log('weight')
-    return "";
-    }
-        
-    var temp = this.state.weight;
-    console.log(temp);
-    if(reg.test((temp))===false)
-    { 
-    this.setState({height:"",weight:"",heightInch:""});
-    return "";
-    }
-    const s = findDOMNode(this.refs.slideBMI);
-        $(s).addClass('slideBMI');
-        const f = findDOMNode(this.refs.Phoneslider);
-        $(f).addClass('slide-phone') 
-  
-        //console.log(this.state.height)
-
-        
-        // this.setState({green:7,red:7,yellow:7,blue:7,dot:""});
-        // this.setState({height:"",weight:"",heightInch:""});
-      
-        var wei = parseInt(this.state.weight);
-        var hei = parseInt(this.state.height);
-        var total = 0;
-
-        console.log(wei + " " + hei)
-        
-        if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Centimeter"){
-        hei = hei/100;
-        const Atemp = wei/(hei*hei);
-        total  = Atemp.toFixed(1);
-        this.setState({result : total});
-        }
-
-        else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Meter")
-        {
-            console.log('conme')
-           total = (wei / (hei * hei)).toFixed(1);
-            this.setState({result : total});
-        }
-        else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Inch")
-        {
-            // console.log('conme')
-            const total =( wei / (hei * hei) * 703).toFixed(1);
-            this.setState({result : total});
-        }
-        else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
-        {
-            
-            const heiIn = parseInt(this.state.heightInch);
-           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(1);
-            this.setState({result : total});
-        }
-        // console.log(this.state.result)
-        if(total <= 19)
-        {
-            this.setState({text: "UnderWeight",height:"",weight:"",heightunits:"",blue : 10  ,green:7,red:7,yellow:7,blueone:"visible",redone:"hidden",greenone:"hidden",yellowone:"hidden",dot: bluedot});
-            return "";
-        }
-        else if(total <= 25)
-        {
-            
-          //  console.log(this.state.result)
-            this.setState({text : "Healthy Weight",height:"",weight:"",heightunits:"",red:7,yellow:7,blue:7,green :10,greenone:"visible",blueone:"hidden",redone:"hidden",yellowone:"hidden",dot : greendot});
-            return "";
-        }  
-        else if(total <= 30)
-        {
-            
-           // console.log(this.state.result)
-            this.setState({text : "OverWeight",height:"",weight:"",heightunits:"",green:7,yellow:7,red:7,yellow : 10, yellowone:"visible",blueone:"hidden",greenone:"hidden",redone:"hidden",dot : yellowdot});
-            return "";
-        }
-        else
-        {   
-            //console.log(this.state.result)
-            this.setState({text : "Obese",height:"",weight:"",heightunits:"",green:7,yellow:7,blue:7,red : 10 ,dot : reddot,redone:"visible",blueone:"hidden",greenone:"hidden",yellowone:"hidden"});
-            return "";
-        }
        
+        this.setState({weight : props.target.value});
+        return "";
     }
-
-    click = () =>{
-        const e = findDOMNode(this.refs.toggle);
-        const f = findDOMNode(this.refs.leave);
-
-        const e3 = findDOMNode(this.refs.toggle1);
-        const e1 = findDOMNode(this.refs.toggle2);
-        const f1 = findDOMNode(this.refs.leave2);
-
-        $(e).addClass("floaty") ;
-        $(f).addClass("leave");
-        if(this.state.height === ""){
-        $(f1).removeClass("leave");
-        $(e1).removeClass("floaty");
-        $(e3).removeClass("floaty");
+    setInch = (props) =>{
+        this.setState({Feetheight : props.target.value})
+    }
+    calculate =()=>{
+        
+       
+        if(this.state.weight === "" || this.state.height == ""){
+        this.setState({height:"",weight:""});
+        return "";
         }
+        // REGEX PART 
+        let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
+        var temp1 = this.state.height;
+        var temp = this.state.weight;
+        if(reg.test((temp1))===false)
+        {  
+        const  a2 = findDOMNode(this.refs.google1);
+        $(a2).addClass('border-color-red')
+        return "";
+        }
+        if(reg.test((temp))===false)
+        { 
+            
+        const a = findDOMNode(this.refs.google)
+        $(a).addClass('border-color-red') 
+        return "";
+        }
+        const e1 = findDOMNode(this.refs.google)
+        const  e = findDOMNode(this.refs.output);
+        const f = findDOMNode(this.refs.google1)
+        $(e1).removeClass('google_text')
+        $(f).removeClass('google_text')
+        $(e).addClass('outnow');
+  
+
+  
+
+      var wei = parseInt(this.state.weight);
+      var hei = parseInt(this.state.height);
+      var total = 0;
+      
+      if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Centimeter"){
+      hei = hei/100; 
+      const Atemp = wei/(hei*hei);
+      total  = Atemp.toFixed(1);
+      this.setState({height:"",weight:"",result : total});
+ 
+      }
+
+      else if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Meter")
+      {
+         total = (wei / (hei * hei)).toFixed(1);
+         this.setState({height:"",weight:"",result : total});
+      }
+      else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Inch")
+      {
+          total =( wei / (hei * hei) * 703).toFixed(1);
+          this.setState({height:"",weight:"",result : total});
+      }
+      else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
+      {
+          
+          const heiIn = parseInt(this.state.Feetheight);
+          total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(1);
+          this.setState({height:"",weight:"",Feetheight:"",result : total});
+      } 
+      else if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Feet")
+      {
+        const Inch = (parseInt(this.state.Feetheight)/39.37);
+        const feet = (parseInt(this.state.height)/3.281);
+        total = (wei/(feet + Inch)).toFixed(1);
+        this.setState({height:"",weight:"",Feetheight:"",result : total});
+      }
+      
+    if(total<= 19)
+    {
+        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7})
     }
-    leave = ()=>{
-        const e = findDOMNode(this.refs.toggle);
-        const f = findDOMNode(this.refs.leave);
-        
-        const e3 = findDOMNode(this.refs.toggle1);
-        const e1 = findDOMNode(this.refs.toggle2);
-        const f1 = findDOMNode(this.refs.leave2);
 
-        $(f).removeClass("leave");
-        $(e).removeClass("floaty");
-        $(f1).removeClass("leave");
-        $(e3).removeClass("floaty");
-        $(e1).removeClass("floaty");
-
+    else if(total <= 24)
+    {
+        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7});
     }
-    heightunits = (props) =>{       
-        
 
-        if(props.target.name === "weightstatus")
+    else if(total <= 30)
+    {
+        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10});
+    }
+    else
+    {
+        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7});
+    }
+    }
+
+    close = ()=>{
+        const  e = findDOMNode(this.refs.output);
+        $(e).removeClass('outnow');
+    }
+    text = ()=>{
+        if(this.state.height === "")
         {
-          //  console.log(props.target.value)
-            this.setState({weightstatus : props.target.value , selectionweight : "springgreen"});
-            return "";
+            const e = findDOMNode(this.refs.google1)
+            $(e).removeClass('google_text')
         }
-        else{
-        this.setState({heightstatus : props.target.value ,selectionheight : "springgreen"});      
-        //console.log(props.target.value)
-        return "";    
+        const f = findDOMNode(this.refs.google)
+        $(f).addClass('google_text')
+        $(f).removeClass('border-color-red')
     }
-    }
-     
-    
-    
-    
-    click1 = () =>{
-        const e = findDOMNode(this.refs.toggle2);
-        const e3 = findDOMNode(this.refs.toggle1);
-        const f = findDOMNode(this.refs.leave2);
-        const e1 = findDOMNode(this.refs.toggle);
-        const f1 = findDOMNode(this.refs.leave);
-        $(f).addClass("leave");
-        $(e).addClass("floaty") ;
-        $(e3).addClass("floaty") ;
-
-        if(this.state.weight === ""){
-        $(f1).removeClass("leave");
-        $(e1).removeClass("floaty") ;
+    text1= ()=>{ 
+        if(this.state.weight === "")
+        {
+            const e = findDOMNode(this.refs.google)
+            $(e).removeClass('google_text')
         }
-    }
-    close = () =>{
-        const c = findDOMNode(this.refs.slideBMI);
-        $(c).removeClass('slideBMI')
-        const f = findDOMNode(this.refs.Phoneslider)
-        $(f).removeClass('slide-phone')
-        
-        this.setState({height:"",weight:"",result:""});
-    }
-    selectCategory = (propss)=>{ 
-        this.setState({heightstatus : propss.target.value})
+        const f = findDOMNode(this.refs.google1)
+        $(f).addClass('google_text')
+        $(f).removeClass('border-color-red')
     }
     render(){
         return(
         <Container className="container-fluid" style={{backgroundImage:`url(${(image)})`}}>
         
         
-            <Output>
-            <div className="d-flex">
-            <p>BMI Result</p>
-            <CloseIcon/>
+            <Output className="Output_for_BMI" ref="output">
+            <div className="d-flex justify-content-between text-bmi">
+            <p  >Your BMI Score</p>
+            <CloseIcon onClick={this.close}/>
             </div>
-            <p>Output</p>
+            <div className="d-flex align-items-center justify-content-between">
+            <h1 >{this.state.result}</h1>
+            <div className="result-in-status">                 {/* text */}
+            <h6 style={{marginLeft: "20px"}}>Your Category</h6>
+            <div>
+            <img src={this.state.dot}></img>
+            <h6 style={{margin:"0"}}>{this.state.status}</h6>
+
+            </div>
+            </div>
+            
+            </div>
+
+            <div className="bars">
+            <div className="bluebars" style={{height:`${this.state.blue}px`}}></div>
+            <div className="greenbars" style={{height:`${this.state.green}px`}}></div>
+            <div className="yellowbars" style={{height:`${this.state.yellow}px`}}></div>
+            <div className="redbars" style={{height:`${this.state.red}px`}}></div>
+            </div> 
+            <div className="indicator" >
+                        <span>18.5</span>
+                        <span>25</span>
+                        <span>30</span> 
+            </div>
+            <div className="barText">
+            <h6>Your BMI indicates that you are at a healthy weight for your height</h6>
+            </div>
             </Output>
 
 
@@ -265,27 +224,38 @@ class BMI extends Component{
 
             <Column >
             <div>
-                   <div className="d-flex">
-                   <FLOAT>
+                   <div className="d-flex" >
+                   <FLOAT   ref="google" onClick={this.text} >
 
-                   <input  required></input>
-                   <p>Weight</p>
+                   <input className="google_random"  onChange={this.setweight}  value={this.state.weight} required></input>
+                   <p className="p">Weight</p>
                    </FLOAT>
-                   <Dropdown options={WeightCategory} onChange={this._onSelect} value={defaultWeight}  />
+                   <Dropdown options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
                    </div>
                    <div className="d-flex">
-                   <FLOAT>
-                   <input  required></input>
-                   <p>Height</p>
+                          
+                   <FLOAT  ref="google1" onClick={this.text1}>
+                    {
+                    
+
+                    (this.state.heightstatus !== 'Feet') ? <><input className="google_random"  onChange={this.setheight} value={this.state.height}  required></input> <p className="p">Height</p>  </>
+                    : <Feet> 
+                    <div><input className="google_random"  onChange={this.setheight}  value={this.state.height} required></input> <h5>Feet</h5></div>
+                    <div><input className="google_random"   onChange={this.setInch} value={this.state.Feetheight} required></input><h5>Inch</h5> </div>
+                    </Feet>
+                    
+                    }
+                   
                    </FLOAT>
-                    <Dropdown options={HeightCategory} onChange={this._onSelect} value={defaultHeight} />
+                    <Dropdown options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
+                   
                    
                    </div>
             </div>
             
             <Button>
             <div className="d-flex justify-content-center p-2">
-            <button>Calculate</button>
+            <button onClick={this.calculate} >Calculate</button>
             </div>
             </Button>
 
@@ -316,7 +286,7 @@ width : 100%;
 background-position : center;
 background-repeat : no-repeat;
 object-fit : cover; 
-padding : 50px;
+min-height : 400px;
 position : relative;
 @media(max-width : 400px)
 {
@@ -326,9 +296,46 @@ position : relative;
 const Output = Styled.div`
 position : absolute;
 z-index : 5;
-padding : 10px;
+padding : 010px;
 background : white;
+min-width : 340px;
+max-width : 400px;
 border-radius : 10px;
+h1{ 
+width : 50%;
+text-align : center;
+}
+// display : none;
+.result-in-status{ 
+    margin-left : 10px;
+    text-align : center;
+    justify-content : between;
+    div{
+        display : flex;
+        align-items : center;
+        img{
+            width : 20px;
+            height : 20px;
+            object-fit : contain;
+            margin-right: 5px;
+        }
+    }
+}
+@media(max-width : 400px)
+{
+    .result-in-status{
+        font-size : 14px;
+        font-weight : 500;
+       
+    }
+}
+.text-bmi{
+font-size : 17px;
+padding : 5px;
+font-weight : 500;
+color : grey;
+}
+
 `
 
 
@@ -355,21 +362,12 @@ div{
     input{
         outline : none;
         width: 100%;
-        padding : 8px;
-       border: 2px solid springgreen;
+        padding : 8px; 
         border-radius : 5px;
         z-index : 1;
         
     
     }
-    div{
-        align-items : center;
-        &:focus-within p{
-            line-height : 15px;    
-            top : -3px;
-            text-align : center;
-        
-        }
     }
     }
 .Dropdown-control{
@@ -379,23 +377,41 @@ div{
     padding : 6px;
     width: 100%;
 }
-
+ 
 `
 const FLOAT = Styled.div`
 position : relative;
-p{
-    position : absolute;
-    left : 30px;
-    bottom : -3px;
-    z-index : 1;
-    font-weight : 500;
-    transition : all 550ms;
-    background : white;
-    font-size : 15px;
-    letter-spacing : 0.1rem;
-    padding :0 3px;
-}
+display : flex;
  
+
+`
+const Feet = Styled.div`
+display : flex;
+gap : 0px; 
+align-items : center;
+div{
+    position : relative;
+    padding : 0px;
+    margin : 0;
+    width : 100%; 
+}
+h5{
+    position : absolute;
+    top : 16px; 
+    left : 16px;
+    background : white;
+    width: 38px;
+    text-align : center;
+    line-height : 10px;
+    font-size : 16px;
+    transition : all 50ms;
+}
+&:focus-within h5{
+    top : -2px;
+    transform : scale(0.9);
+    width : 45px;
+}
+
 `
 
 const Button = Styled.div`
@@ -407,7 +423,15 @@ button{
     border-radius : 15px;
     font-family : roboto;
     font-weight : 500;
+    transition : all 350ms;
+    color : green;
+    &:hover{
+        background : green;
+        color : white;
+
+    }   
 }
+
 
 `
 

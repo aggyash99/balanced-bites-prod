@@ -793,8 +793,10 @@ color: rgb(214, 40, 27);
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
-    width: 100%;
-} 
+    width: 100%; 
+   
+}
+ 
 .input-BMI input{
 outline: none;
 font-weight: 500; 
@@ -1010,7 +1012,6 @@ border-width: 2px;
     color: #070e50; 
     justify-content: flex-end; 
     /* background-color: rgb(248, 248, 248); */
-
 }  
 .underline{
     content: "";
@@ -1025,6 +1026,41 @@ border-width: 2px;
 .BMI-whole{
     width: 50%;
 }
+
+.Output_for_BMI{ 
+    left: -150%;
+    transition: all 500ms ;
+}
+.outnow{
+    left: 0%;
+}
+.p{
+ 
+        position : absolute;
+         z-index : 1;
+          top : 18px;
+          left: 10px;
+         font-weight : 500;
+         background : white;
+         width : 80px;
+         text-align : center;
+         line-height : 5px;
+         transition : all 50ms;
+       
+}
+.google_text input{
+       border-color: blue;
+}
+.border-color-red input{
+    border-color: rgb(255, 12, 12);
+}
+.google_text .p{
+   top: 0%;
+}
+.google_random{
+border: 2px solid springgreen;
+}
+ 
 .input-class{
     width: 100%;
     z-index: 100;  
@@ -1044,14 +1080,14 @@ border-width: 2px;
     }
 .redbars{
     
-    border-radius: 1px;
+    border-radius: 10px;
     width: 25%;  
     height: 7px;
     background-color: red;
 }
 .yellowbars{  
     
-    border-radius: 1px;
+    border-radius: 10px;
     width: 25%;
     height: 7px;
     background-color: rgb(218, 200, 44);
@@ -1059,14 +1095,14 @@ border-width: 2px;
 
 .greenbars{
     
-    border-radius: 1px;
+    border-radius: 10px;
     width: 25%;
     height: 7px;
     background-color: rgb(44, 218, 53);
 }
 .bluebars{
     
-    border-radius: 1px;
+    border-radius: 10px;
     width: 25%;
     height: 7px;
     background-color: rgb(44, 56, 218);
