@@ -1045,7 +1045,7 @@ border-width: 2px;
          width : 80px;
          text-align : center;
          line-height : 5px;
-         transition : all 50ms;
+         transition : all 250ms;
        
 }
 .google_text input{
@@ -1056,6 +1056,7 @@ border-width: 2px;
 }
 .google_text .p{
    top: 0%;
+   transform: scale(0.8);
 }
 .google_random{
 border: 2px solid springgreen;

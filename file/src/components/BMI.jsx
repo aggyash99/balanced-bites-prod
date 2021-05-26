@@ -181,10 +181,13 @@ class BMI extends Component{
     }
     render(){
         return(
-        <Container className="container-fluid" style={{backgroundImage:`url(${(image)})`}}>
+        <Container className="container-fluid =" style={{backgroundImage:`url(${(image)})`}}>
         
         
-            <Output className="Output_for_BMI" ref="output">
+
+
+        <MAIN>
+        <Output className="Output_for_BMI" ref="output">
             <div className="d-flex justify-content-between text-bmi">
             <p  >Your BMI Score</p>
             <CloseIcon onClick={this.close}/>
@@ -219,7 +222,8 @@ class BMI extends Component{
             </Output>
 
 
-        <MAIN>
+
+
         <ROW className = "row">
 
             <Column >
@@ -285,8 +289,7 @@ const Container = Styled.div`
 width : 100%;
 background-position : center;
 background-repeat : no-repeat;
-object-fit : cover; 
-min-height : 400px;
+object-fit : cover;  
 position : relative;
 @media(max-width : 400px)
 {
@@ -296,14 +299,19 @@ position : relative;
 const Output = Styled.div`
 position : absolute;
 z-index : 5;
-padding : 010px;
+padding : 10px;
 background : white;
-min-width : 340px;
+min-width : 340px; 
 max-width : 400px;
 border-radius : 10px;
 h1{ 
 width : 50%;
 text-align : center;
+}
+h1{
+    background : grey;
+    padding : 3px;
+    border-radius : 10px;
 }
 // display : none;
 .result-in-status{ 
@@ -340,9 +348,13 @@ color : grey;
 
 
 const MAIN = Styled.div`
-padding: 10px;
+padding : 10px;
 width : 100%;
-height : 100%;
+height : 100%; 
+min-height : 300px;
+display : flex;
+flex-direction : column;
+justify-content : center;
 
 `
 const ROW = Styled.div`
