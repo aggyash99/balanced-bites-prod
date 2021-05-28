@@ -74,12 +74,8 @@ Contact
 .contact-icon{
   
         color: #03ac11;
-}
-@media(max-width:650px)
-{
-    .contact-icon{
-        font-size:50px;
-    }
+        display: flex;
+        justify-content: center;
 }
 .icon-in-contact{
     font-size: 20px;
@@ -360,16 +356,27 @@ a:visited{
 {
     border-color: #03ac11;
 }
- 
+.paddingmobile2
+{
+    visibility: hidden;
+    display: none;
+
+}
 @media (max-width:650px) {
-    .paddingmobile
+    .paddingmobile2
     {
+        visibility: visible;
+        display:block ;
         padding-left: 10%;
         left:30%;
         width:90%;
-        font-size: medium;
+        font-size: large;
     }
-    
+    .paddingmobile
+    {
+        visibility: hidden;
+        display: none;
+    }
     .paddingfixform {
    
         
