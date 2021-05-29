@@ -30,7 +30,7 @@ const Sdata = [
     
     {
         imgsrc : diabetes,
-        title : "Diabetes",
+        title : "<span class='data-heading'>Diabetes</span>",
         description :"<span class='first'>A</span> healthy lifestyle is something we should all strive to maintain, especially those living with diabetes. Staying on track with a good diet and exercise regimen and keeping blood sugar levels regulated is vital for diabetics. ",
         second : "<span class='bold'>Balanced Bites plan a customized diet plan that helps you control your blood sugar (glucose)</span>, manage your weight and control heart disease risk.",
         third : "",
@@ -39,7 +39,7 @@ const Sdata = [
     
     {
         imgsrc:PCOS,
-        title :"PCOS",
+        title :"<span class='data-heading'>PCOS</span>",
         description : "<span class='first'>P</span>olycystic Ovary Syndrome is an endocrine system disorder that affects a woman’s hormone. Most women with PCOD grow a number of small cysts on their ovaries. These cysts are not harmful but they may lead to an imbalance in hormone levels. Women with PCOD may experience menstrual cycle abnormalities, excess hair growth, acne, increased androgen levels, and obesity.",
         second : "Also, women suffering from PCOD are more prone to miscarriage, premature delivery, and gestational diabetes.",
         third : " Our diet plan for PCOD is specifically designed to cure this problem among women. After understanding your lifestyle and body type, we prepare a diet plan that helps you cure PCOD and meets all your body needs. The diet schedule prepared for you is specifically customized in a way that you find your diets easy to prepare in your kitchen.",
@@ -64,7 +64,7 @@ const Sdata = [
     
     {
         imgsrc:pregnant,
-        title:"Pregnancy",
+        title:"<span class='data-heading'>Pregnancy</span>",
         description :"<span class='first'>I</span>f you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",
         third : "Our Post-natal plans involve losing the baby weight in a healthy and nutritional manner to get your body back to shape. If there’s anything we know, it’s that achieving a healthy weight post-baby can be a struggle. It can be stressful taking care of a newborn, adjusting to a new routine, and recovering from childbirth. It’s a lot. You do not have to worry about that. We will take complete responsibility to design a nutritious and easy to prepare diet plan for the new mothers to make life easy. Making good lifestyle choices will directly impact the health of your baby.",
@@ -81,7 +81,7 @@ const Sdata = [
     },
     {
         imgsrc : thyroid,
-        title : "Thyroid",
+        title : "<span class='data-heading'>Thyroid</span>",
         description:"<div class='cars'><strong class='first'>T</strong>he thyroid gland is a small, butterfly-shaped gland that sits near the base of your neck. It makes and stores thyroid hormones that affect nearly every cell in your body. Thyroid hormones are very important. They help <span class='bold'>control growth, cell repair, and metabolism </span>— the process by which your body converts what you eat into energy.</div>",
         second : "An imbalance in the levels of thyroid hormones could lead to an underactive (Hypothyroid) or overactive (Hyperthyroid).",
         third : "We, at Balanced Bites, carefully assess the levels of TSH (Thyroid Stimulating Hormone), Thyroid Hormones (T3 & T4) in your body and prepare a nutrition plan to stimulate your thyroid glands in a natural and holistic manner.",

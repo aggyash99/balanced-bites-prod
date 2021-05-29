@@ -1,19 +1,19 @@
 import React, {useState} from 'react'; 
-import { Link } from 'react-router-dom';
-import Photo from '../Image/pics/program-4.jpg'
-import shape from '../Image/services/b-shape1.png'
+import { Link } from 'react-router-dom'; 
 import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata';
+import $ from 'jquery';
+import ReactDOM  from "react-dom"; 
 import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
 const Program =(props)=>{ 
  
     const [showB, setB]=useState(false);
-    
-    const [showC, setC]=useState(false);
-var title,description,logo,second,third;
  
+    const [showC, setC]=useState(false);
+    var title,description,logo,second,third;
+   
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -26,7 +26,7 @@ var title,description,logo,second,third;
     }
     return ("");
     })
-  
+ 
 return (
 <>
 <div>
@@ -37,8 +37,6 @@ return (
     <h1 className="service-text">Service</h1>
     </div>
     <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
-   {/* <button className="btn-for-service">Programs</button>
-    <button className="btn-for-service">About</button> */}
     <button className="btn-for-service">Contact Us</button>
     
     </div>
@@ -65,8 +63,8 @@ return (
             {
                 Sdata.map( (value,key) =>{
                     return (
-                        <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
+                        <Link   className="link " to={{ pathname:'/Program',
+                        state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
                     );
                 })
             }
@@ -74,10 +72,9 @@ return (
         </div> 
 
         <div className="col-lg-9 col-md-12 col-12 ">
-        
         <img src={logo} className="PROGRAMS-PHOTO" ></img>
-        {/* </div> */}
         </div>
+
       </div>
         
 
@@ -101,7 +98,7 @@ return (
              </div>
          
         <div className="col-lg-12  pt-3" style={{padding:"0px 10px"}}>
-            <ul style={{listStyle:"none"}}>
+            <ul style={{listStyle:"none" , padding : "12px"}}>
             
             
             <li> 

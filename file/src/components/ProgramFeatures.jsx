@@ -111,7 +111,6 @@ import Styled from 'styled-components';
             </Main>
 
             </LAST>    
-    
     </div>
     
     
@@ -142,15 +141,21 @@ box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
   &:hover{
       box-shadow : 0px 10px 10px 0px #f9f9f9;
-      background : #ffffff;
-  }
+      background : #grey;
+      img{
+        box-shadow : 0px 0px 0px 6px #b8f090;
+        }
+    }
+  
 `
 const Card = Styled.div` 
 width : 250px;
 height : 150px;
 padding :20px 0px;
 margin : 10px 20px;
-
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 const Img = Styled.div`
 position : relative;
@@ -177,7 +182,7 @@ border-radius : 50%;
  
 const Writeup = Styled.div`
 position : relative;
-bottom : -5%;
+bottom : 0;
 letter-spacing: 1.5px;
 text-align : center;
 font-size : 19px;
@@ -207,13 +212,21 @@ font-size : 20px;
 letter-spacing : 1.2px;
 color: rgb(93, 155, 31);
 font-weight : 600;
-padding : 20px;
+padding : 10px;
+
+margin-bottom : 20px;
 `
 const Mainhead = Styled.span`
 font-size : 2.2em;
 word-spacing : 5px;
 font-family : Rubik, sans-serif;
 padding : 5px 0px;
+
+@media (max-width : 400px)
+{
+   // padding : 10px 0px;
+    font-size : 33px;
+}
 `
 const Color = Styled.span`
 color : grey;
@@ -226,6 +239,7 @@ font-family : roboto;
 @media (max-width : 400px)
 {
     padding : 10px 0px;
+    display : none;
 }
 `
 const MidHead = Styled.div`
@@ -234,10 +248,7 @@ font-family :  'Caveat', cursive;
 font-size : 27px;
 font-weight : 500;
 
-@media (max-width : 400px)
-{
-    display : none;
-}
+ 
 `
  
 

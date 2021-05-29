@@ -20,7 +20,7 @@ return (
       <div className="p-4">
         <div className=" position-relative">
         <div className="text-center d-flex flex-column end-line">
-        <span className="programs-head"><span style={{color:"black", marginRight:"6px"}}>Our</span>Programs</span>
+        <span className="programs-head "><span  style={{color:"black", marginRight:"6px"}}>Our</span><span className="in-phone borderbottom">Programs</span></span>
         <span className="programs-head-des">Diet plans designed to meet everyone's every nutrition need.</span>
        
         </div>
@@ -45,8 +45,6 @@ return (
 
 
     </div>
-
-
 
   </div>
 

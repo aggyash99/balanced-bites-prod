@@ -13,7 +13,7 @@ import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; 
 
 const WeightCategory = [
-  'Kilogram','Pounds'
+  'Kg','Pounds'
 ];
 const HeightCategory = [
     'Centimeter','Meter', 'Feet'
@@ -28,7 +28,7 @@ class BMI extends Component{
         super(props);
         this.state= {
         heightstatus : 'Centimeter',
-        weightstatus : 'Kilogram',
+        weightstatus : 'Kg',
         height : "",
         weight : "",
         result : "",
@@ -39,6 +39,7 @@ class BMI extends Component{
         yellow : 7,
         green : 7,
         blue : 7,
+        content : "",
         }
     }
 
@@ -53,11 +54,28 @@ class BMI extends Component{
         return ""
     }
     setheight = (props) =>{
+        // const  a2 = findDOMNode(this.refs.google1);
+        // if(props.target.value > 70)
+        // {
+        // $(a2).addClass('border-color-red');
+        // return ""
+        // }
+        // else 
+        // $(a2).removeClass('border-color-red')
+
         this.setState({height : props.target.value});
         return "";
     }
     setweight = (props)=>{
-       
+        // const  a2 = findDOMNode(this.refs.google);
+        // if(props.target.value > 70)
+        // {
+        // $(a2).addClass('border-color-red');
+        // return ""
+        // }
+        // else 
+        // $(a2).removeClass('border-color-red')
+
         this.setState({weight : props.target.value});
         return "";
     }
@@ -102,7 +120,7 @@ class BMI extends Component{
       var hei = parseInt(this.state.height);
       var total = 0;
       
-      if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Centimeter"){
+      if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Centimeter"){
       hei = hei/100; 
       const Atemp = wei/(hei*hei);
       total  = Atemp.toFixed(1);
@@ -110,7 +128,7 @@ class BMI extends Component{
  
       }
 
-      else if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Meter")
+      else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Meter")
       {
          total = (wei / (hei * hei)).toFixed(1);
          this.setState({height:"",weight:"",result : total});
@@ -127,7 +145,7 @@ class BMI extends Component{
           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(1);
           this.setState({height:"",weight:"",Feetheight:"",result : total});
       } 
-      else if(this.state.weightstatus === "Kilogram" && this.state.heightstatus === "Feet")
+      else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Feet")
       {
         const Inch = (parseInt(this.state.Feetheight)/39.37);
         const feet = (parseInt(this.state.height)/3.281);
@@ -137,21 +155,21 @@ class BMI extends Component{
       
     if(total<= 19)
     {
-        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7})
+        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7, content : "A BMI of less than 18.5 indicates that you may need to gain some weight."})
     }
 
     else if(total <= 24)
     {
-        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7});
+        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 18.5 indicates that you may need to gain some weight."});
     }
 
     else if(total <= 30)
     {
-        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10});
+        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10,content:"A BMI of 25-29.9 indicates that you may be advised to lose some weight for better health. "});
     }
     else
     {
-        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7});
+        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight"});
     }
     }
 
@@ -196,9 +214,9 @@ class BMI extends Component{
             <h1 >{this.state.result}</h1>
             <div className="result-in-status">                 {/* text */}
             <h6 style={{marginLeft: "20px"}}>Your Category</h6>
-            <div>
+            <div style={{display:"flex",justifyContent:"center"}}>
             <img src={this.state.dot}></img>
-            <h6 style={{margin:"0"}}>{this.state.status}</h6>
+            <h6 style={{margin:"0", fontSize:"18px"}}>{this.state.status}</h6>
 
             </div>
             </div>
@@ -212,12 +230,12 @@ class BMI extends Component{
             <div className="redbars" style={{height:`${this.state.red}px`}}></div>
             </div> 
             <div className="indicator" >
-                        <span>18.5</span>
-                        <span>25</span>
-                        <span>30</span> 
+                        <span className="first-indicator">18.5</span>
+                        <span className="second-indicator">25</span>
+                        <span className="third-indicator">30</span> 
             </div>
             <div className="barText">
-            <h6>Your BMI indicates that you are at a healthy weight for your height</h6>
+            <h6>{this.state.content}</h6>
             </div>
             </Output>
 
@@ -225,7 +243,7 @@ class BMI extends Component{
 
 
         <ROW className = "row">
-
+            <Heading> BMI<span style={{fontFamily:"caveat"}}> CALCULATOR</span></Heading>
             <Column >
             <div>
                    <div className="d-flex" >
@@ -234,7 +252,7 @@ class BMI extends Component{
                    <input className="google_random"  onChange={this.setweight}  value={this.state.weight} required></input>
                    <p className="p">Weight</p>
                    </FLOAT>
-                   <Dropdown options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
+                   <Dropdown className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
                    </div>
                    <div className="d-flex">
                           
@@ -299,21 +317,21 @@ position : relative;
 const Output = Styled.div`
 position : absolute;
 z-index : 5;
-padding : 10px;
+box-shadow: 0px 0px 1500px 2px #80808091;
+padding : 8px;
 background : white;
-min-width : 340px; 
-max-width : 400px;
+min-width : 300px; 
+max-width : 320px;
 border-radius : 10px;
-h1{ 
-width : 50%;
-text-align : center;
-}
+bottom : 10%;
 h1{
-    background : grey;
+    background :#b1aa8029;
     padding : 3px;
     border-radius : 10px;
+    width : 50%;
+    text-align : center;
 }
-// display : none;
+ 
 .result-in-status{ 
     margin-left : 10px;
     text-align : center;
@@ -351,19 +369,23 @@ const MAIN = Styled.div`
 padding : 10px;
 width : 100%;
 height : 100%; 
-min-height : 300px;
+min-height : 400px;
 display : flex;
 flex-direction : column;
 justify-content : center;
-
 `
 const ROW = Styled.div`
 display : flex;
 justify-content : flex-end;
+padding : 0  40px 0 10px;
+@media(max-width : 400px)
+{
+    padding : 5px;
+}
 `
 const Column = Styled.div`
 width : 500px;
-padding : 10px 10px 0 ; 
+padding : 10px 10px; 
 background : white;
 border-radius : 10px;
 div{
@@ -377,25 +399,41 @@ div{
         padding : 8px; 
         border-radius : 5px;
         z-index : 1;
-        
     
     }
     }
     }
+.Dropdown-root{
+    width : 70%;
+}
+.Dropdown-placeholder{
+    font-weight : 500;
+}
+.Dropdown-option.is-selected{
+    width : 100%;
+    background: #3e73019e;
+    color: white;
+    padding : 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
 .Dropdown-control{
    
     border : 2px solid springgreen;
     border-radius : 5px;
     padding : 6px;
     width: 100%;
+
+}
+.Dropdown-arrow{
+    top : 17px;
 }
  
 `
 const FLOAT = Styled.div`
 position : relative;
 display : flex;
- 
-
+  
 `
 const Feet = Styled.div`
 display : flex;
@@ -432,7 +470,8 @@ button{
     border : 1px solid green;
     background : transparent;
     outline : none;
-    border-radius : 15px;
+    padding : 5px 15px;
+    border-radius : 25px;
     font-family : roboto;
     font-weight : 500;
     transition : all 350ms;
@@ -440,14 +479,31 @@ button{
     &:hover{
         background : green;
         color : white;
-
     }   
 }
-
-
 `
 
+const Heading = Styled.span`
+font-size : 40px;
+font-weight : 600;
+font-family : rubik;
+text-align : right;
+letter-spacing : 5px;
+margin-bottom : 5px;
+padding : 10px;
+color:#0f0c4dc9;
+@media(max-width : 400px)
+{
+    text-align : left;
+    font-size : 40px;   
+    padding : 10px;
+    text-align : center;
+    span{
+        text-align : left;
+    }
+}
 
+`
 
 
 
@@ -681,7 +737,7 @@ all work
 //        <KeyboardArrowDownIcon/>
 //         </div>
 //         <div className="dropdown-list">
-//         <div className="dropdown-list__item" onClick={()=>{this.setState({weightstatus : "Kg"})}}>Kilogram(Kg)</div>
+//         <div className="dropdown-list__item" onClick={()=>{this.setState({weightstatus : "Kg"})}}>Kg(Kg)</div>
 //         <div className="dropdown-list__item" onClick={()=>this.setState({weightstatus : "Pounds"})} >Pounds</div>
  
 //         </div>
@@ -706,7 +762,7 @@ all work
 //         <div className="" style={{borderColor :`${this.state.selectionheight}`}}>
 
 //         {/* <select className="units  p-2 form-select" name="heightstatus" onClick={this.heightunits}>
-//         <option value=  "centimeter">Centimeter</option>
+//         <option value=  "Centimeter">Centimeter</option>
 //         <option value = "Feet" >Feet</option>
 //         <option value= "meter ">meter</option> 
 //         </select> */}
