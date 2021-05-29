@@ -1,24 +1,48 @@
 import React from 'react';
 import Card from './CardforReview';
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import carddata from '../Data/ReviewData';
+
+import Styled from 'styled-components'
 import google from '../Image/Review/google.png'
 const Newcards = ()=>{
     
+const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
     return (
         <>
-        <div className="" style={{padding:"5%", backgroundImage:"linear-gradient(-225deg, #DFFFCD 0%,lightcoral 100%)"}}> 
+        <div className="" style={{padding:"5%", backgroundImage:"linear-gradient(-225deg, #DFFFCD 0%,lightgreen 100%)"}}> 
             <span className="main-head">A WORD FROM OUR CLIENTS</span>
-            <div className="Heading-border">
-            <div className='write-review'>
-                <img src={google} alt="G"></img>
-                <span>Review</span>
-                </div>
-                 <div className="">
-                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn-for-program" >Write your Review</a> 
-                </div>
-            </div>
+           
+            <MyCarousel responsive={responsive}
+    keyBoardControl={true}
+    removeArrowOnDeviceType={["tablet","mobile"]}
+    showDots={false}
+    arrows={false}
 
-            <div className="Newcards">
+    autoPlay={true}
+    autoPlaySpeed={10000}
+    infinite={true}
+    >
 
            
            {
@@ -28,7 +52,7 @@ const Newcards = ()=>{
                         );
                })
            }
-             </div>
+             </MyCarousel>
         </div>
         </>
     )
@@ -36,3 +60,12 @@ const Newcards = ()=>{
 
 
 export default Newcards;
+const MyCarousel = Styled(Carousel)`
+margin-top : 30px; 
+margin-bottom : 20px;
+li:hover{ 
+}
+ul li button{
+  color : rgb(150,158,171);;
+} 
+`

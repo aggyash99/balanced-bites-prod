@@ -23,10 +23,16 @@ class About extends Component{
     //const b = findDOMNode(this.refs.black);
    //$(b).addClass("black");
    $(o).addClass('ankur');
-  }
-
+   }
+  
 
   render(){
+    window.onscroll=function()
+    {
+      console.log(window.scrollY);
+      if(document.getElementById("movingpicbg"))
+      document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
+    }
     return (
       <>
 
@@ -35,12 +41,12 @@ class About extends Component{
 
     <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
-      <div className="food">
+      <div className="food" >
 
-<div className="alignbottomabout">
-  <div className="gradientbg">
+<div className="alignbottomabout"id="movingpicbg">
+  <div className="gradientbg" >
 
-      <h1 className="headalignment " ><strong style={{color:"black", fontSize:"55px"}}>Muskan Bansal</strong><span className="headtext"> Nutritionist & Diabetes Educator</span></h1>
+      <h1 className="headalignment " id="headtextaboutblur"><strong style={{color:"black", fontSize:"55px"}}>Muskan Bansal</strong><span className="headtext"> Nutritionist & Diabetes Educator</span></h1>
 
   </div>
 
@@ -57,7 +63,7 @@ class About extends Component{
       Muskan Bansal is a young & aspiring dietitian, nutritionist and Diabetes Educator <span style={{paddingLeft:"6px"}}>f</span>rom Delhi, India. She is enthusiastically working in the field of weight management and therapeutic nutrition. She believes in a natural way of achieving a healthy lifestyle & don’t recommend artificial methods like pills and supplement.</p>
       <p className="text pt-2 pb-2">
 She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with individuals who are obese or suffering from lifestyle disorders and serving personalized diet plan to the clients.</p>
-<p className="text pt-2 pb-2">She  believes in <span className="greenHighlight">“never give up on your favourite food”</span> and she encourages a healthy eating lifestyle by eating all your favourite food in balance with other meals. Her plan is based on balanced diet and you will get homemade and traditional food. She encourages use of food as medicine with a holistic approach.
+<p className="text pt-2 pb-2">She <span className="greenHighlight">doesn't believe in Dieting</span>, instead of this she encourages a healthy eating lifestyle by eating all your favourite food in balance with other meals. She believes in making positive, long term changes to your diet. Her plan is based on balanced diet and you will get homemade and traditional food. She encourages <span className="greenHighlight">use of food as medicine</span> with a holistic approach.
 </p><p className="text pt-2 pb-2">Clients can also have free consultation and doubt handling sessions, you can get your own personalized diet plan by contacting us online with no clinic visit.
 
       </p>
@@ -74,58 +80,20 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     </div>
     </div>
     </div>
-
+    <div className="container" style={{padding:"50px 0px"}}>
+    
     <div className="row">
-      <div className="col-6 d-none d-sm-block" style={{paddingRight:"0px"}}>
-        <div className="" style={{width:"100%", paddingRight:"0px "}}>
-        < img  className="leftimageabout"  src={logo} alt="Thank You!" style={{width:"100%"}}/>
-        </div>
-      </div>
-      <div className="col-lg-6 col-12 righttextabout fadebackground" >
-        <h1 style={{paddingBottom:"20px"}}>Why choose <span className="greenHighlight" style={{fontSize:"40px"}}>Balanced Bites</span>? </h1>
-        <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
-        </p>
-       
-      </div>
-    </div>
-    </div>
-
-    <div className="container" style={{paddingTop:"50px"}}>
-        
-
-
+          <div className="col-8">
         <div className="row">
-
-            <div className="col-lg-4">
-            <Main className="col-lg-12" >
-            <Content>
-            <Card>
-            <Img>
-            <img alt="alt" src={options}></img>
-            </Img>
-            <Writeup>✓  Customized diet plans according to your lifestyle.</Writeup>
-            </Card>
-            </Content>
-            </Main> 
-
-            <Main className="col-lg-12">
-                
-                <Content> 
-                    <Card>
-                <Img>
-                <img alt="alt" src={routine}></img>
-                </Img>
-                <Writeup>✓  No external machines, pills, or supplements required.</Writeup>
-                </Card>
-                
-                </Content>
-                </Main>
+            <div className="col-6 bordertemp1" ><div className="textabouttable">✓  Customized diet plans according to your lifestyle.</div></div>
+            
+            <div className="col-6 bordertemp2"><div className="textabouttable">✓  No external machines, pills, or supplements required.</div></div>
+            
+            <div className="col-6 bordertemp3"><div className="textabouttable">✓  Programs where you don’t feel like being on a ‘diet'.</div></div>
+            
+            <div className="col-6 bordertemp4"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
             </div>
-            
-            
-    
-    
-    
+          </div>
             
             <CenterImg className="col-lg-4 -Center" style={{paddingTop:"10%"}}>
             <div className="col-12">
@@ -144,44 +112,32 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     
     
             
-            <div className="col-lg-4">
-
-            <Main className="col-lg-12">
-                
-            <Content>
-                <Card>
-            <Img>
-            <img alt="alt" src={nopills}></img>
-            </Img>
-            <Writeup>✓  Programs where you don’t feel like being on a ‘diet'.</Writeup>
-            </Card>
-            </Content>
-            </Main> 
-
-            <Main className="col-lg-12">
-            
-            <Content>
-                <Card>
-            <Img>
-            <img alt="alt" src={plain}></img>
-            </Img>
            
-            <Writeup>✓  Flexible schedules & diet plans when you travel.</Writeup>
-            </Card>
-            </Content>
-                </Main>
-
-            </div>
              
             
             
             
-                
+            </div>    
         </div>
-               
-          
-    
+    <div className="row">
+      <div className="col-6 d-none d-sm-block" style={{paddingRight:"0px"}}>
+        <div className="" style={{width:"100%", paddingRight:"0px "}}>
+        < img  className="leftimageabout"  src={logo} alt="Thank You!" style={{width:"100%"}}/>
+        </div>
+      </div>
+      <div className="col-lg-6 col-12 righttextabout fadebackground" >
+        <h1 style={{paddingBottom:"20px"}}>Why choose <span className="greenHighlight" style={{fontSize:"40px"}}>Balanced Bites</span>? </h1>
+        <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
+        </p>
+       
+      </div>
     </div>
+    </div>
+    
+
+
+      
+             
     <Reviewcard style={{paddingBottom:"0px"}}/>
     
     
@@ -200,11 +156,10 @@ const CenterImg = Styled.div`
  
 `
 const Main = Styled.div`
-padding : 5% 2%;
 display : flex;
 justify-content : center;
 position : relative;
-
+border: 1px solid black;
  
 `
 
@@ -229,10 +184,6 @@ transition : all 250ms;
     }
 `
 const Card = Styled.div` 
-width : 200px;
-height : 200px;
-padding :20px 0px;
-margin : 10px 20px;
 
 `
 const Img = Styled.div`
