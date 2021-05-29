@@ -40,7 +40,7 @@ const responsive = {
     arrows={false}
 
     autoPlay={true}
-    autoPlaySpeed={10000}
+    autoPlaySpeed={3000}
     infinite={true}
     >
 
