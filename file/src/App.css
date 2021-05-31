@@ -1482,7 +1482,7 @@ select{
         display: none;
     }
     .phone-head{
-        /* display: block; */
+        display: block;
         text-align: center;
         font-size: 40px;
         font-family: "Kaushan Script";

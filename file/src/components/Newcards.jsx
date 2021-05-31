@@ -8,7 +8,7 @@ const Newcards = ()=>{
         <>
         <div className="Review"> 
             <span className="main-head">WHAT OUR CLIENT SAY</span>
-            <span className="phone-head">Our Family</span>
+            <span className="phone-head">Our Reviews</span>
             <div className="Heading-border">
             <div className='write-review'>
                 <img src={google} alt="G"></img>
