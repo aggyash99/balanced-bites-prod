@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import imgs from '../../Image/owner/owner11.jpg';
-
-import img from '../../Image/services/test.png';
+import Photo from '../photo'
+import img from '../../Image/pics/whatsapp1.svg';
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
@@ -13,6 +13,9 @@ function Home() {
   return (
     <>
     <section className = "header" id="headerindex">
+    
+    <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
+
       <div className="container-fluid position-relative overflow-hidden" >
         <div className="row home-img" >
           <div className="col-lg-12 d-flex justify-content-around mx-auto p-0 para" >
@@ -60,7 +63,7 @@ function Home() {
       <Reviewcard />
       </div>
 
-      <div className="appoint">
+      {/* <div className="appoint">
 
       <div>
         <div className="textin">
@@ -73,6 +76,9 @@ function Home() {
       </div>
       </div>
 
+      </div> */}
+      <div>
+          <Photo></Photo>
       </div>
      
     </section>

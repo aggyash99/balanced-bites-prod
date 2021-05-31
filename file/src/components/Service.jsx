@@ -2,11 +2,13 @@ import React from 'react';
 import Sdata from '../Data/Sdata';
 import ServicesCards from './ServicesCard';
 import logo from '../Image/pics/program-44.jpg'
+import img from '../Image/pics/whatsapp1.svg'
 const Service = () =>{
 
 return (
 
   <div className=" container-fluid">
+  <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
     <div className="row logo-for-service" style={{backgroundImage: `Url(${logo})` }}>
         <div className="col-12 our-programs-head" >
           {/* <div className="our-programs"> Our <span className='programs'>Programs</span></div> */}
@@ -20,7 +22,7 @@ return (
       <div className="p-4">
         <div className=" position-relative">
         <div className="text-center d-flex flex-column end-line">
-        <span className="programs-head "><span  style={{color:"black", marginRight:"6px"}}>Our</span><span className="in-phone borderbottom">Programs</span></span>
+        <span className="programs-head "><span  style={{color:"green", marginRight:"6px"}}>Our</span><span className="in-phone borderbottom">Programs</span></span>
         <span className="programs-head-des">Diet plans designed to meet everyone's every nutrition need.</span>
        
         </div>

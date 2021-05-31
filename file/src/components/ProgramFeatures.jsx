@@ -9,6 +9,7 @@ import Styled from 'styled-components';
  const ProgramsFeatures = (props)=>{
     return (
         <div className="container">
+          
         <Top className="row">  
             <Mainhead ><span className="borderbottom mb-2">Program <Color>Features</Color></span></Mainhead>
             <MidHead>Nutritionist & Diabetes Educator</MidHead>
@@ -139,13 +140,7 @@ cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
-  &:hover{
-      box-shadow : 0px 10px 10px 0px #f9f9f9;
-      background : #grey;
-      img{
-        box-shadow : 0px 0px 0px 6px #b8f090;
-        }
-    }
+ 
   
 `
 const Card = Styled.div` 
@@ -156,6 +151,13 @@ margin : 10px 20px;
 display: flex;
     flex-direction: column;
     justify-content: space-between;
+    &:hover{
+        box-shadow : 0px 10px 10px 0px #f9f9f9;
+        background : #grey;
+        img{
+          box-shadow : 0px 0px 0px 6px #b8f090;
+          }
+      }
 `
 const Img = Styled.div`
 position : relative;
@@ -182,7 +184,7 @@ border-radius : 50%;
  
 const Writeup = Styled.div`
 position : relative;
-bottom : 0;
+bottom : 17px;
 letter-spacing: 1.5px;
 text-align : center;
 font-size : 19px;
@@ -192,7 +194,7 @@ font-family : roboto ;
 const Center = Styled.div`
  
 position : absolute;
-top : 100px;
+top : 80px;
 img{
     width :100%;
     height : 100%;
@@ -217,7 +219,7 @@ padding : 10px;
 margin-bottom : 20px;
 `
 const Mainhead = Styled.span`
-font-size : 2.2em;
+font-size : 40px;
 word-spacing : 5px;
 font-family : Rubik, sans-serif;
 padding : 5px 0px;
@@ -245,7 +247,7 @@ font-family : roboto;
 const MidHead = Styled.div`
 color :red;
 font-family :  'Caveat', cursive;
-font-size : 27px;
+font-size : 30px;
 font-weight : 500;
 
  

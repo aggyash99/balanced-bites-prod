@@ -43,7 +43,7 @@ const Sdata = [
         description : "<span class='first'>P</span>olycystic Ovary Syndrome is an endocrine system disorder that affects a woman’s hormone. Most women with PCOD grow a number of small cysts on their ovaries. These cysts are not harmful but they may lead to an imbalance in hormone levels. Women with PCOD may experience menstrual cycle abnormalities, excess hair growth, acne, increased androgen levels, and obesity.",
         second : "Also, women suffering from PCOD are more prone to miscarriage, premature delivery, and gestational diabetes.",
         third : " Our diet plan for PCOD is specifically designed to cure this problem among women. After understanding your lifestyle and body type, we prepare a diet plan that helps you cure PCOD and meets all your body needs. The diet schedule prepared for you is specifically customized in a way that you find your diets easy to prepare in your kitchen.",
-        service : "Eating a well- balanced diet is a must to manage PCOS."
+        service : "Eating a well - balanced diet is a must to manage PCOS."
     },
     {
         imgsrc : Skinhair,

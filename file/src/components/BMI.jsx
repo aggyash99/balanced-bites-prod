@@ -85,9 +85,20 @@ class BMI extends Component{
     calculate =()=>{
         
        
-        if(this.state.weight === "" || this.state.height == ""){
-        this.setState({height:"",weight:""});
-        return "";
+        // if(this.state.weight === "" || (this.state.height == "" && this.state.heightstatus!=="Feet")){
+        // this.setState({height:"",weight:"",});
+        // return "";
+        // }
+        if(this.state.weight === "" )
+        {
+        const  a2 = findDOMNode(this.refs.google);
+        $(a2).addClass('border-color-red')
+        return ""
+        }
+        if(this.state.height == "" && this.state.heightstatus!=="Feet")
+        {const  a2 = findDOMNode(this.refs.google1);
+        $(a2).addClass('border-color-red')
+        return""
         }
         // REGEX PART 
         let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
@@ -130,25 +141,49 @@ class BMI extends Component{
 
       else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Meter")
       {
+          console.log(hei)
          total = (wei / (hei * hei)).toFixed(1);
          this.setState({height:"",weight:"",result : total});
       }
-      else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Inch")
+
+      else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Meter")
       {
-          total =( wei / (hei * hei) * 703).toFixed(1);
-          this.setState({height:"",weight:"",result : total});
+        const height = hei/39.37;
+
+         total = (wei / (height * height)).toFixed(1);
+         this.setState({height:"",weight:"",result : total});
       }
+
+      else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Centimeter")
+      {
+        const Centiheight = hei/100;
+        const height = Centiheight/39.37;
+
+         total = (wei / (height * height)).toFixed(1);
+         this.setState({height:"",weight:"",result : total});
+      }
+ 
       else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
       {
           
-          const heiIn = parseInt(this.state.Feetheight);
+          let heiIn = (this.state.Feetheight);
+            if(this.state.height === "")
+            hei = 0;
+            if(heiIn === "")
+            heiIn = 0;
+
+            console.log(wei + "" + hei + "" + heiIn)
           total = ((wei / (((hei * 12) + heiIn) * ((hei * 12) + heiIn)) ) * 703).toFixed(1);
           this.setState({height:"",weight:"",Feetheight:"",result : total});
       } 
       else if(this.state.weightstatus === "Kg" && this.state.heightstatus === "Feet")
       {
-        const Inch = (parseInt(this.state.Feetheight)/39.37);
-        const feet = (parseInt(this.state.height)/3.281);
+        var Inch = 0;
+        var   feet= 0;
+        if(this.state.Feetheight != "")
+        Inch = (parseInt(this.state.Feetheight)/39.37);
+        if(this.state.height!=="")
+       feet = (parseInt(this.state.height)/3.281);
         total = (wei/(feet + Inch)).toFixed(1);
         this.setState({height:"",weight:"",Feetheight:"",result : total});
       }
@@ -210,11 +245,11 @@ class BMI extends Component{
             <p  >Your BMI Score</p>
             <CloseIcon onClick={this.close}/>
             </div>
-            <div className="d-flex align-items-center justify-content-between">
+            <div className="d-flex gap-3 p-2">
             <h1 >{this.state.result}</h1>
             <div className="result-in-status">                 {/* text */}
-            <h6 style={{marginLeft: "20px"}}>Your Category</h6>
-            <div style={{display:"flex",justifyContent:"center"}}>
+            <h6 style={{marginLeft: "0px", textAlign:"left"}}>Your Category</h6>
+            <div style={{display:"flex"}}>
             <img src={this.state.dot}></img>
             <h6 style={{margin:"0", fontSize:"18px"}}>{this.state.status}</h6>
 
@@ -243,7 +278,7 @@ class BMI extends Component{
 
 
         <ROW className = "row">
-            <Heading> BMI<span style={{fontFamily:"caveat"}}> CALCULATOR</span></Heading>
+            <Heading> BMI CALCULATOR </Heading>
             <Column >
             <div>
                    <div className="d-flex" >
@@ -261,9 +296,9 @@ class BMI extends Component{
                     
 
                     (this.state.heightstatus !== 'Feet') ? <><input className="google_random"  onChange={this.setheight} value={this.state.height}  required></input> <p className="p">Height</p>  </>
-                    : <Feet> 
-                    <div><input className="google_random"  onChange={this.setheight}  value={this.state.height} required></input> <h5>Feet</h5></div>
-                    <div><input className="google_random"   onChange={this.setInch} value={this.state.Feetheight} required></input><h5>Inch</h5> </div>
+                    :<Feet onClick={this.feetsection}> 
+                     <><input className="google_random"  onChange={this.setheight}   value={this.state.height} required></input> <h5 className="p">Feet</h5> </>
+                     < div className=" position-relative"><input className="google_random"   onChange={this.setInch} value={this.state.Feetheight} required></input><h5 className="p">Inch</h5>  </div>
                     </Feet>
                     
                     }
@@ -276,7 +311,7 @@ class BMI extends Component{
             </div>
             
             <Button>
-            <div className="d-flex justify-content-center p-2">
+            <div className="d-flex justify-content-center p-0">
             <button onClick={this.calculate} >Calculate</button>
             </div>
             </Button>
@@ -309,6 +344,7 @@ background-position : center;
 background-repeat : no-repeat;
 object-fit : cover;  
 position : relative;
+padding : 3px 2px;
 @media(max-width : 400px)
 {
     padding  : 10px;
@@ -318,7 +354,7 @@ const Output = Styled.div`
 position : absolute;
 z-index : 5;
 box-shadow: 0px 0px 1500px 2px #80808091;
-padding : 8px;
+padding : 10px;
 background : white;
 min-width : 300px; 
 max-width : 320px;
@@ -385,7 +421,7 @@ padding : 0  40px 0 10px;
 `
 const Column = Styled.div`
 width : 500px;
-padding : 10px 10px; 
+padding : 20px 20px; 
 background : white;
 border-radius : 10px;
 div{
@@ -413,9 +449,19 @@ div{
     width : 100%;
     background: #3e73019e;
     color: white;
-    padding : 5px;
     font-size: 16px;
     font-weight: 600;
+}
+.Dropdown-option{
+    padding : 4px;
+    
+&:hover:not(.Dropdown-option.is-selected){
+    background-color: #badc58;
+}
+}
+.Dropdown-menu{
+    padding : 0px;
+    margin-top : 5px;
 }
 .Dropdown-control{
    
@@ -433,12 +479,15 @@ div{
 const FLOAT = Styled.div`
 position : relative;
 display : flex;
-  
+div{
+    padding : 0;
+}
 `
 const Feet = Styled.div`
 display : flex;
 gap : 0px; 
 align-items : center;
+padding : 0;
 div{
     position : relative;
     padding : 0px;
@@ -446,7 +495,7 @@ div{
     width : 100%; 
 }
 h5{
-    position : absolute;
+   // position : absolute;
     top : 16px; 
     left : 16px;
     background : white;
@@ -456,11 +505,11 @@ h5{
     font-size : 16px;
     transition : all 50ms;
 }
-&:focus-within h5{
-    top : -2px;
-    transform : scale(0.9);
-    width : 45px;
-}
+// &:focus-within h5{
+//     top : -2px;
+//     transform : scale(0.9);
+//     width : 45px;
+// }
 
 `
 
@@ -471,6 +520,7 @@ button{
     background : transparent;
     outline : none;
     padding : 5px 15px;
+    margin-top : 10px;
     border-radius : 25px;
     font-family : roboto;
     font-weight : 500;
@@ -490,7 +540,7 @@ font-family : rubik;
 text-align : right;
 letter-spacing : 5px;
 margin-bottom : 5px;
-padding : 10px;
+padding : 0 50px;
 color:#0f0c4dc9;
 @media(max-width : 400px)
 {
