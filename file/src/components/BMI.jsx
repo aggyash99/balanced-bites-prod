@@ -8,7 +8,7 @@ import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
 import Styled from 'styled-components'; 
-
+import backgroundImage from '../Image/services/bmi.jpg'
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; 
 
@@ -40,6 +40,7 @@ class BMI extends Component{
         green : 7,
         blue : 7,
         content : "",
+        textcolor :""
         }
     }
 
@@ -190,21 +191,21 @@ class BMI extends Component{
       
     if(total<= 19)
     {
-        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7, content : "A BMI of less than 18.5 indicates that you may need to gain some weight."})
+        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7, content : "A BMI of less than 18.5 indicates that you may need to gain some weight.", textcolor : "#4faeea"})
     }
 
     else if(total <= 24)
     {
-        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 18.5 indicates that you may need to gain some weight."});
+        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 18.5 indicates that you may need to gain some weight.", textcolor : "#57dd41"});
     }
 
     else if(total <= 30)
     {
-        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10,content:"A BMI of 25-29.9 indicates that you may be advised to lose some weight for better health. "});
+        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10,content:"A BMI of 25-29.9 indicates that you may be advised to lose some weight for better health. ", textcolor : "#efda40"});
     }
     else
     {
-        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight"});
+        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight",textcolor : "red"});
     }
     }
 
@@ -240,18 +241,19 @@ class BMI extends Component{
 
 
         <MAIN>
-        <Output className="Output_for_BMI" ref="output">
+        <Output className="Output_for_BMI" ref="output"  >
+           
             <div className="d-flex justify-content-between text-bmi">
-            <p  >Your BMI Score</p>
-            <CloseIcon onClick={this.close}/>
+            <p style={{marginLeft: "7px",fontWeight: "600",color:"grey",fontSize: "19px", textShadow: "1px 1px grey"}}>Your BMI Score</p>
+            <CloseIcon className="cross" onClick={this.close}/>
             </div>
             <div className="d-flex gap-3 p-2">
-            <h1 >{this.state.result}</h1>
+            <h1><span >{this.state.result}</span></h1>
             <div className="result-in-status">                 {/* text */}
-            <h6 style={{marginLeft: "0px", textAlign:"left"}}>Your Category</h6>
+            <h6 style={{marginLeft: "0px",fontWeight:"600", textAlign:"left"}}>Your Category</h6>
             <div style={{display:"flex"}}>
             <img src={this.state.dot}></img>
-            <h6 style={{margin:"0", fontSize:"18px"}}>{this.state.status}</h6>
+            <h6 style={{margin:"0", fontSize:"19px",fontWeight:"800",color : `${this.state.textcolor}`}}>{this.state.status}</h6>
 
             </div>
             </div>
@@ -269,8 +271,8 @@ class BMI extends Component{
                         <span className="second-indicator">25</span>
                         <span className="third-indicator">30</span> 
             </div>
-            <div className="barText">
-            <h6>{this.state.content}</h6>
+            <div className="barText p-1">
+            <h6 style={{fontSize:"17px", fontWeight:"550"}}>{this.state.content}</h6>
             </div>
             </Output>
 
@@ -336,8 +338,22 @@ class BMI extends Component{
 
 
 export default BMI;
+const Animation = Styled.div`
+position : absolute;
+width : 150px;
+height : 150px;
+overflow : hidden;
+left : -20%;
+top : -26%;
+`
+const Shape = Styled.div`
+width : 100%; 
+height : 100%;
+position : relative;
 
-
+z-index : -5;
+opacity : 0.7;
+`
 const Container = Styled.div`
 width : 100%;
 background-position : center;
@@ -353,16 +369,25 @@ padding : 3px 2px;
 const Output = Styled.div`
 position : absolute;
 z-index : 5;
+overflow : hidden;
 box-shadow: 0px 0px 1500px 2px #80808091;
-padding : 10px;
+padding : 10px; 
+ 
+ 
 background : white;
 min-width : 300px; 
 max-width : 320px;
 border-radius : 10px;
 bottom : 10%;
+
+ 
+
 h1{
     background :#b1aa8029;
     padding : 3px;
+    font-size:40px;
+    font-weight : 700;
+    overflow : hidden;
     border-radius : 10px;
     width : 50%;
     text-align : center;
@@ -396,6 +421,17 @@ font-size : 17px;
 padding : 5px;
 font-weight : 500;
 color : grey;
+}
+
+&:after{
+//     position : absolute;
+// width : 50px;
+// content : "";
+// height : 50px;
+// background : grey;
+
+// top : 0;
+// z-index : -1;
 }
 
 `
@@ -441,27 +477,31 @@ div{
     }
 .Dropdown-root{
     width : 70%;
+
 }
 .Dropdown-placeholder{
     font-weight : 500;
 }
 .Dropdown-option.is-selected{
     width : 100%;
-    background: #3e73019e;
+    background: #0f5132a8;
     color: white;
     font-size: 16px;
     font-weight: 600;
 }
 .Dropdown-option{
     padding : 4px;
-    
+    transition : all 250ms;    
 &:hover:not(.Dropdown-option.is-selected){
-    background-color: #badc58;
-}
+    background-color: #20c997;
+    font-weight : 600;
+
+}   
 }
 .Dropdown-menu{
     padding : 0px;
     margin-top : 5px;
+    border-radius: 7px;
 }
 .Dropdown-control{
    

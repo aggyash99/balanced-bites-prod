@@ -32,7 +32,7 @@ const CarouselH =()=>{
 
     <MyCarousel responsive={responsive}
     keyBoardControl={true}
-    removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
+    // removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
     showDots={true}
     arrows={true}
     >
@@ -61,6 +61,7 @@ li:hover{
 }
 ul li button{
   color : rgb(150,158,171);;
-} 
+}
+
 `
 
