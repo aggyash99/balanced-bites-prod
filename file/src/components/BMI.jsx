@@ -243,21 +243,19 @@ class BMI extends Component{
         <MAIN>
         <Output className="Output_for_BMI" ref="output"  >
            
-            <div className="d-flex justify-content-between text-bmi">
-            <p style={{marginLeft: "7px",fontWeight: "600",color:"grey",fontSize: "19px", textShadow: "1px 1px grey"}}>Your BMI Score</p>
+            <div className="text-bmi">
             <CloseIcon className="cross" onClick={this.close}/>
             </div>
-            <div className="d-flex gap-3 p-2">
-            <h1><span >{this.state.result}</span></h1>
-            <div className="result-in-status">                 {/* text */}
-            <h6 style={{marginLeft: "0px",fontWeight:"600", textAlign:"left"}}>Your Category</h6>
-            <div style={{display:"flex"}}>
-            <img src={this.state.dot}></img>
-            <h6 style={{margin:"0", fontSize:"19px",fontWeight:"800",color : `${this.state.textcolor}`}}>{this.state.status}</h6>
 
-            </div>
+            <div>
+            <p style={{lineHeight:"10px",fontWeight: "600",color:"grey",fontSize: "19px",  textAlign:"center"}}>Your BMI Result  </p>
             </div>
             
+            <div className="p-2 text-center">
+            <div >
+            <h6 style={{margin:"0px 0px 18px 0px", fontSize:"19px",fontWeight:"800",color : `${this.state.textcolor}`}}>{this.state.status}</h6>
+            </div>
+            <h1 style={{padding:"0"}}><span>{this.state.result}</span></h1>
             </div>
 
             <div className="bars">
@@ -372,8 +370,6 @@ z-index : 5;
 overflow : hidden;
 box-shadow: 0px 0px 1500px 2px #80808091;
 padding : 10px; 
- 
- 
 background : white;
 min-width : 300px; 
 max-width : 320px;
@@ -383,29 +379,24 @@ bottom : 10%;
  
 
 h1{
-    background :#b1aa8029;
+    // background :#b1aa8029;
     padding : 3px;
     font-size:40px;
     font-weight : 700;
     overflow : hidden;
     border-radius : 10px;
-    width : 50%;
+    
     text-align : center;
 }
  
 .result-in-status{ 
-    margin-left : 10px;
+    // margin-left : 10px;
     text-align : center;
     justify-content : between;
     div{
         display : flex;
         align-items : center;
-        img{
-            width : 20px;
-            height : 20px;
-            object-fit : contain;
-            margin-right: 5px;
-        }
+         
     }
 }
 @media(max-width : 400px)

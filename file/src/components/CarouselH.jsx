@@ -32,7 +32,7 @@ const CarouselH =()=>{
 
     <MyCarousel responsive={responsive}
     keyBoardControl={true}
-    // removeArrowOnDeviceType={["tablet","superLargeDesktop","mobile","desktop"]}
+    removeArrowOnDeviceType={["mobile"]} 
     showDots={true}
     arrows={true}
     >

@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import imgs from '../../Image/owner/owner11.jpg';
+import imgs from '../../Image/pics/home.jpg';
 import Photo from '../photo'
 import img from '../../Image/pics/whatsapp1.svg';
 import CarouselH from '../CarouselH'; 
@@ -22,14 +22,16 @@ function Home() {
               <img  style={{width:"100%"}}  src={imgs} alt ="sorry"></img>
             
           </div>
+          <div>
           <p >Exersizes is not sufficient for your body, It changes your mind,attitude.
              <Link to='/contact'>Consult Today  </Link>
           </p>
-          <h6  >Healthy Mood Healthy Mind
+          <h6>Healthy Mood, Healthy Mind
              <Link to='/contact'> Consult Today  </Link>
           </h6>
-          <div className="home-img-fil">
           </div>
+          {/* <div className="home-img-fil">
+          </div> */}
           
         
         </div>
@@ -54,7 +56,7 @@ function Home() {
      
       </div>
       
-      <div className="">
+      <div>
       <BMI/>
       </div>
       
@@ -63,20 +65,7 @@ function Home() {
       <Reviewcard />
       </div>
 
-      {/* <div className="appoint">
-
-      <div>
-        <div className="textin">
-        <h1 >Best Dietitian in vikaspuri West Delhi | 9 yrs Exp | Online Diet Charts - Weight Loss, PCOD/PCOS etc.</h1>
-        </div>
-        <div className="buttoninhome">
-        <Link className="" to={{pathname:'/Contact'}} >
-        <span className="btn btn-success " >Book Appointment</span>
-        </Link>
-      </div>
-      </div>
-
-      </div> */}
+       
       <div>
           <Photo></Photo>
       </div>
