@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import logo from '../../Image/services/about.jpg';
+import Logo from '../../Image/logo.png';
 import $ from 'jquery';
 import {findDOMNode} from 'react-dom';
 
@@ -80,56 +80,26 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     </div>
     </div>
     </div>
-    <div className="container" style={{padding:"50px 0px"}}>
-    
     <div className="row">
-          <div className="col-8">
-        <div className="row">
-            <div className="col-6 bordertemp1" ><div className="textabouttable">✓  Customized diet plans according to your lifestyle.</div></div>
-            
-            <div className="col-6 bordertemp2"><div className="textabouttable">✓  No external machines, pills, or supplements required.</div></div>
-            
-            <div className="col-6 bordertemp3"><div className="textabouttable">✓  Programs where you don’t feel like being on a ‘diet'.</div></div>
-            
-            <div className="col-6 bordertemp4"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
-            </div>
-          </div>
-            
-            <CenterImg className="col-lg-4 -Center" style={{paddingTop:"10%"}}>
-            <div className="col-12">
-            <Center>
-            <img alt="alt" src={logos}></img>
-            <div className="justifycontentcenter" style={{paddingTop:"20px"}}>
-          <a href="./contact">
-          <button className="  btnabout ">Contact Us</button></a>
-        </div>
-            </Center>
-            </div>
-            </CenterImg>
-    
-    
-    
-    
-    
-            
-           
-             
-            
-            
-            
-            </div>    
-        </div>
-    <div className="row">
-      <div className="col-6 d-none d-sm-block" style={{paddingRight:"0px"}}>
-        <div className="" style={{width:"100%", paddingRight:"0px "}}>
-        < img  className="leftimageabout"  src={logo} alt="Thank You!" style={{width:"100%"}}/>
-        </div>
-      </div>
-      <div className="col-lg-6 col-12 righttextabout fadebackground" >
-        <h1 style={{paddingBottom:"20px"}}>Why choose <span className="greenHighlight" style={{fontSize:"40px"}}>Balanced Bites</span>? </h1>
+     
+      <div className="col-12 righttextabout fadebackground" >
+        <h1 style={{paddingBottom:"20px"}}>Why choose <img height="110" width="290" src={Logo}/>? </h1>
         <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
         </p>
-       
+        <div className="row ">
+            <div className="col-11 bordertemp1"><div className="textabouttable" >✓  Customized diet plans according to your lifestyle.</div></div>
+            <div className="col-11 bordertemp1 hiddenelement expansionabout expabout1" id="expabout1" ><div className="textabouttable">✓  Customized diet plans according to your lifestyle.</div>
+            <list><ul>1</ul><ul>1</ul><ul>1</ul><ul>1</ul></list></div>
+              
+            <div className="col-11 bordertemp1"><div className="textabouttable">✓  No external machines, pills, or supplements required.</div></div>
+            <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout2"><div className="textabouttable">✓  No external machines, pills, or supplements required.</div></div>
+            
+            <div className="col-11 bordertemp1"><div className="textabouttable">✓  Programs where you don’t feel like being on a ‘diet'.</div></div>
+            <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout3"><div className="textabouttable">✓  Programs where you don’t feel like being on a ‘diet'.</div></div>
+           
+            <div className="col-11 bordertemp1"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
+            <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout4"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
+              </div>
       </div>
     </div>
     </div>

@@ -47,11 +47,12 @@ function App() {
     console.log("Loading");
     return null; //app is not ready (fake request is in process)
   }/* eslint-enable */
-  
+  const pathname = window.location.pathname;
+    
   return (
     <BrowserRouter>
     <Header></Header>
-    <Navbar/>
+    <Navbar pname={pathname}/>
       <Switch>
         <Route exact path = "/" component={Home}/>
         <Route exact path = "/About" component={About}/>

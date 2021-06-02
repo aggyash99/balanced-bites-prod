@@ -209,7 +209,7 @@ window.location.replace("/");
           
         }}
          ><span id='bottomborder' className={showB?'borderbottom':''}>
-      <strong style={{ color: "#03ac11" }}>With us Today </strong></span></VisibilitySensor></h1>
+      <strong style={{ color: "#03ac11", display:"inline-block", position:"relative" }}>With us Today </strong></span></VisibilitySensor></h1>
         </div>
 
         <div className="row">

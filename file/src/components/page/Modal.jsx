@@ -51,23 +51,20 @@ style="--i:7"                        */
                     <div className="row ">
                     <div className="col-12 justifycontentcenter  " >
                     <div className="resituateripplemodal">
-                        <span className="RippleModal" style={{animationDelay:"0.5s"}}></span>
+                        <span className="RippleModal" style={{animationDelay:"0"}}></span>
                         <span className="RippleModal" style={{animationDelay:"1s"}}></span>
-                        <span className="RippleModal" style={{animationDelay:"1.5s"}}></span>
                         <span className="RippleModal" style={{animationDelay:"2s"}}></span>
-                        <span className="RippleModal" style={{animationDelay:"2.5s"}}></span>
                         <span className="RippleModal" style={{animationDelay:"3s"}}></span>
-                        <span className="RippleModal" style={{animationDelay:"3.5s"}}></span>
+                        <span className="RippleModal" style={{animationDelay:"4s"}}></span>
                         </div>
                         </div></div>
                     <div className="row ">
                           
                           <div className="col-12 btnmodalalign">
-                          
+                          <Link className="" to={{pathname:'/'}} target="_top" >
                             <button className="btn btn-outline btnmodalclose"  >
-                            <Link className="" to={{pathname:'/'}} target="_top" >
-                            <CloseIcon style={{fontSize:"25px"}} /></Link>
-                            </button></div></div>
+                             <CloseIcon style={{fontSize:"25px"}} />
+                            </button></Link></div></div>
                         
                         <div className="row ">
                          
@@ -78,10 +75,10 @@ style="--i:7"                        */
                           </div>
                         <div className="row">
                             <div className="col-12 justifycontentcenter" style={{paddingBottom:"0px"}}>
-                              <span className="modalmaintext">Hi {shortenedname2}, </span>
+                              <span className="modalmaintext">Hi {shortenedname2} </span>
                               </div>
                             <div className="col-12 justifycontentcenter">
-                              <span className="modalmaintext">Thank you for contacting us.</span> </div>
+                              <span className="modalmaintext2">Thank you for contacting us.</span> </div>
                         </div>
                    </div>
                 </div>

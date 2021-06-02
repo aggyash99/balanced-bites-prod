@@ -139,7 +139,7 @@ transition: .3s;
     transform-origin:0 0;
     transition:all .3s;
     font-family: 'Roboto', sans-serif;
-
+cursor:pointer;
 
 }
 .form-control{
@@ -173,7 +173,7 @@ transition: .3s;
 
 .form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
     transform:translateY(-3em) scale(0.75);
-    
+    cursor:default;
     color:#03ac11;
 }
 .borderbottom

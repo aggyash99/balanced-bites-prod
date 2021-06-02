@@ -2,10 +2,10 @@
 {
     
 .food{
-  height: 400px;
+  height: 450px;
     width:100%;
     background-attachment: fixed; 
-    background-image: url('../../Image/services/about.jpg');
+    background-image: url('../../Image/images/About.jpeg');
     background-size: 100%;
     background-repeat: no-repeat;
 }
@@ -22,7 +22,7 @@
 }
 .alignbottomabout
 {
-    padding-top: 309px;
+    padding-top: 359px;
 }
 @media (max-width:700px)
 {
@@ -122,7 +122,7 @@ color:#03ac11;
 {
     padding-top: 100px;
     padding-bottom:100px;
-    padding-left: 50px;
+    padding-left:50px;
     background-image: linear-gradient(
         rgba(0, 255, 149, 0.842), 
         rgba(183, 252, 200, 0.877)
@@ -135,13 +135,10 @@ color:#03ac11;
 
 .textrightsideabout
 {
-    padding-left: 0px;
+    padding:0px 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
+    font-size: 22px;
 list-style: none;    
-}
-.textrightsideabout .li::before{
-    content:'✓';
 }
 
 .listabout{
@@ -213,35 +210,64 @@ list-style: none;
     background: #03ac11;
 }
 .bordertemp1
-{
-    border-width: 2px 1px 1px 1px;
-    border-style: solid;
-    border-color: #E9E9E9;
-    background: #FAFAFA;
+{    background: #ffffff8e;
+    border-radius: 20px;
+    margin:10px;
+    transition: .3s all;
+    padding:0px  20px;
 }
-.bordertemp2
-{
-    border-width:2px 1px 1px 0px;
-    border-style: solid;
-    border-color: #E9E9E9;
+.bordertemp1::first-letter{
+    transition: .3s all;
+    visibility: hidden;
+}
+.bordertemp1:hover{
+    background: white;
+    letter-spacing: 2px;
+    transition: .3s all;
+}
+.bordertemp1:hover::first-letter{
+    transition: .3s all;
+   color:#03ac11;
+   font-weight: 900;
+   visibility: visible;
     
 }
-.bordertemp3
-{
-    border-width:0px 1px 1px 1px;
-    border-style: solid;
-    border-color: #E9E9E9;
-    
-}
-.bordertemp4
-{
-    border-width:0px 1px 1px 0px;
-    border-style: solid;
-    border-color: #E9E9E9;
-    background: #FAFAFA;
-}
+
 .textabouttable
-{
-    padding: 100px 0px;
-    font-size: large;
+{   padding:20px 0px ;
+
+    font-size: 20px;
+}
+.expansionabout{
+    position: absolute;
+    display: block;
+    background: white;
+    border:white 1px solid;
+    transform: translateY(-91.7px);
+    overflow: hidden;
+    animation: expabout .2s linear ;
+}
+@keyframes expabout {
+    0%{ border:black;background: transparent;}
+    10%{height: 100px;}
+    100%{height: 200px; }
+}
+.aboutcarouseldot{
+transform: translateY(1950px);
+transition: .3s all;
+    margin: 0px 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+.aboutcarouselactive{
+    color:green;
+    transition: .3s all;
+
+}
+.aboutcarouselinactive
+{transition: .3s all;
+    color:rgb(94, 209, 94);
+}.Review2{
+    padding: 5% 0%;
+    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
 }
