@@ -166,16 +166,7 @@ function clicknav()
         
           <span className="transitionElementProgram"></span>
           <div className="submenuprogram" ><ul className="submenuprogram" >
-          {/* <li>Weight Loss</li>
-          <li>Weight Gain</li>
-          <li>Diabetes</li>
           
-          <li>PCOS</li>
-          <li>Hair Skin Care</li>
-          <li>Detox Diet</li>
-          <li>Pregnancy</li>
-          <li>Child Nutrition</li>
-          <li>Thyroid</li> */}
           {
             data.map((value , key)=>{
               return <li><Link  to={{pathname:'/Program',
