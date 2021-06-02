@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink , Link } from 'react-router-dom';
 import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
@@ -178,7 +178,8 @@ function clicknav()
           <li>Thyroid</li> */}
           {
             data.map((value , key)=>{
-              return <li key={key}>{value.title}</li>
+              return <li><Link  to={{pathname:'/Program',
+              state:{key : key}}} key={key}>{value.title}</Link></li>
             })
           }
 
