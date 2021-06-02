@@ -1,10 +1,39 @@
-
+@media (min-width:700px)
+{
+    
 .food{
-    max-height: 80vh;
-    min-height: 0vh;
+  height: 450px;
     width:100%;
-    opacity:0.9;
-    background: transparent;
+    background-attachment: fixed; 
+    background-image: url('../../Image/images/About.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.headtext
+{
+    font-size:200px;
+    
+
+}
+.subheadtext
+{
+    font-size: 20px;
+}
+}
+.alignbottomabout
+{
+    padding-top: 359px;
+}
+@media (max-width:700px)
+{
+    .alignbottomabout
+{
+    padding-top: 30px;
+}
+}
+.gradientbg
+{
+    background-image:linear-gradient(54deg , #ffffff 0,#ffffff 50%,transparent 50%,transparent 100%);
 }
 .text{
     
@@ -12,21 +41,52 @@
 letter-spacing: 1px;
 font-size: 20px;
 
+
 }
+
 
 .headtext{
+    display: block;
 font-family: 'Roboto', sans-serif;
-font-size: 45px;
+font-size: 30px;
 color:#03ac11;
-text-align: center;
-}
 
+}
+.subheadtext
+{
+    font-size:35px;
+    padding:20px;
+    padding-left:2px;
+}
+@media (min-width:768px) {
+    
+.headalignment
+{
+    text-align: left;
+    padding-left: 5%;
+    margin-left:0px ;
+}
+}
+@media (max-width:767px)
+{
+    .headalignment
+    {
+        text-align:left;
+        padding-left: 5%;
+    }
+    .text
+    {
+        padding-left: 5%;
+    }
+}
 .about{
-    background: rgba(245, 245, 245, 0.877);
+    background: rgb(255, 255, 255);
+    overflow: hidden;
 }
 
 .client{
     width: 100%;
+    height: 500px;
     background: transparent;
 }
 
@@ -45,4 +105,169 @@ text-align: center;
     padding-top: 0px;
   
     line-height:50px;
+}
+
+.greenHighlight{
+    color:#03ac11;
+    font-size:22px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+.leftimageabout
+{width: 500px;
+    
+
+}
+.righttextabout
+{
+    padding-top: 100px;
+    padding-bottom:100px;
+    padding-left:50px;
+    background-image: linear-gradient(
+        rgba(0, 255, 149, 0.842), 
+        rgba(183, 252, 200, 0.877)
+      ), url('../../Image/services/fruits.jpg');
+    background-size: 150%;
+    
+ 
+    
+}
+
+.textrightsideabout
+{
+    padding:0px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+list-style: none;    
+}
+
+.listabout{
+    font-size: 20px;
+    font-weight:bold;
+    transition: .3s;
+    position: relative;
+}
+.listabout:hover
+{
+    font-size: 21px;
+    transition: .3s;
+}
+.listabout:hover:after{
+    
+    content:' ';
+    display: block;
+    position:absolute;
+    border:1px solid rgba(68, 0, 11, 0);
+    border-radius: 50px;
+    width:69%;
+    height: 3px;
+    top:101%;
+    background-image: linear-gradient(to right, #e600ff 0%, #17BAF9 51%, #e600ff 100%);
+    animation-name: listhoveranim;
+    animation-duration: .3s;
+   
+}
+@keyframes listhoveranim
+ {
+    from {width:0%;left:34.5%;}
+    to {width:69%;left:0%;}
+}
+.btnabout
+{
+    margin: 10px;
+    outline:none;
+    font-family: "Arial Black", Gadget, sans-serif;
+    border:none;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFF;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 200px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #C570CE 0%, #17BAF9 51%, #e600ff 100%)
+}
+.btnabout:hover
+{
+    outline:none;
+    background-color: black;
+    border-color: black;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        margin: 8px 10px 12px;
+        background-position: right center;
+    
+}
+
+#loading{
+    background: #03ac11;
+}
+.bordertemp1
+{    background: #ffffff8e;
+    border-radius: 20px;
+    margin:10px;
+    transition: .3s all;
+    padding:0px  20px;
+}
+.bordertemp1::first-letter{
+    transition: .3s all;
+    visibility: hidden;
+}
+.bordertemp1:hover{
+    background: white;
+    letter-spacing: 2px;
+    transition: .3s all;
+}
+.bordertemp1:hover::first-letter{
+    transition: .3s all;
+   color:#03ac11;
+   font-weight: 900;
+   visibility: visible;
+    
+}
+
+.textabouttable
+{   padding:20px 0px ;
+
+    font-size: 20px;
+}
+.expansionabout{
+    position: absolute;
+    display: block;
+    background: white;
+    border:white 1px solid;
+    transform: translateY(-91.7px);
+    overflow: hidden;
+    animation: expabout .2s linear ;
+}
+@keyframes expabout {
+    0%{ border:black;background: transparent;}
+    10%{height: 100px;}
+    100%{height: 200px; }
+}
+.aboutcarouseldot{
+transform: translateY(1950px);
+transition: .3s all;
+    margin: 0px 5px;
+    z-index: 3;
+    cursor: pointer;
+}
+.aboutcarouselactive{
+    color:green;
+    transition: .3s all;
+
+}
+.aboutcarouselinactive
+{transition: .3s all;
+    color:rgb(94, 209, 94);
+}.Review2{
+    padding: 5% 0%;
+    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
 }

@@ -6,16 +6,31 @@ Contact
  background-color: rgb(250, 250, 250);   
 }
 
-.input input{
+.inputcontact input{
     background: transparent;
     text-decoration: none;
     border-radius: 1px;
+    height:40px;
     border-width: 2.3px;
     background-color: #f5f4f7;
     font-family: 'Roboto', sans-serif;
-    padding:0px;
+    
     font-size: large;
  
+}
+
+@media (max-width:580px)
+{
+    .paddingtextarea{
+        padding-left:30px;
+        padding-right:30px;
+
+    }
+    .formheading{
+        
+        text-align: center;
+        display: flex;
+    }
 }
 .con{
 
@@ -24,14 +39,15 @@ Contact
     font-size: 60px;
     color: Red;
 }
-form {
+.formcontact form {
     
     border-radius: 15px;
     border: 1px solid #03ac11;
     background: rgba(248, 248, 248, 0.973);
     padding-top: 5%;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     padding-left:0px;
+    padding-right: 0px;
     border-width: 4px;
     width: 100%;
     font-weight: 500;
@@ -40,15 +56,14 @@ form {
     /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
 }
 .paddingtextarea{
-    padding-top: 25px;
-    padding-bottom:25px;
+    padding-top: 10px;
+    padding-bottom:10px;
 }
-textarea{
+.textmessage{
     
-    height:20px;
+    height:125px;
     max-height: 800px;
-    border-radius: 0px;
-    font-size: xx-large;
+    border:2px;    font-size: xx-large;
    
 }
 .jumbotron{
@@ -59,50 +74,51 @@ textarea{
 .contact-icon{
   
         color: #03ac11;
-}
-@media(max-width:650px)
-{
-    .contact-icon{
-        font-size:50px;
-    }
+        display: flex;
+        justify-content: center;
 }
 .icon-in-contact{
     font-size: 20px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;}
-.btn{
-width:100px;
-border-radius: 10px;
-}
-.input .btn{
+
+.inputcontact .btncontact{
   
 border-radius: 50px;
-border-radius: 50px;
-font-size:24px;
-color:#03ac11;
-border-color: #03ac11;
+display: flex;
+    width:102px;
+    border:none;
+    border-radius: 50px;
+    height:41px;
+    font-family:  'Roboto', sans-serif;
+   font-size: 22px;
+    color:#03ac11;
+    border:.5px solid;
+    border-color: #03ac11;
+  
+    vertical-align:-webkit-baseline-middle;
+    justify-content: center;
+    box-shadow: none;
+
+transition: .3s;
 }
  
 
-.btncontact{
-    border-radius: 50px;
-    font-size:14px;
-    color:#03ac11;
-    border-color: #03ac11;
 
-}
-@media (min-width:650px) {
-    input .btncontact
+@media (max-width:650px) {
+    .inputcontact .btncontact
     {
         font-size:20px;
     }
     
+    
 }
 .btncontact:hover{
-    
+    transition: .3s;
     color:white;
     border-color: #03ac11;
     background-color: #03ac11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .form-group
@@ -119,11 +135,11 @@ border-color: #03ac11;
     position: absolute;
     display:block;
     opacity:1;
-    transform:translateY(-1.75em);
+    transform:translateY(-1.75em) translateX(15px);
     transform-origin:0 0;
     transition:all .3s;
     font-family: 'Roboto', sans-serif;
-
+cursor:pointer;
 
 }
 .form-control{
@@ -156,7 +172,8 @@ border-color: #03ac11;
 }
 
 .form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
-    transform:translateY(-2.5em) scale(0.75);
+    transform:translateY(-3em) scale(0.75);
+    cursor:default;
     color:#03ac11;
 }
 .borderbottom
@@ -251,12 +268,12 @@ a:visited{
     color: black;
     text-decoration: none;
 }
-a:link:hover
+/* a:link:hover
 {
     transition: .3s;
     transform: translateY(-1px);
     color:black;
-}
+} */
 .contact-icon{
     transition:.3s;
 }
@@ -265,6 +282,7 @@ a:link:hover
     transition:.3s;
     transform:translateY(-3px);
     color:red;
+    
     
 }
  .contact-icon-hover
@@ -277,21 +295,47 @@ a:link:hover
 }
 .formheading
 {
-    font-size:54px;
+    font-size:52px;
     font-family: 'Roboto', sans-serif;
      color:Black;
-     justify-content: center   ;
-}   
+     display:flex;
+     justify-content: center;
+}  
+
+.contactheading
+{
+    font-size:50px;
+}
+.mapheading
+{
+    padding:5px;
+    padding-bottom: 45px;
+    font-weight: 600;
+    font-size: 55px;
+}
+
+@media (max-width:660px)
+{
+    .contactheading{
+        font-size:35px;
+    }
+    .formheading{
+        font-size:30px;
+    }
+    .mapheading{
+        font-size:37.5px;
+        padding-bottom: 15px;
+    }
+}
 
 .warningicon
 {
     color:red;
     display:block;
     position:relative;
-    left:-60px;
-    top:25px;
-    
-    vertical-align: bottom;
+    left:-63px;
+    top:13px;
+
 }
 .hiddenelement{
     visibility: hidden;
@@ -312,17 +356,27 @@ a:link:hover
 {
     border-color: #03ac11;
 }
-.acceptedborder:focus-within{
-     
+.paddingmobile2
+{
+    visibility: hidden;
+    display: none;
+
 }
 @media (max-width:650px) {
+    .paddingmobile2
+    {
+        visibility: visible;
+        display:block ;
+        padding-left: 10%;
+        left:30%;
+        width:90%;
+        font-size: large;
+    }
     .paddingmobile
     {
-        padding-left: 10%;
-        left:20%;
-        width:70%;
+        visibility: hidden;
+        display: none;
     }
-    
     .paddingfixform {
    
         
@@ -335,6 +389,7 @@ a:link:hover
 }
 .textmessagelabel{
    position:absolute;
+   transform:translateX(15px);
     font-family: 'Roboto', sans-serif;
     font-size:large;
     transform-origin: 0 0;

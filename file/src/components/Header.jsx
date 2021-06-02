@@ -1,5 +1,4 @@
 import React from 'react';
-import './Component.css';
 import EmailIcon from '@material-ui/icons/Email';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
@@ -13,11 +12,11 @@ return (
 <div className="row head d-flex">
  
 <div className="col-lg-3 text-center p-2">
-    <WhatsAppIcon className="whatsapp"/><a><span className="p-2">98761431736</span></a>
+    <WhatsAppIcon className="whatsapp"/><a href="https://wa.me/9198761431736"style={{color:"white"}}><span className="p-2">98761431736</span></a>
     </div>
 
     <div className="col-lg-5 text-center p-2">
-    <EmailIcon className="mail" /><a> balancedbites10@gmail.com</a>
+    <EmailIcon className="mail" /><a href="mailto:balancedbites10@gmail.com" style={{color:"white"}}> balancedbites10@gmail.com</a>
     </div>
   
 

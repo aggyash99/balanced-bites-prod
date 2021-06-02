@@ -1,0 +1,89 @@
+.navbaranim{
+    position: relative;
+    width: 65px;
+    height:3px;
+    bottom: -35px;
+    padding:0px 0px;
+    left:70px;
+    background: #11c220;
+    z-index: -1;
+    transition: .3s all ease 0s;
+}
+.navbaranimSit1{
+    left:70px;
+}
+.navbaranimSit2{
+    left:161px;
+    width:82.5px;
+}
+.navbaranimSit3{
+    left:240px;
+}
+.navbaranimSit4{
+    left:320px;
+}
+.navbarhover{
+    position: relative;
+    font-family: 'Roboto', sans-serif;;
+transition: .3s all;
+}
+.navbarhover2{
+    color:#11c220;
+}
+.navbar{
+    padding:0px;
+}
+.submenuprogram
+{
+   display: none;
+    background: #ffffff;
+    color:rgb(0, 0, 0);
+    width:200px;
+    transition:3s all;
+    list-style: none;
+    padding: 0px;
+}
+.submenuprogram ul{
+    display: block;
+    transition: .3s all;
+}
+
+.submenuprogram ul li{
+    width:100%;
+    cursor: pointer;
+    transition: .3s all ease;
+    font-family: 'Roboto', sans-serif;
+    padding:15px;
+    border-bottom: #e9e9e9 1px solid;
+}
+.submenuprogram ul li:hover{
+    background: #fafafa;
+    color:#11c220;
+}
+  .submenuprogram ul li:last-child{
+  
+    border-bottom: none;
+}
+.submenuprogram ul li:first-child{
+    border-top:#11c220 3px solid;
+}
+.programHover{
+    transition:3s all;
+}
+.programHover:hover .submenuprogram{
+    display: block;
+    transition: 3s all;
+    position: absolute;
+    margin-top:7px;
+    transform:translateX(-27px);
+}
+.transitionElementProgram{
+    display: none;
+    width:100px;
+    height: 100px;
+    background-color: rgba(0, 0, 255, 0);
+    position: absolute;
+}
+.programHover:hover .transitionElementProgram{
+    display: block;
+}
