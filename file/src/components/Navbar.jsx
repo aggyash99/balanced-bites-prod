@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
+import data from '../Data/Sdata'
 const Navbar = props => {
   var currentActive =1;
   if(props.pname=="/")
@@ -165,7 +166,7 @@ function clicknav()
         
           <span className="transitionElementProgram"></span>
           <div className="submenuprogram" ><ul className="submenuprogram" >
-          <li>Weight Loss</li>
+          {/* <li>Weight Loss</li>
           <li>Weight Gain</li>
           <li>Diabetes</li>
           
@@ -174,7 +175,13 @@ function clicknav()
           <li>Detox Diet</li>
           <li>Pregnancy</li>
           <li>Child Nutrition</li>
-          <li>Thyroid</li>
+          <li>Thyroid</li> */}
+          {
+            data.map((value , key)=>{
+              return <li key={key}>{value.title}</li>
+            })
+          }
+
         </ul></div></li>
         <li className="nav-item " onMouseEnter={mousein3} onMouseLeave={mouseout3} onClick={()=>{currentActive=3;clicknav();}}>
           <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover" id="nav3">Contact</span></NavLink>
