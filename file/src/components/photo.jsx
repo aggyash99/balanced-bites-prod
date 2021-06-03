@@ -10,7 +10,7 @@ function photo() {
                     3 MONTHS NUTRITION PROGRAM
                     <div>Lets begin your healthiest journey together</div> 
                 </p>
-                <button><Link to='/contact'>Consult Now</Link></button>
+                <button><Link to='/contact'><span>Consult Now</span></Link></button>
         </Photo>
     )
 }
@@ -35,6 +35,14 @@ p{
     font-size : 40px;
     font-weight : 700;
     letter-spacing: 1px;
+        
+    @media (max-width : 400px)  
+    {
+        font-size : 15px;
+        top : 40%;
+    }
+    
+    
     div{
         position : relative;
         font-family : caveat;
@@ -47,7 +55,17 @@ p{
             bottom : 20px;
             right : 0;
             content : "";
+        
+    @media (max-width : 400px)  
+    {
+        display : none;    
+    }
         }
+        
+    @media (max-width : 400px)  
+    {
+        font-size : 25px;
+    }
     }
 }
 &:before{
@@ -59,27 +77,36 @@ p{
     left : 0;
     opacity : 0.4;
     content : "";
-}   button{
+}  
+
+ button{
     position : absolute;
     bottom:15%;
     left : 15%;
-    padding : 0px;
-    width :15%;
+    padding : 10px;
+    
     border-radius : 35px;
     outline:none;
     border : 2px solid green;
-    background : green;
+    background : transparent;
     font-size : 22px;
+    span{
+        color : #2aff00e0;
+        letter-spacing : 1px;
+    }   
     font-weight : 700;
     font-family : "Poppins", sans-serif;
     transition : all 350ms;
     &:hover{
-        background : white;
+        background : #f9f9f9;
+        
         border-color : white;
-        a{
+        span{
             color : green;
+            font-weight : 900;    
         }
     }
+    
 }   
 
 
