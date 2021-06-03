@@ -1,10 +1,10 @@
 .navbaranim{
     position: relative;
-    width: 65px;
+    width:1%;
+    left: 49.5%;
+    opacity: 0;
     height:3px;
-    bottom: -35px;
     padding:0px 0px;
-    left:70px;
     background: #11c220;
     z-index: -1;
     transition: .3s all ease 0s;
@@ -27,7 +27,7 @@
     font-family: 'Roboto', sans-serif;;
 transition: .3s all;
 }
-.navbarhover2{
+li:hover .navbarhover{
     color:#11c220;
 }
 .navbar{
@@ -70,13 +70,7 @@ transition: .3s all;
 .programHover{
     transition:3s all;
 }
-.programHover:hover .submenuprogram{
-    display: block;
-    transition: 3s all;
-    position: absolute;
-    margin-top:7px;
-    transform:translateX(-27px);
-}
+
 .transitionElementProgram{
     display: none;
     width:100px;
@@ -84,6 +78,82 @@ transition: .3s all;
     background-color: rgba(0, 0, 255, 0);
     position: absolute;
 }
-.programHover:hover .transitionElementProgram{
+@media (min-width:991px){
+
+    .programHover:hover .transitionElementProgram{
+        display: block;
+    }.programHover:hover .submenuprogram{
+        display: block;
+        transition: 3s all;
+        position: absolute;
+        margin-top:7px;
+        transform:translateX(-27px);
+    }
+    
+li:hover .navbaranim{
+    width:20%;
+    left:40%;
+    opacity: 1;
+}
+}.desktopNav{
+    display: none;
+    position: absolute;
+    width:100%;
+    height:100%;
+    position:fixed;
+}
+.navHamBurger{
+    display: none;
+}
+@media (max-width:991px)
+{
+    .navbarcol {
+   position:absolute;
+   z-index: 10;
+   top: 0px;
+   background: white;
+   margin: 0px;
+    width:100%;
+    height: 1000px;
+    
+}
+.navHamBurger{
     display: block;
+}
+}
+.visibleMobile{
+    display:block;
+}
+.fullscreenWrapper{
+    transition:.5s all ease;
+    position: absolute;
+    margin-left: 50%;
+    width:50%;
+    left: 0px;
+    top:-100px;
+    height: 1000px;
+    z-index: 10;
+    background-image: linear-gradient(to right, rgb(255, 16, 8) ,  rgb(255, 102, 0));
+    position: fixed;
+}
+.navWrapper{
+    margin-top: 100px;
+}
+.navItemWrapper{
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform:translate(-50%, -35%);
+}
+.navItemWrapper li{
+    display: block;
+    justify-content: center;
+}
+.navClose{
+ position: absolute;
+top:-70px;
+left:50%;
+}
+.fullscreenMove{
+    margin-left: 100%; 
 }
