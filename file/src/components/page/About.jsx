@@ -15,6 +15,7 @@ import logos from '../../Image/logo.png'
 import Styled from 'styled-components'; 
 import logo2 from '../../Image/logo1.png'
 import Reviewcard from '../Newcards2';
+import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
 
 class About extends Component{
 
@@ -74,7 +75,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
       </div>
 
       <div className="col-lg-4 col-md-4  pt-5 d-none d-sm-block" >
-      <img className="client" src="https://i.pinimg.com/236x/34/25/9d/34259d8b6b60a94f5e43bde242ecc26e.jpg" alt=" "></img>
+      <img className="client" height="300" width="200" src={SmallerIMG} alt=" "></img>
       </div>
 
     </div>
