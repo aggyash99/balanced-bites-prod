@@ -15,6 +15,7 @@ import logos from '../../Image/logo.png'
 import Styled from 'styled-components';
  import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
+import { Link } from 'react-router-dom';
 import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
 
 class About extends Component{
