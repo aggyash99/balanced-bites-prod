@@ -163,12 +163,10 @@ cursor:pointer;
     box-shadow: none;
     outline:none;
     border-color:#03ac11;
-   
 }
 
 .form-group:focus-within{
     transform:scale(1.05, 1.05);
-
 }
 
 .form-control:focus +.form-label, .form-control:not(:placeholder-shown) +.form-label{
@@ -178,15 +176,13 @@ cursor:pointer;
 }
 .borderbottom
 {
-    display:inline-block;
+display:inline-block;
 position: relative;
-
 }
 
 
 
 @media (max-width:649px){
-    
 .borderbottom::after
 {
     content:' ';
@@ -197,8 +193,6 @@ position: relative;
     top:101%;
     left:45%;
     background-color:#03ac11;
-   
-
 }
 .borderbottom::before
 {
@@ -212,7 +206,6 @@ position: relative;
     background-color:rgb(94, 94, 94);
     animation-name:borderbottomanim2;
     animation-duration: 3s;
-
 }
 }
 @media (min-width:650px) {
