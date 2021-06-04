@@ -38,7 +38,7 @@ class About extends Component{
 
 
     <div className="container-fluid about g-0">
-    <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
+    {/* <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a> */}
     <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
       <div className="food" >
