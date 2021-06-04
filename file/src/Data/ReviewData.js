@@ -13,8 +13,7 @@ const data = [
         name : "Nehal Rupla",
         description : "Diet chart is too good which has been provided to me by dietician muskan bansal love the diet chart..."
         ,link :"https://www.google.com/maps/contrib/101608427469022880046/reviews/@23.9617268,75.0976379,6z/data=!3m1!4b1!4m3!8m2!3m1!1e1?hl=en-IN"
-    },
-    
+    }
 
 ];
 

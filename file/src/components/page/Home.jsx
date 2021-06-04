@@ -15,11 +15,11 @@ function Home() {
   return (
     <>
     <section className = "header" id="headerindex">
-    <div  className="screen-bar">
+    {/* <div  className="screen-bar">
       <img className="animates" src={circle}></img>
       <img className="animates1" src={circle}></img>
        <a href="https://wa.link/k2f045"><span><img src={img}></img></span></a>
-    </div>
+    </div> */}
       <div className="container-fluid position-relative overflow-hidden" >
         <div className="row home-img" >
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
@@ -29,7 +29,7 @@ function Home() {
                
           </div>
           <div>
-          <p >"Exersizes is not sufficient for your body, It changes your mind,attitude."
+          <p> "The Groundwork of all happiness is health."
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>
