@@ -21,8 +21,6 @@ class About extends Component{
 
   opens =()=>{
     const o = findDOMNode(this.refs.toggle);
-    //const b = findDOMNode(this.refs.black);
-   //$(b).addClass("black");
    $(o).addClass('ankur');
    }
   
@@ -74,9 +72,9 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
   </div>
       </div>
 
-      <div className="col-lg-4 col-md-4  pt-5 d-none d-sm-block" >
-      <img className="client" height="300" width="200" src={SmallerIMG} alt=" "></img>
-      </div>
+      <div className="col-lg-4 col-md-4 d-none d-sm-block "  >
+      <div className="aboutGreenBackground"><img src={SmallerIMG} alt=" "></img>
+      </div></div>
 
     </div>
     </div>
@@ -174,20 +172,9 @@ border-radius : 50%;
     background : #f9f9f9;
     transition : all 250ms;
     padding : 0px;
-  //  box-shadow : 1px 0px 0px 12px #f5f5f5;
-   // &:hover{
-   //    box-shadow : 0px 0px 0px 6px #b8f090;
-   //
-   // }
+  
 } 
 `
-/*
-const Heading = Styled.div`
-padding : 5px;
-text-align : center;
-font-weight : 600;
-font-family : roboto;
-`*/
 const Writeup = Styled.div`
 position : relative;
 bottom : -5%;
@@ -197,9 +184,7 @@ font-size : 19px;
 font-weight: 550;
 `
 const Center = Styled.div`
-// width : 100%;  
-// display : flex;
-// justify-content : center; 
+ 
 
 img{
     width :100%;
@@ -213,22 +198,7 @@ img{
 }
 
 `
-/*
-const Top = Styled.div`
-text-align : center;
-font-size : 20px;
-letter-spacing : 1.2px;
-color: green;
-font-weight : 600;
-padding : 20px;
-`
-const Mainhead = Styled.span`
-font-size : 30px;
-word-spacing : 5px;
-font-family : roboto, sans-serif;
-padding : 5px 0px;
-`
-*/
+ 
 const Descriptions = Styled.div`
 font-size : 15px;
 padding: 10px 100px;
@@ -242,24 +212,4 @@ const MidHead = Styled.div`
 color : #000000;
 font-family : roboto;
 `
-/*
-const Bottom = Styled.div`
-// position: relative;
-
-// @media (max-width : 500px)
-// {
-//     top : 0;
-// }
-`
-
-const LAST = Styled.div`
-margin-top : -40px;
-display : flex;
-justify-content : center;
-@media(max-width : 700px)
-{
-    margin-top : 0px;
-    
-}
-`
-*/
+ 

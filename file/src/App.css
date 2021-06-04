@@ -13,11 +13,6 @@
     font-weight: 100;
    
 }
-.Navbar-image{
-    border:none;
-    width:30%;
-    height:100%
-}
 .menu_active{
     font-weight: bold;
 }
