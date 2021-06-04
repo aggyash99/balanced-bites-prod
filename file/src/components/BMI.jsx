@@ -167,7 +167,7 @@ class BMI extends Component{
       else if(this.state.weightstatus === "Pounds" && this.state.heightstatus === "Feet")
       {
           
-          let heiIn = (this.state.Feetheight);
+          let heiIn = parseInt(this.state.Feetheight);
             if(this.state.height === "")
             hei = 0;
             if(heiIn === "")
@@ -182,10 +182,10 @@ class BMI extends Component{
         var Inch = 0;
         var   feet= 0;
         if(this.state.Feetheight != "")
-        Inch = (parseInt(this.state.Feetheight)/39.37);
+        Inch = (parseInt(this.state.Feetheight));
         if(this.state.height!=="")
-       feet = (parseInt(this.state.height)/3.281);
-        total = (wei/(feet + Inch)).toFixed(1);
+       feet = (parseInt(this.state.height) * 12);
+        total = (wei/(((feet + Inch)*0.0254)*((feet + Inch)*0.0254))).toFixed(1);
         this.setState({height:"",weight:"",Feetheight:"",result : total});
       }
       

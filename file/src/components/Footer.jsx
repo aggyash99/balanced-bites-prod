@@ -8,9 +8,10 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Styled from 'styled-components'
 import logo from '../Image/logo.png';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 const Footer =()=>{
     return (
         <>
@@ -20,7 +21,7 @@ const Footer =()=>{
                 <IMGcolumn className="d-flex justify-content-center">
                 <Upper>
                 <Img src={logo} alt="footer-img"></Img>
-               
+                
                 <Icons>
                         <LINKS   className="whatsapp" href="https://wa.link/k2f045" ><WhatsAppIcon></WhatsAppIcon></LINKS>
                         <LINKS   className="facebook" href="https://www.facebook.com/Balancedbites10/" ><FacebookIcon></FacebookIcon></LINKS>
@@ -33,38 +34,36 @@ const Footer =()=>{
 
             <div className="row mt-2">
             <Col className="col-lg-4 col-md-6 col-12">
-                <span>About Us</span>
+                <span className="span1">About Us</span>
                 <FooterLink className="foot1">
                 <ul>
                 <li>Muskan Bansal is a young & aspiring dietitian, nutritionist and Diabetes Educator from Delhi, India. She is enthusiastically working in the field of weight management and therapeutic nutrition. She believes in a natural way of achieving a healthy lifestyle...</li>
-                <li className="newlink"><LINKS href="/about" >Read More</LINKS></li>
+                <LINKS href="/about" className="newlink"><li >Read More</li></LINKS>
                 </ul> 
                 </FooterLink>
             </Col>  
 
             <Col className="col-lg-4 col-md-6 col-12">
-                <span>Our Programs</span>
-                <FooterLink>
+                <span className="span2">Our Programs</span>
+                <FooterLink className="foot2">
                 <ul>
-                <li>Weight Loss</li>
-                <li>Weight Gain</li>
-                <li>Pregnancy</li>
-                <li>Child Nutrition</li>
-                
+                <Link  to={{pathname:'/Program',state:{key : 0}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Weight Loss</li></Link>
+                <Link  to={{pathname:'/Program',state:{key : 1}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Weight Gain</li></Link>
+                <Link  to={{pathname:'/Program',state:{key : 6}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Pregnancy</li></Link>
+                <Link  to={{pathname:'/Program',state:{key : 5}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Detox Diet</li></Link>
+                <Link  to={{pathname:'/Program',state:{key : 7}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Child Nutrition</li></Link>
                 </ul>
                 <ul>
-                <li>PCOS</li>
-                <li>Detox Diet</li>
-                <li>Diabetes</li>
-                <li>Thyroid</li>
-                
-                <li>Hair and Skin care</li>
+                <Link  to={{pathname:'/Program',state:{key : 3}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>PCOS</li></Link >
+                <Link  to={{pathname:'/Program',state:{key : 2}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Diabetes</li></Link >
+                <Link  to={{pathname:'/Program',state:{key : 8}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Thyroid</li></Link >
+                <Link  to={{pathname:'/Program',state:{key : 4}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Hair and Skin care</li></Link >
                 </ul>
                 </FooterLink>
             </Col>  
 
             <Col className="col-lg-4 col-md-6 col-12">
-            <span>Get In Touch</span>
+            <span className="span3">Get In Touch</span>
             <FooterLink className="foot3">
             <ul>
             <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
@@ -89,23 +88,48 @@ const Footer =()=>{
 
 export default Footer;
 const FooterLink = Styled.div`
-
+li{
+    text-align : left;
+    padding : 10px; 
+    transition : all 250ms;
+    
+}
 ul{
     list-style : none;
     text-align : center;
     margin : 0;
     padding: 20px 0;
     font-size: 17px;
+    a{
+        color : white;
+        display  : flex;
+        align-items : center;
+        .arrow-in-footer{
+        width : 10px;
+       
+        }
+        
+        transition : all 250ms;
+            &:hover{
+                color: green;
+            cursor : pointer;
+            .arrow-in-footer{
+                width : 11px;
+            }
+            }
+       
+    }
+}
+.foot1{
+    ul{
+        padding : 0;
+    }
+}
 
-}
-li{
-    text-align : center;
-    padding : 10px;    
-}
 
 display : flex; 
 justify-content : space-around;
-align-items : center;
+// align-items : center;
 
 `
 const Col = Styled.div`
@@ -113,8 +137,31 @@ color : white;
 font-size : 20px;
 font-family : poppins;
 padding : 5px;
-text-align : center;
-span {
+.span1{
+    margin-left : 70px;
+
+    @media (max-width : 400px)
+    {
+             margin-left : 30px;
+    }    
+}
+    .span2{
+        margin-left : 40px;
+        
+    @media (max-width : 400px)
+    {
+             margin-left : 20px;
+    }
+    }
+    .span3{
+        margin-left : 20px;
+        
+    @media (max-width : 400px)
+    {
+             margin-left : 20px;
+    }
+    }
+span { 
     position : relative;
     &:before{
         position : absolute;
@@ -125,22 +172,34 @@ span {
         bottom : -10px;
     }
 }
+.foot2{
+    a{
+        margin-left : 10px;
+    }
+}
+
 .foot1{
-    padding : 20px;
+    padding : 0px 20px;
     li{
         text-align : left;
         margin-left : 40px;
         @media (max-width : 400px)
         {
             margin : 0;
+            padding : 0;
         }
     }
 }
 .foot3{
-    padding : 20px;
+    padding : 0 20px ;
     text-align : left;
     li{
         text-align : left; 
+        @media (max-width : 400px)
+        {
+            margin : 0;
+            padding : 0;
+        }
     }
     div{
         display : flex;
@@ -155,13 +214,14 @@ object-fit: contain;
 width : 100%; 
 `
 const Icons = Styled.div`
+padding : 10px;
 a{
 margin : 10px;
 color : white;
 }
 display : flex;
 align-items : center;
-justify-content : space-around;
+justify-content : center;
 `
 const LINKS = Styled.a`
  
@@ -181,12 +241,12 @@ position : relative;
     height : 2px;
     background : #80808052;
     position : absolute;
-    bottom : 0;
+    bottom : 20px;
 }
 `
 
 const Upper = Styled.div`
-width : 270px; 
+width : 350px; 
 padding  : 30px 0; 
 
 `
