@@ -12,9 +12,10 @@ import options from '../../Image/pics/food.svg';
 import plain from '../../Image/pics/plain1.svg'
 import routine from '../../Image/pics/routine1.svg';
 import logos from '../../Image/logo.png'
-import Styled from 'styled-components'; 
-import logo2 from '../../Image/logo1.png'
+import Styled from 'styled-components';
+ import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
+import { Link } from 'react-router-dom';
 
 class About extends Component{
 
@@ -32,7 +33,7 @@ class About extends Component{
 
 
     <div className="container-fluid about g-0">
-
+    <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
     <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
       <div className="food">

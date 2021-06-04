@@ -8,10 +8,11 @@ const Newcards = ()=>{
         <>
         <div className="Review"> 
             <span className="main-head">WHAT OUR CLIENT SAY</span>
+            <span className="phone-head">Our Reviews</span>
             <div className="Heading-border">
             <div className='write-review'>
                 <img src={google} alt="G"></img>
-                <span>Review</span>
+                <span>Reviews</span>
                 </div>
                 <span className="center-Heading">Give Your Wishes</span>
                 <div className="">

@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
-import img from '../../Image/services/test.png';
+import imgs from '../../Image/owner/bg.jpg';
+import Photo from '../photo';
+import owner from '../../Image/owner/owner2.png'
+import img from '../../Image/images/whatsapp-1.png';
+import circle from '../../Image/images/circle.svg';
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
@@ -11,11 +15,38 @@ function Home() {
   return (
     <>
     <section className = "header" id="headerindex">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-lg-12 d-flex justify-content-around mx-auto p-0">
-              <img  style={{width:"100%"}}  src={img} alt ="sorry"></img>
+    <div  className="screen-bar">
+      <img className="animates" src={circle}></img>
+      <img className="animates1" src={circle}></img>
+       <a href="https://wa.link/k2f045"><span><img src={img}></img></span></a>
+    </div>
+      <div className="container-fluid position-relative overflow-hidden" >
+        <div className="row home-img" >
+          <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
+              <img  style={{width:"100%",opacity:"0.6"}}  src={imgs} alt ="sorry"></img>
+            
+              <img className="owner1" src={owner}></img>
+               
           </div>
+          <div>
+          <p >"Exersizes is not sufficient for your body, It changes your mind,attitude."
+            <div className="add-new  mt-4">
+              Muskan Bansal
+              </div>
+             <div className="" style={{marginLeft:"0px",marginTop:"0px"}}> 
+             <Link to='/contact'>Contact Us </Link>
+             {/* <Link to='/contact'>Programs </Link> */}
+             </div>
+          </p>
+          <h6>Healthy Mood, Healthy Mind
+             <Link to='/contact'> Consult Today  </Link>
+          </h6>
+          
+          </div>
+          {/* <div className="home-img-fil">
+          </div> */}
+          
+        
         </div>
       </div>
 
@@ -38,7 +69,7 @@ function Home() {
      
       </div>
       
-      <div className="">
+      <div>
       <BMI/>
       </div>
       
@@ -47,19 +78,9 @@ function Home() {
       <Reviewcard />
       </div>
 
-      <div className="appoint">
-
+       
       <div>
-        <div className="textin">
-        <h1 >Best Dietitian in vikaspuri West Delhi | 9 yrs Exp | Online Diet Charts - Weight Loss, PCOD/PCOS etc.</h1>
-        </div>
-        <div className="buttoninhome">
-        <Link className="" to={{pathname:'/Contact'}} >
-        <span className="btn btn-success " >Book Appointment</span>
-        </Link>
-      </div>
-      </div>
-
+          <Photo></Photo>
       </div>
      
     </section>

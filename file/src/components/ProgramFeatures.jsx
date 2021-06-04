@@ -9,8 +9,9 @@ import Styled from 'styled-components';
  const ProgramsFeatures = (props)=>{
     return (
         <div className="container">
+          
         <Top className="row">  
-            <Mainhead ><span className="borderbottom mb-2">Program Features</span></Mainhead>
+            <Mainhead ><span className="borderbottom mb-2">Program <Color>Features</Color></span></Mainhead>
             <MidHead>Nutritionist & Diabetes Educator</MidHead>
             <Descriptions >Diets prescribed are designed for a particular person or purpose. We emphasise and focus only on Individual needs & requirements.</Descriptions>
         </Top>
@@ -19,26 +20,26 @@ import Styled from 'styled-components';
         <div className="row">
 
             <div className="col-lg-4">
-            <Main className="col-lg-12">
+            <Main className="tick col-lg-12">
             <Content>
             <Card>
-            <Img>
+            <Img className="tick_mark">
             <img alt="alt" src={options}></img>
             </Img>
-            <Heading>Heading</Heading>
+           
             <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
             </Card>
             </Content>
             </Main> 
 
-            <Main className="col-lg-12">
+            <Main className="tick col-lg-12">
                 
                 <Content> 
                     <Card>
-                <Img>
+                <Img className="tick_mark">
                 <img alt="alt" src={routine}></img>
                 </Img>
-                <Heading>Heading</Heading>
+                
                 <Writeup>Analysis of your routine & food preferences.</Writeup>
                 </Card>
                 
@@ -66,31 +67,31 @@ import Styled from 'styled-components';
             
             <div className="col-lg-4">
 
-            <Main className="col-lg-12">
+            <Main className="tick col-lg-12">
                 
             <Content>
                 <Card>
-            <Img>
+            <Img className="tick_mark">
             <img alt="alt" src={nopills}></img>
-            </Img>
-            <Heading>Heading</Heading>
+            </Img >
+            
             <Writeup>Non – restrictive diet & lifestyle plan.</Writeup>
             </Card>
             </Content>
             </Main> 
 
-            <Main className="col-lg-12">
+            <Main className="tick col-lg-12">
             
             <Content>
                 <Card>
-            <Img>
+            <Img className="tick_mark">
             <img alt="alt" src={plain}></img>
             </Img>
-            <Heading>Heading</Heading>
+             
             <Writeup>Provide you multiple options in your diet plan.</Writeup>
             </Card>
             </Content>
-                </Main>
+            </Main>
 
             </div>
              
@@ -101,21 +102,16 @@ import Styled from 'styled-components';
         </div>
                
              <LAST className="row">
-             <Main className="col-lg-4 col-12">
+             <Main className="tick col-lg-4 col-12">
             <Content>
-                <Card>
-            <Img> 
-            <img src={call} alt=""></img>
-        
-            </Img>
-            <Heading>Support</Heading>
+            <Card>
+            <Img className="tick_mark"><img src={call} alt=""></img></Img>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
             </Card>
             </Content>
             </Main>
 
-                 </LAST>    
-    
+            </LAST>    
     </div>
     
     
@@ -123,11 +119,8 @@ import Styled from 'styled-components';
 }
 export default ProgramsFeatures
 const IMGCENTER = Styled.img`
-
 `
-const CenterImg = Styled.div`
-//position : relative;
- 
+const CenterImg = Styled.div` 
 `
 const Main = Styled.div`
 padding : 5% 2%;
@@ -147,23 +140,29 @@ cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
-// &:hover{
-//     box-shadow : 0px 30px 10px 0px #f9f9f9;
-//     background : #ffffff;
-// }
+ 
+  
 `
 const Card = Styled.div` 
 width : 250px;
 height : 150px;
 padding :20px 0px;
 margin : 10px 20px;
-
+display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &:hover{
+        box-shadow : 0px 10px 10px 0px #f9f9f9;
+        background : #grey;
+        img{
+          box-shadow : 0px 0px 0px 6px #b8f090;
+          }
+      }
 `
 const Img = Styled.div`
-position :relative;
+position : relative;
 cursor : pointer; 
 img{
-    
 border-radius : 50%;
     width : 70px;
     height : 70px; 
@@ -178,19 +177,14 @@ border-radius : 50%;
     box-shadow : 1px 0px 0px 12px #f5f5f5;
     &:hover{
         box-shadow : 0px 0px 0px 6px #b8f090;
-   
     }
 } 
+
 `
-const Heading = Styled.div`
-padding : 5px;
-text-align : center;
-font-weight : 600;
-font-family : roboto;
-`
+ 
 const Writeup = Styled.div`
 position : relative;
-bottom : -5%;
+bottom : 17px;
 letter-spacing: 1.5px;
 text-align : center;
 font-size : 19px;
@@ -200,7 +194,7 @@ font-family : roboto ;
 const Center = Styled.div`
  
 position : absolute;
-top : 100px;
+top : 80px;
 img{
     width :100%;
     height : 100%;
@@ -218,17 +212,27 @@ const Top = Styled.div`
 text-align : center;
 font-size : 20px;
 letter-spacing : 1.2px;
-color: green;
+color: rgb(93, 155, 31);
 font-weight : 600;
-padding : 20px;
+padding : 10px;
+
+margin-bottom : 20px;
 `
 const Mainhead = Styled.span`
-font-size : 35px;
+font-size : 40px;
 word-spacing : 5px;
 font-family : Rubik, sans-serif;
 padding : 5px 0px;
-`
 
+@media (max-width : 400px)
+{
+   // padding : 10px 0px;
+    font-size : 33px;
+}
+`
+const Color = Styled.span`
+color : grey;
+`
 const Descriptions = Styled.div`
 font-size : 15px;
 padding: 10px 10px;
@@ -237,23 +241,18 @@ font-family : roboto;
 @media (max-width : 400px)
 {
     padding : 10px 0px;
+    display : none;
 }
 `
 const MidHead = Styled.div`
 color :red;
 font-family :  'Caveat', cursive;
-font-size : 27px;
+font-size : 30px;
 font-weight : 500;
-`
-/*
-const Bottom = Styled.div`
-// position: relative;
 
-// @media (max-width : 500px)
-// {
-//     top : 0;
-// }
-`*/
+ 
+`
+ 
 
 const LAST = Styled.div`
 margin-top : -40px;
