@@ -6,16 +6,15 @@ const Newcards = ()=>{
     
     return (
         <>
-        <div className="Review"> 
-            <span className="main-head">WHAT OUR CLIENT SAY</span>
+        <div className="" style={{padding:"5%", backgroundImage:"linear-gradient(-225deg, #DFFFCD 0%,lightcoral 100%)"}}> 
+            <span className="main-head">A WORD FROM OUR CLIENTS</span>
             <div className="Heading-border">
             <div className='write-review'>
                 <img src={google} alt="G"></img>
                 <span>Review</span>
                 </div>
-                <span className="center-Heading">Give Your Wishes</span>
-                <div className="">
-                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn-for-program">Write your Review</a> 
+                 <div className="">
+                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn-for-program" >Write your Review</a> 
                 </div>
             </div>
 

@@ -1,15 +1,20 @@
-import React from 'react';
-import { findDOMNode } from 'react-dom'
+import React, {useState} from 'react'; 
 import { Link } from 'react-router-dom';
 import Photo from '../Image/pics/program-4.jpg'
+import shape from '../Image/services/b-shape1.png'
+import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata';
+import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
- import $ from 'jquery';
+import VisibilitySensor from 'react-visibility-sensor';
 const Program =(props)=>{ 
  
+    const [showB, setB]=useState(false);
+    
+    const [showC, setC]=useState(false);
 var title,description,logo,second,third;
-{
-    Sdata.map( (value,key)=>{
+ 
+    Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
         title = value.title;
@@ -19,78 +24,112 @@ var title,description,logo,second,third;
         logo = value.imgsrc;
         return ("");
     }
+    return ("");
     })
-    }
+  
 return (
 <>
 <div>
 <div className=" container-fluid">
-    {
-  
-    /*TOP PHOTO*/}
-    <div className="row p-0"  >
-    <div className="col-lg-12 p-0  col-12">
-    <img className="IMAGEFORPROGRAM" src={Photo} alt="sorry"></img>
+    <div className="row photos">
+    <div className="col-12 p-0 position-relative">
+    <img className="steps" src={step}></img>
+    <h1 className="service-text">Service</h1>
+    </div>
+    <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
+   {/* <button className="btn-for-service">Programs</button>
+    <button className="btn-for-service">About</button> */}
+    <button className="btn-for-service">Contact Us</button>
+    
     </div>
     </div>
  
         <div className=" text-center program-header" >
-        <span className="OurStyle">Our</span>
-        <span className="serviceStyle borderbottom">Service</span>
+        <span className="OurStyle">Our</span><VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setB(isVisible?true:false);
+                 
+            
+          
+        }}>
+        <span  className={showB?'serviceStyle borderbottom':'serviceStyle'} >Service</span></VisibilitySensor>
         </div>
-    <div className="row mt-5">  
+    <div className="row mt-5" >  
         
-        <div className="col-lg-3 col-md-12 col-sm-12 col-12 d-flex">
+        
+        <div className="col-lg-3 col-md-12 col-12 ">
         <div className="alllink d-flex flex-column">
             
             {
                 Sdata.map( (value,key) =>{
                     return (
                         <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} key={key}><span>{value.title}</span> </Link>
+                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
                     );
                 })
             }
         </div>
         </div> 
 
-
-
-        <div className="col-lg-9 col-sm-12 col-md-12 col-12 d-flex">
-        <div className="program-photo">
-        <img src={logo} className="PROGRAMS-PHOTO" ></img>
-        </div>
+        <div className="col-lg-9 col-md-12 col-12 ">
         
-      
+        <img src={logo} className="PROGRAMS-PHOTO" ></img>
+        {/* </div> */}
         </div>
-        </div>
+      </div>
+        
+
+
+         
 
 
 
         <div className="row text-black   d-flex justify-content-center">
-        <div className=" text-center PROGRAM-HEADING" >
-            <div>{title}</div>
-            <div className="under" ></div> 
+         
+           <div  className="text-center PROGRAM-HEADING"><VisibilitySensor
+               partialVisibility 
+               onChange={(isVisible) => {
+                 
+                 setC(isVisible?true:false);
+                 
             
-            </div>  
-        <div className="col-lg-12 pt-3" style={{padding:"0px 10px"}}>
+          
+        }}>
+           <span className={showC?'borderbottom':''} dangerouslySetInnerHTML={{__html:title}}></span></VisibilitySensor>
+             </div>
+         
+        <div className="col-lg-12  pt-3" style={{padding:"0px 10px"}}>
             <ul style={{listStyle:"none"}}>
-            <li><p className="program-text">
-            {description}
+            
+            
+            <li> 
+            <p className="program-text" dangerouslySetInnerHTML={{__html: description}}>
+             
             </p></li>
-            <li><p className="program-text1">
-            {second}
+            <li><p className="program-text1" dangerouslySetInnerHTML={{__html : second}}>
+            
             </p></li>
-            <li><p className="program-text2">
-            {third}
+            <li><p className="program-text2" dangerouslySetInnerHTML={{__html : third}}>
+            
             </p></li>
             </ul>
         </div>
         </div>
+        
+        
 
+
+        <ProgramsFeatures/>
+
+        {/* <div className="row ">
+            <div className="col-12 p-0">
+            <img src={step} style={{objectFit:"cover",width:"100%",height:"500px"}}></img>
+            </div>
+        </div> */}
         </div>
      
-        <ProgramsFeatures/>
 
     </div>
 

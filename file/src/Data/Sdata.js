@@ -1,18 +1,17 @@
 import  Milk  from "../Image/services/milk.jpg";
 import  weightloss  from "../Image/services/weightloss.jpg";
-import  fruits  from "../Image/services/fruits.jpg";
 import  PCOS  from "../Image/services/PCOS.jpg";
 import  Skinhair from "../Image/services/Skinhair.jpg";
 import  thyroid  from "../Image/services/thyroid.jpg";
-import  pregnant  from "../Image/services/pregnant.jpg";
 import  Childrens from '../Image/services/child.jpg';
 import diabetes from '../Image/services/diabetes.jpg';
 import Detox from '../Image/services/detox.jpg';
+import pregnant from '../Image/services/pregnant.jpg'
 const Sdata = [
     {
         imgsrc : weightloss,
         title : "Weight Loss",
-        description:`Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way? You exercise, but the weight keeps coming back?
+        description:`Are you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way ?... You exercise, but the weight keeps coming back?
         If this is true? Then Balanced Bites is just right for you.
         `,
         second : "I would always tell my clients DO NOT START SILLY PLANS THAT YOU CANT SUSTAIN FOR A LIFETIME. health is a way of life , it has to be prioritised. My weight loss plans offer great nutrition and minimise unnecessary empty food choices.",
@@ -63,7 +62,7 @@ const Sdata = [
     },
     
     {
-        imgsrc:PCOS,
+        imgsrc:pregnant,
         title:"Pregnancy",
         description :"If you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",

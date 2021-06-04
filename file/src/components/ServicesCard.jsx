@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
 import { findDOMNode } from 'react-dom';
-import { NavLink, Link, Route} from 'react-router-dom';
-import Program from './Program';
-import { ThreeSixty } from '@material-ui/icons';
+import {  Link} from 'react-router-dom';
+
 
 class ServicesCards extends Component{
 
@@ -33,15 +32,17 @@ class ServicesCards extends Component{
 
 
   
-  <div class="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ border:"2px solid greenyellow",Width:"18rem",height:"50vh",backgroundPosition:"center",backgroundRepeat:"no-repeat",backgroundSize:"cover",backgroundImage:`url(${this.props.imgsrc})`}}>
+  <div className="card " onMouseLeave={this.leave} onMouseOver={this.hand} style={{ backgroundImage:`url(${this.props.imgsrc})`}}>
   
-  <div class="card-body servicecards">
-    <p class="title">{this.props.title}</p>
+  <div className="text-content-for-program">
+  <div className="card-body servicecards">
+    <p className="title" dangerouslySetInnerHTML={{__html:this.props.title}}></p>
+  </div>
   </div>
   <div className="content" ref="toggle">
  
-        <div><span style={{fontSize:"15px"}}>{this.props.service}</span></div>
-        <div className=""><Link className="success-for-service" to={{pathname:'/Program',state:{key : this.props.num}}} ><span className="success-for-service-text">Read More</span></Link></div>
+        <div><span style={{fontSize:"18px"}}>{this.props.service}</span></div>
+        <div ><Link className="success_button" to={{pathname:'/Program',state:{key : this.props.num}}} ><span className="success-for-service-text">Read More</span></Link></div>
   </div>
 </div>
 

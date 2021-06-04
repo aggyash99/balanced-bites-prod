@@ -1,21 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState} from 'react'
 import Map from '../Map';
-import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/LocationOn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import { NavLink } from 'react-router-dom';
 import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
 import WarningIcon from '@material-ui/icons/ErrorOutline'
 import './contact.css';
-import $, { event } from 'jquery';
+import $ from 'jquery';
 import emailjs from 'emailjs-com';
-import Modal from './Modal'
+import Modal from './Modal';
+import VisibilitySensor from 'react-visibility-sensor';
 
 function Contact() {
+
   const [Data, setData] = useState({
     fullname: '',
     phone: '',
@@ -41,7 +40,7 @@ function Contact() {
     if (!submitform())
       return;
 
-    emailjs.sendForm('service_u77862v', 'template_d4a6rhq', e.target, 'user_s9XA9nBNNpdk7RQRaVfna')
+    emailjs.sendForm('balancedbites123', 'template_n9gdg9h', e.target, 'user_fK8lHw76rRZJeEA2LUSYn')
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -49,14 +48,14 @@ function Contact() {
 
       }
       );
-     
     setShow(true);
     
   }
 
-  function clearform() {
-    document.location.reload();
 
+  function clearform() {
+    
+window.location.replace("/");
   }
 
   function placeholderActive() {
@@ -75,7 +74,7 @@ function Contact() {
     return regex.test(name);
   }
   function phoneverify(phone) {
-    var regex = /^\(?(\+([0-9]{2}(\ )?))?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
+    var regex = /^\(?(\+([0-9]{2}( )?))?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/;
     return regex.test(phone);
   }
 
@@ -103,7 +102,7 @@ function Contact() {
 
   function contactmouseover(e) {
     const name = "\"" + e.target + "\"";
-    if (name.includes("callto:8700326422"))
+    if (name.includes("tel:8700326422"))
       $("#contact-icon-1").addClass("contact-icon-hover");
     else if (name.includes("https://goo.gl/maps/V9zRTXPGUrjiV78x8"))
       $("#contact-icon-2").addClass("contact-icon-hover");
@@ -118,7 +117,7 @@ function Contact() {
 
   function contactmouseout(e) {
     const name = "\"" + e.target + "\"";
-    if (name.includes("callto:8700326422"))
+    if (name.includes("tel:8700326422"))
       $("#contact-icon-1").removeClass("contact-icon-hover");
     else if (name.includes("https://goo.gl/maps/V9zRTXPGUrjiV78x8"))
       $("#contact-icon-2").removeClass("contact-icon-hover");
@@ -137,13 +136,13 @@ function Contact() {
     $("#exampleFormControlInput1").removeClass("warningborder");
     $(iconname).addClass("hiddenelement");
     $("#exampleFormControlInput1").removeClass("acceptedborder");
-    if (nameverify(Data.fullname) == true) {
+    if (nameverify(Data.fullname) === true) {
       $("#exampleFormControlInput1").removeClass("warningborder");
       $(iconname).addClass("hiddenelement");
       $("#exampleFormControlInput1").addClass("acceptedborder");
       return true;
     }
-    if (nameverify(Data.fullname) == false) {
+    if (nameverify(Data.fullname) === false) {
       $(iconname).removeClass("hiddenelement");
       $("#exampleFormControlInput1").addClass("warningborder");
       return false;
@@ -155,14 +154,14 @@ function Contact() {
     $("#exampleFormControlInput2").removeClass("acceptedborder");
 
     $(iconnum).addClass("hiddenelement");
-    if (phoneverify(Data.phone) == true) {
+    if (phoneverify(Data.phone) === true) {
       $("#exampleFormControlInput2").removeClass("warningborder");
       $(iconnum).addClass("hiddenelement");
 
       $("#exampleFormControlInput2").addClass("acceptedborder");
       return true;
     }
-    if (phoneverify(Data.phone) == false) {
+    if (phoneverify(Data.phone) === false) {
       $(iconnum).removeClass("hiddenelement");
       $("#exampleFormControlInput2").addClass("warningborder");
       return false;
@@ -172,13 +171,13 @@ function Contact() {
     $("#exampleFormControlInput3").removeClass("warningborder");
     $("#exampleFormControlInput3").removeClass("acceptedborder");
     $(iconemail).addClass("hiddenelement");
-    if (emailverify(Data.email) == true) {
+    if (emailverify(Data.email) === true) {
       $("#exampleFormControlInput3").removeClass("warningborder");
       $(iconemail).addClass("hiddenelement");
       $("#exampleFormControlInput3").addClass("acceptedborder");
       return true;
     }
-    if (emailverify(Data.email) == false) {
+    if (emailverify(Data.email) === false) {
       $(iconemail).removeClass("hiddenelement");
       $("#exampleFormControlInput3").addClass("warningborder");
       return false;
@@ -187,14 +186,30 @@ function Contact() {
   function submitform() {
     return (resultname() && resultphone() && resultemail());
   }
+  
   const [show, setShow] =useState(false);
+  const [showB, setB]=useState(false);
+  if(!showB)
+  {
+    console.log("Not Visible");
+  }
+  
+   
   return (
     <>
-    
-      <Modal onClose={() => clearform()} show={show} />
-      <div className=" container-fluid contact_div">
+  
+        <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
+      <div className=" container-fluid contact_div" style={{overflow:"hidden"}}>
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
-          <h1 className="text-center contactheading" >Get in Touch <span id='bottomborder' className="borderbottom"><strong style={{ color: "#03ac11" }}>With us Today </strong></span></h1>
+          <h1 className="text-center contactheading" >Get in Touch <VisibilitySensor
+          partialVisibility 
+        onChange={(isVisible) => {
+          
+          setB(isVisible?true:false);
+          
+        }}
+         ><span id='bottomborder' className={showB?'borderbottom':''}>
+      <strong style={{ color: "#03ac11" }}>With us Today </strong></span></VisibilitySensor></h1>
         </div>
 
         <div className="row">
@@ -244,7 +259,7 @@ function Contact() {
                 <div className="row">
                   <div className="col-1 d-none d-sm-block"></div>
                   <div className="mb-3 form-group col-sm-10 paddingtextarea" required>
-                    <label class="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
+                    <label for="exampleFormControlTextarea1" className="textmessagelabel" id="textmessagelabel" onClick={textarealabelclick}>Your Message</label>
                     <textarea className="form-control textmessage" id="exampleFormControlTextarea1" rows="3" name='msg' autoComplete="off" value={Data.msg} onChange={InputEvent} onFocus={textareafocus} onBlur={textareafocusout} onClick={textareaclick} placeholder="message"></textarea>
                   </div>
                 </div>
@@ -260,7 +275,7 @@ function Contact() {
           <div className="col-lg-5 col-sm-12 mt-sm-5 col-md-12">
             <div className="container icon-in-contact p-lg-5">
               <div className="mt-5 row " >
-                <span className="col-1" >< PhoneIphoneIcon className="contact-icon" id='contact-icon-1' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="callto:8700326422" id="contactlink1" value="1" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Call : +91 8700326422</a></span>
+                <span className="col-1" >< PhoneIphoneIcon className="contact-icon" id='contact-icon-1' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="tel:8700326422" id="contactlink1" value="1" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Call : +91 8700326422</a></span>
               </div>
               <div className="mt-5 row">
                 <span className="col-1" >< EditLocationIcon className="contact-icon " id='contact-icon-2' style={{ fontSize: "35px", transition: ".3s" }}></EditLocationIcon></span><span className="col-11 paddingmobile" ><a href="https://goo.gl/maps/V9zRTXPGUrjiV78x8" id="contactlink2" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Address : Hno. 288-89 G-26 Sec-3 Rohini , Delhi</a></span>
@@ -272,7 +287,7 @@ function Contact() {
                 <span className="col-1"><MailOutlineIcon className="contact-icon" id='contact-icon-3' style={{ fontSize: "35px", transition: ".3s" }}></MailOutlineIcon></span><span className="col-11 paddingmobile" ><a href="mailto:balancedbites10@gmail.com" id="contactlink3" onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Email : balancedbites10@gmail.com</a></span>
               </div>
               <div className="mt-5 row">
-                <span className="col-1"><WhatsAppIcon className="contact-icon" id='contact-icon-4' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://api.whatsapp.com/send?phone=+918700326422" id="contactlink4" target="_blank" style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Whatsapp Us</a></span>
+                <span className="col-1"><WhatsAppIcon className="contact-icon" id='contact-icon-4' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://api.whatsapp.com/send?phone=+918700326422" id="contactlink4"  style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>Whatsapp Us</a></span>
               </div>
               <div className="mt-5 row">
                 <span className="col-1"> <InstagramIcon className="contact-icon" id='contact-icon-5' style={{ fontSize: "35px", transition: ".3s" }} /></span><span className="col-11 paddingmobile" ><a href="https://www.instagram.com/balancedbites10/?r=nametag" id="contactlink5" style={{ color: "black", textDecoration: "none" }} onMouseEnter={contactmouseover} onMouseOut={contactmouseout}>balancedbites10</a></span>
