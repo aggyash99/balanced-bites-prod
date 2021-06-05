@@ -20,8 +20,8 @@ import Styled from 'styled-components';
         <div className="row">
 
             <div className="col-lg-4">
-            <Main className="tick col-lg-12">
-            <Content>
+            <Main className=" col-lg-12">
+            <Content className="tick">
             <Card>
             <Img className="tick_mark">
             <img alt="alt" src={options}></img>
@@ -32,9 +32,9 @@ import Styled from 'styled-components';
             </Content>
             </Main> 
 
-            <Main className="tick col-lg-12">
+            <Main className=" col-lg-12">
                 
-                <Content> 
+                <Content className="tick"> 
                     <Card>
                 <Img className="tick_mark">
                 <img alt="alt" src={routine}></img>
@@ -44,7 +44,7 @@ import Styled from 'styled-components';
                 </Card>
                 
                 </Content>
-                </Main>
+            </Main>
             </div>
             
             
@@ -67,9 +67,9 @@ import Styled from 'styled-components';
             
             <div className="col-lg-4">
 
-            <Main className="tick col-lg-12">
+            <Main className="  col-lg-12">
                 
-            <Content>
+            <Content className="tick">
                 <Card>
             <Img className="tick_mark">
             <img alt="alt" src={nopills}></img>
@@ -80,9 +80,9 @@ import Styled from 'styled-components';
             </Content>
             </Main> 
 
-            <Main className="tick col-lg-12">
+            <Main className="col-lg-12">
             
-            <Content>
+            <Content >
                 <Card>
             <Img className="tick_mark">
             <img alt="alt" src={plain}></img>
@@ -102,8 +102,8 @@ import Styled from 'styled-components';
         </div>
                
              <LAST className="row">
-             <Main className="tick col-lg-4 col-12">
-            <Content>
+             <Main className="col-lg-4 col-12">
+            <Content className="tick">
             <Card>
             <Img className="tick_mark"><img src={call} alt=""></img></Img>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
@@ -140,8 +140,6 @@ cursor : pointer;
 border-radius : 10px;
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 transition : all 250ms;
- 
-  
 `
 const Card = Styled.div` 
 width : 250px;
@@ -152,11 +150,9 @@ display: flex;
     flex-direction: column;
     justify-content: space-between;
     &:hover{
-        box-shadow : 0px 10px 10px 0px #f9f9f9;
+      //  box-shadow : 0px 10px 10px 0px #f9f9f9;
         background : #grey;
-        img{
-          box-shadow : 0px 0px 0px 6px #b8f090;
-          }
+       
       }
 `
 const Img = Styled.div`
@@ -176,7 +172,7 @@ border-radius : 50%;
     padding : 0px;
     box-shadow : 1px 0px 0px 12px #f5f5f5;
     &:hover{
-        box-shadow : 0px 0px 0px 6px #b8f090;
+      //  box-shadow : 0px 0px 0px 6px #b8f090;
     }
 } 
 
