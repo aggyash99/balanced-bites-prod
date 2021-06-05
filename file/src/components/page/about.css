@@ -242,7 +242,8 @@ list-style: none;
 }
 .bordertemp1::first-letter{
     transition: .3s all;
-    visibility: hidden;
+    font-size: 30px;
+    opacity: 0;
 }
 .bordertemp1:hover{
     background: white;
@@ -253,7 +254,7 @@ list-style: none;
     transition: .3s all;
    color:#03ac11;
    font-weight: 900;
-   visibility: visible;
+   opacity: 1;
     
 }
 
@@ -277,20 +278,19 @@ list-style: none;
     100%{height: 200px; }
 }
 .aboutcarouseldot{
-transform: translateY(1950px);
 transition: .3s all;
     margin: 0px 5px;
     z-index: 3;
     cursor: pointer;
 }
 .aboutcarouselactive{
-    color:green;
+    color:rgb(0, 100, 5);
     transition: .3s all;
 
 }
 .aboutcarouselinactive
 {transition: .3s all;
-    color:rgb(94, 209, 94);
+    color:rgb(125, 248, 76);
 }.Review2{
     padding: 5% 0%;
     background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);

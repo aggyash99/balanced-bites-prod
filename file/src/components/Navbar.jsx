@@ -21,7 +21,9 @@ function Navbar() {
     $("#hamOpt3").addClass("hamTransform3");
   }
   window.onscroll=function()
-    {if(window.scrollY>125)
+    {  if(document.getElementById("movingpicbg"))
+    document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
+      if(window.scrollY>125)
       {
         $("#nav1").addClass("navSmall");
         $("#nav2").addClass("navSmall");
