@@ -475,24 +475,25 @@ div{
 }
 .Dropdown-option.is-selected{
     width : 100%;
-    background: #0f5132a8;
+    background: #629c6e;
     color: white;
     font-size: 16px;
     font-weight: 600;
 }
 .Dropdown-option{
-    padding : 4px;
+    padding : 7px;
+    font-weight : 600;
     transition : all 250ms;    
 &:hover:not(.Dropdown-option.is-selected){
-    background-color: #20c997;
-    font-weight : 600;
-
+    background-color: #aaefb0;;
+   
+    
 }   
 }
 .Dropdown-menu{
     padding : 0px;
-    margin-top : 5px;
-    border-radius: 7px;
+    margin-top : 1px;
+    border-radius: 3px;
 }
 .Dropdown-control{
    

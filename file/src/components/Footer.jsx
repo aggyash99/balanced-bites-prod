@@ -57,7 +57,7 @@ const Footer =()=>{
                 <Link  to={{pathname:'/Program',state:{key : 3}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>PCOS</li></Link >
                 <Link  to={{pathname:'/Program',state:{key : 2}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Diabetes</li></Link >
                 <Link  to={{pathname:'/Program',state:{key : 8}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Thyroid</li></Link >
-                <Link  to={{pathname:'/Program',state:{key : 4}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Hair and Skin care</li></Link >
+                <Link  to={{pathname:'/Program',state:{key : 4}}}><ArrowForwardIosIcon className="arrow-in-footer"/><li>Hair & Skin care</li></Link >
                 </ul>
                 </FooterLink>
             </Col>  
@@ -94,6 +94,10 @@ li{
     transition : all 250ms;
     
 }
+.newlink{
+    margin-top : -10px;
+    color : grey;
+}
 ul{
     list-style : none;
     text-align : center;
@@ -114,7 +118,7 @@ ul{
                 color: green;
             cursor : pointer;
             .arrow-in-footer{
-                width : 11px;
+                width : 11px; 
             }
             }
        

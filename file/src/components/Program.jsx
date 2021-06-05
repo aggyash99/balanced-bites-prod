@@ -35,7 +35,7 @@ return (
 
 <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
     <div className="row photos">
-    <div className="col-12 p-0 position-relative">
+    <div className="col-12 p-0 Programs-head position-relative">
     <img className="steps" src={step}></img>
     <h1 className="service-text">Service</h1>
     </div>

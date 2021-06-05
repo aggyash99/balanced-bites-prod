@@ -47,20 +47,7 @@ p{
         position : relative;
         font-family : caveat;
         font-size : 40px;
-        &:before{
-            width : 20px;
-            height : 4px;
-            background : black;
-            position : absolute;
-            bottom : 20px;
-            right : 0;
-            content : "";
         
-    @media (max-width : 400px)  
-    {
-        display : none;    
-    }
-        }
         
     @media (max-width : 400px)  
     {
@@ -83,15 +70,16 @@ p{
     position : absolute;
     bottom:15%;
     left : 15%;
-    padding : 10px;
+    padding : 5px;
     
     border-radius : 35px;
     outline:none;
     border : 2px solid green;
-    background : transparent;
+    background : green;
+  
     font-size : 22px;
     span{
-        color : #2aff00e0;
+        color : rgb(249,249,249);
         letter-spacing : 1px;
     }   
     font-weight : 700;
