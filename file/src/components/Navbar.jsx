@@ -136,11 +136,11 @@ function dropdownClose()
       <ul className="navItemWrapper">
      
       <li className="navItems  " onClick={navCollapse} >
-          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
         <li className="navItems programHover">
-      <div style={{display:"inline-block", width:"1000px"}}>    <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
+         <NavLink  activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
           <a id="dropdown" className=" btn subMenuDropDownIcon " type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
         
             if(dropOpen)
@@ -152,7 +152,7 @@ function dropdownClose()
             }
           }}>
       <DropDownIcon/>
-    </a></div>
+    </a>
          <div className="navbaranim start-home" id="animNavbar"></div>
            <span className="transitionElementProgram"></span>
              <div className="submenuMobile collapse" id="subMenuMobile"><ul className="submenuUL" >

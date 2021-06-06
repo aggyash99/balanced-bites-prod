@@ -271,7 +271,16 @@ transform :rotateZ(45deg) translate(7px, 55px);
     transition: .3s all;
 color:#11c220 !important;
 }
-.subMenuDropDownIcon
+
+.subMenuDropDownIcon:hover{
+    color: #11c220;
+}
+.subMDDIselected{
+    color:#11c220;
+    transform:rotateZ(180deg);
+}
+@media (min-width:782px) {
+    .subMenuDropDownIcon
 {
     border:none;
     position: absolute;
@@ -280,16 +289,19 @@ color:#11c220 !important;
     color:#11c220;
     top:85px;
 }
-.subMenuDropDownIcon:hover{
-    color: #11c220;
+
 }
-.subMDDIselected{
-    color:#11c220;
-    transform:rotateZ(180deg);
-}
-@media (max-width:782px) {
-    .subMenuDropDownIcon{
-        display: none;
-        visibility: hidden;
+@media (max-width:782px)
+{
+    .fullscreenWrapper{
+        width: 60%;
+        left:0%;
     }
+    
+.fullscreenMove{
+    margin-left: -70%; 
+}
+.fullscreenMove2{
+    margin-left: 130%; 
+}
 }
