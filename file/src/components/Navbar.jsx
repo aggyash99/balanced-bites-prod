@@ -136,11 +136,10 @@ function dropdownClose()
       <ul className="navItemWrapper">
      
       <li className="navItems  " onClick={navCollapse} >
-          <NavLink activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
+          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
-        <li className="navItems programHover">
-         <NavLink  activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
+        <li className="navItems programHover">   <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
           <a id="dropdown" className=" btn subMenuDropDownIcon " type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
         
             if(dropOpen)
