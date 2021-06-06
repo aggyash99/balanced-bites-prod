@@ -126,15 +126,7 @@ function Navbar() {
         <li className="navItems programHover">
       <div style={{display:"inline-block", width:"1000px"}}>    <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
           <a id="dropdown" className=" btn subMenuDropDownIcon " type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
-           if($("#dropdown").hasClass("subMDDIselected"))
-           {
-             console.log("woow");
-           }
-
-           else
-           {
-             console.log("omg");
-           }
+        
             if(dropOpen)
             { console.log(dropOpen);
               document.getElementById("dropdown").style.color="black";
