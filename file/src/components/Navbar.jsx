@@ -21,6 +21,22 @@ function Navbar() {
     $("#hamOpt2").addClass("hamTransform2");
     $("#hamOpt3").addClass("hamTransform3");
   }
+  function dropdownOpen()
+  {
+    console.log(dropOpen);
+              document.getElementById("dropdown").style.color="#11c220";
+              document.getElementById("dropdown").style.transform="rotateZ(180deg)";
+              
+              dropOpen=1;
+  }
+function dropdownClose()
+{
+  console.log(dropOpen);
+              document.getElementById("dropdown").style.color="black";
+              
+              document.getElementById("dropdown").style.transform="rotateZ(0deg)";
+              dropOpen=0;
+}
   window.onscroll=function()
     {  if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
@@ -128,19 +144,11 @@ function Navbar() {
           <a id="dropdown" className=" btn subMenuDropDownIcon " type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
         
             if(dropOpen)
-            { console.log(dropOpen);
-              document.getElementById("dropdown").style.color="black";
-              
-              document.getElementById("dropdown").style.transform="rotateZ(0deg)";
-              dropOpen=0;
+            { dropdownClose();
             }
             else
             { 
-              console.log(dropOpen);
-              document.getElementById("dropdown").style.color="#11c220";
-              document.getElementById("dropdown").style.transform="rotateZ(180deg)";
-              
-              dropOpen=1;
+              dropdownOpen();
             }
           }}>
       <DropDownIcon/>
