@@ -53,7 +53,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 }
 .alignbottomabout
 {
-    padding-top: 359px;
+    padding-top: 339px;
 }
 @media (max-width:700px)
 {
@@ -64,6 +64,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
 }
 .gradientbg
 {
+    padding-top:10px;
     background-image:linear-gradient(54deg , #ffffff 0,#ffffff 50%,transparent 50%,transparent 100%);
 }
 .text{
@@ -161,7 +162,7 @@ color:#03ac11;
 {
     padding:0px 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-size: 23px;
 list-style: none;    
 }
 
@@ -257,11 +258,10 @@ list-style: none;
    opacity: 1;
     
 }
-
 .textabouttable
 {   padding:20px 0px ;
 
-    font-size: 20px;
+    font-size: 25px;
 }
 .expansionabout{
     position: absolute;
