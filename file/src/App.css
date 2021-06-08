@@ -1590,9 +1590,8 @@ select{
 @media (max-width : 400px)
 {
     .main-head{
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
-        display: none;
     }
     .phone-head{
         display: block;
