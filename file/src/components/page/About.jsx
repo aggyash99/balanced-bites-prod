@@ -28,6 +28,7 @@ class About extends Component{
 
   render(){
     
+  window.onload = window.scroll(0,0);
     return (
       <>
 

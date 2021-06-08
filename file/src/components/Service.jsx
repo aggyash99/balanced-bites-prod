@@ -4,8 +4,10 @@ import ServicesCards from './ServicesCard';
 import logo from '../Image/pics/program-44.jpg' 
 const Service = () =>{
 
+//  window.onload = ()=>
+//  window.scroll(0,0) 
 return (
-
+  <>
   <div className=" container-fluid">
   {/* <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a> */}
     <div className="row logo-for-service" style={{backgroundImage: `Url(${logo})` }}>
@@ -48,7 +50,7 @@ return (
     </div>
 
   </div>
-
+</>
 );
 }
 

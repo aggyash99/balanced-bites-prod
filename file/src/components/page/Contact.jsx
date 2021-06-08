@@ -196,10 +196,13 @@ window.location.replace("/");
   }
   
    
+   
   return (
     <>
-  
+    {window.onload = window.scroll(0,0)}
+
         <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
+        
       <div className=" container-fluid contact_div" style={{overflow:"hidden"}}>
      
     <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>

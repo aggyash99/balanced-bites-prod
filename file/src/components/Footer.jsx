@@ -96,7 +96,12 @@ li{
 }
 .newlink{
     margin-top : -10px;
-    color : grey;
+    color : white; 
+    @media (max-width : 400px)
+    {
+        margin :  0;
+
+    }
 }
 ul{
     list-style : none;
@@ -107,7 +112,7 @@ ul{
     a{
         color : white;
         display  : flex;
-        width : 160px;
+        width : 170px;
         align-items : center;
         .arrow-in-footer{
         width : 10px;
@@ -115,7 +120,7 @@ ul{
         }
         
         transition : all 250ms;
-            &:hover{
+            &:hover:not(.newlink){
                 color: green;
             cursor : pointer;
             .arrow-in-footer{
@@ -130,7 +135,14 @@ ul{
         padding : 0;
     }
 }
-
+ul{
+div{
+    @media(max-width : 500px)
+    {
+        padding : 10px 0px;
+    }
+}
+}
 
 display : flex; 
 justify-content : space-around;
@@ -147,7 +159,7 @@ padding : 5px;
 
     @media (max-width : 400px)
     {
-             margin-left : 30px;
+             margin-left : 20px;
     }    
 }
     .span2{

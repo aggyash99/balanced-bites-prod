@@ -30,6 +30,7 @@ const Program =(props)=>{
  
 return (
 <>
+{/* {window.onload = window.scroll(0,0)} */}
 <div>
 <div className=" container-fluid">
 

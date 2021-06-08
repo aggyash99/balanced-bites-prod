@@ -12,9 +12,12 @@ import VisibilitySensor from 'react-visibility-sensor';
 function Home() {
   const [showB, setB]=useState(false);
   
+
   return (
     <>
-    <section className = "header" id="headerindex">
+    
+  {/* {window.onload = window.scroll(0,0)} */}
+    <section className = "header" id="headerindex" >
     {/* <div  className="screen-bar">
       <img className="animates" src={circle}></img>
       <img className="animates1" src={circle}></img>
