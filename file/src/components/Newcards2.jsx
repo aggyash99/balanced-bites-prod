@@ -49,11 +49,9 @@ const responsive = {
     removeArrowOnDeviceType={["tablet","mobile"]}
     showDots={true}
     arrows={false}
-    customDot={<CustomDot/>}
     autoPlay={true}
     autoPlaySpeed={5000}
     infinite={true}
-    renderDotsOutside={true}
     >
 
            
