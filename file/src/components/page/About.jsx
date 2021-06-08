@@ -16,7 +16,7 @@ import Styled from 'styled-components';
  import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
 import { Link } from 'react-router-dom';
-import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
+import SmallerIMG from '../../Image/images/About Smaller Img2.png';
 
 class About extends Component{
 
@@ -69,7 +69,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
       </div>
 
       <div className="col-lg-4 col-md-4 d-none d-sm-block "  >
-      <div className="aboutGreenBackground"><img src={SmallerIMG} alt=" "></img>
+      <div className="aboutImgRight"><img src={SmallerIMG} alt=" "></img>
       </div></div>
 
     </div>
@@ -94,7 +94,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
            
             <div className="col-11 bordertemp1"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
             <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout4"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
-              </div>
+              </div><Reviewcard style={{paddingBottom:"0px"}}/>
       </div>
     </div>
     </div>
@@ -103,7 +103,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
 
       
              
-    <Reviewcard style={{paddingBottom:"0px"}}/>
+    
     
     
     );
