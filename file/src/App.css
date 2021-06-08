@@ -1482,10 +1482,6 @@ select{
     font-size: 22px; 
     color: rgb(255, 255, 255);
 }
-.maincardsFOR:hover{
-    transition:.3s all ease;
-    transform:scale(1.01, 1.01);
-}
  
 .nameofperson{ 
     font: 17px rubik,sans-serif;

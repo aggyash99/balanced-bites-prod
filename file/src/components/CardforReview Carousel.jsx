@@ -8,8 +8,7 @@ const CardforReview =(props)=>{
         <div className="maincardsFOR" style={{cursor:"pointer", userSelect:"none"}}>
         <div className="reviewcards">
         <div className="goggleCards">
-            <div className="goggleCardsimg2" style={{zIndex:"2"}}>{props.iconInitial}</div><span style={{height:"60px", width:"60px", color:"pink", backgroundColor:props.iconBG, position:"absolute", zIndex:"0", left:"57px", borderRadius:"50%"}}></span>
-
+        <div className="img">A</div>
             <div className="Person">
                 <span className="nameofperson">{props.name}</span>
             <Rating className="rating" value={5}  max={5}/>
@@ -21,7 +20,7 @@ const CardforReview =(props)=>{
         </p>
         <div className="ENDbutton">
         <a href={props.link}><img className="googleImage" src={google} alt="google "/></a>
-        <Link to={props.link} className="buttonLink">Read More</Link>
+        <a href={props.link} className="buttonLink">Read More</a>
         </div>
         </div>
         </div>

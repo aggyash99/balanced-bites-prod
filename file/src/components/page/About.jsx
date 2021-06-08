@@ -27,12 +27,7 @@ class About extends Component{
   
 
   render(){
-    window.onscroll=function()
-    {
-      console.log(window.scrollY);
-      if(document.getElementById("movingpicbg"))
-      document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
-    }
+    
     return (
       <>
 
@@ -42,12 +37,12 @@ class About extends Component{
     <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
       <div className="food" >
-
 <div className="alignbottomabout"id="movingpicbg">
+
   <div className="gradientbg" >
 
       <h1 className="headalignment " id="headtextaboutblur"><strong style={{color:"black", fontSize:"55px"}}>Muskan Bansal</strong><span className="headtext"> Nutritionist & Diabetes Educator</span></h1>
-
+    
   </div>
 
 </div>
