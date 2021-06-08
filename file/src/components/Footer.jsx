@@ -100,7 +100,7 @@ li{
     @media (max-width : 400px)
     {
         margin :  0;
-
+        padding : 10px 0;
     }
 }
 ul{
