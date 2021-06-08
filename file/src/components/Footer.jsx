@@ -107,10 +107,11 @@ ul{
     a{
         color : white;
         display  : flex;
+        width : 160px;
         align-items : center;
         .arrow-in-footer{
         width : 10px;
-       
+            
         }
         
         transition : all 250ms;
