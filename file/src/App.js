@@ -51,10 +51,13 @@ function App() {
   const pathname = window.location.pathname;
     
   return (
-    <BrowserRouter>
+    
+    <BrowserRouter> 
+    
     <Header></Header>
     <Navbar pname={pathname}/>
       <Switch>
+        
         <Route exact path = "/" component={Home}/>
         <Route exact path = "/About" component={About}/>
         <Route exact path = "/Contact" component={Contact}/>

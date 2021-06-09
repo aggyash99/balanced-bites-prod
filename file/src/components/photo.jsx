@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom'
 function photo() {
     return (
         <Photo >
+           
+
                 <img src={background}></img>
                 <p>
                     3 MONTHS NUTRITION PROGRAM
@@ -38,10 +40,15 @@ p{
         
     @media (max-width : 400px)  
     {
-        font-size : 15px;
-        top : 40%;
+        font-size : 20px;
+        word-spacing : 0px;
+        top : 20%;
     }
-    
+    @media (max-width : 425px)  
+    {
+        font-size : 18px;
+        top : 23%;
+    }
     
     div{
         position : relative;
@@ -51,8 +58,10 @@ p{
         
     @media (max-width : 400px)  
     {
-        font-size : 25px;
+        font-size : 30px;
     }
+    
+    
     }
 }
 &:before{
@@ -70,14 +79,14 @@ p{
     position : absolute;
     bottom:15%;
     left : 15%;
-    padding : 5px;
+    padding : 5px 10px;
     
     border-radius : 35px;
     outline:none;
     border : 2px solid green;
     background : green;
   
-    font-size : 22px;
+    font-size : 20px;
     span{
         color : rgb(249,249,249);
         letter-spacing : 1px;

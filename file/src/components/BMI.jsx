@@ -1,5 +1,5 @@
 import React,{ Component }  from "react";
-import image from '../Image/pics/bmi-2.jpg'; 
+import image from '../Image/pics/bmi-4.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom"; 
 import reddot from '../Image/images/red.png'; 
@@ -16,7 +16,7 @@ const WeightCategory = [
   'Kg','Pounds'
 ];
 const HeightCategory = [
-    'Centimeter','Meter', 'Feet'
+    'Centimeter', 'Feet'
   ];
 let defaultWeight = WeightCategory[0];
 let defaultHeight = HeightCategory[0];
@@ -55,27 +55,12 @@ class BMI extends Component{
         return ""
     }
     setheight = (props) =>{
-        // const  a2 = findDOMNode(this.refs.google1);
-        // if(props.target.value > 70)
-        // {
-        // $(a2).addClass('border-color-red');
-        // return ""
-        // }
-        // else 
-        // $(a2).removeClass('border-color-red')
-
+   
         this.setState({height : props.target.value});
         return "";
     }
     setweight = (props)=>{
-        // const  a2 = findDOMNode(this.refs.google);
-        // if(props.target.value > 70)
-        // {
-        // $(a2).addClass('border-color-red');
-        // return ""
-        // }
-        // else 
-        // $(a2).removeClass('border-color-red')
+    
 
         this.setState({weight : props.target.value});
         return "";
@@ -84,12 +69,7 @@ class BMI extends Component{
         this.setState({Feetheight : props.target.value})
     }
     calculate =()=>{
-        
-       
-        // if(this.state.weight === "" || (this.state.height == "" && this.state.heightstatus!=="Feet")){
-        // this.setState({height:"",weight:"",});
-        // return "";
-        // }
+ 
         if(this.state.weight === "" )
         {
         const  a2 = findDOMNode(this.refs.google);
@@ -272,7 +252,7 @@ class BMI extends Component{
             <div className="barText p-1">
             <h6 style={{fontSize:"17px", fontWeight:"550"}}>{this.state.content}</h6>
             </div>
-            </Output>
+        </Output>
 
 
 
@@ -372,11 +352,9 @@ box-shadow: 0px 0px 1500px 2px #80808091;
 padding : 10px; 
 background : white;
 min-width : 300px; 
-max-width : 320px;
+max-width : 340px;
 border-radius : 10px;
 bottom : 10%;
-
- 
 
 h1{
     // background :#b1aa8029;
@@ -440,7 +418,7 @@ justify-content : center;
 const ROW = Styled.div`
 display : flex;
 justify-content : flex-end;
-padding : 0  40px 0 10px;
+padding :0 20px;
 @media(max-width : 400px)
 {
     padding : 5px;
@@ -475,7 +453,7 @@ div{
 }
 .Dropdown-option.is-selected{
     width : 100%;
-    background: #629c6e;
+    background: #74d37b;
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -485,14 +463,14 @@ div{
     font-weight : 600;
     transition : all 250ms;    
 &:hover:not(.Dropdown-option.is-selected){
-    background-color: #aaefb0;;
+    background-color: #d3f5d5;;
    
     
 }   
 }
 .Dropdown-menu{
     padding : 0px;
-    margin-top : 1px;
+    margin-top : 0px;
     border-radius: 3px;
 }
 .Dropdown-control{
@@ -574,7 +552,7 @@ letter-spacing : 5px;
 margin-bottom : 5px;
 padding : 0 50px;
 color:#0f0c4dc9;
-@media(max-width : 400px)
+@media(max-width : 450px)
 {
     text-align : left;
     font-size : 40px;   

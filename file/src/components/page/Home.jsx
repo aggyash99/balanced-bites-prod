@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React, {useState , useEffect} from 'react';
 import imgs from '../../Image/owner/bg.jpg';
 import Photo from '../photo';
 import owner from '../../Image/owner/owner2.png'
-import img from '../../Image/images/whatsapp-1.png';
-import circle from '../../Image/images/circle.svg';
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
@@ -11,10 +9,15 @@ import {Link} from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 function Home() {
   const [showB, setB]=useState(false);
-  
+
+  useEffect(() => {
+  window.scroll(0,0)
+  }, [])
   return (
     <>
-    <section className = "header" id="headerindex">
+    
+  {/* {window.onload = window.scroll(0,0)} */}
+    <section className = "header" id="headerindex" >
     {/* <div  className="screen-bar">
       <img className="animates" src={circle}></img>
       <img className="animates1" src={circle}></img>
@@ -29,7 +32,7 @@ function Home() {
                
           </div>
           <div>
-          <p> "The Groundwork of all happiness is health."
+          <p> "Every Time you eat is an opportunity to <span style={{color : "green"}}>Nourish You Body"</span>
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>

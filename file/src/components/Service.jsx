@@ -3,14 +3,14 @@ import Sdata from '../Data/Sdata';
 import ServicesCards from './ServicesCard';
 import logo from '../Image/pics/program-44.jpg' 
 const Service = () =>{
-
+ 
 return (
-
+  <>
   <div className=" container-fluid">
-  {/* <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a> */}
+ 
     <div className="row logo-for-service" style={{backgroundImage: `Url(${logo})` }}>
         <div className="col-12 our-programs-head" >
-          {/* <div className="our-programs"> Our <span className='programs'>Programs</span></div> */}
+       
          <div className="our-programs">
            <span className='programs borderbottom'>  Programs </span> 
             
@@ -48,7 +48,7 @@ return (
     </div>
 
   </div>
-
+</>
 );
 }
 
