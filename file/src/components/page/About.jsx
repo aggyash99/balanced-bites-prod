@@ -71,7 +71,8 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
 
       <div className="col-lg-4 col-md-4 d-none d-sm-block "  >
       <div className="aboutImgRight"><img src={SmallerIMG} alt=" "></img>
-      </div></div>
+      </div>
+      </div>
 
     </div>
     </div>
