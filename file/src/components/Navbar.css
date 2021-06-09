@@ -123,6 +123,11 @@ li:hover .navbaranim{
     height: 50px;
 }
 }
+@media (max-width:365px){
+    .navHamBurger{
+        left:300px
+    }
+}
 .visibleMobile{
     display:block;
 }
@@ -258,6 +263,9 @@ li:hover .navbaranim{
 
     .headerEmail{
         display: none;
+    }
+    .navImg2{
+        width:220px;
     }
 }
 .submenuMobile ul a li{
