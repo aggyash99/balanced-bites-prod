@@ -143,14 +143,14 @@ color:#03ac11;
     .aboutImgRight{
         display: none;
     }
+    .imgWhyChoose{
+        height:50px ;
+        width:125px ;
+    }
 }
 .about{
     background: rgb(255, 255, 255);
     overflow: hidden;
-}
-.imgWhyChoose{
-    height:50px ;
-    width:125px ;
 }
 
  
