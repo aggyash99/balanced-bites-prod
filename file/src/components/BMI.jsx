@@ -1,5 +1,5 @@
 import React,{ Component }  from "react";
-import image from '../Image/pics/bmi-2.jpg'; 
+import image from '../Image/pics/bmi-4.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom"; 
 import reddot from '../Image/images/red.png'; 

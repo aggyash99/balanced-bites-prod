@@ -3,9 +3,7 @@ import Sdata from '../Data/Sdata';
 import ServicesCards from './ServicesCard';
 import logo from '../Image/pics/program-44.jpg' 
 const Service = () =>{
-
-//  window.onload = ()=>
-//  window.scroll(0,0) 
+ 
 return (
   <>
   <div className=" container-fluid">

@@ -1,4 +1,4 @@
-import React, { useState} from 'react'
+import React, { useState , useEffect} from 'react'
 import Map from '../Map';
 import img from '../../Image/pics/whatsapp1.svg'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
@@ -195,7 +195,9 @@ window.location.replace("/");
     console.log("Not Visible");
   }
   
-   
+  useEffect(() => {
+    window.scroll(0,0)
+    }, [])
    
   return (
     <>

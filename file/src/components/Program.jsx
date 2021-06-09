@@ -1,20 +1,21 @@
-import React, {useState} from 'react'; 
-import { Link } from 'react-router-dom'; 
+import React, {useState,useEffect} from 'react'; 
+import { Link, Redirect } from 'react-router-dom'; 
 import Newdata from '../Data/Newdata';
-import Sdata from '../Data/Sdata';
-import $ from 'jquery';
-import ReactDOM  from "react-dom"; 
+import Sdata from '../Data/Sdata'; 
 import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
 import img from '../Image/pics/whatsapp1.svg'
 const Program =(props)=>{ 
- 
-    const [showB, setB]=useState(false);
- 
-    const [showC, setC]=useState(false);
-    var title,description,logo,second,third;
    
+   
+    const [showB, setB]=useState(false);
+    const [showC, setC]=useState(false);
+
+    var title,description,logo,second,third;
+  
+
+    if(props.location.state !== undefined){
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -24,10 +25,16 @@ const Program =(props)=>{
         third = value.third
         logo = value.imgsrc;
         return ("");
-    }
+        }
     return ("");
     })
- 
+    }
+    else
+    <Redirect to="/Service"></Redirect>
+
+    useEffect(() => {
+        window.scroll(0,0)
+        }, []);
 return (
 <>
 {/* {window.onload = window.scroll(0,0)} */}

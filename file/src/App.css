@@ -1609,6 +1609,7 @@ select{
     .main-head{
         font-size: 20px;
         text-align: center;
+        display: none;
     }
     .phone-head{
         display: block;
@@ -1833,7 +1834,7 @@ font-weight: 500;
     width: 30px;
     height: 0px;
     display: none;
-    background: transparent;
+    background: white;
     border-color: white;
     border-radius: 0%;
     /* border-color: rgb(13, 122, 58); */
@@ -1845,7 +1846,7 @@ font-weight: 500;
     }
 }
 .react-multi-carousel-dot--active button{
-background-color: rgb(95, 95, 13);
+background-color: rgb(1, 182, 1);
 border-color: rgb(1, 182, 1);
 width: 30px;
 height: 0px;
