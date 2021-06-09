@@ -199,7 +199,7 @@ window.location.replace("/");
    
   return (
     <>
-    {window.onload = window.scroll(0,0)}
+    {/* {window.onload = window.scroll(0,0)} */}
 
         <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
         
