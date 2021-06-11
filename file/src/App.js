@@ -71,7 +71,7 @@ function App() {
       <div  className="screen-bar">
       <img className="animates" src={circle}></img>
       <img className="animates1" src={circle}></img>
-       <a href="https://wa.link/k2f045"><span><img src={img}></img></span></a>
+       <a href="https://api.whatsapp.com/send?phone=+918700326422"><span><img src={img}></img></span></a>
     </div>
     </BrowserRouter>
   );

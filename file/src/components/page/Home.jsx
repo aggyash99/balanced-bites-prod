@@ -7,6 +7,7 @@ import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 import {Link} from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
+import img from '../../Image/services/doodle.jpg'
 function Home() {
   const [showB, setB]=useState(false);
 
@@ -32,11 +33,11 @@ function Home() {
                
           </div>
           <div>
-          <p> "Every Time you eat is an opportunity to <span style={{color : "green"}}>Nourish You Body"</span>
+          <p>Every Time you eat is an opportunity to <span style={{color : "green"}}>"Nourish You Body"</span>
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>
-             <div className="" style={{marginLeft:"0px",marginTop:"0px"}}> 
+             <div className="" style={{marginLeft:"10px",marginTop:"0px"}}> 
              <Link to='/contact'>Contact Us </Link>
              {/* <Link to='/contact'>Programs </Link> */}
              </div>
@@ -54,8 +55,8 @@ function Home() {
       </div>
 
 
-      <div className="carousel caouselBody" >
-
+      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"no-repeat"}} >
+          <div className="caouselBody">
       <div className="text-center Home-carousel d-flex justify-content-center">
       <p>Our</p><VisibilitySensor
                partialVisibility 
@@ -69,7 +70,7 @@ function Home() {
       </div>
      
       <CarouselH ></CarouselH>
-     
+      </div>
       </div>
       
       <div>
