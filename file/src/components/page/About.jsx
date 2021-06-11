@@ -42,7 +42,7 @@ class About extends Component{
 
   <div className="gradientbg" >
 
-      <h1 className="headalignment " id="headtextaboutblur"><strong style={{color:"black", fontSize:"55px"}}>Muskan Bansal</strong><span className="headtext"> Nutritionist & Diabetes Educator</span></h1>
+      <h1 className="headalignment " id="headtextaboutblur"><strong className="headHeadAbout">Muskan Bansal</strong><span className="headtext"> Nutritionist & Diabetes Educator</span></h1>
     
   </div>
 
@@ -52,7 +52,7 @@ class About extends Component{
 
     
       <div className="row d-flex">
-      <div className="col-lg-8 col-md-8 pt-5 ">
+      <div className="col-lg-8 col-md-8 " style={{paddingTop:"0px 20px 20px 20px"}}>
       <div className="col-lg-10 col-md-10 mx-auto">
     <h5 className=" subheadtext">One Of The Best Dietitian In Delhi</h5>
           <p className="text pb-2 firstletter">
@@ -80,7 +80,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     <div className="row">
      
       <div className="col-12 righttextabout fadebackground" >
-        <h1 style={{paddingBottom:"20px"}}>Why choose <img height="110" width="290" src={Logo}/>? </h1>
+        <h1 style={{paddingBottom:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>? </h1>
         <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
         </p>
         <div className="row ">

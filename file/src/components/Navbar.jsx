@@ -40,7 +40,8 @@ function dropdownClose()
               dropOpen=0;
 }
   window.onscroll=function()
-    {  if(document.getElementById("movingpicbg"))
+    { if($(window).width()>382){
+       if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
     var dynWidth;
     var dynWidthDropDown;
@@ -66,6 +67,36 @@ function dropdownClose()
       {
         dynWidth=(125-window.scrollY)+240;
         dynWidthDropDown=17-(window.scrollY-125)/6 ;
+      }}
+      else
+      {
+        if(document.getElementById("movingpicbg"))
+    document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
+    var dynWidth;
+    var dynWidthDropDown;
+      if(window.scrollY<125)
+      {
+        $("#nav1").addClass("navSmall");
+        $("#nav2").addClass("navSmall");
+        $("#nav3").addClass("navSmall");
+        $("#nav4").addClass("navSmall");
+        dynWidth=220;
+        dynWidthDropDown=17;
+      }
+      else if(window.scrollY>195)
+      {
+        $("#nav1").removeClass("navSmall");
+        $("#nav2").removeClass("navSmall");
+        $("#nav3").removeClass("navSmall");
+        $("#nav4").removeClass("navSmall");
+        dynWidth=170;
+        dynWidthDropDown=5.5;
+      }
+      else
+      {
+        dynWidth=(125-window.scrollY)+220;
+        dynWidthDropDown=17-(window.scrollY-125)/6 ;
+      }
       }
         document.getElementById("brandImg").style.width=dynWidth+"px";
       document.getElementById("smp").style.margin=dynWidthDropDown+"px 0 0 0";
