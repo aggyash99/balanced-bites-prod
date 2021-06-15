@@ -50,7 +50,7 @@ function Home() {
       </div>
 
 
-      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"no-repeat"}} >
+      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
           <div className="caouselBody">
       <div className="text-center Home-carousel d-flex justify-content-center">
       <p>Our</p><VisibilitySensor

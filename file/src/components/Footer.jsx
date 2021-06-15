@@ -96,11 +96,15 @@ li{
 }
 .newlink{
     margin-top : -10px;
-    color : white; 
+    color : grey; 
+    transition : all 50ms;
     @media (max-width : 400px)
     {
         margin :  0;
         padding : 10px 0;
+    }
+    &:hover{
+        color : white;
     }
 }
 ul{

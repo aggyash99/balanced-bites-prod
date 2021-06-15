@@ -1,4 +1,5 @@
 import React from 'react';
+import img from '../Image/services/doodle.jpg'
 import Card from './CardforReview';
 import carddata from '../Data/ReviewData';
 import google from '../Image/Review/google.png'
@@ -6,7 +7,8 @@ const Newcards = ()=>{
     
     return (
         <>
-        <div className="Review"> 
+        <div className="carousel1" style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
+            <div className=" Review"> 
             <span className="main-head">WHAT OUR CLIENT SAY</span>
             <span className="phone-head">Our Reviews</span>
             <div className="Heading-border">
@@ -30,6 +32,7 @@ const Newcards = ()=>{
                         );
                })
            }
+             </div>
              </div>
         </div>
         </>

@@ -597,6 +597,22 @@ font-weight: bold;
     width : 100%;
     height : 100%;
     opacity : 0.9;
+    /* z-index: -1; */
+}
+.carousel1{
+    position: relative;
+    z-index: 1;
+}
+.carousel1::before{
+    position:absolute;
+    content: "";
+    top: 0;
+    left: 0;
+   background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+    width : 100%;
+    height : 100%;
+    opacity : 0.9;
+    z-index: -1;
 }
 .Home-carousel{
     letter-spacing: 1.5px;
@@ -1540,10 +1556,10 @@ select{
     letter-spacing: 0.7px;
     color: #575757;
     font-family: "Roboto";
-}
+} 
 @media (max-width: 400px) {
     .program-ul-text{
-        padding : 0;
+        padding: 0 0px 0 13px;
     }
 }
 
@@ -1678,13 +1694,14 @@ select{
     }
 }
 .Review{
+    z-index: 5;
     padding: 5%;
-    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+    /* background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%); */
 }
 .Newcards{
     display: flex;
     justify-content: space-around;
-  
+
 }
 @media (max-width:980px) {
     .Newcards{
@@ -1796,9 +1813,7 @@ justify-content: space-between;
         animation: upperText 70ms  forwards;  
     }
  
-.caouselBody{
-    /* background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%); */
-}
+ 
 .first-indicator{
 margin-left: 20px;;
 }

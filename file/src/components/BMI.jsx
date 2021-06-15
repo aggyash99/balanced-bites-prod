@@ -226,6 +226,8 @@ class BMI extends Component{
         $(f).addClass('google_text')
         $(f).removeClass('border-color-red')
     }
+   
+
     render(){
         return(
         <Container className="container-fluid =" style={{backgroundImage:`url(${(image)})`}}>
@@ -271,7 +273,7 @@ class BMI extends Component{
 
 
         <ROW className = "row">
-            <Heading> BMI CALCULATOR </Heading>
+            <Heading id="new" onClick={this.c}> BMI CALCULATOR </Heading>
             <Column >
             <div>
                    <div className="d-flex" >
@@ -280,7 +282,7 @@ class BMI extends Component{
                    <input className="google_random"  onChange={this.setweight}  value={this.state.weight} required></input>
                    <p className="p">Weight</p>
                    </FLOAT>
-                   <Dropdown className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
+                   <Dropdown  onClick={this.c}  className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
                    </div>
                    <div className="d-flex">
                           
@@ -297,7 +299,7 @@ class BMI extends Component{
                     }
                    
                    </FLOAT>
-                    <Dropdown options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
+                    <Dropdown id="new" onClick={this.c} options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
                    
                    
                    </div>
@@ -322,13 +324,14 @@ class BMI extends Component{
 
 );
 
-
-
+                    
     }
 }
 
 
 export default BMI;
+ 
+
 const Animation = Styled.div`
 position : absolute;
 width : 150px;
