@@ -3,15 +3,15 @@ import Logo from '../../Image/logo.png';
 import $ from 'jquery';
 import {findDOMNode} from 'react-dom';
 
-//import ProgramsFeatures from '../ProgramFeatures';
-import './about.css';
-import nopills from '../../Image/pics/pills.svg'
-//import option from '../Image/pics/option.svg';
-import options from '../../Image/pics/food.svg';
-//import whatsApp from '../../Image/pics/whatsapp1.svg'
-import plain from '../../Image/pics/plain1.svg'
-import routine from '../../Image/pics/routine1.svg';
-import logos from '../../Image/logo.png'
+// //import ProgramsFeatures from '../ProgramFeatures';
+// import './about.css';
+// import nopills from '../../Image/pics/pills.svg'
+// //import option from '../Image/pics/option.svg';
+// import options from '../../Image/pics/food.svg';
+// //import whatsApp from '../../Image/pics/whatsapp1.svg'
+// import plain from '../../Image/pics/plain1.svg'
+// import routine from '../../Image/pics/routine1.svg';
+// import logos from '../../Image/logo.png'
 import Styled from 'styled-components';
  import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
@@ -33,8 +33,7 @@ class About extends Component{
       <>
 
 
-    <div className="container-fluid about g-0">
-    {/* <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a> */}
+    <div className="container-fluid about g-0"> 
     <div className="row g-0">
       <div className="col-lg-12 col-md-12 mx-auto">
       <div className="food" >
@@ -95,7 +94,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
             <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout3"><div className="textabouttable">✓  Programs where you don’t feel like being on a ‘diet'.</div></div>
            
             <div className="col-11 bordertemp1"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
-            <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout4"><div className="textabouttable">✓  Flexible schedules & diet plans when you travel.</div></div>
+            <div className="col-11 bordertemp1 expansionabout hiddenelement"id="expabout4"><div className="textabouttable">✓ Flexible schedules & diet plans when you travel.</div></div>
               </div><Reviewcard style={{paddingBottom:"0px"}}/>
       </div>
     </div>
