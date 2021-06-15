@@ -8,14 +8,15 @@ const Newcards = ()=>{
         <>
         <div className="Review"> 
             <span className="main-head">WHAT OUR CLIENT SAY</span>
+            <span className="phone-head">Our Reviews</span>
             <div className="Heading-border">
             <div className='write-review'>
                 <img src={google} alt="G"></img>
-                <span>Review</span>
+                <span>Reviews</span>
                 </div>
-                <span className="center-Heading">Give Your Wishes</span>
+                <span className="center-Heading">WRITE YOUR REVIEW</span>
                 <div className="">
-                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn-for-program">Write your Review</a> 
+                  <a href="https://www.google.com/maps/place/Balanced+Bites/@28.7030936,77.1013804,17z/data=!3m1!4b1!4m5!3m4!1s0x390d03e720796ed7:0xe4c81be8ab95b962!8m2!3d28.7030822!4d77.1035788" className="btn-for-program">Review</a> 
                 </div>
             </div>
 

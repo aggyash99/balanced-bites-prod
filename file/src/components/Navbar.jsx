@@ -3,12 +3,106 @@ import { NavLink , Link } from 'react-router-dom';
 import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
-import data from '../Data/Sdata'
+import data from '../Data/Sdata';
+import DropDownIcon from '@material-ui/icons/ArrowDropDown';
 import CloseIcon from '@material-ui/icons/Close'; 
 function Navbar() {
   function navCollapse(){
+    navOpen=0;
     $("#navFullScreen").addClass("fullscreenMove");
+    $("#navClose").addClass("fullscreenMove2");
+    $("#hamOpt").removeClass("hamTransform");
+    $("#hamOpt2").removeClass("hamTransform2");
+    $("#hamOpt3").removeClass("hamTransform3");
+    $("#primaryHamButton").trigger("focus");
+   
+  }function navExpand(){
+    $("#navFullScreen").removeClass("fullscreenMove");
+    $("#navClose").removeClass("fullscreenMove2");
+    $("#hamOpt").addClass("hamTransform");
+    $("#hamOpt2").addClass("hamTransform2");
+    $("#hamOpt3").addClass("hamTransform3");
+    navOpen=1;
   }
+  function dropdownOpen()
+  {
+    console.log(dropOpen);
+              document.getElementById("dropdown").style.color="#11c220";
+              document.getElementById("dropdown").style.transform="rotateZ(180deg)";
+              
+              dropOpen=1;
+  }
+function dropdownClose()
+{
+  console.log(dropOpen);
+              document.getElementById("dropdown").style.color="black";
+              document.getElementById("dropdown").style.transform="rotateZ(0deg)";
+              dropOpen=0;
+}
+  window.onscroll=function()
+    { if($(window).width()>382){
+       if(document.getElementById("movingpicbg"))
+    document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
+    var dynWidth;
+    var dynWidthDropDown;
+      if(window.scrollY<125)
+      {
+        $("#nav1").addClass("navSmall");
+        $("#nav2").addClass("navSmall");
+        $("#nav3").addClass("navSmall");
+        $("#nav4").addClass("navSmall");
+        dynWidth=240;
+        dynWidthDropDown=17;
+      }
+      else if(window.scrollY>195)
+      {
+        $("#nav1").removeClass("navSmall");
+        $("#nav2").removeClass("navSmall");
+        $("#nav3").removeClass("navSmall");
+        $("#nav4").removeClass("navSmall");
+        dynWidth=170;
+        dynWidthDropDown=5.5;
+      }
+      else
+      {
+        dynWidth=(125-window.scrollY)+240;
+        dynWidthDropDown=17-(window.scrollY-125)/6 ;
+      }}
+      else
+      {
+        if(document.getElementById("movingpicbg"))
+    document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
+    var dynWidth;
+    var dynWidthDropDown;
+      if(window.scrollY<125)
+      {
+        $("#nav1").addClass("navSmall");
+        $("#nav2").addClass("navSmall");
+        $("#nav3").addClass("navSmall");
+        $("#nav4").addClass("navSmall");
+        dynWidth=220;
+        dynWidthDropDown=17;
+      }
+      else if(window.scrollY>195)
+      {
+        $("#nav1").removeClass("navSmall");
+        $("#nav2").removeClass("navSmall");
+        $("#nav3").removeClass("navSmall");
+        $("#nav4").removeClass("navSmall");
+        dynWidth=170;
+        dynWidthDropDown=5.5;
+      }
+      else
+      {
+        dynWidth=(125-window.scrollY)+220;
+        dynWidthDropDown=17-(window.scrollY-125)/6 ;
+      }
+      }
+        document.getElementById("brandImg").style.width=dynWidth+"px";
+      document.getElementById("smp").style.margin=dynWidthDropDown+"px 0 0 0";
+    }
+  var navOpen=0;
+  var dropOpen=0;
   return (
       <>
     {
@@ -18,83 +112,106 @@ function Navbar() {
   <div className="container-fluid">
   <nav className="d-flex">
     <div>
-     <NavLink className="navbar-brand " to="/"><img className="img-fluid img-thumbnail Navbar-image"  src={logo} alt="sorry" style={{}}/></NavLink></div>
-     <button className="btn btn-outline  navHamBurger"  onClick={()=>{$("#navFullScreen").removeClass("fullscreenMove");}}>
-     <span className="navbar-toggler-icon"></span>
-                            </button>
-    </nav>
+     <NavLink className="navbar-brand " to="/"><img className="img-fluid img-thumbnail Navbar-image navImg2"  src={logo} alt="Balanced Bites" id="brandImg" style={{}}/></NavLink></div>
+     
+    </nav><a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
+       console.log(navOpen);
+       if(navOpen==0)
+       {
+        navOpen=1;
+         navExpand();
+       }else
+       { navOpen=0;
+         navCollapse();
+        
+         
+       }
+     }}>
+    <div style={{display:"block"}}><span className="hamMod ham1" id="hamOpt"></span><span className="hamMod ham2" id="hamOpt2"></span><span className="hamMod ham3" id="hamOpt3"></span>
+    </div>      </a>
     <div className=" collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav ms-auto gap-2 ">
+      <ul className="navbar-nav ms-auto ">
        
-      <li className="nav-item "  >
+      <li className="nav-item navDesktop"  >
           <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
+      <li className="nav-item  navDesktop" >
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About" onClick={navCollapse}><span className="nav-name navbarhover " id="nav4">About</span></NavLink>
+          <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
-        <li className="nav-item programHover">
+        <li className="nav-item programHover navDesktop">
          
           <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover" id="nav2">Program</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div>
           <span className="transitionElementProgram"></span>
+<<<<<<< HEAD
           <div className="submenuprogram" ><ul className="submenuprogram" >
+=======
+          <div className="submenuprogram" id="smp"><ul className="submenuprogram" >
+          {/* <li>Weight Loss</li>
+          <li>Weight Gain</li>
+          <li>Diabetes</li>
+>>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
           
           {
             data.map((value , key)=>{
-              return <li><Link  to={{pathname:'/Program',
-              state:{key : key}}} key={key}>{value.title}</Link></li>
+              return <Link  to={{pathname:'/Program',
+              state:{key : key}}} key={key}><li>{value.title}</li></Link>
             })
           }
 
         </ul></div></li>
-        <li className="nav-item ">
+        <li className="nav-item  navDesktop">
           <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact" onClick={navCollapse}><span className="nav-name navbarhover" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
-        <li className="nav-item " >
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About" onClick={navCollapse}><span className="nav-name navbarhover " id="nav4">About</span></NavLink>
-          <div className="navbaranim start-home" id="animNavbar"></div> </li>
       </ul>
       
-    </div>
+    </div> <a className="btn btn-outline navClose fullscreenMove2" id="navClose"  onClick={()=>{navCollapse();navOpen=0;console.log(navOpen)}}>
+                 
+                            </a>
     <div className="fullscreenWrapper fullscreenMove" id="navFullScreen">
     
     <div className="navWrapper " id="">
       <ul className="navItemWrapper">
-      <button className="btn btn-outline navClose "  onClick={()=>{$("#navFullScreen").addClass("fullscreenMove");}}>
-                             <CloseIcon style={{fontSize:"25px"}} />
-                            </button>
+     
       <li className="navItems  " onClick={navCollapse} >
-          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover" id="nav1">Home</span></NavLink>
+          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
-        <li className="navItems programHover" onClick={navCollapse}>
-         
-          <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover" id="nav2">Program</span></NavLink>
-         <div className="navbaranim start-home" id="animNavbar"></div>
-         { /* <span className="transitionElementProgram"></span>
-          <div className="submenuprogram"><ul className="submenuprogram" >
-          {/* <li>Weight Loss</li>
-          <li>Weight Gain</li>
-          <li>Diabetes</li>
-          
-          <li>PCOS</li>
-          <li>Hair Skin Care</li>
-          <li>Detox Diet</li>
-          <li>Pregnancy</li>
-          <li>Child Nutrition</li>
-          <li>Thyroid</li> }
+        <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
+        <a id="dropdown" className=" btn  subMenuDropDownIcon" type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
+        
+        if(dropOpen)
+        { dropdownClose();
+        }
+        else
+        { 
+          dropdownOpen();
+        }
+      }}>   
+      <DropDownIcon/>
+    </a></div>
+           <span className="transitionElementProgram"></span>
+             <div className="submenuMobile collapse" id="subMenuMobile"><ul className="submenuUL" >
+   
           {
             data.map((value , key)=>{
-              return <li><Link  to={{pathname:'/Program',
-              state:{key : key}}} key={key}>{value.title}</Link></li>
+              return <Link  to={{pathname:'/Program',
+              state:{key : key}}} key={key} onClick={navCollapse}><li>{value.title}</li></Link>
             })
           }
 
+<<<<<<< HEAD
         </ul></div>*/}
         </li>
+=======
+        </ul></div></li>
+>>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover" id="nav3">Contact</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover navItemMobile" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name navbarhover " id="nav4">About</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name navbarhover navItemMobile" id="nav4">About</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
       </ul>
       

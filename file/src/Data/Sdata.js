@@ -42,7 +42,7 @@ const Sdata = [
         description : "Polycystic Ovary Syndrome is an endocrine system disorder that affects a woman’s hormone. Most women with PCOD grow a number of small cysts on their ovaries. These cysts are not harmful but they may lead to an imbalance in hormone levels. Women with PCOD may experience menstrual cycle abnormalities, excess hair growth, acne, increased androgen levels, and obesity.",
         second : "Also, women suffering from PCOD are more prone to miscarriage, premature delivery, and gestational diabetes.",
         third : " Our diet plan for PCOD is specifically designed to cure this problem among women. After understanding your lifestyle and body type, we prepare a diet plan that helps you cure PCOD and meets all your body needs. The diet schedule prepared for you is specifically customized in a way that you find your diets easy to prepare in your kitchen.",
-        service : "Eating a well- balanced diet is a must to manage PCOS."
+        service : "Eating a well - balanced diet is a must to manage PCOS."
     },
     {
         imgsrc : Skinhair,
@@ -50,7 +50,7 @@ const Sdata = [
         description:"Shiny hairs and glowing skin may be signs of a great beauty regime, but the importance of a great diet shouldn’t be underestimated.  ",
         second : "Food contains lots of beauty nutrients, which people have used for thousands of years, inside and out. ",
         third : "There’s no magic food that will keep us looking forever young, but diet (and lifestyle and attitude) does affect how your skin looks and ages. A healthy diet can help your hair stay strong and shiny. To keep your skin healthy, eat a well-balanced diet that includes plenty of protein rich foods, fresh fruits & vegetables and liquids.         We give you the best personalized diet plan according to your skin type and a list of foods to eat and avoid. If we \"feed\" skin from the inside, we can't make a mistake.        We also give you special homemade skin care and face pack recipes.",
-        service : "Hair & Skin requires key nutrients."
+        service : " Good nutrition can keep hair and skin healthy & strong."
     },
     {
         imgsrc: Detox,

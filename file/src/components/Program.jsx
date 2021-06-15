@@ -1,19 +1,23 @@
-import React, {useState} from 'react'; 
-import { Link } from 'react-router-dom';
-import Photo from '../Image/pics/program-4.jpg'
-import shape from '../Image/services/b-shape1.png'
+import React, {useState,useEffect} from 'react'; 
+import { Link, Redirect } from 'react-router-dom'; 
 import Newdata from '../Data/Newdata';
-import Sdata from '../Data/Sdata';
+import Sdata from '../Data/Sdata'; 
 import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
+import img from '../Image/pics/whatsapp1.svg'
 const Program =(props)=>{ 
- 
+   
+    useEffect(() => {
+        window.scroll(0,0)
+        }, []);
     const [showB, setB]=useState(false);
-    
     const [showC, setC]=useState(false);
-var title,description,logo,second,third;
- 
+
+    var title,description,logo,second,third,clas;
+  
+
+    if(props.location.state !== undefined){
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -22,23 +26,29 @@ var title,description,logo,second,third;
         second = value.second;
         third = value.third
         logo = value.imgsrc;
+        clas = key;
         return ("");
-    }
+        }
     return ("");
     })
+    }
+    else
+    <Redirect to="/Service"></Redirect>
+
   
 return (
 <>
+{/* {window.onload = window.scroll(0,0)} */}
 <div>
 <div className=" container-fluid">
+
+<a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
     <div className="row photos">
-    <div className="col-12 p-0 position-relative">
+    <div className="col-12 p-0 Programs-head position-relative">
     <img className="steps" src={step}></img>
     <h1 className="service-text">Service</h1>
     </div>
     <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
-   {/* <button className="btn-for-service">Programs</button>
-    <button className="btn-for-service">About</button> */}
     <button className="btn-for-service">Contact Us</button>
     
     </div>
@@ -64,9 +74,17 @@ return (
             
             {
                 Sdata.map( (value,key) =>{
+                    
+                    if(clas ===key){
+                    return( <Link   className="link" style={{background : "#eb2209" , color :"white"}} to={{ pathname:'/Program',
+                    state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
+                    )
+                        
+                    }
+                    
                     return (
-                        <Link   className="link" to={{pathname:'/Program',
-                        state:{key : key}}} key={key}><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
+                        <Link   className="link " to={{ pathname:'/Program',
+                        state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
                     );
                 })
             }
@@ -74,10 +92,9 @@ return (
         </div> 
 
         <div className="col-lg-9 col-md-12 col-12 ">
-        
         <img src={logo} className="PROGRAMS-PHOTO" ></img>
-        {/* </div> */}
         </div>
+
       </div>
         
 
@@ -101,7 +118,7 @@ return (
              </div>
          
         <div className="col-lg-12  pt-3" style={{padding:"0px 10px"}}>
-            <ul style={{listStyle:"none"}}>
+            <ul className="program-ul-text">
             
             
             <li> 

@@ -194,8 +194,8 @@ to {top:210.5px;
 }
 @media (min-width:480px) {
   .underlinebordermodal::after{
-    width:298px;
-    left:101px;
+    width:398px;
+    left:51px;
   }
 }
 .heightincmodal

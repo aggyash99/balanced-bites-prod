@@ -7,16 +7,17 @@ import About from './components/page/About'
 import Contact from './components/page/Contact'
 import Navbar from './components/Navbar'
 import './App.css';
+
+import img from '../src/Image/images/whatsapp-1.png'; 
+ 
+import circle from '../src/Image/images/circle.svg';
 import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Program from './components/Program';
 import Newcards from './components/Newcards'
 function App() {
-
-  //const [loading, set]=useState(true);
  
-  /* eslint-disable */
   const [isLoading, setLoading] = useState(true);
 
   function fakeRequest() {
@@ -50,10 +51,13 @@ function App() {
   const pathname = window.location.pathname;
     
   return (
-    <BrowserRouter>
+    
+    <BrowserRouter> 
+    
     <Header></Header>
     <Navbar pname={pathname}/>
       <Switch>
+        
         <Route exact path = "/" component={Home}/>
         <Route exact path = "/About" component={About}/>
         <Route exact path = "/Contact" component={Contact}/>
@@ -64,6 +68,11 @@ function App() {
       </Switch>
 
       <Footer></Footer>
+      <div  className="screen-bar">
+      <img className="animates" src={circle}></img>
+      <img className="animates1" src={circle}></img>
+       <a href="https://api.whatsapp.com/send?phone=+918700326422"><span><img src={img}></img></span></a>
+    </div>
     </BrowserRouter>
   );
 }

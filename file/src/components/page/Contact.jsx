@@ -1,5 +1,6 @@
-import React, { useState} from 'react'
+import React, { useState , useEffect} from 'react'
 import Map from '../Map';
+import img from '../../Image/pics/whatsapp1.svg'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/LocationOn';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
@@ -194,12 +195,19 @@ window.location.replace("/");
     console.log("Not Visible");
   }
   
+  useEffect(() => {
+    window.scroll(0,0)
+    }, [])
    
   return (
     <>
-  
+    {/* {window.onload = window.scroll(0,0)} */}
+
         <Modal onClose={() => clearform()} show={show} name={Data.fullname}/>
+        
       <div className=" container-fluid contact_div" style={{overflow:"hidden"}}>
+     
+    <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
           <h1 className="text-center contactheading" >Get in Touch <VisibilitySensor
           partialVisibility 

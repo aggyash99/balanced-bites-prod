@@ -30,9 +30,7 @@ style="--i:7"                        */
       if(props.name[i]===' ')
       break;
     }
-    console.log(i);
     shortenedname=props.name.substring(0, i);
-    console.log(shortenedname);
 
   const shortenedname2=shortenedname;
 
