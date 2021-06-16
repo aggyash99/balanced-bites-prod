@@ -116,11 +116,15 @@ ul{
     a{
         color : white;
         display  : flex;
+<<<<<<< HEAD
+        width : 160px;
+=======
         width : 170px;
+>>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
         align-items : center;
         .arrow-in-footer{
         width : 10px;
-       
+            
         }
         
         transition : all 250ms;
