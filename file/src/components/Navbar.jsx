@@ -144,14 +144,7 @@ function dropdownClose()
           <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover" id="nav2">Program</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div>
           <span className="transitionElementProgram"></span>
-<<<<<<< HEAD
           <div className="submenuprogram" ><ul className="submenuprogram" >
-=======
-          <div className="submenuprogram" id="smp"><ul className="submenuprogram" >
-          {/* <li>Weight Loss</li>
-          <li>Weight Gain</li>
-          <li>Diabetes</li>
->>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
           
           {
             data.map((value , key)=>{
@@ -201,12 +194,8 @@ function dropdownClose()
             })
           }
 
-<<<<<<< HEAD
-        </ul></div>*/}
+        </ul></div>
         </li>
-=======
-        </ul></div></li>
->>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
         <li className="navItems  " onClick={navCollapse}>
           <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover navItemMobile" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
