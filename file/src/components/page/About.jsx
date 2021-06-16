@@ -3,15 +3,19 @@ import Logo from '../../Image/logo.png';
 import $ from 'jquery';
 import {findDOMNode} from 'react-dom';
 
-// //import ProgramsFeatures from '../ProgramFeatures';
-// import './about.css';
-// import nopills from '../../Image/pics/pills.svg'
-// //import option from '../Image/pics/option.svg';
-// import options from '../../Image/pics/food.svg';
-// //import whatsApp from '../../Image/pics/whatsapp1.svg'
-// import plain from '../../Image/pics/plain1.svg'
-// import routine from '../../Image/pics/routine1.svg';
-// import logos from '../../Image/logo.png'
+import imgs from '../../Image/owner/bg.jpg';
+import Photo from '../photo';
+import owner from '../../Image/owner/owner2.png'
+import img2 from '../../Image/services/doodle.jpg';
+//import ProgramsFeatures from '../ProgramFeatures';
+import './about.css';
+import nopills from '../../Image/pics/pills.svg'
+//import option from '../Image/pics/option.svg';
+import options from '../../Image/pics/food.svg';
+//import whatsApp from '../../Image/pics/whatsapp1.svg'
+import plain from '../../Image/pics/plain1.svg'
+import routine from '../../Image/pics/routine1.svg';
+import logos from '../../Image/logo.png'
 import Styled from 'styled-components';
  import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
@@ -76,9 +80,31 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     </div>
     </div>
     </div>
+    <div className="container-fluid position-relative overflow-hidden aboutimg2 " >
+       
+        <div className="row home-img" >
+          <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
+              <img  style={{width:"100%",opacity:"0.6"}}  src={imgs} alt ="sorry"></img>
+              <h6 className="aboutlinkh6"> 
+             <Link className="aboutlinklink" to='/contact'> Consult Today  </Link>
+             </h6>
+          
+              <img className="owner1" src={owner}></img>
+               
+          </div>
+          <div>
+         
+          </div>
+          {/* <div className="home-img-fil">
+          </div> */}
+          
+        
+        </div>
+      </div>
+
     <div className="row">
      
-      <div className="col-12 righttextabout fadebackground" >
+      <div className="col-12 righttextabout "  className="carousel2 " style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
         <h1 style={{paddingBottom:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>? </h1>
         <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
         </p>
