@@ -1,6 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components'
-import background from '../Image/pics/page-1.jpg'
+import background from '../Image/pics/page-2.jpg'
 import {Link} from 'react-router-dom'
 function photo() {
     return (
@@ -25,37 +25,45 @@ img{
     width : 100%;
     height : 400px;
     object-fit : cover;
+    transform : scaleX(-1);
+ 
 }
 
 p{
     position : absolute;
-    top : 30%;
-    left : 2%;
+    top : 20%;
+    right : 2%;
+    z-index: 5;
     padding:10px;
     font-family : Kaushan script;
     color : white;
     font-size : 40px;
     font-weight : 700;
-    letter-spacing: 1px;
-        
+    letter-spacing: 1px; 
     @media (max-width : 400px)  
     {
-        font-size : 20px;
+        width : 100%;
+        font-size : 25px;
         word-spacing : 0px;
-        top : 20%;
+        
+        left : 50%;
+        top : 0%;
+        transform: translate(-50%, 30%);
     }
     @media (max-width : 425px)  
     {
-        font-size : 18px;
-        top : 23%;
+        
+        text-align : center;
+        
+        //transform: translate(50%, 14%);
     }
     
     div{
         position : relative;
-        font-family : caveat;
-        font-size : 40px;
-        
-        
+        font-family : 'kaushin' script;
+        font-size : 40px; 
+        margin-top : 10px;
+        width : 100%;
     @media (max-width : 400px)  
     {
         font-size : 30px;
@@ -64,23 +72,25 @@ p{
     
     }
 }
-&:before{
+&:after{
     position : absolute;
     width : 100%;
     height : 100%;
     background : black;
     top: 0;
     left : 0;
-    opacity : 0.4;
+    opacity : 0.5;
     content : "";
+    z-index : 1;
+
 }  
 
  button{
     position : absolute;
-    bottom:15%;
-    left : 15%;
+    bottom:25%;
+    right : 20%;
     padding : 5px 10px;
-    
+    z-index: 5;
     border-radius : 35px;
     outline:none;
     border : 2px solid green;
@@ -103,8 +113,13 @@ p{
             font-weight : 900;    
         }
     }
-    
-}   
-
+      
+@media (max-width : 400px){
+    left : 28%; 
+    bottom : 20%;
+    // top : 50%;
+    // transition : translate(-50%, -50%);
+}
+} 
 
 `

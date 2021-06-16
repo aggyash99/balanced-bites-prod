@@ -1,5 +1,5 @@
 import React,{ Component }  from "react";
-import image from '../Image/pics/bmi-4.jpg'; 
+import image from '../Image/pics/bmi-5.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom"; 
 import reddot from '../Image/images/red.png'; 
@@ -60,8 +60,8 @@ class BMI extends Component{
         return "";
     }
     setweight = (props)=>{
-    
-
+        const  e = findDOMNode(this.refs.output);
+        $(e).removeClass('outnow')
         this.setState({weight : props.target.value});
         return "";
     }
@@ -70,13 +70,14 @@ class BMI extends Component{
     }
     calculate =()=>{
  
-        if(this.state.weight === "" )
+        if(this.state.weight === "" || this.state.weight === "0")
         {
         const  a2 = findDOMNode(this.refs.google);
         $(a2).addClass('border-color-red')
         return ""
         }
-        if(this.state.height == "" && this.state.heightstatus!=="Feet")
+    
+        if(this.state.height == "" && this.state.heightstatus!=="Feet" || parseInt(this.state.height)==0)
         {const  a2 = findDOMNode(this.refs.google1);
         $(a2).addClass('border-color-red')
         return""
@@ -103,9 +104,11 @@ class BMI extends Component{
         const f = findDOMNode(this.refs.google1)
         $(e1).removeClass('google_text')
         $(f).removeClass('google_text')
-        $(e).addClass('outnow');
-  
-
+        
+        const a = findDOMNode(this.refs.google)
+        $(a).removeClass('border-color-red') 
+        const b = findDOMNode(this.refs.google1)
+        $(b).removeClass('border-color-red') 
   
 
       var wei = parseInt(this.state.weight);
@@ -187,7 +190,17 @@ class BMI extends Component{
     {
         this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight",textcolor : "red"});
     }
-    }
+
+    $(e).addClass('outnow');
+    // if(total <= 60)
+    // else
+    // {
+    //     const a = findDOMNode(this.refs.google)
+    //     $(a).addClass('border-color-red') 
+    //     const b = findDOMNode(this.refs.google1)
+    //     $(b).addClass('border-color-red') 
+    // }
+     }
 
     close = ()=>{
         const  e = findDOMNode(this.refs.output);

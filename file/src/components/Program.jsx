@@ -8,11 +8,13 @@ import VisibilitySensor from 'react-visibility-sensor';
 import img from '../Image/pics/whatsapp1.svg'
 const Program =(props)=>{ 
    
-   
+    useEffect(() => {
+        window.scroll(0,0)
+        }, []);
     const [showB, setB]=useState(false);
     const [showC, setC]=useState(false);
 
-    var title,description,logo,second,third;
+    var title,description,logo,second,third,clas;
   
 
     if(props.location.state !== undefined){
@@ -24,6 +26,7 @@ const Program =(props)=>{
         second = value.second;
         third = value.third
         logo = value.imgsrc;
+        clas = key;
         return ("");
         }
     return ("");
@@ -32,9 +35,7 @@ const Program =(props)=>{
     else
     <Redirect to="/Service"></Redirect>
 
-    useEffect(() => {
-        window.scroll(0,0)
-        }, []);
+  
 return (
 <>
 {/* {window.onload = window.scroll(0,0)} */}
@@ -73,6 +74,14 @@ return (
             
             {
                 Sdata.map( (value,key) =>{
+                    
+                    if(clas ===key){
+                    return( <Link   className="link" style={{background : "#eb2209" , color :"white"}} to={{ pathname:'/Program',
+                    state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
+                    )
+                        
+                    }
+                    
                     return (
                         <Link   className="link " to={{ pathname:'/Program',
                         state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>

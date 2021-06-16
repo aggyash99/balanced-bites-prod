@@ -42,7 +42,7 @@ const responsive = {
     return (
         <>
         <div className="Review2" > 
-            <span className="main-head">A WORD FROM OUR CLIENTS</span>
+            <span className="main-head">LET'S HEAR IT FROM OUR CLIENTS</span>
            
             <MyCarousel responsive={responsive}
     keyBoardControl={true}
