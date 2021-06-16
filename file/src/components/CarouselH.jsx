@@ -60,7 +60,7 @@ margin-bottom : 20px;
 li:hover{ 
 }
 ul li button{
-  color : rgb(150,158,171);;
+  color : rgb(150,158,171);
 }
 
 `

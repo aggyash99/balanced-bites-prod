@@ -40,9 +40,9 @@ li:hover .navbarhover{
     background: #ffffff;
     color:rgb(0, 0, 0);
     width:200px;
-    transition:3s all;
     list-style: none;
     padding: 0px;
+
 }
 .submenuprogram ul{
     display: block;
@@ -57,15 +57,14 @@ li:hover .navbarhover{
     padding:14px;
     border-bottom: #e9e9e9 1px solid;
 }
-.submenuprogram ul li:hover{
+.submenuprogram ul a:hover li{
     background: #d3f5d5;
-    color:#11c220;
 }
-  .submenuprogram ul li:last-child{
+  .submenuprogram ul a:last-child li{
   
     border-bottom: none;
 }
-.submenuprogram ul li:first-child{
+.submenuprogram ul a:first-child li{
     border-top:#11c220 3px solid;
 }
 .programHover{
@@ -85,9 +84,8 @@ li:hover .navbarhover{
         display: block;
     }.programHover:hover .submenuprogram{
         display: block;
-        transition: 3s all;
+        
         position: absolute;
-        margin-top:7px;
         transform:translateX(-27px);
     }
     
@@ -122,7 +120,13 @@ li:hover .navbaranim{
     display: flex;
     justify-content: center;
     width:100px;
+    height: 50px;
 }
+}
+@media (max-width:365px){
+    .navHamBurger{
+        left:300px
+    }
 }
 .visibleMobile{
     display:block;
@@ -144,7 +148,7 @@ li:hover .navbaranim{
 }
 .navItemWrapper{
     position: absolute;
-    width:209px;
+    width: 300px;
     padding-top:20px;
     padding:30px;
 }
@@ -158,8 +162,8 @@ li:hover .navbaranim{
 .navClose{
     position: absolute;
     cursor: default !important;
-    margin-left: 30%;
-    width:70%;
+    margin-left: 60%;
+    width:40%;
     left: 0px;
     top:-100px;
     height: 1000px;
@@ -182,13 +186,13 @@ li:hover .navbaranim{
     color:#11c220;
     background: #000000;
  
-    transform:translate(-30px, 40px);
+    transform:translate(-30px, 15px);
 }
 .ham1{   transition: .3s all ease;
-    transform:translate(-30px, 25px);
+    transform:translate(-30px, 0px);
 }
 .ham3{   transition: .3s all ease;
-    transform: translate(-30px, 55px);
+    transform: translate(-30px, 30px);
 }
 .ham2{
     transition: .1s all ease;
@@ -197,14 +201,13 @@ li:hover .navbaranim{
 
 }
 .hamTransform{
-transform :rotateZ(45deg) translate(7px, 55px);
-}
+    transform :translate(-34px, 15px)rotateZ(45deg) }
 .hamTransform2{
     opacity: 0;
 }
 .hamTransform3{
-    transform :translate(-34px,45px)rotateZ(-45deg) ;
-    }
+    transform :translate(-34px,15px)rotateZ(-45deg) ;
+}
     
 @media (max-width:650px) {
     .hamMod{
@@ -247,12 +250,11 @@ transform :rotateZ(45deg) translate(7px, 55px);
 
 .Navbar-image{
     border:none;
-    width:30%;
+    width:170px;
     height:100%;
-    transition: .3s all ease;
 }
 .navImg2{
-    width:40%;
+        width:240px;
 }
 .menu_active{
     color:#11c220 !important;
@@ -262,12 +264,15 @@ transform :rotateZ(45deg) translate(7px, 55px);
     .headerEmail{
         display: none;
     }
+    .navImg2{
+        width:220px;
+    }
 }
-.submenuMobile ul li a{
+.submenuMobile ul a li{
     
     font-family: 'Roboto', sans-serif;
 }
-.submenuMobile ul li:hover a{
+.submenuMobile ul a:hover li{
     transition: .3s all;
 color:#11c220 !important;
 }
@@ -279,18 +284,15 @@ color:#11c220 !important;
     color:#11c220;
     transform:rotateZ(180deg);
 }
-@media (min-width:782px) {
     .subMenuDropDownIcon
 {
     border:none;
-    position: absolute;
-    left:200px;
+    
     transition:.5s all;
-    color:#11c220;
-    top:85px;
+   
 }
 
-}
+
 @media (max-width:782px)
 {
     .fullscreenWrapper{

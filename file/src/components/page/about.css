@@ -1,14 +1,21 @@
- @media (min-width:700px)
-{
-    
-.food{
-  height: 450px;
-    width:100%;
-    background-attachment: fixed; 
-    background-image: url('../../Image/images/About.jpeg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+
+
+@media (min-width:700px)
+{    
+    .food{
+        height: 450px;
+          width:100%;
+          background-attachment: fixed; 
+          background-image: url('../../Image/images/About - Copy.jpeg');
+          background-origin: border-box;
+      background-size:100% ;
+          background-repeat: no-repeat;
+      }
+
+      .headHeadAbout{
+          font-size: 55px;
+          color: black;
+      }
 .headtext
 {
     font-size:200px;
@@ -18,6 +25,19 @@
 .aboutGreenBackground{
     position: relative;
 }
+
+.aboutImgRight{
+    width : 300px;
+height : 480px;
+}
+.aboutImgRight img{
+   
+    width : 380px;
+height : 550px;
+position:relative;
+left:20%;
+top:10%;
+}
 .aboutGreenBackground::before{
     content: '';
     width: 300px;
@@ -26,17 +46,16 @@
     background-color: rgb(170, 247, 147);
     right :25px;
     top : 65px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .aboutGreenBackground img{
 width : 300px;
 height : 480px;
 position: relative;
 top : 80px;
-left : 20%;
-border-radius: 20px;
-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
+left : 30%;
+border-radius: 10px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
 }
 /* .aboutGreenBackground img{
     width : 0%;
@@ -46,21 +65,39 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
     }
 */
 
-.subheadtext
-{
-    font-size: 20px;
-}
 }
 .alignbottomabout
 {
-    padding-top: 339px;
+    padding-top: 187px;
+}
+.subheadtext
+{
+    font-size:35px;
+    padding:0px 20px 20px 20px;
 }
 @media (max-width:700px)
 {
-    .alignbottomabout
-{
-    padding-top: 30px;
-}
+    .food{
+   background-size: 0px;
+  
+   }
+   .alignbottomabout
+   {
+       padding-top:     0px;
+   }
+   .headtext
+   {
+       font-size:200px;
+       
+   
+   }
+   .subheadtext
+   {
+       font-size: 20px;
+   }
+   .headHeadAbout{
+       font-size: 35px;
+   }
 }
 .gradientbg
 {
@@ -72,6 +109,7 @@ box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 
     font-family: 'Antic Didone', serif;
 letter-spacing: 1px;
 font-size: 20px;
+padding-left:20px;
 
 
 }
@@ -84,31 +122,30 @@ font-size: 30px;
 color:#03ac11;
 
 }
-.subheadtext
-{
-    font-size:35px;
-    padding:20px;
-    padding-left:2px;
+.imgWhyChoose{
+    height:110px ;
+    width:290px ;
 }
 @media (min-width:768px) {
     
 .headalignment
 {
     text-align: left;
-    padding-left: 5%;
-    margin-left:0px ;
+    padding:5%;
 }
 }
 @media (max-width:767px)
-{
-    .headalignment
+{.headalignment
     {
-        text-align:left;
-        padding-left: 5%;
+        text-align: left;
+        padding:0% 5%;
     }
-    .text
-    {
-        padding-left: 5%;
+    .aboutImgRight{
+        display: none;
+    }
+    .imgWhyChoose{
+        height:50px ;
+        width:125px ;
     }
 }
 .about{
@@ -148,6 +185,7 @@ color:#03ac11;
     padding-top: 100px;
     padding-bottom:100px;
     padding-left:50px;
+    padding-right:50px;
     background-image: linear-gradient(
         rgba(0, 255, 149, 0.842), 
         rgba(183, 252, 200, 0.877)
@@ -162,7 +200,7 @@ color:#03ac11;
 {
     padding:0px 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 23px;
+    font-size: 20px;
 list-style: none;    
 }
 
@@ -259,9 +297,9 @@ list-style: none;
     
 }
 .textabouttable
-{   padding:20px 0px ;
+{   padding:15px 0px ;
 
-    font-size: 25px;
+    font-size: 20px;
 }
 .expansionabout{
     position: absolute;
@@ -293,5 +331,9 @@ transition: .3s all;
     color:rgb(125, 248, 76);
 }.Review2{
     padding: 5% 0%;
-    background-image: linear-gradient(-225deg, #DFFFCD 0%, #90F9C4 48%, #39F3BB 100%);
+    background-color: transparent;
+}
+.dropdownLine{
+    display: inline-block;
+    
 }

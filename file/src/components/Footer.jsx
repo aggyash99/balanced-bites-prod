@@ -23,7 +23,7 @@ const Footer =()=>{
                 <Img src={logo} alt="footer-img"></Img>
                 
                 <Icons>
-                        <LINKS   className="whatsapp" href="https://wa.link/k2f045" ><WhatsAppIcon></WhatsAppIcon></LINKS>
+                        <LINKS   className="whatsapp" href="https://api.whatsapp.com/send?phone=+918700326422" ><WhatsAppIcon></WhatsAppIcon></LINKS>
                         <LINKS   className="facebook" href="https://www.facebook.com/Balancedbites10/" ><FacebookIcon></FacebookIcon></LINKS>
                         <LINKS  className="mail"  href="balancedbites10@gmail.com" > <MailOutlineIcon ></MailOutlineIcon></LINKS>
                         <LINKS   className="insta" href="https://www.instagram.com/balancedbites10/?r=nametag" ><InstagramIcon  ></InstagramIcon></LINKS>
@@ -67,7 +67,7 @@ const Footer =()=>{
             <FooterLink className="foot3">
             <ul>
             <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
-            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00Am - 7:00 PM</li></div>
+            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00AM - 7:00 PM</li></div>
             <div> <EditLocationIcon className="icon" /> <li>Address : Hno. 288-89 G-26 Sec-3 ROHINI , DELHI</li></div>
             <div><EmailIcon className="icon"/> <li>EMAIL : balancedbites10@gmail.com</li></div>
             </ul>
@@ -96,7 +96,12 @@ li{
 }
 .newlink{
     margin-top : -10px;
-    color : grey;
+    color : white; 
+    @media (max-width : 400px)
+    {
+        margin :  0;
+        padding : 10px 0;
+    }
 }
 ul{
     list-style : none;
@@ -107,7 +112,11 @@ ul{
     a{
         color : white;
         display  : flex;
+<<<<<<< HEAD
         width : 160px;
+=======
+        width : 170px;
+>>>>>>> 70fbed269b15625b9587e2983928822e8d2d3cb9
         align-items : center;
         .arrow-in-footer{
         width : 10px;
@@ -115,7 +124,7 @@ ul{
         }
         
         transition : all 250ms;
-            &:hover{
+            &:hover:not(.newlink){
                 color: green;
             cursor : pointer;
             .arrow-in-footer{
@@ -130,7 +139,14 @@ ul{
         padding : 0;
     }
 }
-
+ul{
+div{
+    @media(max-width : 500px)
+    {
+        padding : 10px 0px;
+    }
+}
+}
 
 display : flex; 
 justify-content : space-around;
@@ -147,7 +163,7 @@ padding : 5px;
 
     @media (max-width : 400px)
     {
-             margin-left : 30px;
+             margin-left : 20px;
     }    
 }
     .span2{

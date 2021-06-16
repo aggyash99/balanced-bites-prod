@@ -1,20 +1,23 @@
-import React, {useState} from 'react'; 
-import { Link } from 'react-router-dom'; 
+import React, {useState,useEffect} from 'react'; 
+import { Link, Redirect } from 'react-router-dom'; 
 import Newdata from '../Data/Newdata';
-import Sdata from '../Data/Sdata';
-import $ from 'jquery';
-import ReactDOM  from "react-dom"; 
+import Sdata from '../Data/Sdata'; 
 import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
 import img from '../Image/pics/whatsapp1.svg'
 const Program =(props)=>{ 
- 
-    const [showB, setB]=useState(false);
- 
-    const [showC, setC]=useState(false);
-    var title,description,logo,second,third;
    
+    useEffect(() => {
+        window.scroll(0,0)
+        }, []);
+    const [showB, setB]=useState(false);
+    const [showC, setC]=useState(false);
+
+    var title,description,logo,second,third,clas;
+  
+
+    if(props.location.state !== undefined){
     Newdata.map( (value,key)=>{
         if(key===(props.location.state.key))
         {
@@ -23,13 +26,19 @@ const Program =(props)=>{
         second = value.second;
         third = value.third
         logo = value.imgsrc;
+        clas = key;
         return ("");
-    }
+        }
     return ("");
     })
- 
+    }
+    else
+    <Redirect to="/Service"></Redirect>
+
+  
 return (
 <>
+{/* {window.onload = window.scroll(0,0)} */}
 <div>
 <div className=" container-fluid">
 
@@ -65,6 +74,14 @@ return (
             
             {
                 Sdata.map( (value,key) =>{
+                    
+                    if(clas ===key){
+                    return( <Link   className="link" style={{background : "#eb2209" , color :"white"}} to={{ pathname:'/Program',
+                    state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>
+                    )
+                        
+                    }
+                    
                     return (
                         <Link   className="link " to={{ pathname:'/Program',
                         state:{key : key}}} key={key} ><span dangerouslySetInnerHTML={{__html: value.title}}></span> </Link>

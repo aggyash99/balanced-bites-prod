@@ -8,6 +8,7 @@ import center from '../Image/pics/center.jpg'
 import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
+        <> 
         <div className="container">
           
         <Top className="row">  
@@ -82,8 +83,8 @@ import Styled from 'styled-components';
 
             <Main className="col-lg-12">
             
-            <Content >
-                <Card>
+            <Content className="tick">
+            <Card>
             <Img className="tick_mark">
             <img alt="alt" src={plain}></img>
             </Img>
@@ -113,7 +114,7 @@ import Styled from 'styled-components';
 
             </LAST>    
     </div>
-    
+    </>
     
     );
 }
@@ -150,9 +151,7 @@ display: flex;
     flex-direction: column;
     justify-content: space-between;
     &:hover{
-      //  box-shadow : 0px 10px 10px 0px #f9f9f9;
-        background : #grey;
-       
+      box-shadow : 0px 10px 10px 0px #f9f9f9;
       }
 `
 const Img = Styled.div`
@@ -171,9 +170,7 @@ border-radius : 50%;
     transition : all 250ms;
     padding : 0px;
     box-shadow : 1px 0px 0px 12px #f5f5f5;
-    &:hover{
-      //  box-shadow : 0px 0px 0px 6px #b8f090;
-    }
+    
 } 
 
 `

@@ -1,5 +1,5 @@
 import React,{ Component }  from "react";
-import image from '../Image/pics/bmi-2.jpg'; 
+import image from '../Image/pics/bmi-5.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom"; 
 import reddot from '../Image/images/red.png'; 
@@ -16,7 +16,7 @@ const WeightCategory = [
   'Kg','Pounds'
 ];
 const HeightCategory = [
-    'Centimeter','Meter', 'Feet'
+    'Centimeter', 'Feet'
   ];
 let defaultWeight = WeightCategory[0];
 let defaultHeight = HeightCategory[0];
@@ -55,28 +55,13 @@ class BMI extends Component{
         return ""
     }
     setheight = (props) =>{
-        // const  a2 = findDOMNode(this.refs.google1);
-        // if(props.target.value > 70)
-        // {
-        // $(a2).addClass('border-color-red');
-        // return ""
-        // }
-        // else 
-        // $(a2).removeClass('border-color-red')
-
+   
         this.setState({height : props.target.value});
         return "";
     }
     setweight = (props)=>{
-        // const  a2 = findDOMNode(this.refs.google);
-        // if(props.target.value > 70)
-        // {
-        // $(a2).addClass('border-color-red');
-        // return ""
-        // }
-        // else 
-        // $(a2).removeClass('border-color-red')
-
+        const  e = findDOMNode(this.refs.output);
+        $(e).removeClass('outnow')
         this.setState({weight : props.target.value});
         return "";
     }
@@ -84,19 +69,15 @@ class BMI extends Component{
         this.setState({Feetheight : props.target.value})
     }
     calculate =()=>{
-        
-       
-        // if(this.state.weight === "" || (this.state.height == "" && this.state.heightstatus!=="Feet")){
-        // this.setState({height:"",weight:"",});
-        // return "";
-        // }
-        if(this.state.weight === "" )
+ 
+        if(this.state.weight === "" || this.state.weight === "0")
         {
         const  a2 = findDOMNode(this.refs.google);
         $(a2).addClass('border-color-red')
         return ""
         }
-        if(this.state.height == "" && this.state.heightstatus!=="Feet")
+    
+        if(this.state.height == "" && this.state.heightstatus!=="Feet" || parseInt(this.state.height)==0)
         {const  a2 = findDOMNode(this.refs.google1);
         $(a2).addClass('border-color-red')
         return""
@@ -123,9 +104,11 @@ class BMI extends Component{
         const f = findDOMNode(this.refs.google1)
         $(e1).removeClass('google_text')
         $(f).removeClass('google_text')
-        $(e).addClass('outnow');
-  
-
+        
+        const a = findDOMNode(this.refs.google)
+        $(a).removeClass('border-color-red') 
+        const b = findDOMNode(this.refs.google1)
+        $(b).removeClass('border-color-red') 
   
 
       var wei = parseInt(this.state.weight);
@@ -207,7 +190,17 @@ class BMI extends Component{
     {
         this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight",textcolor : "red"});
     }
-    }
+
+    $(e).addClass('outnow');
+    // if(total <= 60)
+    // else
+    // {
+    //     const a = findDOMNode(this.refs.google)
+    //     $(a).addClass('border-color-red') 
+    //     const b = findDOMNode(this.refs.google1)
+    //     $(b).addClass('border-color-red') 
+    // }
+     }
 
     close = ()=>{
         const  e = findDOMNode(this.refs.output);
@@ -272,7 +265,7 @@ class BMI extends Component{
             <div className="barText p-1">
             <h6 style={{fontSize:"17px", fontWeight:"550"}}>{this.state.content}</h6>
             </div>
-            </Output>
+        </Output>
 
 
 
@@ -372,11 +365,9 @@ box-shadow: 0px 0px 1500px 2px #80808091;
 padding : 10px; 
 background : white;
 min-width : 300px; 
-max-width : 320px;
+max-width : 340px;
 border-radius : 10px;
 bottom : 10%;
-
- 
 
 h1{
     // background :#b1aa8029;
@@ -440,7 +431,7 @@ justify-content : center;
 const ROW = Styled.div`
 display : flex;
 justify-content : flex-end;
-padding : 0  40px 0 10px;
+padding :0 20px;
 @media(max-width : 400px)
 {
     padding : 5px;
@@ -475,7 +466,7 @@ div{
 }
 .Dropdown-option.is-selected{
     width : 100%;
-    background: #629c6e;
+    background: #74d37b;
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -485,14 +476,14 @@ div{
     font-weight : 600;
     transition : all 250ms;    
 &:hover:not(.Dropdown-option.is-selected){
-    background-color: #aaefb0;;
+    background-color: #d3f5d5;;
    
     
 }   
 }
 .Dropdown-menu{
     padding : 0px;
-    margin-top : 1px;
+    margin-top : 0px;
     border-radius: 3px;
 }
 .Dropdown-control{
@@ -574,7 +565,7 @@ letter-spacing : 5px;
 margin-bottom : 5px;
 padding : 0 50px;
 color:#0f0c4dc9;
-@media(max-width : 400px)
+@media(max-width : 450px)
 {
     text-align : left;
     font-size : 40px;   
