@@ -135,6 +135,9 @@ function dropdownClose()
       <li className="nav-item navDesktop"  >
           <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
+      <li className="nav-item  navDesktop" >
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About" onClick={navCollapse}><span className="nav-name navbarhover " id="nav4">About</span></NavLink>
+          <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
         <li className="nav-item programHover navDesktop">
          
@@ -163,9 +166,6 @@ function dropdownClose()
         <li className="nav-item  navDesktop">
           <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact" onClick={navCollapse}><span className="nav-name navbarhover" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
-        <li className="nav-item  navDesktop" >
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About" onClick={navCollapse}><span className="nav-name navbarhover " id="nav4">About</span></NavLink>
-          <div className="navbaranim start-home" id="animNavbar"></div> </li>
       </ul>
       
     </div> <a className="btn btn-outline navClose fullscreenMove2" id="navClose"  onClick={()=>{navCollapse();navOpen=0;console.log(navOpen)}}>

@@ -24,7 +24,7 @@ return (
         <div className=" position-relative">
         <div className="text-center d-flex flex-column end-line">
         <span className="programs-head "><span  style={{color:"green", marginRight:"6px"}}>Our</span><span className="in-phone borderbottom">Programs</span></span>
-        <span className="programs-head-des">Diet plans designed to meet everyone's every nutrition need.</span>
+        <span className="programs-head-des">Diet plans that work for your personal goal.</span>
        
         </div>
         </div>
