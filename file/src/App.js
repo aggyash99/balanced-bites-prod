@@ -16,7 +16,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Program from './components/Program';
 import Newcards from './components/Newcards';
-import Loader  from "./components/Loader";
+// import Loader  from "./components/Loader";
 function App() {
 
     
@@ -34,7 +34,7 @@ function App() {
       <Route exact path ="/Program" component={Program} />
       <Route exact path ="/Newcards" component={Newcards}></Route>
       
-      <Route exact path ="/loader" component={Loader}></Route>
+      {/* <Route exact path ="/loader" component={Loader}></Route> */}
       <Redirect to="/"/>
     </Switch>
  

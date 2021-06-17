@@ -1,14 +1,12 @@
-import React, { lazy , Suspense} from 'react';
-import Loader  from "./Loader";
-const ServiceRender = lazy(()=> import('./ServiceRender'))
+import React  from 'react'; 
+import ServiceRender  from './ServiceRender';
 
 const Service = () =>{
 
 return (
-  <>
-  <Suspense fallback={<Loader />}>
+  <> 
   <ServiceRender />
-  </Suspense>
+ 
     
 </>
 );
