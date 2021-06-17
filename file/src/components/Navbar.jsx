@@ -4,8 +4,7 @@ import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
 import data from '../Data/Sdata';
-import DropDownIcon from '@material-ui/icons/ArrowDropDown';
-import CloseIcon from '@material-ui/icons/Close'; 
+import DropDownIcon from '@material-ui/icons/ArrowDropDown'; 
 function Navbar() {
   function navCollapse(){
     navOpen=0;

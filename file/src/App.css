@@ -1916,3 +1916,12 @@ outline: none;
 .react-multi-carousel-list button:focus{
     outline: none;
 }
+
+.__loader{
+    height: 700px;
+}
+.__loader img{
+    position: relative;
+    top: 38%;
+    left: 48%;
+}

@@ -16,8 +16,7 @@ function Home() {
   }, [])
   return (
     <>
-    
-    <section className = "header" id="headerindex" >
+      <section className = "header" id="headerindex" >
    
       <div className="container-fluid position-relative overflow-hidden" >
         <div className="row home-img" >
@@ -33,21 +32,20 @@ function Home() {
               Muskan Bansal
               </div>
              <div className="" style={{marginLeft:"10px",marginTop:"0px"}}> 
-             <Link to='/contact'>Contact Us </Link>
-             {/* <Link to='/contact'>Programs </Link> */}
-             </div>
+             <Link to='/contact'>Contact Us </Link>  
+                         </div>
           </p>
           <h6>Healthy Mood, Healthy Mind
              <Link to='/contact'> Consult Today  </Link>
           </h6>
           
           </div>
-          {/* <div className="home-img-fil">
-          </div> */}
+          
           
         
         </div>
       </div>
+     
 
 
       <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
@@ -83,7 +81,10 @@ function Home() {
       </div>
      
     </section>
+ 
+ 
     </>
+ 
   );
 }
 

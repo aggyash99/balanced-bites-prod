@@ -7,11 +7,10 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-import Styled from 'styled-components'; 
-import backgroundImage from '../Image/services/bmi.jpg'
+import Styled from 'styled-components';  
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; 
-
+// import p from '../Image/Review/logo.svg'
 const WeightCategory = [
   'Kg','Pounds'
 ];
@@ -232,7 +231,7 @@ class BMI extends Component{
         return(
         <Container className="container-fluid =" style={{backgroundImage:`url(${(image)})`}}>
         
-        
+    
 
 
         <MAIN>
