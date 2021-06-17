@@ -1918,10 +1918,13 @@ outline: none;
 }
 
 .__loader{
-    height: 700px;
-}
-.__loader img{
-    position: relative;
-    top: 38%;
-    left: 48%;
-}
+    height: calc(100vh - 120px);
+    width: 95vw;
+       position: relative;
+   }
+   .__loader img{
+      position:absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50% , -50%);
+   }
