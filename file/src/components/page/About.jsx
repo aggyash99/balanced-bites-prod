@@ -20,7 +20,7 @@ import Styled from 'styled-components';
  import img from '../../Image/pics/whatsapp1.svg'
 import Reviewcard from '../Newcards2';
 import { Link } from 'react-router-dom';
-import SmallerIMG from '../../Image/images/About Smaller Img2.png';
+import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
 
 class About extends Component{
 
@@ -72,8 +72,8 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
   </div>
       </div>
 
-      <div className="col-lg-4 col-md-4 d-none d-sm-block "  >
-      <div className="aboutImgRight"><img src={SmallerIMG} alt=" "></img>
+      <div className="col-lg-4 col-md-4 d-none d-md-block "  >
+      <div className="aboutGreenBackground"><img src={SmallerIMG} alt=" "></img>
       </div>
       </div>
 
@@ -109,7 +109,7 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
         <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
         </p>
         <div className="row ">
-            <div className="col-11 bordertemp1"><div className="textabouttable" >✓  Customized diet plans according to your lifestyle.</div></div>
+            <div className="col-11 bordertemp1"><div className="textabouttable" ><span className="tickaboutTabl">✓</span>  Customized diet plans according to your lifestyle.</div></div>
             <div className="col-11 bordertemp1 hiddenelement expansionabout expabout1" id="expabout1" ><div className="textabouttable">✓  Customized diet plans according to your lifestyle.</div>
             <list><ul>1</ul><ul>1</ul><ul>1</ul><ul>1</ul></list></div>
               
