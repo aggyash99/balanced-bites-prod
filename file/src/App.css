@@ -217,7 +217,7 @@ width: 100%;
 .home-img p a{
         text-align: center;
         width: 100%;
-        padding: 5px 30px;
+        padding: 8px 20px;
         /* padding-left: 10px; */
         font-size: 20px;
         border-radius: 35px;
@@ -1698,7 +1698,7 @@ select{
 .center-Heading{
     color: black;
     font-size: 35px ;
-    font-family:roboto;
+    font-family: roboto;
     font-weight: 600;
     letter-spacing: 3px;
      

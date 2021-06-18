@@ -31,7 +31,7 @@ function Home() {
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>
-             <div className="" style={{marginLeft:"10px",marginTop:"0px"}}> 
+             <div  className="muskan-button" style={{marginLeft:"10px",marginTop:"10px"}}> 
              <Link to='/contact'>Contact Us </Link>  
                          </div>
           </p>
