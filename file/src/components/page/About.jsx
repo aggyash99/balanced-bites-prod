@@ -38,7 +38,7 @@ class About extends Component{
 </div>
 
 </div>
-<div className="container-fluid position-relative overflow-hidden aboutimg2 " >
+{/*<div className="container-fluid position-relative overflow-hidden aboutimg2 " >
        
         <div className="row home-img" >
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
@@ -54,10 +54,14 @@ class About extends Component{
           {/* <div className="home-img-fil">
           </div> */}
           
-        
+        {/*
         </div>
+      </div>*/}
+      <div>
+    <div className="col-12 aboutGreenBGDivClass"  >
+      <div className="aboutPhotoMobile "><img src={SmallerIMG} alt=" "></img>
+      </div></div>
       </div>
-    
       <div className="row d-flex">
       <div className="col-lg-8 col-md-8 " style={{paddingTop:"0px 20px 20px 20px"}}>
       <div className="col-lg-10 col-md-10 mx-auto">
@@ -88,18 +92,20 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
 
     <div className="row">
      
-      <div className="col-12 righttextabout "  className="carousel2 " style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
-        <h1 style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>? </h1>
+      <div className="col-12 righttextabout "  className="carousel22 " style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
+        <h1 className="h1aboutWhyChoose" style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>? </h1>
+        <div className="whychoosedivhead"><h1 style={{padding:"20px 0px",textAlign:"center",   display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/> </h1>
+        </div>
         <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
         </p>
         <div className="row " style={{padding:"0px 20px"}}>
-            <div className="col-11 bordertemp1"><div className="textabouttable" ><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span>Customized diet plans according to your lifestyle.</div></div>
+            <div className="col-11 bordertemp1"><div className="textabouttable" ><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span><span className="pointAbout">Customized diet plans according to your lifestyle.</span></div></div>
      
               
             <div className="col-11 bordertemp1"><div className="textabouttable"><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span><span className="pointAbout">No external machines, pills, or supplements required.</span></div></div>
-            <div className="col-11 bordertemp1"><div className="textabouttable"><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span>Programs where you don’t feel like being on a ‘diet'.</div></div>
+            <div className="col-11 bordertemp1"><div className="textabouttable"><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span><span className="pointAbout">Programs where you don’t feel like being on a ‘diet'.</span></div></div>
             
-            <div className="col-11 bordertemp1"><div className="textabouttable"><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span>Flexible schedules & diet plans when you travel.</div></div>
+            <div className="col-11 bordertemp1"><div className="textabouttable"><span className="tickAbout">✓</span><span style={{fontSize:"30px"}}>&nbsp;</span><span className="pointAbout">Flexible schedules & diet plans when you travel.</span></div></div>
             </div><Reviewcard style={{paddingBottom:"0px"}}/>
       </div>
     </div>

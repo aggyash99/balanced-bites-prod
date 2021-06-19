@@ -22,9 +22,6 @@
     
 
 }
-.aboutGreenBackground{
-    position: relative;
-}
 
 .aboutImgRight{
     align-items:flex-start;
@@ -38,14 +35,14 @@ height : 550px;
 .aboutgreenbgdiv{
     display: block;
 }
-@media (max-width:900px) {
-    .aboutGreenBackground{
-        display: none;
-    }
-    .aboutgreenbgdiv{
-        display: none;
-        visibility: hidden;
-    }
+
+.aboutGreenBGDivClass{
+    display: none;
+}
+.aboutGreenBackground{
+    position: relative;
+    display:inline-block
+}
 }
 .aboutGreenBackground::before{
     content: '';
@@ -63,9 +60,72 @@ height : 480px;
 position: relative;
 top : 85px;
 right : 0px;
+transition:.3s;
 border-radius: 2px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+.aboutGreenHide{
+    display: none;
+}
+@media (max-width:900px) {
+    .aboutGreenBackground{
+        display: none;
+       
+    }
+    .aboutGreenBGDivClass{
+        display: block;
+    }
+    .aboutgreenbgdiv{
+        display: block;
+        visibility: hidden;
+    }.aboutGreenBackground::before{
+        display: none;
+        left:5%;
+        bottom:5%;
+    }
+}
+.aboutPhotoMobile{
+    display: flex;
+    justify-content: center;
+}
+.aboutPhotoMobile img{
+  z-index: 100;
+width : 200px;
+height : 320px;
+border-radius: 2px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.aboutPhotoMobile::after{
+    content: '';
+    width: 200px;
+    height: 320px;
+    position:absolute;
+    background-color: rgb(170, 247, 147);
+   transform:translateX(10px) translateY(-10px);
+    
+    border-radius: 2px;
+}
+.h1aboutWhyChoose{
+    display: block;
+}
+.whychoosedivhead{
+    display: none;
+}
+@media (max-width:900px) {
+    .h1aboutWhyChoose{
+display: none !important;
+    }
+    .whychoosedivhead{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutGreenBackground img{
+        display: block;
+        top:45%;
+    }
+    .aboutGreenHide{
+        display: block;;
+    }
 /* .aboutGreenBackground img{
     width : 0%;
     height : 90%;
@@ -142,6 +202,13 @@ color:#03ac11;
     text-align: left;
     padding:0% 7%;
 }
+.pointAbout{
+    display: inline-block;
+    transform:translateY(-4px)
+}
+}
+.newcarsheading1{
+    display: block;
 }
 @media (max-width:900px)
 {.headalignment
@@ -153,8 +220,11 @@ color:#03ac11;
         display: none;
     }
     .imgWhyChoose{
-        height:50px ;
-        width:125px ;
+        height:100px ;
+        width:250px ;
+    }
+    .newcarsheading1{
+        display: none !important;
     }
 }
 .about{
@@ -414,9 +484,10 @@ transition: .3s all;
         display: block !important;
         font-size: 32px !important;
         padding:2% !important;
+        text-align: center !important;
     }
     .aboutMobileHeading{
-        display:inline;
+        display:inline !important;
     }
     .text{
         padding-right:30px;
