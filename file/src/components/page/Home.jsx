@@ -16,14 +16,8 @@ function Home() {
   }, [])
   return (
     <>
-    
-  {/* {window.onload = window.scroll(0,0)} */}
-    <section className = "header" id="headerindex" >
-    {/* <div  className="screen-bar">
-      <img className="animates" src={circle}></img>
-      <img className="animates1" src={circle}></img>
-       <a href="https://wa.link/k2f045"><span><img src={img}></img></span></a>
-    </div> */}
+      <section className = "header" id="headerindex" >
+   
       <div className="container-fluid position-relative overflow-hidden" >
         <div className="row home-img" >
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
@@ -37,25 +31,24 @@ function Home() {
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>
-             <div className="" style={{marginLeft:"10px",marginTop:"0px"}}> 
-             <Link to='/contact'>Contact Us </Link>
-             {/* <Link to='/contact'>Programs </Link> */}
-             </div>
+             <div  className="muskan-button" style={{marginLeft:"10px",marginTop:"10px"}}> 
+             <Link to='/contact'>Contact Us </Link>  
+                         </div>
           </p>
           <h6>Healthy Mood, Healthy Mind
              <Link to='/contact'> Consult Today  </Link>
           </h6>
           
           </div>
-          {/* <div className="home-img-fil">
-          </div> */}
+          
           
         
         </div>
       </div>
+     
 
 
-      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"no-repeat"}} >
+      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
           <div className="caouselBody">
       <div className="text-center Home-carousel d-flex justify-content-center">
       <p>Our</p><VisibilitySensor
@@ -88,7 +81,10 @@ function Home() {
       </div>
      
     </section>
+ 
+ 
     </>
+ 
   );
 }
 

@@ -50,30 +50,7 @@ class ServicesCards extends Component{
 
 
 
-
-
-
-{/*
-  <div className="maincards"  onMouseLeave={this.leave} > 
-  <div >
-  <img className="card-img-top " onMouseOver={this.hand} ref="img" src={this.props.imgsrc} alt="Card image cap"  />
-  </div>
-  <div className="card-body servicecards"  onMouseOver={this.hand}>
-  <h5 className=" text-center" >{this.props.title}</h5>
-  
-  
-  <div className="Cardbody" >
-  <div className="textforprogram" not use anywhere > 
-  <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus architecto inventore hic blanditiis commodi, perferendis illum voluptatibus at nostrum rem asperiores totam facilis eaque nesciunt impedit recusandae maxime! Quas, accusamus.</span>
-  </div>
-  <div className="buttomonservice">
-  
-  </div>
-  </div>
-
-  </div>
-  </div>
-  */}
+ 
 </div>
 
 

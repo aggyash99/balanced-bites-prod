@@ -1,35 +1,8 @@
-import React,{ Component } from 'react';
-import Logo from '../../Image/logo.png';
-import $ from 'jquery';
-import {findDOMNode} from 'react-dom';
-
-import imgs from '../../Image/owner/bg.jpg';
-import Photo from '../photo';
-import owner from '../../Image/owner/owner2.png'
-import img2 from '../../Image/services/doodle.jpg';
-//import ProgramsFeatures from '../ProgramFeatures';
-import './about.css';
-import nopills from '../../Image/pics/pills.svg'
-//import option from '../Image/pics/option.svg';
-import options from '../../Image/pics/food.svg';
-//import whatsApp from '../../Image/pics/whatsapp1.svg'
-import plain from '../../Image/pics/plain1.svg'
-import routine from '../../Image/pics/routine1.svg';
-import logos from '../../Image/logo.png'
-import Styled from 'styled-components';
- import img from '../../Image/pics/whatsapp1.svg'
-import Reviewcard from '../Newcards2';
-import { Link } from 'react-router-dom';
-import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
+import React,{ Component, lazy, Suspense } from 'react';
+import AboutRender from './AboutRender'
 
 class About extends Component{
-
-  opens =()=>{
-    const o = findDOMNode(this.refs.toggle);
-   $(o).addClass('ankur');
-   }
-  
-
+ 
   render(){
     
   window.onload = window.scroll(0,0);
@@ -121,103 +94,11 @@ She founded Balanced Bites in 2019, located in Rohini, Delhi. She deals with ind
     </div>
 
     </>
+
   );
 }
 }
 
 
 export default About;
-
-const CenterImg = Styled.div`
-//position : relative;
- 
-`
-const Main = Styled.div`
-display : flex;
-justify-content : center;
-position : relative;
-border: 1px solid black;
- 
-`
-
-const Content = Styled.div`
-border: 1px solid white;
-padding : 20px;
-margin-bottom : 20px;
-background: #f5f5f5;
-cursor : pointer;
-border-radius : 1000px;
-box-shadow : 1px 1px 2px 2px rgb(240,240,249);
-transition : all 250ms;
-// &:hover{
-//     box-shadow : 0px 30px 10px 0px #f9f9f9;
-//     background : #ffffff;
-// }
-//box-shadow : 1px 0px 0px 12px #f5f5f5;
-    &:hover{
-        box-shadow : 2px 2px 2px 2px #b1f090;
-        background-color:white;
-   
-    }
-`
-const Card = Styled.div` 
-
-`
-const Img = Styled.div`
-position :relative;
-cursor : pointer; 
-padding-top:50px;
-img{
-    
-border-radius : 50%;
-    width : 70px;
-    height : 70px; 
-    position : absolute;
-    bottom : 5px;
-    z-index : 0;
-    left : 50%;
-    transform:translate(-50%);    
-    background : #f9f9f9;
-    transition : all 250ms;
-    padding : 0px;
-  
-} 
-`
-const Writeup = Styled.div`
-position : relative;
-bottom : -5%;
-letter-spacing: 1.5px;
-text-align : center;
-font-size : 19px;
-font-weight: 550;
-`
-const Center = Styled.div`
- 
-
-img{
-    width :100%;
-    height : 100%;
-    object-fit : contain;
-}
-
-@media (max-width : 900px)
-{
-    display : none;
-}
-
-`
- 
-const Descriptions = Styled.div`
-font-size : 15px;
-padding: 10px 100px;
-color : #000000;
-@media (max-width : 400px)
-{
-    padding : 10px 0px;
-}
-`
-const MidHead = Styled.div`
-color : #000000;
-font-family : roboto;
-`
  

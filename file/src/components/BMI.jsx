@@ -7,11 +7,10 @@ import bluedot from '../Image/images/blue.png';
 import greendot from '../Image/images/green.png';
 import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-import Styled from 'styled-components'; 
-import backgroundImage from '../Image/services/bmi.jpg'
+import Styled from 'styled-components';  
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; 
-
+// import p from '../Image/Review/logo.svg'
 const WeightCategory = [
   'Kg','Pounds'
 ];
@@ -226,11 +225,13 @@ class BMI extends Component{
         $(f).addClass('google_text')
         $(f).removeClass('border-color-red')
     }
+   
+
     render(){
         return(
         <Container className="container-fluid =" style={{backgroundImage:`url(${(image)})`}}>
         
-        
+    
 
 
         <MAIN>
@@ -271,7 +272,7 @@ class BMI extends Component{
 
 
         <ROW className = "row">
-            <Heading> BMI CALCULATOR </Heading>
+            <Heading id="new" onClick={this.c}> BMI CALCULATOR </Heading>
             <Column >
             <div>
                    <div className="d-flex" >
@@ -280,7 +281,7 @@ class BMI extends Component{
                    <input className="google_random"  onChange={this.setweight}  value={this.state.weight} required></input>
                    <p className="p">Weight</p>
                    </FLOAT>
-                   <Dropdown className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
+                   <Dropdown  onClick={this.c}  className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
                    </div>
                    <div className="d-flex">
                           
@@ -297,7 +298,7 @@ class BMI extends Component{
                     }
                    
                    </FLOAT>
-                    <Dropdown options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
+                    <Dropdown id="new" onClick={this.c} options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
                    
                    
                    </div>
@@ -322,13 +323,14 @@ class BMI extends Component{
 
 );
 
-
-
+                    
     }
 }
 
 
 export default BMI;
+ 
+
 const Animation = Styled.div`
 position : absolute;
 width : 150px;
