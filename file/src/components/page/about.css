@@ -55,7 +55,7 @@ height : 550px;
     background-color: rgb(170, 247, 147);
    transform:translateX(20px);
     top : 65px;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .aboutGreenBackground img{
 width : 300px;
@@ -63,8 +63,8 @@ height : 480px;
 position: relative;
 top : 80px;
 right : 0px;
-border-radius: 10px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
+border-radius: 2px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 2px 2px 0px;/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
 }
 /* .aboutGreenBackground img{
     width : 0%;
@@ -140,7 +140,7 @@ color:#03ac11;
 .headalignment
 {
     text-align: left;
-    padding:0% 5%;
+    padding:0% 7%;
 }
 }
 @media (max-width:900px)
@@ -285,38 +285,59 @@ list-style: none;
 {    background: #ffffff8e;
     border-radius: 20px;
     margin:10px;
+    
     transition: .3s all;
-    padding:0px  -20px;
-
+    padding:0px  20px;
     position: relative;
     cursor: default;
-}
+}/*
 .bordertemp1::first-letter{
-    font-size: 30px;
+   
     opacity: 0;
-}
+}*/
 .bordertemp1:hover{
     background: white;
     letter-spacing: 2px;
     transition: .3s all;
-    padding:0px 20px;
-}
+}/*
 .bordertemp1:hover::first-letter{
    color:#03ac11;
    font-weight: 900;
    opacity: 1;
-   transition: opacity 3s ;
     
-}
+}*/
 .textabouttable
 {   padding:15px 0px ;
-transition: .3s all;
     font-size: 20px;
+}
+.tickAbout{
     position: relative;
-    transform: translateX(-30px);
+font-size: 0px;
+transition:.3s;
+}
+.bordertemp1:hover .textabouttable .tickAbout{
+display: inline;
+transition:.3s all;
+width:200px;
+font-size: 30px;   color:#03ac11;
+font-weight: 900;
+}
+@media (max-width:900px)
+{
+    .tickAbout{
+        font-size: 30px;
+        opacity: 0;
+    }.bordertemp1:hover .textabouttable .tickAbout{
+        opacity: 1;
+    }
+
+    .bordertemp1:hover{
+        background: white;
+        letter-spacing: 0px;
+        transition: .3s all;
+    }
 }
 .bordertemp1:hover .textabouttable{
-    transform: translateX(0px);
 }
 .expansionabout{
     position: absolute;
@@ -381,4 +402,23 @@ transition: .3s all;
         right:9%;
         top: 0px !important;
         position: absolute;
+}
+.carouselMobileHeading{
+    display: none !important;
+}
+.aboutMobileHeading{
+    display: none !important;
+}
+@media (max-width:900px) {
+    .carouselMobileHeading{
+        display: block !important;
+        font-size: 32px !important;
+        padding:2% !important;
+    }
+    .aboutMobileHeading{
+        display:inline;
+    }
+    .text{
+        padding-right:30px;
+    }
 }

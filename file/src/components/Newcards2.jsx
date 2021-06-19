@@ -43,12 +43,12 @@ const responsive = {
         <>
         <div className="Review2" > 
             <span className="main-head">LET'S HEAR IT FROM OUR CLIENTS</span>
-           
+           <span className="main-head carouselMobileHeading">OUR REVIEWS</span>
             <MyCarousel responsive={responsive}
     keyBoardControl={true}
     removeArrowOnDeviceType={["tablet","mobile"]}
-    showDots={false}
-    arrows={false}
+    showDots={true}
+    arrows={true}
     autoPlay={true}
     autoPlaySpeed={5000}
     infinite={true}
