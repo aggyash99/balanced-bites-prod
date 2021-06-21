@@ -1,13 +1,13 @@
 import React, {useState , useEffect} from 'react';
-import imgs from '../../Image/owner/bg.jpg';
+// import imgs from '../../Image/owner/bg.jpg';
 import Photo from '../photo';
-import owner from '../../Image/owner/owner2.png'
+// import owner from '../../Image/owner/owner2.png'
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 import {Link} from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
-import img from '../../Image/services/doodle.jpg'
+// import img from '../../Image/services/doodle.jpg'
 function Home() {
   const [showB, setB]=useState(false);
 
@@ -21,9 +21,9 @@ function Home() {
       <div className="container-fluid position-relative overflow-hidden" >
         <div className="row home-img" >
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
-              <img  style={{width:"100%",opacity:"0.6"}}  src={imgs} alt ="sorry"></img>
+              <img  style={{width:"100%",opacity:"0.6"}}  src="https://res.cloudinary.com/vivekananda-institute-of-professional-studies/image/upload/v1624253199/bg_kzasqd.jpg" alt ="sorry"></img>
             
-              <img className="owner1" src={owner}></img>
+              <img className="owner1" src="https://res.cloudinary.com/vivekananda-institute-of-professional-studies/image/upload/v1624253213/owner2_pav1nd.png"></img>
                
           </div>
           <div>
@@ -48,7 +48,7 @@ function Home() {
      
 
 
-      <div className="carousel " style={{backgroundImage:`URL(${img})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
+      <div className="carousel " style={{backgroundImage:`URL(https://res.cloudinary.com/vivekananda-institute-of-professional-studies/image/upload/v1624253260/doodle_zopthm.jpg)`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
           <div className="caouselBody">
       <div className="text-center Home-carousel d-flex justify-content-center">
       <p>Our</p><VisibilitySensor

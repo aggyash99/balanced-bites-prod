@@ -1,10 +1,10 @@
 import React from 'react';
-import nopills from '../Image/pics/cross.svg' 
-import options from '../Image/pics/program.png'; 
-import call from '../Image/pics/support.svg'
-import plain from '../Image/pics/dietplan.svg'
-import routine from '../Image/pics/routine1.svg'; 
-import center from '../Image/pics/center.jpg'
+// import nopills from '../Image/pics/cross.svg' 
+// import options from '../Image/pics/program.png'; 
+// import call from '../Image/pics/support.svg'
+// import plain from '../Image/pics/dietplan.svg'
+// import routine from '../Image/pics/routine1.svg'; 
+// import center from '../Image/pics/center.jpg'
 import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
@@ -25,7 +25,7 @@ import Styled from 'styled-components';
             <Content className="tick">
             <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={options}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257986/Programs_features/program_cnwd88.png"></img>
             </Img>
            
             <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
@@ -38,7 +38,7 @@ import Styled from 'styled-components';
                 <Content className="tick"> 
                     <Card>
                 <Img className="tick_mark">
-                <img alt="alt" src={routine}></img>
+                <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258026/Programs_features/routine1_w2e9ii.svg"></img>
                 </Img>
                 
                 <Writeup>Analysis of your routine & food preferences.</Writeup>
@@ -56,7 +56,7 @@ import Styled from 'styled-components';
             <CenterImg className="col-lg-4 Center">
             <div className="col-12 position-relative">
             <Center>
-            <IMGCENTER alt="alt" src={center}></IMGCENTER>
+            <IMGCENTER alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258019/Programs_features/center_kgzi8t.jpg"></IMGCENTER>
             </Center>
             </div>
             </CenterImg>
@@ -73,7 +73,7 @@ import Styled from 'styled-components';
             <Content className="tick">
                 <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={nopills}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257980/Programs_features/cross_qseprb.svg"></img>
             </Img >
             
             <Writeup>Non – restrictive diet & lifestyle plan.</Writeup>
@@ -86,7 +86,7 @@ import Styled from 'styled-components';
             <Content className="tick">
             <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={plain}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258024/Programs_features/dietplan_tueumt.svg"></img>
             </Img>
              
             <Writeup>Provide you multiple options in your diet plan.</Writeup>
@@ -106,7 +106,7 @@ import Styled from 'styled-components';
              <Main className="col-lg-4 col-12">
             <Content className="tick">
             <Card>
-            <Img className="tick_mark"><img src={call} alt=""></img></Img>
+            <Img className="tick_mark"><img src="https://res.cloudinary.com/balance-bites/image/upload/v1624257991/Programs_features/support_fsp7mw.svg" alt=""></img></Img>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
             </Card>
             </Content>
