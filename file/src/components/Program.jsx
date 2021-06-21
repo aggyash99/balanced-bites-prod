@@ -2,10 +2,10 @@ import React, {useState,useEffect} from 'react';
 import { Link, Redirect } from 'react-router-dom'; 
 import Newdata from '../Data/Newdata';
 import Sdata from '../Data/Sdata'; 
-import step from '../Image/services/service.jpg'
+// import step from '../Image/services/service.jpg'
 import ProgramsFeatures from './ProgramFeatures';
 import VisibilitySensor from 'react-visibility-sensor';
-import img from '../Image/pics/whatsapp1.svg'
+// import img from '../Image/pics/whatsapp1.svg'
 const Program =(props)=>{ 
    
     useEffect(() => {
@@ -41,10 +41,10 @@ return (
 <div>
 <div className=" container-fluid">
 
-<a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a>
+<a href="https://wa.link/k2f045"><span className="screen-bar"><img src="https://res.cloudinary.com/balance-bites/image/upload/v1624257691/Home_carousel/whatsapp1_yfa4u3.svg"></img></span></a>
     <div className="row photos">
     <div className="col-12 p-0 Programs-head position-relative">
-    <img className="steps" src={step}></img>
+    <img className="steps" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257648/Home_carousel/service_vr6zmg.jpg"></img>
     <h1 className="service-text">Service</h1>
     </div>
     <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>

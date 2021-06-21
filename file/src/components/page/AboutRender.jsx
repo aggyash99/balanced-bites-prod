@@ -1,23 +1,13 @@
 import React, {useState} from 'react'
-import Logo from '../../Image/logo.png';
- 
-
-import imgs from '../../Image/owner/bg.jpg';
- 
-import owner from '../../Image/owner/owner2.png'
+import Logo from '../../Image/logo.png'; 
 import img2 from '../../Image/services/doodle.jpg'; 
-import './about.css'; 
- 
-import Reviewcard from '../Newcards2';
-import { Link } from 'react-router-dom';
+import './about.css';  
+import Reviewcard from '../Newcards2'; 
 import SmallerIMG from '../../Image/images/About Smaller Img.jpeg';
 import VisibilitySensor from 'react-visibility-sensor';
-function AboutRender() {
-    
+function AboutRender() { 
   const [showB, setB]=useState(false);
-    return (
-         
-        
+    return ( 
   <>
       <div className="container-fluid about g-0">
       {/* <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img}></img></span></a> */}
@@ -35,25 +25,7 @@ function AboutRender() {
   </div>
   
   </div>
-  {/*<div className="container-fluid position-relative overflow-hidden aboutimg2 " >
-         
-          <div className="row home-img" >
-            <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
-                <img  style={{width:"100%",opacity:"0.6"}}  src={imgs} alt ="sorry"></img>
-                
-            
-                <img className="owner1" style={{right:"40px", top:"10px"}}src={owner}></img>
-                 
-            </div>
-            <div>
-           
-            </div>
-            {/* <div className="home-img-fil">
-            </div> */}
-            
-          {/*
-          </div>
-        </div>*/}
+ 
         <div>
       <div className="col-12 aboutGreenBGDivClass"  >
         <div className="aboutPhotoMobile "><img src={SmallerIMG} alt=" "></img>

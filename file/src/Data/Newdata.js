@@ -1,16 +1,8 @@
 import  weightgain  from "../Image/services/milk.jpg";
-import  weightloss  from "../Image/services/weightloss.jpg";
-//import  fruits  from "../Image/services/fruits.jpg";
-import  PCOS  from "../Image/services/PCOS.jpg";
-import  Skinhair from "../Image/services/Skinhair.jpg";
-import  thyroid  from "../Image/services/thyroid.jpg";
-import  pregnant  from "../Image/services/pregnant.jpg";
-import  Childrens from '../Image/services/child.jpg';
-import diabetes from '../Image/services/diabetes.jpg';
-import Detox from '../Image/services/detox.jpg';
+ 
 const Sdata = [
     {
-        imgsrc : weightloss,
+        imgsrc : "https://res.cloudinary.com/balance-bites/image/upload/v1624253651/Home_carousel/weightloss_pjq9kw.jpg",
         title : "<span class='data-heading'>Weight</span> Loss",
         description:`<span class='first'>A</span>re you frustrated with pointless diets and tired of random fluctuations in your weight despite doing everything the right way ?...You exercise, but the weight keeps coming back?...
         If this is true?... Then Balanced Bites is just right for you.
@@ -29,7 +21,7 @@ const Sdata = [
     },
     
     {
-        imgsrc : diabetes,
+        imgsrc : "https://res.cloudinary.com/balance-bites/image/upload/v1624253600/Home_carousel/diabetes_jrxl7m.jpg",
         title : "<span class='data-heading'>Diabetes</span>",
         description :"<span class='first'>A</span> healthy lifestyle is something we should all strive to maintain, especially those living with diabetes. Staying on track with a good diet and exercise regimen and keeping blood sugar levels regulated is vital for diabetics. ",
         second : "<span class='bold'>Balanced Bites plan a customized diet plan that helps you control your blood sugar (glucose)</span>, manage your weight and control heart disease risk.",
@@ -38,7 +30,7 @@ const Sdata = [
     },
     
     {
-        imgsrc:PCOS,
+        imgsrc:"https://res.cloudinary.com/balance-bites/image/upload/v1624253635/Home_carousel/PCOS_cnr3gq.jpg",
         title :"<span class='data-heading'>PCOS</span>",
         description : "<span class='first'>P</span>olycystic Ovary Syndrome is an endocrine system disorder that affects a woman’s hormone. Most women with PCOD grow a number of small cysts on their ovaries. These cysts are not harmful but they may lead to an imbalance in hormone levels. Women with PCOD may experience menstrual cycle abnormalities, excess hair growth, acne, increased androgen levels, and obesity.",
         second : "Also, women suffering from PCOD are more prone to miscarriage, premature delivery, and gestational diabetes.",
@@ -46,7 +38,7 @@ const Sdata = [
         service : "Eating a well - balanced diet is a must to manage PCOS."
     },
     {
-        imgsrc : Skinhair,
+        imgsrc : "https://res.cloudinary.com/balance-bites/image/upload/v1624253655/Home_carousel/Skinhair_rnoxge.jpg",
         title : "<span class='data-heading'>Hair</span> Skin Care",
         description:"<span class='first'>S</span>hiny hairs and glowing skin may be signs of a great beauty regime, but the importance of a great diet shouldn’t be underestimated.  ",
         second : "Food contains lots of beauty nutrients, which people have used for thousands of years, inside and out. ",
@@ -54,7 +46,7 @@ const Sdata = [
         service : " Good nutrition can keep hair and skin healthy & strong."
     },
     {
-        imgsrc: Detox,
+        imgsrc: "https://res.cloudinary.com/balance-bites/image/upload/v1624253601/Home_carousel/detox_s9gsfi.jpg",
         title:"<span class='data-heading'>Detox</span> Diet",
         description :"<span class='first'>D</span>etox diets are generally short-term dietary interventions designed to eliminate toxins from your body. These days there is also so much of adulterated food that we get and we also tend to eat a lot of packaged and processed food, which gives rise to lot of toxic substances in our body, which needs to be flushed out regularly to keep our body disease free. ",
         second : "A good detox plan boosts your metabolism and helps you lose those extra inches. Our cleansing technique will completely rejuvenate you making you feel lighter on your feet.",
@@ -63,7 +55,7 @@ const Sdata = [
     },
     
     {
-        imgsrc:pregnant,
+        imgsrc:"https://res.cloudinary.com/balance-bites/image/upload/v1624253634/Home_carousel/pregnant_kaajse.jpg",
         title:"<span class='data-heading'>Pregnancy</span>",
         description :"<span class='first'>I</span>f you’re concerned about what foods to eat to keep you and your baby healthy while you’re pregnant, that’s totally normal. Don’t worry — we are here to help you. ",
         second : "Our Pre-natal plans are basically to target nutrition for your upcoming pregnancy in order to have a successful period of pregnancy in this we take into consideration as to which nutrient needs special attention during which phase of pregnancy as this is one of the most important parts of the prenatal nutritional program. ",
@@ -72,7 +64,7 @@ const Sdata = [
     },
 
     {
-        imgsrc: Childrens,
+        imgsrc: "https://res.cloudinary.com/balance-bites/image/upload/v1624253607/Home_carousel/child_dovsdc.jpg",
         title : "<span class='data-heading'>Child</span> Nutrition",
         description:"<p class='bold'><span class='first'>Y</span>ou want your child to eat healthy foods, but do you know which nutrients are necessary and in what amounts?...</p> Whether you have a toddler or a teen, nutrition is important to his or her physical and mental development.<br> Healthy eating in childhood and adolescence is important for proper growth and development and to prevent various health conditions. How your child eats today will have an effect on their health, both now and in the future.",
         second : " As children grow and make choices, they can be overwhelmed by a confusing world that throws convenience and fast food at their feet. It is important to help children develop healthy habits that will make it easier for them to continue throughout life..",
@@ -80,7 +72,7 @@ const Sdata = [
         service : "Educating kids about good nutrition from an early age helps them create and maintain a well - balanced, healthy life."
     },
     {
-        imgsrc : thyroid,
+        imgsrc : "https://res.cloudinary.com/balance-bites/image/upload/v1624253645/Home_carousel/thyroid_frkjmx.jpg",
         title : "<span class='data-heading'>Thyroid</span>",
         description:"<div class='cars'><strong class='first'>T</strong>he thyroid gland is a small, butterfly-shaped gland that sits near the base of your neck. It makes and stores thyroid hormones that affect nearly every cell in your body. Thyroid hormones are very important. They help <span class='bold'>control growth, cell repair, and metabolism </span>— the process by which your body converts what you eat into energy.</div>",
         second : "An imbalance in the levels of thyroid hormones could lead to an underactive (Hypothyroid) or overactive (Hyperthyroid).",
