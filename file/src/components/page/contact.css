@@ -245,6 +245,7 @@ position: relative;
 .borderbottom3
 {
 display:inline-block;
+border-radius: 2px;
 position: relative;
 background: linear-gradient(to bottom, rgb(255, 255, 255) 50%, #03ac11 50%);
 background-size: 100% 200%;
@@ -286,8 +287,10 @@ color:#03ac1100
     position:absolute;
     width:100%;
     height: 4px;
-    top: 98%;
+    top: 92%;
     left:0%;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     background-color:#03ac11;
     animation-name:borderbottomanim;
     animation-duration: 3s;
