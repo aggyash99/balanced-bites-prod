@@ -5,6 +5,7 @@ import $ from 'jquery';
 import './Navbar.css';
 import data from '../Data/Sdata';
 import DropDownIcon from '@material-ui/icons/ArrowDropDown'; 
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function Navbar() {
   function navCollapse(){
     navOpen=0;
@@ -25,21 +26,18 @@ function Navbar() {
   }
   function dropdownOpen()
   {
-    console.log(dropOpen);
-              document.getElementById("dropdown").style.color="#11c220";
-              document.getElementById("dropdown").style.transform="rotateZ(180deg)";
-              
+              $("#subMenuMobile").addClass("submenuMove");
+              $("#navFullScreen").addClass("submenuMove2");
               dropOpen=1;
   }
 function dropdownClose()
 {
-  console.log(dropOpen);
-              document.getElementById("dropdown").style.color="black";
-              document.getElementById("dropdown").style.transform="rotateZ(0deg)";
+              $("#subMenuMobile").removeClass("submenuMove");
+              $("#navFullScreen").removeClass("submenuMove2");
               dropOpen=0;
 }
   window.onscroll=function()
-    { if($(window).width()>382){
+    { if($(window).width()>450){
        if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
     var dynWidth;
@@ -79,7 +77,7 @@ function dropdownClose()
         $("#nav2").addClass("navSmall");
         $("#nav3").addClass("navSmall");
         $("#nav4").addClass("navSmall");
-        dynWidth=220;
+        dynWidth=130;
         dynWidthDropDown=17;
       }
       else if(window.scrollY>195)
@@ -88,12 +86,12 @@ function dropdownClose()
         $("#nav2").removeClass("navSmall");
         $("#nav3").removeClass("navSmall");
         $("#nav4").removeClass("navSmall");
-        dynWidth=170;
+        dynWidth=130;
         dynWidthDropDown=5.5;
       }
       else
       {
-        dynWidth=(125-window.scrollY)+220;
+        dynWidth=130
         dynWidthDropDown=17-(window.scrollY-125)/6 ;
       }
       }
@@ -172,15 +170,15 @@ function dropdownClose()
                             </a>
     <div className="fullscreenWrapper fullscreenMove" id="navFullScreen">
     
-    <div className="navWrapper " id="">
-      <ul className="navItemWrapper">
+    <div className="navWrapper submenuprogram2" id="navitemwrappermobile">
+      <ul className="navItemWrapper  " id="">
      
       <li className="navItems  " onClick={navCollapse} >
           <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
         <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
-        <a id="dropdown" className=" btn  subMenuDropDownIcon" type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
+        <a id="dropdown"style={{trasfrom:"rotateZ(90deg)"}} className=" btn  subMenuDropDownIcon" type="button"onClick={()=>{
         
         if(dropOpen)
         { dropdownClose();
@@ -190,10 +188,22 @@ function dropdownClose()
           dropdownOpen();
         }
       }}>   
-      <DropDownIcon/>
+      <DropDownIcon />
     </a></div>
            <span className="transitionElementProgram"></span>
-             <div className="submenuMobile collapse" id="subMenuMobile"><ul className="submenuUL" >
+             <div className="submenuMobile " id="subMenuMobile"><ul className="submenuUL" >
+             <a id="dropdown" className=" btn  subMenuDropDownIcon2" type="button"onClick={()=>{
+        
+        if(dropOpen)
+        { dropdownClose();
+        }
+        else
+        { 
+          dropdownOpen();
+        }
+      }}>   
+      <ArrowBackIcon/>
+    </a>
    
           {
             data.map((value , key)=>{
