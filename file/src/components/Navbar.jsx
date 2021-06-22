@@ -105,7 +105,7 @@ function dropdownClose()
     {
       // HEADER END
     }
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-lg-top top-0"  >
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0"  >
   <div className="container-fluid">
   <nav className="d-flex">
     <div>
