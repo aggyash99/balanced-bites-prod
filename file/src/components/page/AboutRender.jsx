@@ -40,7 +40,7 @@ function AboutRender() {
             setB(isVisible?true:false);
             
           }}
-           ><span className={showB?"borderbottom3":""}><span className={showB?"bestdieticiantextcol":""}>Best Dietitian</span></span></VisibilitySensor> In Delhi</h5>
+           ><span className={showB?"borderbottom3":""}><span className={showB?"bestdieticiantextcol":""}>&thinsp;Best Dietitian&thinsp;</span></span></VisibilitySensor> In Delhi</h5>
             <p className="text pb-2 firstletter">
         Muskan Bansal is a young & aspiring dietitian, nutritionist and Diabetes Educator <span style={{paddingLeft:"6px"}}>f</span>rom Delhi, India. She is enthusiastically working in the field of weight management and therapeutic nutrition. She believes in a natural way of achieving a healthy lifestyle & don’t recommend artificial methods like pills and supplement.</p>
         <p className="text pt-2 pb-2">
@@ -68,7 +68,7 @@ function AboutRender() {
       <div className="row">
        
         <div className="col-12 righttextabout "  className="carousel22 " style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
-          <h1 className="h1aboutWhyChoose" style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>? </h1>
+          <h1 className="h1aboutWhyChoose" style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/>&thinsp;? </h1>
           <div className="whychoosedivhead"><h1 style={{padding:"20px 0px",textAlign:"center", fontSize:"35px",  display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo}/> </h1>
           </div>
           <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
