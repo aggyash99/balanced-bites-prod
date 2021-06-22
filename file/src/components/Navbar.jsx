@@ -15,6 +15,7 @@ function Navbar() {
     $("#hamOpt2").removeClass("hamTransform2");
     $("#hamOpt3").removeClass("hamTransform3");
     $("#primaryHamButton").trigger("focus");
+    dropdownClose();
    
   }function navExpand(){
     $("#navFullScreen").removeClass("fullscreenMove");
