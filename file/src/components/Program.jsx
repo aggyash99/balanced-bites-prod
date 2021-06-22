@@ -47,8 +47,8 @@ return (
     <img className="steps" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257648/Home_carousel/service_vr6zmg.jpg"></img>
     <h1 className="service-text">Service</h1>
     </div>
-    <div className="d-flex " style={{position:"absolute" , justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
-    <button className="btn-for-service">Contact Us</button>
+    <div className="d-flex button-on-program" style={{position:"absolute", justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
+    <Link className="btn-for-service" to="/contact">Contact Us</Link>
     
     </div>
     </div>

@@ -2,8 +2,7 @@ import React from 'react';
 import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/EditLocation';
-import EmailIcon from '@material-ui/icons/Email';
-import CopyrightIcon from '@material-ui/icons/Copyright';
+import EmailIcon from '@material-ui/icons/Email'; 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -138,6 +137,7 @@ ul{
     ul{
         padding : 0;
     }
+    
 }
 ul{
 div{
@@ -150,7 +150,7 @@ div{
 
 display : flex; 
 justify-content : space-around;
-// align-items : center;
+ 
 
 `
 const Col = Styled.div`
@@ -253,6 +253,12 @@ svg{
 }  
 padding : 2px;
 border-radius : 25px;
+@media(max-width : 400px)
+{
+    li{
+    color : white;
+    }
+}
 `
 const IMGcolumn = Styled.div`
 position : relative;

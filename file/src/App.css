@@ -24,7 +24,10 @@
     font-weight: 600;
     background-color: rgb(9, 12, 12);
 }
-
+.header2 a
+{
+    color : white;  
+}
 @media (max-width : 991px) {
     .navbar-brand {
         font-size: 1.5rem !important;
@@ -1529,7 +1532,9 @@ select{
 .googleImage{
     width: 80%;
 }
- 
+.button-on-program a{
+    color : white
+}
  
 .goggleCards{ 
     display: flex;
