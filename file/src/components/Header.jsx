@@ -4,6 +4,7 @@ import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import InstagramIcon from '@material-ui/icons/Instagram';
+// import { Link } from 'react-router-dom';
 const Header = () =>{
 return (
 <>
@@ -22,9 +23,9 @@ return (
   
 
 <div className="col-lg-4 col-6 p-2 d-flex gap-3 justify-content-center  header2">
-<FacebookIcon />
-<MailOutlineIcon/>
-<InstagramIcon />
+<a href="https://www.facebook.com/Balancedbites10/"><FacebookIcon /></a >
+<a href="mailto:balancedbites10@gmail.com"><MailOutlineIcon/></a >
+<a href="https://www.instagram.com/balancedbites10/?r=nametag"><InstagramIcon /></a >
 </div>
 </div> 
 </div>

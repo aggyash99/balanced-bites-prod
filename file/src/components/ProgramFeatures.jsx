@@ -25,7 +25,7 @@ import Styled from 'styled-components';
             <Content className="tick">
             <Card>
             <Img className="tick_mark">
-            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257986/Programs_features/program_cnwd88.png"></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624351518/Home_carousel/food_m3gv1a.svg"></img>
             </Img>
            
             <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
@@ -56,7 +56,7 @@ import Styled from 'styled-components';
             <CenterImg className="col-lg-4 Center">
             <div className="col-12 position-relative">
             <Center>
-            <IMGCENTER alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258019/Programs_features/center_kgzi8t.jpg"></IMGCENTER>
+            <IMGCENTER alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257986/Programs_features/program_cnwd88.png"></IMGCENTER>
             </Center>
             </div>
             </CenterImg>
@@ -124,11 +124,10 @@ const IMGCENTER = Styled.img`
 const CenterImg = Styled.div` 
 `
 const Main = Styled.div`
-padding : 5% 2%;
+padding : 5% 2%; 
 display : flex;
-justify-content : center;
+justify-content :center;
 position : relative;
-
  
 `
 
@@ -139,7 +138,13 @@ margin-bottom : 20px;
 background: #f5f5f5;
 cursor : pointer;
 border-radius : 10px;
+
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
+
+&:hover{
+
+    box-shadow : 2px 4px 5px 5px rgb(240,240,249);
+}
 transition : all 250ms;
 `
 const Card = Styled.div` 
@@ -187,8 +192,9 @@ font-family : roboto ;
 const Center = Styled.div`
  
 position : absolute;
-top : 80px;
+top : 120px;
 img{
+
     width :100%;
     height : 100%;
     object-fit : contain;
