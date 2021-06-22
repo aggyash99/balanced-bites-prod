@@ -137,6 +137,7 @@ ul{
     ul{
         padding : 0;
     }
+    
 }
 ul{
 div{
@@ -149,7 +150,7 @@ div{
 
 display : flex; 
 justify-content : space-around;
-// align-items : center;
+ 
 
 `
 const Col = Styled.div`
@@ -252,6 +253,12 @@ svg{
 }  
 padding : 2px;
 border-radius : 25px;
+@media(max-width : 400px)
+{
+    li{
+    color : white;
+    }
+}
 `
 const IMGcolumn = Styled.div`
 position : relative;
