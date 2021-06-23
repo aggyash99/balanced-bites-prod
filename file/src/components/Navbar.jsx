@@ -25,18 +25,18 @@ function Navbar() {
     $("#hamOpt3").addClass("hamTransform3");
     navOpen=1;
   }
-  function dropdownOpen()
-  {
-              $("#subMenuMobile").addClass("submenuMove");
-              $("#navFullScreen").addClass("submenuMove2");
-              dropOpen=1;
-  }
-function dropdownClose()
-{
-              $("#subMenuMobile").removeClass("submenuMove");
-              $("#navFullScreen").removeClass("submenuMove2");
-              dropOpen=0;
-}
+              function dropdownOpen()
+              {
+                          $("#subMenuMobile").addClass("submenuMove");
+                          $("#navFullScreen").addClass("submenuMove2");
+                          dropOpen=1;
+              }
+ function dropdownClose()
+ {
+ $("#subMenuMobile").removeClass("submenuMove");
+ $("#navFullScreen").removeClass("submenuMove2");
+ dropOpen=0;
+ }
   window.onscroll=function()
     { if($(window).width()>450){
        if(document.getElementById("movingpicbg"))
@@ -103,10 +103,9 @@ function dropdownClose()
   var dropOpen=0;
   return (
       <>
-    {
-      // HEADER END
-    }
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0"  ><a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
+     
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0"  >
+      <a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
        console.log(navOpen);
        if(navOpen==0)
        {
@@ -143,16 +142,7 @@ function dropdownClose()
           <div className="navbaranim start-home" id="animNavbar"></div>
           <span className="transitionElementProgram"></span>
           <div className="submenuprogram" id="smp"><ul className="submenuprogram" >
-          {/* <li>Weight Loss</li>
-          <li>Weight Gain</li>
-          <li>Diabetes</li>
-          
-          <li>PCOS</li>
-          <li>Hair Skin Care</li>
-          <li>Detox Diet</li>
-          <li>Pregnancy</li>
-          <li>Child Nutrition</li>
-          <li>Thyroid</li> */}
+           
           {
             data.map((value , key)=>{
               return <Link  to={{pathname:'/Program',

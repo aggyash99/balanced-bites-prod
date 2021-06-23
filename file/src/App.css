@@ -1275,6 +1275,8 @@ border-width: 2px;
     display: flex;
     justify-content: flex-end;
 }
+
+
 .owner1{
 position:absolute;
 height : 100%;
@@ -1284,7 +1286,10 @@ top: 70px;
 @media (max-width : 400px) {
 .owner1{
     right : 40px;
-    top : 15px;
+    top : 25px;
+}
+.para:first-child {
+height: 200px;
 }
 .cross{
     color: red;
@@ -1499,7 +1504,12 @@ gap: 2px;
     border: 2px solid blue;
     transition: all 100ms ease-in;
 }
- 
+.ham1{
+    width: 30px;
+} 
+.ham3{
+    width: 30px;
+}
 .BMI-unit-part{
     border: 2px solid springgreen;
     border-radius: 5px;
