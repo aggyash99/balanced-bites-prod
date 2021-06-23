@@ -14,7 +14,7 @@ return (
  
 
 <div className="col-lg-3 col-6  text-center p-2 header2">
-    <WhatsAppIcon className="whatsapp"/><a href="https://wa.me/8700326422"style={{color:"white"}}><span className="p-2">8700326422</span></a>
+    <WhatsAppIcon className="whatsapp"/><a href="https://api.whatsapp.com/send?phone=+918700326422"style={{color:"white"}}><span className="p-2">8700326422</span></a>
     </div>
 
     <div className="col-lg-5 text-center p-2 headerEmail  header2 ">
