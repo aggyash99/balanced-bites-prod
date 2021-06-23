@@ -65,9 +65,9 @@ const Footer =()=>{
             <span className="span3">Get In Touch</span>
             <FooterLink className="foot3">
             <ul>
-            <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
-            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00AM - 7:00 PM</li></div>
             <div> <EditLocationIcon className="icon" /> <li>Address : Hno. 288-89 G-26 Sec-3 ROHINI , DELHI</li></div>
+            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00AM - 7:00 PM</li></div>
+            <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
             <div><EmailIcon className="icon"/> <li>EMAIL : balancedbites10@gmail.com</li></div>
             </ul>
             </FooterLink>

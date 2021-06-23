@@ -4,7 +4,7 @@ import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
 import data from '../Data/Sdata';
-import DropDownIcon from '@material-ui/icons/ArrowDropDown'; 
+import DropDownIcon from '@material-ui/icons/NavigateNext';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function Navbar() {
   function navCollapse(){
@@ -175,10 +175,10 @@ function dropdownClose()
       <ul className="navItemWrapper  " id="">
      
       <li className="navItems  " onClick={navCollapse} >
-          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
+          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name  navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
-        <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
+        <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name  navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
         <a id="dropdown"style={{trasfrom:"rotateZ(90deg)"}} className=" btn  subMenuDropDownIcon" type="button"onClick={()=>{
         
         if(dropOpen)
@@ -193,7 +193,7 @@ function dropdownClose()
     </a></div>
            <span className="transitionElementProgram"></span>
              <div className="submenuMobile " id="subMenuMobile"><ul className="submenuUL" >
-             <a id="dropdown" className=" btn  subMenuDropDownIcon2" type="button"onClick={()=>{
+            <li className="backiconnavli"><a id="dropdown" className=" btn  subMenuDropDownIcon2" type="button"onClick={()=>{
         
         if(dropOpen)
         { dropdownClose();
@@ -205,7 +205,7 @@ function dropdownClose()
       }}>   
       <ArrowBackIcon/>
     </a>
-   
+    </li> 
           {
             data.map((value , key)=>{
               return <Link  to={{pathname:'/Program',
@@ -215,10 +215,10 @@ function dropdownClose()
 
         </ul></div></li>
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover navItemMobile" id="nav3">Contact</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name  navItemMobile" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name navbarhover navItemMobile" id="nav4">About</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name  navItemMobile" id="nav4">About</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
       </ul>
       
