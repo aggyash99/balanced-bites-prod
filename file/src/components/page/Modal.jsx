@@ -76,7 +76,7 @@ style="--i:7"                        */
                               <span className="modalmaintext">Hi {shortenedname2} </span>
                               </div>
                             <div className="col-12 justifycontentcenter">
-                              <span className="modalmaintext2">Thank you for contacting us.</span> </div>
+                              <span className="modalmaintext2">Thank you for contacting us. We will be in touch soon. We look forward to serving you.</span> </div>
                         </div>
                    </div>
                 </div>
