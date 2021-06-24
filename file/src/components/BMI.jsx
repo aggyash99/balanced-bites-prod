@@ -76,13 +76,13 @@ class BMI extends Component{
         return ""
         }
     
-        if(this.state.height == "" && this.state.heightstatus!=="Feet" || parseInt(this.state.height)==0)
+        if((this.state.height === "" && this.state.heightstatus!=="Feet") || parseInt(this.state.height)===0)
         {const  a2 = findDOMNode(this.refs.google1);
         $(a2).addClass('border-color-red')
         return""
         }
         // REGEX PART 
-        let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
+        let reg = /^([0-9]){0,5}([.]){0,1}([0-9]){0,5}$/;
         var temp1 = this.state.height;
         var temp = this.state.weight;
         if(reg.test((temp1))===false)
@@ -163,7 +163,7 @@ class BMI extends Component{
       {
         var Inch = 0;
         var   feet= 0;
-        if(this.state.Feetheight != "")
+        if(this.state.Feetheight !== "")
         Inch = (parseInt(this.state.Feetheight));
         if(this.state.height!=="")
        feet = (parseInt(this.state.height) * 12);
@@ -330,7 +330,7 @@ class BMI extends Component{
 
 export default BMI;
  
-
+/*
 const Animation = Styled.div`
 position : absolute;
 width : 150px;
@@ -346,7 +346,7 @@ position : relative;
 
 z-index : -5;
 opacity : 0.7;
-`
+`*/
 const Container = Styled.div`
 width : 100%;
 background-position : center;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
@@ -42,9 +42,9 @@ function App() {
 
       <Footer></Footer>
       <div  className="screen-bar">
-      <img className="animates" src={circle}></img>
-      <img className="animates1" src={circle}></img>
-       <a href="https://api.whatsapp.com/send?phone=+918700326422"><span><img src={img}></img></span></a>
+      <img alt="sorry"className="animates" src={circle}></img>
+      <img alt="sorry" className="animates1" src={circle}></img>
+       <a href="https://api.whatsapp.com/send?phone=+918700326422"><span><img alt="sorry" src={img}></img></span></a>
     </div>
     </BrowserRouter>
  

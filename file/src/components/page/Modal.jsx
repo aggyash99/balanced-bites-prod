@@ -68,7 +68,7 @@ style="--i:7"                        */
                          
                         <div className="col-12 justifycontentcenter heightincmodal " >
                          
-                        <img src={Tick} height="175" width="175" className="vidmodal"></img> </div>
+                        <img alt="sorry" src={Tick} height="175" width="175" className="vidmodal"></img> </div>
                    
                           </div>
                         <div className="row">

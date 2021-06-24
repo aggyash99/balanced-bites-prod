@@ -23,7 +23,7 @@ function Home() {
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
               <img  style={{width:"100%",opacity:"0.6"}}  src="https://res.cloudinary.com/balance-bites/image/upload/v1624253199/Home_carousel/Owner_img/bg_kzasqd.jpg" alt ="sorry"></img>
             
-              <img className="owner1" src="https://res.cloudinary.com/balance-bites/image/upload/v1624253213/Home_carousel/Owner_img/owner2_pav1nd.png"></img>
+              <img alt="sorry" className="owner1" src="https://res.cloudinary.com/balance-bites/image/upload/v1624253213/Home_carousel/Owner_img/owner2_pav1nd.png"></img>
                
           </div>
           <div>

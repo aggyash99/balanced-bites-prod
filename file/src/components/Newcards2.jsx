@@ -4,25 +4,12 @@ import Card from './CardforReview Carousel';
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import carddata from '../Data/ReviewData Carousel';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-
-import MaximizeIcon from "@material-ui/icons/Maximize";
 import Styled from 'styled-components';
-import google from '../Image/Review/google.png';
 import VisibilitySensor from 'react-visibility-sensor';
 const Newcards = ()=>{
   
   const [showB, setB]=useState(false);
-  const CustomDot = ({ onMove, index, onClick, active }) => {
-    return (
-      <li
-        className={active ? "active aboutcarouselactive aboutcarouseldot" : "inactive aboutcarouseldot aboutcarouselinactive"}
-        onClick={() => onClick()}
-      >
-        <MaximizeIcon/>
-      </li>
-    );
-  };
+ 
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
