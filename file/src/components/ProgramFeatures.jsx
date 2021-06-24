@@ -1,10 +1,4 @@
-import React from 'react';
-// import nopills from '../Image/pics/cross.svg' 
-// import options from '../Image/pics/program.png'; 
-// import call from '../Image/pics/support.svg'
-// import plain from '../Image/pics/dietplan.svg'
-// import routine from '../Image/pics/routine1.svg'; 
-// import center from '../Image/pics/center.jpg'
+import React from 'react'; 
 import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
@@ -145,6 +139,16 @@ box-shadow : 1px 1px 2px 2px rgb(240,240,249);
 
     box-shadow : 2px 4px 5px 5px rgb(240,240,249);
 }
+&:before{
+    position : absolute;
+    //     left : 0;
+    //     content: "";
+    //     width : 100px;
+    //     height : 100px;
+    //     background : red;
+    //     top : 0;
+    // //     z-index : ;
+}
 transition : all 250ms;
 `
 const Card = Styled.div` 
@@ -162,20 +166,33 @@ display: flex;
 const Img = Styled.div`
 position : relative;
 cursor : pointer; 
-img{
-border-radius : 50%;
+&:before{
+    position : absolute; 
+    content : "";
+    border-radius : 50%;
+    width : 90px;
+    height : 90px;
+    background : #f9f9f9f9;
+    bottom  : -7px;
+    left : 50%;
+    transform : translate(-50%);
+    z-index : 8;
+ }
+
+img{ 
     width : 70px;
     height : 70px; 
+
     position : absolute;
     bottom : 5px;
-    z-index : 0;
+    z-index : 8;
     left : 50%;
     transform:translate(-50%);    
-    background : #f9f9f9;
+    // background : #f9f9f9;
+     padding : 2px;
     transition : all 250ms;
-    padding : 0px;
-    box-shadow : 1px 0px 0px 12px #f5f5f5;
-    
+    // padding : 0px;
+    // box-shadow : 1px 0px 0px 12px #f5f5f5;
 } 
 
 `

@@ -24,7 +24,7 @@ const Footer =()=>{
                 <Icons>
                         <LINKS   className="whatsapp" href="https://api.whatsapp.com/send?phone=+918700326422" ><WhatsAppIcon></WhatsAppIcon></LINKS>
                         <LINKS   className="facebook" href="https://www.facebook.com/Balancedbites10/" ><FacebookIcon></FacebookIcon></LINKS>
-                        <LINKS  className="mail"  href="balancedbites10@gmail.com" > <MailOutlineIcon ></MailOutlineIcon></LINKS>
+                        <LINKS  className="mail"  href="mailto:balancedbites10@gmail.com" > <MailOutlineIcon ></MailOutlineIcon></LINKS>
                         <LINKS   className="insta" href="https://www.instagram.com/balancedbites10/?r=nametag" ><InstagramIcon  ></InstagramIcon></LINKS>
                 </Icons>
                 </Upper>
