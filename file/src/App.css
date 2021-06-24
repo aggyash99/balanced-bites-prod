@@ -1055,7 +1055,8 @@ input::-webkit-inner-spin-button {
         color: white;
     }
 } 
-.tick:hover .tick_mark img{
+.tick:hover .tick_mark::before{
+    transition: all 250ms; 
     box-shadow : 0px 0px 0px 6px #b8f090;
 }
 .success{
@@ -1504,12 +1505,7 @@ gap: 2px;
     border: 2px solid blue;
     transition: all 100ms ease-in;
 }
-.ham1{
-    width: 30px;
-} 
-.ham3{
-    width: 30px;
-}
+ 
 .BMI-unit-part{
     border: 2px solid springgreen;
     border-radius: 5px;
