@@ -1,11 +1,6 @@
-import React,{ Component }  from "react";
-// import image from '../Image/pics/bmi-5.jpg'; 
+import React,{ Component }  from "react"; 
 import $ from 'jquery';
-import { findDOMNode } from "react-dom"; 
-// import reddot from '../Image/images/red.png'; 
-// import bluedot from '../Image/images/blue.png';
-// import greendot from '../Image/images/green.png';
-// import yellowdot from '../Image/images/yellow.png';
+import { findDOMNode } from "react-dom";  
 import CloseIcon from '@material-ui/icons/Close';   
 import Styled from 'styled-components';  
 import Dropdown from 'react-dropdown';

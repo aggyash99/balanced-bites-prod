@@ -3,15 +3,8 @@ import Card from './CardforReview Carousel';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-<<<<<<< HEAD
-import carddata from '../Data/ReviewData Carousel'; 
-
-import MaximizeIcon from "@material-ui/icons/Maximize";
-import Styled from 'styled-components'; 
-=======
 import carddata from '../Data/ReviewData Carousel';
 import Styled from 'styled-components';
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
 import VisibilitySensor from 'react-visibility-sensor';
 const Newcards = ()=>{
   

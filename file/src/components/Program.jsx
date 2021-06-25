@@ -41,17 +41,10 @@ return (
 <div>
 <div className=" container-fluid">
 
-<<<<<<< HEAD
-<a href="https://wa.link/k2f045"><span className="screen-bar"><img src="https://res.cloudinary.com/balance-bites/image/upload/v1624257691/Home_carousel/whatsapp1_yfa4u3.svg"  alt="LOAD"></img></span></a>
-    <div className="row photos">
-    <div className="col-12 p-0 Programs-head position-relative">
-    <img className="steps"  alt="LOAD" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257648/Home_carousel/service_vr6zmg.jpg"></img>
-=======
 <a href="https://wa.link/k2f045"><span className="screen-bar"><img  alt="sorry" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257691/Home_carousel/whatsapp1_yfa4u3.svg"></img></span></a>
     <div className="row photos">
     <div className="col-12 p-0 Programs-head position-relative">
     <img  alt="sorry" className="steps" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257648/Home_carousel/service_vr6zmg.jpg"></img>
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
     <h1 className="service-text">Service</h1>
     </div>
     <div className="d-flex button-on-program" style={{position:"absolute", justifyContent:"flex-end", marginBottom:"30px",paddingRight:"170px", bottom:"10px"}}>
@@ -98,11 +91,7 @@ return (
         </div> 
 
         <div className="col-lg-9 col-md-12 col-12 ">
-<<<<<<< HEAD
-        <img src={logo} className="PROGRAMS-PHOTO" alt="LOAD"></img>
-=======
         <img src={logo} alt="sorry" className="PROGRAMS-PHOTO" ></img>
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
         </div>
 
       </div>
@@ -149,12 +138,7 @@ return (
 
 
         <ProgramsFeatures/>
-
-        {/* <div className="row ">
-            <div className="col-12 p-0">
-            <img src={step} style={{objectFit:"cover",width:"100%",height:"500px"}}></img>
-            </div>
-        </div> */}
+  
         </div>
      
 

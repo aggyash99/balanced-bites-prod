@@ -67,15 +67,9 @@ function AboutRender() {
   
       <div className="row">
        
-<<<<<<< HEAD
-        <div className="col-12 righttextabout carousel22 "   style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
-          <h1 className="h1aboutWhyChoose" style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo} alt="LOAD" />&thinsp;? </h1>
-          <div className="whychoosedivhead"><h1 style={{padding:"20px 0px",textAlign:"center", fontSize:"35px",  display:"inline-block"}}>Why choose <img className="imgWhyChoose" src={Logo} alt="LOAD" /> </h1>
-=======
         <div className="col-12 righttextabout carousel22 " style={{backgroundImage:`URL(${img2})`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:"repeat", zIndex:"100"}} >
           <h1 className="h1aboutWhyChoose" style={{paddingBottom:"20px",paddingLeft:"20px", paddingTop:"20px", display:"inline-block"}}>Why choose <img alt="sorry" className="imgWhyChoose" src={Logo}/>&thinsp;? </h1>
           <div className="whychoosedivhead"><h1 style={{padding:"20px 0px",textAlign:"center", fontSize:"35px",  display:"inline-block"}}>Why choose <img alt="sorry" className="imgWhyChoose" src={Logo}/> </h1>
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
           </div>
           <p className="textrightsideabout">Balanced Bites assures to offer you a lot of health benefits including complete guidance to your lifestyle plan that is supposed to base on your everyday life and diet. We educate you about the food and how small changes can result in long – term health benefits. We focus on nutrition as a sustainable lifestyle change, not just calorie counting. Our mission is to bring whole foods to your plate and nourishment to your soul by providing you with the right tools and knowledge to lead a healthy and happy life.
           </p>

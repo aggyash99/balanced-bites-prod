@@ -1,13 +1,10 @@
-import React, {useState , useEffect} from 'react';
-// import imgs from '../../Image/owner/bg.jpg';
-import Photo from '../photo';
-// import owner from '../../Image/owner/owner2.png'
+import React, {useState , useEffect} from 'react'; 
+import Photo from '../photo'; 
 import CarouselH from '../CarouselH'; 
 import BMI from '../BMI';
 import Reviewcard from '../Newcards';
 import {Link} from 'react-router-dom';
-import VisibilitySensor from 'react-visibility-sensor';
-// import img from '../../Image/services/doodle.jpg'
+import VisibilitySensor from 'react-visibility-sensor'; 
 function Home() {
   const [showB, setB]=useState(false);
 
@@ -23,11 +20,7 @@ function Home() {
           <div className="col-lg-12 d-flex justify-content-around mx-auto position-relative p-0 para" >
               <img style={{width:"100%",opacity:"0.6"}} src="https://res.cloudinary.com/balance-bites/image/upload/v1624253199/Home_carousel/Owner_img/bg_kzasqd.jpg" alt ="sorry"></img>
             
-<<<<<<< HEAD
-              <img className="owner1" alt="LOAD"  src="https://res.cloudinary.com/balance-bites/image/upload/v1624253213/Home_carousel/Owner_img/owner2_pav1nd.png"></img>
-=======
               <img alt="sorry" className="owner1" src="https://res.cloudinary.com/balance-bites/image/upload/v1624253213/Home_carousel/Owner_img/owner2_pav1nd.png"></img>
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
                
           </div>
           <div>

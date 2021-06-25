@@ -207,11 +207,7 @@ window.location.replace("/");
         
       <div className=" container-fluid contact_div" style={{overflow:"hidden"}}>
      
-<<<<<<< HEAD
-    <a href="https://wa.link/k2f045"><span className="screen-bar"><img src={img} alt="LOAD" ></img></span></a>
-=======
     <a href="https://wa.link/k2f045"><span className="screen-bar"><img alt="sorry" src={img}></img></span></a>
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
         <div style={{ paddingTop: "55px", paddingBottom: "30px" }}>
           <h1 className="text-center contactheading" >Get in Touch <VisibilitySensor
           partialVisibility 
