@@ -8,7 +8,7 @@ import DropDownIcon from '@material-ui/icons/NavigateNext';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function Navbar() {
   function navCollapse(){
-    navOpen=0;
+    navOpen=0;/* eslint-disable */
     $("#navFullScreen").addClass("fullscreenMove");
     $("#navClose").addClass("fullscreenMove2");
     $("#hamOpt").removeClass("hamTransform");
@@ -70,8 +70,7 @@ function Navbar() {
       {
         if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
-    var dynWidth;
-    var dynWidthDropDown;
+    
       if(window.scrollY<125)
       {
         $("#nav1").addClass("navSmall");
@@ -107,7 +106,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0"  >
       <a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
        console.log(navOpen);
-       if(navOpen==0)
+       if(navOpen===0)
        {
         navOpen=1;
          navExpand();

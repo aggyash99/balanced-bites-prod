@@ -1,4 +1,7 @@
+<<<<<<< HEAD
  
+=======
+>>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
 import Rating from '@material-ui/lab/Rating'; 
 import google from '../Image/Review/google.png'
 const CardforReview =(props)=>{
