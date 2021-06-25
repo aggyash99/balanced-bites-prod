@@ -1,10 +1,4 @@
-import React from 'react';
-import nopills from '../Image/pics/pills.svg' 
-import options from '../Image/pics/food.svg'; 
-import call from '../Image/pics/call.png'
-import plain from '../Image/pics/plain1.svg'
-import routine from '../Image/pics/routine1.svg'; 
-import center from '../Image/pics/center.jpg'
+import React from 'react'; 
 import Styled from 'styled-components';  
  const ProgramsFeatures = (props)=>{
     return (
@@ -25,7 +19,7 @@ import Styled from 'styled-components';
             <Content className="tick">
             <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={options}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624351518/Home_carousel/food_m3gv1a.svg"></img>
             </Img>
            
             <Writeup>100% customized diet plans, no pre – defined or fixed diets.</Writeup>
@@ -38,7 +32,7 @@ import Styled from 'styled-components';
                 <Content className="tick"> 
                     <Card>
                 <Img className="tick_mark">
-                <img alt="alt" src={routine}></img>
+                <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258026/Programs_features/routine1_w2e9ii.svg"></img>
                 </Img>
                 
                 <Writeup>Analysis of your routine & food preferences.</Writeup>
@@ -56,7 +50,7 @@ import Styled from 'styled-components';
             <CenterImg className="col-lg-4 Center">
             <div className="col-12 position-relative">
             <Center>
-            <IMGCENTER alt="alt" src={center}></IMGCENTER>
+            <IMGCENTER alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257986/Programs_features/program_cnwd88.png"></IMGCENTER>
             </Center>
             </div>
             </CenterImg>
@@ -73,7 +67,7 @@ import Styled from 'styled-components';
             <Content className="tick">
                 <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={nopills}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624257980/Programs_features/cross_qseprb.svg"></img>
             </Img >
             
             <Writeup>Non – restrictive diet & lifestyle plan.</Writeup>
@@ -86,7 +80,7 @@ import Styled from 'styled-components';
             <Content className="tick">
             <Card>
             <Img className="tick_mark">
-            <img alt="alt" src={plain}></img>
+            <img alt="alt" src="https://res.cloudinary.com/balance-bites/image/upload/v1624258024/Programs_features/dietplan_tueumt.svg"></img>
             </Img>
              
             <Writeup>Provide you multiple options in your diet plan.</Writeup>
@@ -106,7 +100,7 @@ import Styled from 'styled-components';
              <Main className="col-lg-4 col-12">
             <Content className="tick">
             <Card>
-            <Img className="tick_mark"><img src={call} alt=""></img></Img>
+            <Img className="tick_mark"><img src="https://res.cloudinary.com/balance-bites/image/upload/v1624257991/Programs_features/support_fsp7mw.svg" alt=""></img></Img>
             <Writeup>Ongoing support & guidance via. WhatsApp chat.</Writeup>
             </Card>
             </Content>
@@ -124,11 +118,10 @@ const IMGCENTER = Styled.img`
 const CenterImg = Styled.div` 
 `
 const Main = Styled.div`
-padding : 5% 2%;
+padding : 5% 2%; 
 display : flex;
-justify-content : center;
+justify-content :center;
 position : relative;
-
  
 `
 
@@ -139,7 +132,23 @@ margin-bottom : 20px;
 background: #f5f5f5;
 cursor : pointer;
 border-radius : 10px;
+
 box-shadow : 1px 1px 2px 2px rgb(240,240,249);
+
+&:hover{
+
+    box-shadow : 2px 4px 5px 5px rgb(240,240,249);
+}
+&:before{
+    position : absolute;
+    //     left : 0;
+    //     content: "";
+    //     width : 100px;
+    //     height : 100px;
+    //     background : red;
+    //     top : 0;
+    // //     z-index : ;
+}
 transition : all 250ms;
 `
 const Card = Styled.div` 
@@ -157,20 +166,33 @@ display: flex;
 const Img = Styled.div`
 position : relative;
 cursor : pointer; 
-img{
-border-radius : 50%;
+&:before{
+    position : absolute; 
+    content : "";
+    border-radius : 50%;
+    width : 90px;
+    height : 90px;
+    background : #f9f9f9f9;
+    bottom  : -7px;
+    left : 50%;
+    transform : translate(-50%);
+    z-index : 8;
+ }
+
+img{ 
     width : 70px;
     height : 70px; 
+
     position : absolute;
     bottom : 5px;
-    z-index : 0;
+    z-index : 8;
     left : 50%;
     transform:translate(-50%);    
-    background : #f9f9f9;
+    // background : #f9f9f9;
+     padding : 2px;
     transition : all 250ms;
-    padding : 0px;
-    box-shadow : 1px 0px 0px 12px #f5f5f5;
-    
+    // padding : 0px;
+    // box-shadow : 1px 0px 0px 12px #f5f5f5;
 } 
 
 `
@@ -187,8 +209,9 @@ font-family : roboto ;
 const Center = Styled.div`
  
 position : absolute;
-top : 80px;
+top : 120px;
 img{
+
     width :100%;
     height : 100%;
     object-fit : contain;

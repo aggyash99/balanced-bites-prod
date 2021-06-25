@@ -2,8 +2,7 @@ import React from 'react';
 import CallIcon from '@material-ui/icons/Call';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import EditLocationIcon from '@material-ui/icons/EditLocation';
-import EmailIcon from '@material-ui/icons/Email';
-import CopyrightIcon from '@material-ui/icons/Copyright';
+import EmailIcon from '@material-ui/icons/Email'; 
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -25,7 +24,7 @@ const Footer =()=>{
                 <Icons>
                         <LINKS   className="whatsapp" href="https://api.whatsapp.com/send?phone=+918700326422" ><WhatsAppIcon></WhatsAppIcon></LINKS>
                         <LINKS   className="facebook" href="https://www.facebook.com/Balancedbites10/" ><FacebookIcon></FacebookIcon></LINKS>
-                        <LINKS  className="mail"  href="balancedbites10@gmail.com" > <MailOutlineIcon ></MailOutlineIcon></LINKS>
+                        <LINKS  className="mail"  href="mailto:balancedbites10@gmail.com" > <MailOutlineIcon ></MailOutlineIcon></LINKS>
                         <LINKS   className="insta" href="https://www.instagram.com/balancedbites10/?r=nametag" ><InstagramIcon  ></InstagramIcon></LINKS>
                 </Icons>
                 </Upper>
@@ -66,9 +65,9 @@ const Footer =()=>{
             <span className="span3">Get In Touch</span>
             <FooterLink className="foot3">
             <ul>
-            <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
-            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00AM - 7:00 PM</li></div>
             <div> <EditLocationIcon className="icon" /> <li>Address : Hno. 288-89 G-26 Sec-3 ROHINI , DELHI</li></div>
+            <div><AccessTimeIcon className="icon"/> <li>Timing : Mon-Sat 10:00AM - 7:00 PM</li></div>
+            <div><CallIcon className="icon"/><li>Call : +91 8700326422</li></div>
             <div><EmailIcon className="icon"/> <li>EMAIL : balancedbites10@gmail.com</li></div>
             </ul>
             </FooterLink>
@@ -96,11 +95,15 @@ li{
 }
 .newlink{
     margin-top : -10px;
-    color : white; 
+    color : grey; 
+    transition : all 50ms;
     @media (max-width : 400px)
     {
         margin :  0;
         padding : 10px 0;
+    }
+    &:hover{
+        color : white;
     }
 }
 ul{
@@ -116,7 +119,7 @@ ul{
         align-items : center;
         .arrow-in-footer{
         width : 10px;
-       
+            
         }
         
         transition : all 250ms;
@@ -134,6 +137,7 @@ ul{
     ul{
         padding : 0;
     }
+    
 }
 ul{
 div{
@@ -146,7 +150,7 @@ div{
 
 display : flex; 
 justify-content : space-around;
-// align-items : center;
+ 
 
 `
 const Col = Styled.div`
@@ -249,6 +253,12 @@ svg{
 }  
 padding : 2px;
 border-radius : 25px;
+@media(max-width : 400px)
+{
+    li{
+    color : white;
+    }
+}
 `
 const IMGcolumn = Styled.div`
 position : relative;

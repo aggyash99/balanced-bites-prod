@@ -4,17 +4,18 @@ import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
 import data from '../Data/Sdata';
-import DropDownIcon from '@material-ui/icons/ArrowDropDown';
-import CloseIcon from '@material-ui/icons/Close'; 
+import DropDownIcon from '@material-ui/icons/NavigateNext';
+import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function Navbar() {
   function navCollapse(){
-    navOpen=0;
+    navOpen=0;/* eslint-disable */
     $("#navFullScreen").addClass("fullscreenMove");
     $("#navClose").addClass("fullscreenMove2");
     $("#hamOpt").removeClass("hamTransform");
     $("#hamOpt2").removeClass("hamTransform2");
     $("#hamOpt3").removeClass("hamTransform3");
     $("#primaryHamButton").trigger("focus");
+    dropdownClose();
    
   }function navExpand(){
     $("#navFullScreen").removeClass("fullscreenMove");
@@ -24,23 +25,20 @@ function Navbar() {
     $("#hamOpt3").addClass("hamTransform3");
     navOpen=1;
   }
-  function dropdownOpen()
-  {
-    console.log(dropOpen);
-              document.getElementById("dropdown").style.color="#11c220";
-              document.getElementById("dropdown").style.transform="rotateZ(180deg)";
-              
-              dropOpen=1;
-  }
-function dropdownClose()
-{
-  console.log(dropOpen);
-              document.getElementById("dropdown").style.color="black";
-              document.getElementById("dropdown").style.transform="rotateZ(0deg)";
-              dropOpen=0;
-}
+              function dropdownOpen()
+              {
+                          $("#subMenuMobile").addClass("submenuMove");
+                          $("#navFullScreen").addClass("submenuMove2");
+                          dropOpen=1;
+              }
+ function dropdownClose()
+ {
+ $("#subMenuMobile").removeClass("submenuMove");
+ $("#navFullScreen").removeClass("submenuMove2");
+ dropOpen=0;
+ }
   window.onscroll=function()
-    { if($(window).width()>382){
+    { if($(window).width()>450){
        if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
     var dynWidth;
@@ -72,15 +70,14 @@ function dropdownClose()
       {
         if(document.getElementById("movingpicbg"))
     document.getElementById("movingpicbg").style.backdropFilter="blur("+(0.05*window.scrollY)+"px)";
-    var dynWidth;
-    var dynWidthDropDown;
+    
       if(window.scrollY<125)
       {
         $("#nav1").addClass("navSmall");
         $("#nav2").addClass("navSmall");
         $("#nav3").addClass("navSmall");
         $("#nav4").addClass("navSmall");
-        dynWidth=220;
+        dynWidth=130;
         dynWidthDropDown=17;
       }
       else if(window.scrollY>195)
@@ -89,12 +86,12 @@ function dropdownClose()
         $("#nav2").removeClass("navSmall");
         $("#nav3").removeClass("navSmall");
         $("#nav4").removeClass("navSmall");
-        dynWidth=170;
+        dynWidth=130;
         dynWidthDropDown=5.5;
       }
       else
       {
-        dynWidth=(125-window.scrollY)+220;
+        dynWidth=130
         dynWidthDropDown=17-(window.scrollY-125)/6 ;
       }
       }
@@ -105,18 +102,11 @@ function dropdownClose()
   var dropOpen=0;
   return (
       <>
-    {
-      // HEADER END
-    }
-    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-lg-top top-0"  >
-  <div className="container-fluid">
-  <nav className="d-flex">
-    <div>
-     <NavLink className="navbar-brand " to="/"><img className="img-fluid img-thumbnail Navbar-image navImg2"  src={logo} alt="Balanced Bites" id="brandImg" style={{}}/></NavLink></div>
      
-    </nav><a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
+    <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top top-0"  >
+      <a className="btn btn-outline  navHamBurger" id="primaryHamButton" onClick={()=>{
        console.log(navOpen);
-       if(navOpen==0)
+       if(navOpen===0)
        {
         navOpen=1;
          navExpand();
@@ -129,6 +119,12 @@ function dropdownClose()
      }}>
     <div style={{display:"block"}}><span className="hamMod ham1" id="hamOpt"></span><span className="hamMod ham2" id="hamOpt2"></span><span className="hamMod ham3" id="hamOpt3"></span>
     </div>      </a>
+  <div className="container-fluid" style={{justifyContent:"center"}}>
+  <nav className="d-flex">
+    <div style={{display:"inherit"}}>
+     <NavLink className="navbar-brand " to="/"><img className="img-fluid img-thumbnail Navbar-image navImg2"  src={logo} alt="Balanced Bites" id="brandImg" style={{}}/></NavLink></div>
+     
+    </nav>
     <div className=" collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav ms-auto ">
        
@@ -144,8 +140,13 @@ function dropdownClose()
           <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover" id="nav2">Program</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div>
           <span className="transitionElementProgram"></span>
+<<<<<<< HEAD
           <div className="submenuprogram" ><ul className="submenuprogram" >
           
+=======
+          <div className="submenuprogram" id="smp"><ul className="submenuprogram" >
+           
+>>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
           {
             data.map((value , key)=>{
               return <Link  to={{pathname:'/Program',
@@ -164,15 +165,15 @@ function dropdownClose()
                             </a>
     <div className="fullscreenWrapper fullscreenMove" id="navFullScreen">
     
-    <div className="navWrapper " id="">
-      <ul className="navItemWrapper">
+    <div className="navWrapper submenuprogram2" id="navitemwrappermobile">
+      <ul className="navItemWrapper  " id="">
      
       <li className="navItems  " onClick={navCollapse} >
-          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name navbarhover navItemMobile" id="nav1">Home</span></NavLink>
+          <NavLink exact activeClassName = "menu_active" className="nav-link active " aria-current="page" to="/"><span className="nav-name  navItemMobile" id="nav1">Home</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
         
-        <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name navbarhover navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
-        <a id="dropdown" className=" btn  subMenuDropDownIcon" type="button" data-bs-toggle="collapse" data-bs-target="#subMenuMobile" aria-controls="subMenuMobile" aria-expanded="false" aria-label="Toggle navigation" onClick={()=>{
+        <li className="navItems programHover"><div className="dropdownLine"><NavLink activeClassName = "menu_active" className="nav-link active " to="/Service" style={{display:"inline-block"}}><span className="nav-name  navItemMobile" id="nav2"  onClick={navCollapse}>Program</span></NavLink>
+        <a id="dropdown"style={{trasfrom:"rotateZ(90deg)"}} className=" btn  subMenuDropDownIcon" type="button"onClick={()=>{
         
         if(dropOpen)
         { dropdownClose();
@@ -182,11 +183,23 @@ function dropdownClose()
           dropdownOpen();
         }
       }}>   
-      <DropDownIcon/>
+      <DropDownIcon />
     </a></div>
            <span className="transitionElementProgram"></span>
-             <div className="submenuMobile collapse" id="subMenuMobile"><ul className="submenuUL" >
-   
+             <div className="submenuMobile " id="subMenuMobile"><ul className="submenuUL" >
+            <li className="backiconnavli"><a id="dropdown" className=" btn  subMenuDropDownIcon2" type="button"onClick={()=>{
+        
+        if(dropOpen)
+        { dropdownClose();
+        }
+        else
+        { 
+          dropdownOpen();
+        }
+      }}>   
+      <ArrowBackIcon/>
+    </a>
+    </li> 
           {
             data.map((value , key)=>{
               return <Link  to={{pathname:'/Program',
@@ -197,10 +210,10 @@ function dropdownClose()
         </ul></div>
         </li>
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name navbarhover navItemMobile" id="nav3">Contact</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name  navItemMobile" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
         <li className="navItems  " onClick={navCollapse}>
-          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name navbarhover navItemMobile" id="nav4">About</span></NavLink>
+          <NavLink activeClassName = "menu_active" className="nav-link active" to="/About"><span className="nav-name  navItemMobile" id="nav4">About</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div> </li>
       </ul>
       

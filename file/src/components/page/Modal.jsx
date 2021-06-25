@@ -68,7 +68,7 @@ style="--i:7"                        */
                          
                         <div className="col-12 justifycontentcenter heightincmodal " >
                          
-                        <img src={Tick} height="175" width="175" className="vidmodal"></img> </div>
+                        <img alt="sorry" src={Tick} height="175" width="175" className="vidmodal"></img> </div>
                    
                           </div>
                         <div className="row">
@@ -76,7 +76,7 @@ style="--i:7"                        */
                               <span className="modalmaintext">Hi {shortenedname2} </span>
                               </div>
                             <div className="col-12 justifycontentcenter">
-                              <span className="modalmaintext2">Thank you for contacting us.</span> </div>
+                              <span className="modalmaintext2">Thank you for contacting us. We will be in touch soon. We look forward to serving you.</span> </div>
                         </div>
                    </div>
                 </div>

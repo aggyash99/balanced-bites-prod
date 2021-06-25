@@ -1,17 +1,16 @@
 import React,{ Component }  from "react";
-import image from '../Image/pics/bmi-5.jpg'; 
+// import image from '../Image/pics/bmi-5.jpg'; 
 import $ from 'jquery';
 import { findDOMNode } from "react-dom"; 
-import reddot from '../Image/images/red.png'; 
-import bluedot from '../Image/images/blue.png';
-import greendot from '../Image/images/green.png';
-import yellowdot from '../Image/images/yellow.png';
+// import reddot from '../Image/images/red.png'; 
+// import bluedot from '../Image/images/blue.png';
+// import greendot from '../Image/images/green.png';
+// import yellowdot from '../Image/images/yellow.png';
 import CloseIcon from '@material-ui/icons/Close';   
-import Styled from 'styled-components'; 
-import backgroundImage from '../Image/services/bmi.jpg'
+import Styled from 'styled-components';  
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'; 
-
+// import p from '../Image/Review/logo.svg'
 const WeightCategory = [
   'Kg','Pounds'
 ];
@@ -34,7 +33,7 @@ class BMI extends Component{
         result : "",
         Feetheight : "",
         status : "",
-        dot : reddot,
+      
         red : 7,
         yellow : 7,
         green : 7,
@@ -77,13 +76,13 @@ class BMI extends Component{
         return ""
         }
     
-        if(this.state.height == "" && this.state.heightstatus!=="Feet" || parseInt(this.state.height)==0)
+        if((this.state.height === "" && this.state.heightstatus!=="Feet") || parseInt(this.state.height)===0)
         {const  a2 = findDOMNode(this.refs.google1);
         $(a2).addClass('border-color-red')
         return""
         }
         // REGEX PART 
-        let reg = /^([0-9]){0,5}([\.]){0,1}([0-9]){0,5}$/;
+        let reg = /^([0-9]){0,5}([.]){0,1}([0-9]){0,5}$/;
         var temp1 = this.state.height;
         var temp = this.state.weight;
         if(reg.test((temp1))===false)
@@ -164,7 +163,7 @@ class BMI extends Component{
       {
         var Inch = 0;
         var   feet= 0;
-        if(this.state.Feetheight != "")
+        if(this.state.Feetheight !== "")
         Inch = (parseInt(this.state.Feetheight));
         if(this.state.height!=="")
        feet = (parseInt(this.state.height) * 12);
@@ -174,21 +173,21 @@ class BMI extends Component{
       
     if(total<= 19)
     {
-        this.setState({dot:bluedot,status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7, content : "A BMI of less than 18.5 indicates that you may need to gain some weight.", textcolor : "#4faeea"})
+        this.setState({status : "UnderWeight",green : 7,blue : 10,red:7,yellow : 7, content : "A BMI of less than 18.5 indicates that you may need to gain some weight.", textcolor : "#4faeea"})
     }
 
     else if(total <= 24)
     {
-        this.setState({dot:greendot,status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 18.5 indicates that you may need to gain some weight.", textcolor : "#57dd41"});
+        this.setState({status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 25 indicates that you lower your risk of developing serious health problem.", textcolor : "#57dd41"});
     }
 
     else if(total <= 30)
     {
-        this.setState({dot:yellowdot,status : "OverWeight",green : 7,blue :7,red:7,yellow : 10,content:"A BMI of 25-29.9 indicates that you may be advised to lose some weight for better health. ", textcolor : "#efda40"});
+        this.setState({status : "OverWeight",green : 7,blue :7,red:7,yellow : 10,content:"A BMI of 25-29.9 indicates that you may be advised to lose some weight for better health. ", textcolor : "#efda40"});
     }
     else
     {
-        this.setState({dot:reddot,status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight",textcolor : "red"});
+        this.setState({status : "Obese",green : 7,blue : 7,red:10,yellow : 7,content:"A BMI of over 30 indicates that your health may be at risk if you do not lose weight",textcolor : "red"});
     }
 
     $(e).addClass('outnow');
@@ -226,11 +225,13 @@ class BMI extends Component{
         $(f).addClass('google_text')
         $(f).removeClass('border-color-red')
     }
+   
+
     render(){
         return(
-        <Container className="container-fluid =" style={{backgroundImage:`url(${(image)})`}}>
+        <Container className="container-fluid =" style={{backgroundImage:`url(https://res.cloudinary.com/balance-bites/image/upload/v1624256688/Home_carousel/Bmi/bmi-5_v6elbc.jpg)`}}>
         
-        
+    
 
 
         <MAIN>
@@ -271,7 +272,7 @@ class BMI extends Component{
 
 
         <ROW className = "row">
-            <Heading> BMI CALCULATOR </Heading>
+            <Heading id="new" onClick={this.c}> BMI CALCULATOR </Heading>
             <Column >
             <div>
                    <div className="d-flex" >
@@ -280,7 +281,7 @@ class BMI extends Component{
                    <input className="google_random"  onChange={this.setweight}  value={this.state.weight} required></input>
                    <p className="p">Weight</p>
                    </FLOAT>
-                   <Dropdown className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
+                   <Dropdown  onClick={this.c}  className="drop" options={WeightCategory} onChange={this.setweightstatus }   value={defaultWeight}  />
                    </div>
                    <div className="d-flex">
                           
@@ -297,7 +298,7 @@ class BMI extends Component{
                     }
                    
                    </FLOAT>
-                    <Dropdown options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
+                    <Dropdown id="new" onClick={this.c} options={HeightCategory} onChange={ this.setheightstatus} name="heightstatus"  value={defaultHeight} />
                    
                    
                    </div>
@@ -322,13 +323,14 @@ class BMI extends Component{
 
 );
 
-
-
+                    
     }
 }
 
 
 export default BMI;
+ 
+/*
 const Animation = Styled.div`
 position : absolute;
 width : 150px;
@@ -344,7 +346,7 @@ position : relative;
 
 z-index : -5;
 opacity : 0.7;
-`
+`*/
 const Container = Styled.div`
 width : 100%;
 background-position : center;

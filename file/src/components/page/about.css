@@ -1,6 +1,6 @@
 
 
-@media (min-width:700px)
+@media (min-width:900px)
 {    
     .food{
         height: 450px;
@@ -16,27 +16,27 @@
           font-size: 55px;
           color: black;
       }
-.headtext
-{
-    font-size:200px;
-    
-
-}
-.aboutGreenBackground{
-    position: relative;
-}
 
 .aboutImgRight{
-    width : 300px;
-height : 480px;
+    align-items:flex-start;
+    display: flex;
 }
 .aboutImgRight img{
    
     width : 380px;
 height : 550px;
-position:relative;
-left:20%;
-top:10%;
+}
+.aboutgreenbgdiv{
+    display: block;
+}
+
+.aboutGreenBGDivClass{
+    display: none;
+}
+.aboutGreenBackground{
+    position: relative;
+    display:inline-block
+}
 }
 .aboutGreenBackground::before{
     content: '';
@@ -44,19 +44,83 @@ top:10%;
     height: 480px;
     position:absolute;
     background-color: rgb(170, 247, 147);
-    right :25px;
+   transform:translateX(20px);
     top : 65px;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 .aboutGreenBackground img{
 width : 300px;
 height : 480px;
 position: relative;
-top : 80px;
-left : 30%;
-border-radius: 10px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;/* box-shadow: 10px 10px 10px 0px rgb(245, 235, 235); */
+top : 85px;
+right : 0px;
+transition:.3s;
+border-radius: 2px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
+.aboutGreenHide{
+    display: none;
+}
+@media (max-width:900px) {
+    .aboutGreenBackground{
+        display: none;
+       
+    }
+    .aboutGreenBGDivClass{
+        display: block;
+    }
+    .aboutgreenbgdiv{
+        display: block;
+        visibility: hidden;
+    }.aboutGreenBackground::before{
+        display: none;
+        left:5%;
+        bottom:5%;
+    }
+}
+.aboutPhotoMobile{
+    display: flex;
+    justify-content: center;
+}
+.aboutPhotoMobile img{
+  z-index: 1;
+width : 250px;
+height : 400px;
+border-radius: 2px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+.aboutPhotoMobile::after{
+    content: '';
+    width: 250px;
+    height: 400px;
+    position:absolute;
+    background-color: rgb(170, 247, 147);
+   transform:translateX(10px) translateY(-10px);
+    
+    border-radius: 2px;
+}
+.h1aboutWhyChoose{
+    display: block;
+    font-size: 35px !important;
+}
+.whychoosedivhead{
+    display: none;
+}
+@media (max-width:900px) {
+    .h1aboutWhyChoose{
+display: none !important;
+    }
+    .whychoosedivhead{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutGreenBackground img{
+        display: block;
+        top:45%;
+    }
+    .aboutGreenHide{
+        display: block;;
+    }
 /* .aboutGreenBackground img{
     width : 0%;
     height : 90%;
@@ -68,14 +132,14 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;/* box-shadow: 10px 10px 1
 }
 .alignbottomabout
 {
-    padding-top: 187px;
+    padding-top: 339px;
 }
 .subheadtext
 {
     font-size:35px;
-    padding:0px 20px 20px 20px;
+    padding:20px 20px 20px 20px;
 }
-@media (max-width:700px)
+@media (max-width:900px)
 {
     .food{
    background-size: 0px;
@@ -126,15 +190,22 @@ color:#03ac11;
     height:110px ;
     width:290px ;
 }
-@media (min-width:768px) {
+@media (min-width:900px) {
     
 .headalignment
 {
     text-align: left;
-    padding:5%;
+    padding:0% 7%;
+}
+.pointAbout{
+    display: inline-block;
+    transform:translateY(-4px)
 }
 }
-@media (max-width:767px)
+.newcarsheading1{
+    display: block;
+}
+@media (max-width:900px)
 {.headalignment
     {
         text-align: left;
@@ -144,8 +215,12 @@ color:#03ac11;
         display: none;
     }
     .imgWhyChoose{
-        height:50px ;
-        width:125px ;
+        height:100px ;
+        width:250px ;
+        margin-top:20px;
+    }
+    .newcarsheading1{
+        display: none !important;
     }
 }
 .about{
@@ -276,30 +351,75 @@ list-style: none;
 {    background: #ffffff8e;
     border-radius: 20px;
     margin:10px;
+    user-select: none;
     transition: .3s all;
     padding:0px  20px;
-}
+    position: relative;
+    cursor: default;
+}/*
 .bordertemp1::first-letter{
-    transition: .3s all;
-    font-size: 30px;
+   
     opacity: 0;
-}
+}*/
 .bordertemp1:hover{
     background: white;
     letter-spacing: 2px;
     transition: .3s all;
-}
+}/*
 .bordertemp1:hover::first-letter{
-    transition: .3s all;
    color:#03ac11;
    font-weight: 900;
    opacity: 1;
     
-}
+}*/
 .textabouttable
 {   padding:15px 0px ;
-
     font-size: 20px;
+}
+.tickAbout{
+    position: relative;
+font-size: 0px;
+transition:.3s;
+}
+.bordertemp1:hover .textabouttable .tickAbout{
+display: inline;
+transition:.3s all;
+width:200px;
+font-size: 30px;
+   color:#03ac11;
+font-weight: 900;
+}
+.bulletabout{
+    display: none;
+}
+@media (max-width:900px)
+{
+    .tickAbout{
+        font-size: 30px;
+        opacity: 0;
+    }.bordertemp1:hover .textabouttable .tickAbout{
+        opacity: 1;
+    }
+
+    .bordertemp1:hover{
+        background: white;
+        letter-spacing: 0px;
+        transition: .3s all;
+    }
+    .bulletabout{
+        position: absolute;
+        display: inline;
+        transition: .3s all;
+        color:#03ac11;
+        transform-origin: center;
+        transform: translateY(9px) translateX(-20px);
+    }
+    .bordertemp1:hover .bulletabout{
+       opacity: 0;
+       
+    }
+}
+.bordertemp1:hover .textabouttable{
 }
 .expansionabout{
     position: absolute;
@@ -335,5 +455,59 @@ transition: .3s all;
 }
 .dropdownLine{
     display: inline-block;
+    
+}
+.aboutimg2{
+    display: none;
+}
+@media (max-width:700px) {
+  
+.aboutimg2{  display: block;
+}}
+.aboutlinkh6{
+
+    font-family: 'Roboto', sans-serif !important; }
+.aboutlinklink
+{
+    
+        /* text-align: center; */
+        width: 80%;
+        padding:5px;
+        /* padding-left: 10px; */
+        font-size: 20px;
+        letter-spacing: 1.2px;
+        border-radius: 35px;
+        background : transparent;
+        color: green;
+        border: 2px solid green;
+        margin-top: 10px;
+        right:9%;
+        top: 0px !important;
+        position: absolute;
+}
+.carouselMobileHeading{
+    display: none !important;
+}
+.aboutMobileHeading{
+    display: none !important;
+}
+@media (max-width:900px) {
+    .carouselMobileHeading{
+        display: block !important;
+        font-size: 32px !important;
+        padding:2% !important;
+        text-align: center !important;
+    }
+    .aboutMobileHeading{
+        display:inline !important;
+    }
+    .text{
+        padding-right:30px;
+    }.headtext
+    {
+        font-size:25px;
+        padding-bottom: 20px;
+    
+    }
     
 }

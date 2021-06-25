@@ -1,25 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Card from './CardforReview Carousel';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import carddata from '../Data/ReviewData Carousel';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-
-import MaximizeIcon from "@material-ui/icons/Maximize";
-import Styled from 'styled-components'
-import google from '../Image/Review/google.png'
+import Styled from 'styled-components';
+import VisibilitySensor from 'react-visibility-sensor';
 const Newcards = ()=>{
-  const CustomDot = ({ onMove, index, onClick, active }) => {
-    return (
-      <li
-        className={active ? "active aboutcarouselactive aboutcarouseldot" : "inactive aboutcarouseldot aboutcarouselinactive"}
-        onClick={() => onClick()}
-      >
-        <MaximizeIcon/>
-      </li>
-    );
-  };
+  
+  const [showB, setB]=useState(false);
+ 
 const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -41,14 +31,28 @@ const responsive = {
   };
     return (
         <>
-        <div className="Review2" > 
-            <span className="main-head">LET'S HEAR IT FROM OUR CLIENTS</span>
-           
-            <MyCarousel responsive={responsive}
+        <div className="Review2" >  <VisibilitySensor
+            partialVisibility 
+          onChange={(isVisible) => {
+            
+            setB(isVisible?true:false);
+            
+          }}
+           >
+            <span className="main-head newcarsheading1">LET'S HEAR IT &thinsp;<span className={showB?'borderbottom':''} style={{color:"#03ac11"}}> FROM OUR CLIENTS</span></span>
+            </VisibilitySensor>  <VisibilitySensor
+            partialVisibility 
+          onChange={(isVisible) => {
+            
+            setB(isVisible?true:false);
+            
+          }}
+           ><span className="main-head carouselMobileHeading">OUR <span className={showB?'borderbottom2':''} style={{color:"#03ac11"}}>REVIEWS</span></span>
+         </VisibilitySensor><MyCarousel responsive={responsive}
     keyBoardControl={true}
-    removeArrowOnDeviceType={["tablet","mobile"]}
-    showDots={false}
-    arrows={false}
+    removeArrowOnDeviceType={["mobile"]}
+    showDots={true}
+    arrows={true}
     autoPlay={true}
     autoPlaySpeed={5000}
     infinite={true}

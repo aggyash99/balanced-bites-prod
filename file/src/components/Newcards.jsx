@@ -1,17 +1,19 @@
 import React from 'react';
+// import img from '../Image/services/doodle.jpg'
 import Card from './CardforReview';
 import carddata from '../Data/ReviewData';
-import google from '../Image/Review/google.png'
+// import google from '../Image/Review/google.png'
 const Newcards = ()=>{
     
     return (
         <>
-        <div className="Review"> 
+        <div className="carousel1" style={{backgroundImage:`URL(https://res.cloudinary.com/balance-bites/image/upload/v1624253260/Home_carousel/doodle_zopthm.jpg)`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
+            <div className=" Review"> 
             <span className="main-head">WHAT OUR CLIENT SAY</span>
             <span className="phone-head">Our Reviews</span>
             <div className="Heading-border">
             <div className='write-review'>
-                <img src={google} alt="G"></img>
+                <img src="https://res.cloudinary.com/balance-bites/image/upload/v1624256854/Home_carousel/google_zkt4nr.png" alt="G"></img>
                 <span>Reviews</span>
                 </div>
                 <span className="center-Heading">WRITE YOUR REVIEW</span>
@@ -30,6 +32,7 @@ const Newcards = ()=>{
                         );
                })
            }
+             </div>
              </div>
         </div>
         </>
