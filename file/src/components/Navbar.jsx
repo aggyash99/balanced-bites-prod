@@ -140,13 +140,8 @@ function Navbar() {
           <NavLink activeClassName = "menu_active" className="nav-link active " to="/Service"><span className="nav-name navbarhover" id="nav2">Program</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div>
           <span className="transitionElementProgram"></span>
-<<<<<<< HEAD
-          <div className="submenuprogram" ><ul className="submenuprogram" >
-          
-=======
           <div className="submenuprogram" id="smp"><ul className="submenuprogram" >
            
->>>>>>> af41a2afe75d784f809b065cf7ec87929b6499f5
           {
             data.map((value , key)=>{
               return <Link  to={{pathname:'/Program',
