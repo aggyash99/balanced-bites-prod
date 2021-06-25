@@ -3,12 +3,10 @@ import Card from './CardforReview Carousel';
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import carddata from '../Data/ReviewData Carousel';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
+import carddata from '../Data/ReviewData Carousel'; 
 
 import MaximizeIcon from "@material-ui/icons/Maximize";
-import Styled from 'styled-components';
-import google from '../Image/Review/google.png';
+import Styled from 'styled-components'; 
 import VisibilitySensor from 'react-visibility-sensor';
 const Newcards = ()=>{
   

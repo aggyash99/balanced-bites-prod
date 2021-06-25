@@ -7,26 +7,14 @@ import Tick from '../../Image/tickmark.png';
 import {Link} from 'react-router-dom';
 const Modal = props => {
 
-  
-/* <video className="vidmodal" height="200" width="200" id="video" autoPlay>
-                            <source  className="vidmodal2" src="https://media.tenor.com/videos/b1193bfdeb305b8e34dc975177590f53/mp4#t=0.1" type="video/mp4"/>
-                          </video>
-  
-  style="--i:1"
-style="--i:2"
-style="--i:3"
-style="--i:4"
-style="--i:5"
-style="--i:6"
-style="--i:7"                        */
-
+ 
   
   var shortenedname;
   
     var i=0;
     for(;i<props.name.length;i++)
     {
-      console.log(props.name[i]);
+      // console.log(props.name[i]);
       if(props.name[i]===' ')
       break;
     }
@@ -68,7 +56,7 @@ style="--i:7"                        */
                          
                         <div className="col-12 justifycontentcenter heightincmodal " >
                          
-                        <img src={Tick} height="175" width="175" className="vidmodal"></img> </div>
+                        <img src={Tick} height="175" alt="LOAD" width="175" className="vidmodal"></img> </div>
                    
                           </div>
                         <div className="row">

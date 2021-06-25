@@ -7,7 +7,7 @@ function photo() {
         <Photo >
            
 
-                <img src={background}></img>
+                <img src={background} alt="LOAD"></img>
                 <p>
                     3 MONTHS NUTRITION PROGRAM
                     <div>Lets begin your healthiest journey together</div> 

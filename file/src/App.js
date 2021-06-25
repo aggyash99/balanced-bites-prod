@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react'
+import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/bootstrap/dist/js/bootstrap.bundle'
 import {BrowserRouter, Redirect, Route, Switch} from 'react-router-dom'
@@ -15,8 +15,7 @@ import Service from './components/Service';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Program from './components/Program';
-import Newcards from './components/Newcards';
-// import Loader  from "./components/Loader";
+import Newcards from './components/Newcards'; 
 function App() {
 
     

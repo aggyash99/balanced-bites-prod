@@ -1,8 +1,6 @@
-import React from 'react';
-// import img from '../Image/services/doodle.jpg'
+import React from 'react'; 
 import Card from './CardforReview';
-import carddata from '../Data/ReviewData';
-// import google from '../Image/Review/google.png'
+import carddata from '../Data/ReviewData'; 
 const Newcards = ()=>{
     
     return (
