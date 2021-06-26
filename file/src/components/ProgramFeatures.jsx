@@ -247,7 +247,7 @@ padding : 5px 0px;
 }
 `
 const Color = Styled.span`
-color : grey;
+color : black;
 `
 const Descriptions = Styled.div`
 font-size : 15px;

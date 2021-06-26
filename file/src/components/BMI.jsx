@@ -178,7 +178,7 @@ class BMI extends Component{
 
     else if(total <= 24)
     {
-        this.setState({status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"A BMI of less than 25 indicates that you lower your risk of developing serious health problem.", textcolor : "#57dd41"});
+        this.setState({status : "Healthy",green :10,blue :7,red:7,yellow : 7,content:"Your BMI indicates that you are at a healthy weight for your height.", textcolor : "#57dd41"});
     }
 
     else if(total <= 30)
