@@ -27,7 +27,7 @@ function Home() {
                
           </div>
           <div>
-          <p>Every Time you eat is an opportunity to <span style={{color : "green"}}>"Nourish You Body"</span>
+          <p>Every Time you eat is an opportunity to <span style={{color : "green"}}>"Nourish Your Body"</span>
             <div className="add-new  mt-4">
               Muskan Bansal
               </div>

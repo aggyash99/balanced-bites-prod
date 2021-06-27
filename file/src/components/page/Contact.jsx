@@ -41,7 +41,7 @@ function Contact() {
     if (!submitform())
       return;
 
-    emailjs.sendForm('balancedbites123', 'template_n9gdg9h', e.target, 'user_fK8lHw76rRZJeEA2LUSYn')
+    emailjs.sendForm('BBmail', 'template_pa1199v', e.target, 'user_TbOFiNBKwMcKtKBHqmh1o')
       .then((result) => {
         console.log(result.text);
       }, (error) => {

@@ -66,7 +66,7 @@ return (
             
           
         }}>
-        <span  className={showB?'serviceStyle borderbottom':'serviceStyle'} >Service</span></VisibilitySensor>
+        <span  className={showB?'serviceStyle borderbottom':'serviceStyle'} >Program</span></VisibilitySensor>
         </div>
     <div className="row mt-5" >  
         
