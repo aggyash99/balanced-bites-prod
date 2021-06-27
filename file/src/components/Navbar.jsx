@@ -202,7 +202,8 @@ function Navbar() {
             })
           }
 
-        </ul></div></li>
+        </ul></div>
+        </li>
         <li className="navItems  " onClick={navCollapse}>
           <NavLink activeClassName = "menu_active" className="nav-link active" to="/Contact"><span className="nav-name  navItemMobile" id="nav3">Contact</span></NavLink>
           <div className="navbaranim start-home" id="animNavbar"></div></li>
