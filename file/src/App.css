@@ -782,16 +782,16 @@ font-weight: bold;
     position: relative;
 }
 .photos::after{
-    content:'\201F Your diet is a bank account. Good food choices are good investments.\201D';
-    color: rgba(255, 255, 255, 0.671);
+    content:'\201F   Your diet is a bank account. Good food choices are good investments. 	\201D';
+    color: rgba(255, 255, 255, 0.534);
     position:absolute;
     width: calc(100vw - 77vw);
     height: 100px; 
     right: calc(100% - 95%);
     top: 20%;
-    font-size: 20px;
-    font-weight: 600;
-    font-family:'Roboto';
+    font-size: 22px;
+    font-weight: 400;
+    font-family:'Rubik';
     letter-spacing: 1px;
 }
 .photos::before{
