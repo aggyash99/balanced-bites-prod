@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink , Link } from 'react-router-dom';
+import { NavLink , Link , useParams } from 'react-router-dom';
 import logo from '../Image/logo.png';
 import $ from 'jquery';
 import './Navbar.css';
@@ -7,6 +7,9 @@ import data from '../Data/Sdata';
 import DropDownIcon from '@material-ui/icons/NavigateNext';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 function Navbar() {
+
+  const n = useParams();
+
   function navCollapse(){
     navOpen=0;/* eslint-disable */
     $("#navFullScreen").addClass("fullscreenMove");

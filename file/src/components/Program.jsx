@@ -11,7 +11,7 @@ const Program =(props)=>{
    
     useEffect(() => {
         window.scroll(0,0)
-        }, []);
+        }, [props]);
     const [showB, setB]=useState(false);
     const [showC, setC]=useState(false);
 
