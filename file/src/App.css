@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
-
+*{
+    user-select: none;
+}
 .navbar {
     background-color: #ffffff !important;
 
