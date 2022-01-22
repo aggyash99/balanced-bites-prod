@@ -1,7 +1,7 @@
 {
   "name": "client",
-  "homepage": "https://Ankur-2002.github.io/New",
   "version": "0.1.0",
+  "homepage": "https://Ankur-2002.github.io/Balanced-bites-website",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
