@@ -8,7 +8,7 @@ import Contact from './components/page/Contact';
 import Navbar from './components/Navbar';
 import './App.css';
 
-import Img from '../src/Image/images/whatsapp-1.png';
+import img from '../src/Image/images/whatsapp-1.png';
 
 import circle from '../src/Image/images/circle.svg';
 import Service from './components/Service';
@@ -18,35 +18,33 @@ import Program from './components/Program';
 import Newcards from './components/Newcards';
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header></Header>
-        <Navbar />
+    <BrowserRouter>
+      <Header></Header>
+      <Navbar />
 
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/About" component={About} />
-          <Route exact path="/Contact" component={Contact} />
-          <Route exact path="/Service" component={Service} />
-          <Route exact path="/Program" component={Program} />
-          <Route exact path="/Newcards" component={Newcards}></Route>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/About" component={About} />
+        <Route exact path="/Contact" component={Contact} />
+        <Route exact path="/Service" component={Service} />
+        <Route exact path="/Program" component={Program} />
+        <Route exact path="/Newcards" component={Newcards}></Route>
 
-          {/* <Route exact path ="/loader" component={Loader}></Route> */}
-          <Redirect to="/" />
-        </Switch>
+        {/* <Route exact path ="/loader" component={Loader}></Route> */}
+        <Redirect to="/" />
+      </Switch>
 
-        <Footer></Footer>
-      </BrowserRouter>
-      <div>
+      <Footer></Footer>
+      <div className="screen-bar">
         <img alt="sorry" className="animates" src={circle}></img>
         <img alt="sorry" className="animates1" src={circle}></img>
         <a href="https://api.whatsapp.com/send?phone=+918700326422">
           <span>
-            <img alt="sorry" src={Img}></img>
+            <img alt="sorry" src={img}></img>
           </span>
         </a>
       </div>
-    </>
+    </BrowserRouter>
   );
 }
 
