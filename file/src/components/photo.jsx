@@ -1,22 +1,24 @@
 import React from 'react';
-import Styled from 'styled-components'
-import background from '../Image/pics/page-2.jpg'
-import {Link} from 'react-router-dom'
+import Styled from 'styled-components';
+import background from '../Image/pics/page-2.jpg';
+import { Link } from 'react-router-dom';
 function photo() {
-    return (
-        <Photo >
-           
-
-                <img src={background} alt="LOAD"></img>
-                <p>
-                    3 MONTHS NUTRITION PROGRAM
-                    <div>Lets begin your healthiest journey together</div> 
-                </p>
-                <button><Link to='/contact'><span>Consult Now</span></Link></button>
-        </Photo>
-    )
+  return (
+    <Photo>
+      <img src={background} alt="LOAD"></img>
+      <span>
+        3 MONTHS NUTRITION PROGRAM
+        <div>Lets begin your healthiest journey together</div>
+      </span>
+      <button>
+        <Link to="/contact">
+          <span>Consult Now</span>
+        </Link>
+      </button>
+    </Photo>
+  );
 }
-  
+
 export default photo;
 
 const Photo = Styled.div`
@@ -122,4 +124,4 @@ p{
 }
 } 
 
-`
+`;
