@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/hosting/dietitianmuskan.in/static/css/main.dbeb9179.chunk.css",
+    "main.js": "/hosting/dietitianmuskan.in/static/js/main.5422fe34.chunk.js",
+    "main.js.map": "/hosting/dietitianmuskan.in/static/js/main.5422fe34.chunk.js.map",
+    "runtime-main.js": "/hosting/dietitianmuskan.in/static/js/runtime-main.1808f760.js",
+    "runtime-main.js.map": "/hosting/dietitianmuskan.in/static/js/runtime-main.1808f760.js.map",
+    "static/css/2.be7e4060.chunk.css": "/hosting/dietitianmuskan.in/static/css/2.be7e4060.chunk.css",
+    "static/js/2.fa0d10ff.chunk.js": "/hosting/dietitianmuskan.in/static/js/2.fa0d10ff.chunk.js",
+    "static/js/2.fa0d10ff.chunk.js.map": "/hosting/dietitianmuskan.in/static/js/2.fa0d10ff.chunk.js.map",
+    "static/js/3.8dc4be5f.chunk.js": "/hosting/dietitianmuskan.in/static/js/3.8dc4be5f.chunk.js",
+    "static/js/3.8dc4be5f.chunk.js.map": "/hosting/dietitianmuskan.in/static/js/3.8dc4be5f.chunk.js.map",
+    "index.html": "/hosting/dietitianmuskan.in/index.html",
+    "static/css/2.be7e4060.chunk.css.map": "/hosting/dietitianmuskan.in/static/css/2.be7e4060.chunk.css.map",
+    "static/css/main.dbeb9179.chunk.css.map": "/hosting/dietitianmuskan.in/static/css/main.dbeb9179.chunk.css.map",
+    "static/js/2.fa0d10ff.chunk.js.LICENSE.txt": "/hosting/dietitianmuskan.in/static/js/2.fa0d10ff.chunk.js.LICENSE.txt",
+    "static/media/about.css": "/hosting/dietitianmuskan.in/static/media/fruits.e64f84b8.jpg",
+    "static/media/About Smaller Img.912e958a.jpeg": "/hosting/dietitianmuskan.in/static/media/About Smaller Img.912e958a.jpeg",
+    "static/media/circle.4fad1b10.svg": "/hosting/dietitianmuskan.in/static/media/circle.4fad1b10.svg",
+    "static/media/doodle.f81a3301.jpg": "/hosting/dietitianmuskan.in/static/media/doodle.f81a3301.jpg",
+    "static/media/logo.29ef68a9.png": "/hosting/dietitianmuskan.in/static/media/logo.29ef68a9.png",
+    "static/media/milk.e9eb051e.jpg": "/hosting/dietitianmuskan.in/static/media/milk.e9eb051e.jpg",
+    "static/media/page-2.9cfd7941.jpg": "/hosting/dietitianmuskan.in/static/media/page-2.9cfd7941.jpg",
+    "static/media/program-44.3842b3b5.jpg": "/hosting/dietitianmuskan.in/static/media/program-44.3842b3b5.jpg",
+    "static/media/styles.css": "/hosting/dietitianmuskan.in/static/media/revicons.e8746a62.woff",
+    "static/media/tickmark.6f6371b0.png": "/hosting/dietitianmuskan.in/static/media/tickmark.6f6371b0.png",
+    "static/media/whatsapp-1.b411946c.png": "/hosting/dietitianmuskan.in/static/media/whatsapp-1.b411946c.png",
+    "static/media/whatsapp1.0e9d1475.svg": "/hosting/dietitianmuskan.in/static/media/whatsapp1.0e9d1475.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1808f760.js",
+    "static/css/2.be7e4060.chunk.css",
+    "static/js/2.fa0d10ff.chunk.js",
+    "static/css/main.dbeb9179.chunk.css",
+    "static/js/main.5422fe34.chunk.js"
+  ]
+}

@@ -45,7 +45,7 @@ function Home() {
      
 
 
-      <div className="carousel " style={{backgroundImage:`URL(https://res.cloudinary.com/vivekananda-institute-of-professional-studies/image/upload/v1624253260/doodle_zopthm.jpg)`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
+      <div className="carousel " style={{backgroundImage:`URL(https://res.cloudinary.com/balance-bites/image/upload/v1624253260/Home_carousel/doodle_zopthm.jpg)`, backgroundSize:"center", objectFit : "cover", backgroundRepeat:""}} >
           <div className="caouselBody">
       <div className="text-center Home-carousel d-flex justify-content-center">
       <p>Our</p><VisibilitySensor
