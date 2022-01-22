@@ -6,10 +6,10 @@ function photo() {
   return (
     <Photo>
       <img src={background} alt="LOAD"></img>
-      <p>
+      <span>
         3 MONTHS NUTRITION PROGRAM
         <div>Lets begin your healthiest journey together</div>
-      </p>
+      </span>
       <button>
         <Link to="/contact">
           <span>Consult Now</span>

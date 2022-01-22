@@ -180,7 +180,7 @@ home .header1 {
     height: 100%;
   }
 }
-.home-img p {
+.home-img .home-img-p {
   position: absolute;
   z-index: 3;
   font-family: 'Kaushan Script';
@@ -202,11 +202,11 @@ home .header1 {
   margin-left: 10px;
 }
 @media (max-width: 1130px) {
-  .home-img p {
+  .home-img .home-img-p {
     font-size: 25px;
   }
 }
-.home-img p a {
+.home-img .home-img-p a {
   text-align: center;
   width: 100%;
   padding: 8px 20px;
@@ -225,7 +225,7 @@ home .header1 {
 
   transition: all 250ms;
 }
-.home-img p a:hover {
+.home-img .home-img-p a:hover {
   background: green;
   color: white;
 }
@@ -248,7 +248,7 @@ home .header1 {
   display: none;
 }
 @media (max-width: 600px) {
-  .home-img p {
+  .home-img .home-img-p {
     display: none;
   }
   .home-img h6 {

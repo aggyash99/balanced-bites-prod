@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom';
 import VisibilitySensor from 'react-visibility-sensor';
 function Home() {
   const [showB, setB] = useState(false);
-
   useEffect(() => {
     window.scroll(0, 0);
   }, []);
@@ -30,7 +29,7 @@ function Home() {
               ></img>
             </div>
             <div>
-              <p>
+              <div className="home-img-p">
                 Every Time you eat is an opportunity to{' '}
                 <span style={{ color: 'green' }}>"Nourish Your Body"</span>
                 <div className="add-new  mt-4">Muskan Bansal</div>
@@ -40,7 +39,7 @@ function Home() {
                 >
                   <Link to="/contact">Contact Us </Link>
                 </div>
-              </p>
+              </div>
               <h6>
                 Healthy Mood, Healthy Mind
                 <Link to="/contact"> Consult Today </Link>
@@ -71,21 +70,15 @@ function Home() {
               </VisibilitySensor>
             </div>
 
-            <CarouselH></CarouselH>
+            <CarouselH />
           </div>
         </div>
 
-        <div>
-          <BMI />
-        </div>
+        <BMI />
 
-        <div>
-          <Reviewcard />
-        </div>
+        <Reviewcard />
 
-        <div>
-          <Photo></Photo>
-        </div>
+        <Photo></Photo>
       </section>
     </>
   );
