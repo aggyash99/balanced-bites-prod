@@ -30,9 +30,6 @@ class BMI extends Component {
       content: '',
       textcolor: '',
     };
-    this.output = React.createRef();
-    this.google = React.createRef();
-    this.google1 = React.createRef();
   }
 
   setheightstatus = props => {
@@ -243,7 +240,7 @@ class BMI extends Component {
         }}
       >
         <MAIN>
-          <Output className="Output_for_BMI" ref={this.output}>
+          <Output className="Output_for_BMI" ref={'output'}>
             <div className="text-bmi">
               <CloseIcon className="cross" onClick={this.close} />
             </div>
@@ -312,13 +309,12 @@ class BMI extends Component {
 
           <ROW className="row">
             <Heading id="new" onClick={this.c}>
-              {' '}
-              BMI CALCULATOR{' '}
+              BMI CALCULATOR
             </Heading>
             <Column>
               <div>
                 <div className="d-flex">
-                  <FLOAT ref={this.google} onClick={this.text}>
+                  <FLOAT ref={'google'} onClick={this.text}>
                     <input
                       className="google_random"
                       onChange={this.setweight}
@@ -336,7 +332,7 @@ class BMI extends Component {
                   />
                 </div>
                 <div className="d-flex">
-                  <FLOAT ref={this.google1} onClick={this.text1}>
+                  <FLOAT ref={'google1'} onClick={this.text1}>
                     {this.state.heightstatus !== 'Feet' ? (
                       <>
                         <input
